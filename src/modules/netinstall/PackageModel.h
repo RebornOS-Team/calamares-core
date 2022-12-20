@@ -64,6 +64,15 @@ public:
      */
     void setSelections( const QStringList& selectNames );
 
+    /** @brief Updates the checked flag on matching packages in the tree
+     *
+     * Recursively traverses the tree pointed to by m_rootItem and
+     * checks if a package name matches @p selectName.
+     * If a match is found, updates the check the box for that package.
+     *
+     */
+    void updatePackageSelectionStates( const QString& selectName, const Qt::CheckState& selectState );
+
     PackageTreeItem::List getPackages() const;
     PackageTreeItem::List getItemPackages( PackageTreeItem* item ) const;
 
@@ -84,6 +93,7 @@ private:
     friend class ItemTests;
 
     void setupModelData( const QVariantList& l, PackageTreeItem* parent );
+    void internalSetSelections( const QStringList& selectNames, PackageTreeItem* item );
 
     PackageTreeItem* m_rootItem = nullptr;
     PackageTreeItem::List m_hiddenItems;
