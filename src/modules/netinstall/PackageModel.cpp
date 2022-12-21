@@ -15,26 +15,16 @@
 #include "utils/Yaml.h"
 
 /// Recursive helper for setSelections()
-void PackageModel::internalSetSelections( const QStringList& selectNames, PackageTreeItem* item )
+static void
+setSelections( const QStringList& selectNames, PackageTreeItem* item )
 {
-    // cDebug()<<">> In PackageModel::internalSetSelections("<<selectNames<<", "<<item<<")";
     for ( int i = 0; i < item->childCount(); i++ )
     {
         auto* child = item->child( i );
-        if ( !child->isGroup() && !child->packageName().isEmpty() )
-        {
-            // cDebug() << Logger::SubEntry << Logger::SubEntry << "Running this->updatePackageSelectionStates(" <<child->packageName()<<" ,"<<Qt::CheckState::Checked<<")";
-            this->updatePackageSelectionStates( child->packageName(), Qt::CheckState::Checked );
-        }
-        else
-        {
-            // cDebug() << Logger::SubEntry << Logger::SubEntry << "Running this->internalSetSelections(" <<selectNames<<" ,"<<child<<")";
-            this->internalSetSelections( selectNames, child );        
-        }
+        setSelections( selectNames, child );
     }
     if ( item->isGroup() && selectNames.contains( item->name() ) )
-    {     
-        cDebug()<<"*****************************************************************************************************************************************";
+    {
         item->setSelected( Qt::CheckState::Checked );
     }
 }
@@ -288,15 +278,9 @@ PackageModel::headerData( int section, Qt::Orientation orientation, int role ) c
 void
 PackageModel::setSelections( const QStringList& selectNames )
 {
-    cDebug()<<">> In PackageModel::setSelections("<<selectNames<<")";
     if ( m_rootItem )
     {
-        cDebug() << Logger::SubEntry << "Running this->internalSetSelections(" <<selectNames<<" ,"<<m_rootItem<<")";
-        this->internalSetSelections( selectNames, m_rootItem );
-
-        emit dataChanged( this->index( 0, 0 ),
-                          this->index( 1000, 1000 ),
-                          QVector< int >( Qt::CheckStateRole ) );        
+        ::setSelections( selectNames, m_rootItem );
     }
 }
 

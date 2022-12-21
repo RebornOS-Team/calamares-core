@@ -34,6 +34,7 @@ NetInstallPage::NetInstallPage( Config* c, QWidget* parent )
     ui->setupUi( this );
     ui->groupswidget->header()->setSectionResizeMode( QHeaderView::ResizeToContents );
     ui->groupswidget->setModel( c->model() );
+    connect( ui->reset_button, &QPushButton::released, this, &NetInstallPage::onActivate);
     connect( c, &Config::statusChanged, ui->netinst_status, &QLabel::setText );
     connect( c,
              &Config::titleLabelChanged,

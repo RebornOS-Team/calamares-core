@@ -100,7 +100,6 @@ private:
     friend class ItemTests;
 
     void setupModelData( const QVariantList& l, PackageTreeItem* parent );
-    void internalSetSelections( const QStringList& selectNames, PackageTreeItem* item );
 
     PackageTreeItem* m_rootItem = nullptr;
     PackageTreeItem::List m_hiddenItems;
