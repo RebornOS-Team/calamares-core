@@ -105,7 +105,7 @@ updateDuplicates( const QList<QString> * selectNames, const QList<Qt::CheckState
     else 
     {
         int index = selectNames->indexOf(item->packageName());
-        if ( index >= 0 && !item->packageName().isEmpty() && item->isSelected() != selectStates->value(index) )
+        if ( index >= 0 && !item->packageName().isEmpty() && !item->isImmutable() && item->isSelected() != selectStates->value(index) )
         {
             item->setSelected( selectStates->value(index) );
         }
@@ -335,10 +335,6 @@ PackageModel::packageSelectionStates( QList<QString> * packageNames, QList<Qt::C
     if ( m_rootItem )
     {
         ::packageSelectionStates( packageNames , packageStates, m_rootItem );
-
-        emit dataChanged( this->index( 0, 0 ),
-                          this->index( 1000, 1000 ),
-                          QVector< int >( Qt::CheckStateRole ) );
     }
 }
 
@@ -348,10 +344,6 @@ PackageModel::updateDuplicates( const QList<QString> * selectNames, const QList<
     if ( m_rootItem )
     {
         ::updateDuplicates( selectNames, selectStates, m_rootItem );
-
-        emit dataChanged( this->index( 0, 0 ),
-                          this->index( 1000, 1000 ),
-                          QVector< int >( Qt::CheckStateRole ) );
     }
 }
 
@@ -361,10 +353,6 @@ PackageModel::updateDuplicates( const QString& selectName, const Qt::CheckState&
     if ( m_rootItem )
     {
         ::updateDuplicates( selectName, selectState, m_rootItem );
-
-        emit dataChanged( this->index( 0, 0 ),
-                          this->index( 1000, 1000 ),
-                          QVector< int >( Qt::CheckStateRole ) );
     }
 }
 
@@ -535,7 +523,8 @@ PackageModel::appendModelData( const QVariantList& groupList )
                 PackageTreeItem* child = m_rootItem->child( i );
                 if ( sources.contains( child->source() ) )
                 {
-                    removeList.insert( 0, i );
+                    this->propagateAndUpdateDuplicates( Qt::CheckState::Unchecked, child );
+                    removeList.insert( 0, i );                    
                 }
             }
             for ( const int& item : qAsConst( removeList ) )
