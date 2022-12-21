@@ -365,6 +365,20 @@ PackageModel::updateInitialDuplicates()
     this->updateDuplicates( &packageNames, &packageStates );
 }
 
+void
+PackageModel::storeInitialState()
+{
+    m_InitialPackageNames = QList<QString>();
+    m_InitialPackageStates = QList<Qt::CheckState>();
+    this->packageSelectionStates( &m_InitialPackageNames, &m_InitialPackageStates );
+}
+
+void
+PackageModel::resetToDefaults()
+{
+    this->updateDuplicates( &m_InitialPackageNames, &m_InitialPackageStates );
+}
+
 PackageTreeItem::List
 PackageModel::getPackages() const
 {
@@ -501,8 +515,9 @@ PackageModel::setupModelData( const QVariantList& l )
     beginResetModel();
     delete m_rootItem;
     m_rootItem = new PackageTreeItem();
-    setupModelData( l, m_rootItem );
+    setupModelData( l, m_rootItem );    
     endResetModel();
+    this->storeInitialState();
 }
 
 void

@@ -84,7 +84,9 @@ public:
     */
     void propagateAndUpdateDuplicates( const Qt::CheckState& selectState, PackageTreeItem* item );
 
-    void packageSelectionStates( QList<QString> * packageNames, QList<Qt::CheckState> * packageStates );
+    void packageSelectionStates( QList<QString> * packageNames, QList<Qt::CheckState> * packageStates );    
+
+    void resetToDefaults();
 
     PackageTreeItem::List getPackages() const;
     PackageTreeItem::List getItemPackages( PackageTreeItem* item ) const;
@@ -107,8 +109,13 @@ private:
 
     void setupModelData( const QVariantList& l, PackageTreeItem* parent );
 
+    void storeInitialState();
+
     PackageTreeItem* m_rootItem = nullptr;
     PackageTreeItem::List m_hiddenItems;
+
+    QList<QString> m_InitialPackageNames;
+    QList<Qt::CheckState> m_InitialPackageStates;
 };
 
 #endif  // PACKAGEMODEL_H
