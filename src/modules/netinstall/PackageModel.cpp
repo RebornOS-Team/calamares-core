@@ -15,28 +15,61 @@
 #include "utils/Yaml.h"
 
 /// Recursive helper for setSelections()
-void
-PackageModel::internalSetSelections( const QStringList& selectNames, PackageTreeItem* item )
+void PackageModel::internalSetSelections( const QStringList& selectNames, PackageTreeItem* item )
 {
+    // cDebug()<<">> In PackageModel::internalSetSelections("<<selectNames<<", "<<item<<")";
     for ( int i = 0; i < item->childCount(); i++ )
     {
         auto* child = item->child( i );
-        if ( !child->isGroup() )
+        if ( !child->isGroup() && !child->packageName().isEmpty() )
         {
-            cDebug() << Logger::SubEntry <<"Child item "<<child->packageName();
+            // cDebug() << Logger::SubEntry << Logger::SubEntry << "Running this->updatePackageSelectionStates(" <<child->packageName()<<" ,"<<Qt::CheckState::Checked<<")";
             this->updatePackageSelectionStates( child->packageName(), Qt::CheckState::Checked );
         }
         else
         {
-            internalSetSelections( selectNames, child );        
+            // cDebug() << Logger::SubEntry << Logger::SubEntry << "Running this->internalSetSelections(" <<selectNames<<" ,"<<child<<")";
+            this->internalSetSelections( selectNames, child );        
         }
     }
     if ( item->isGroup() && selectNames.contains( item->name() ) )
-    {      
+    {     
+        cDebug()<<"*****************************************************************************************************************************************";
         item->setSelected( Qt::CheckState::Checked );
     }
 }
 
+/** @brief Propagates selection state @p selectState over @p item
+ *
+ * Propagates @p selectState throughout the tree under @p item
+ * and all the duplicates of its packages
+ */
+static void
+propagatePackageSelectionStates( const Qt::CheckState& selectState, PackageTreeItem* item )
+{
+    if ( selectState != Qt::PartiallyChecked && item->isGroup() )
+    {
+        for ( int i = 0; i < item->childCount(); i++ )
+        {
+            auto* child = item->child( i );
+            if ( !child->isGroup() )
+            {
+                this->updatePackageSelectionStates( child->packageName(), selectState );
+            }
+            else
+            {
+                propagatePackageSelectionStates(selectState, child)
+            }
+        }
+    }
+}
+
+/** @brief Copies selection state @p selectState
+ * for packages with name @p selectName over @p item
+ *
+ * Sets state to @p selectState for all copies of "packageName" @p selectName
+ * throughout the tree under @p item 
+ */
 static void
 updatePackageSelectionStates( const QString& selectName, const Qt::CheckState& selectState, PackageTreeItem* item )
 {
@@ -45,12 +78,15 @@ updatePackageSelectionStates( const QString& selectName, const Qt::CheckState& s
         for ( int i = 0; i < item->childCount(); i++ )
         {
             auto* child = item->child( i );
+            // cDebug()<<">> In updatePackageSelectionStates("<<selectName<<", "<<selectState<<", "<<item<<")";
+            // cDebug() << Logger::SubEntry << Logger::SubEntry << "Running updatePackageSelectionStates(" <<selectName<<" ,"<<selectState<<", "<<child<<")";
             updatePackageSelectionStates( selectName, selectState, child );
         }
     }
     else if ( QString::compare(selectName, item->packageName(), Qt::CaseInsensitive) == 0 && item->isSelected() != selectState )
     {
-        cDebug() << Logger::SubEntry <<"While looking for item named "<<selectName<< ", updating item named " << item->packageName();
+        cDebug()<<">> In updatePackageSelectionStates("<<selectName<<", "<<selectState<<", "<<item<<")";
+        cDebug() << Logger::SubEntry << "Running item->setSelected("<<selectState<<")"<<" for "<<"item->name(): "<<item->name()<<", "<<"item->packageName(): "<<item->packageName();
         item->setSelected( selectState );
     }
 }
@@ -187,6 +223,7 @@ PackageModel::data( const QModelIndex& index, int role ) const
 bool
 PackageModel::setData( const QModelIndex& index, const QVariant& value, int role )
 {
+    cDebug()<<">> In PackageModel::setData("<<index<<", "<<value<<", "<<role<<")";
     if ( !m_rootItem )
     {
         return false;
@@ -196,20 +233,32 @@ PackageModel::setData( const QModelIndex& index, const QVariant& value, int role
     {
         PackageTreeItem* item = static_cast< PackageTreeItem* >( index.internalPointer() );
         item->setSelected( static_cast< Qt::CheckState >( value.toInt() ) );
+        cDebug() << Logger::SubEntry << " item->isGroup()" << item->isGroup();
+        cDebug() << Logger::SubEntry << " item->name()" << item->name();
+        cDebug() << Logger::SubEntry << " item->packageName()" << item->packageName();
 
         if( !item->isGroup() )
         {
-            cDebug() << Logger::SubEntry << "Checking if other items are named " << (item->packageName()).toUtf8();
+            cDebug() << Logger::SubEntry << "Running this->updatePackageSelectionStates(" <<item->packageName()<<" ,"<<item->isSelected()<<")";
             this->updatePackageSelectionStates(item->packageName(), item->isSelected());
         } else {
-            for ( int i = 0; i < item->childCount(); i++ )
+            if ( item->isSelected() != Qt::PartiallyChecked )
             {
-                auto* child = item->child( i );
-                cDebug() << Logger::SubEntry <<"Child item "<<child->packageName();
-                
-                if ( item->isSelected() != Qt::PartiallyChecked )
+                for ( int i = 0; i < item->childCount(); i++ )
                 {
-                    this->updatePackageSelectionStates( child->packageName(), item->isSelected() );
+                    auto* child = item->child( i );                
+                    if ( !child->isGroup() )
+                    {
+                        if ( !child->packageName().isEmpty() )
+                        {
+                            cDebug() << Logger::SubEntry << Logger::SubEntry << "Running this->updatePackageSelectionStates(" <<child->packageName()<<" ,"<<item->isSelected()<<")";
+                            this->updatePackageSelectionStates( child->packageName(), item->isSelected() );
+                        }
+                    }
+                    // else
+                    // {
+                    //     this->updatePackageSelectionStates( child->packageName(), item->isSelected() );
+                    // }
                 }
             }
         }
@@ -253,8 +302,10 @@ PackageModel::headerData( int section, Qt::Orientation orientation, int role ) c
 void
 PackageModel::setSelections( const QStringList& selectNames )
 {
+    cDebug()<<">> In PackageModel::setSelections("<<selectNames<<")";
     if ( m_rootItem )
     {
+        cDebug() << Logger::SubEntry << "Running this->internalSetSelections(" <<selectNames<<" ,"<<m_rootItem<<")";
         this->internalSetSelections( selectNames, m_rootItem );
 
         emit dataChanged( this->index( 0, 0 ),
@@ -266,7 +317,7 @@ PackageModel::setSelections( const QStringList& selectNames )
 void
 PackageModel::updatePackageSelectionStates( const QString& selectName, const Qt::CheckState& selectState )
 {
-    if ( m_rootItem )
+    if ( m_rootItem && !selectName.isEmpty() )
     {
         ::updatePackageSelectionStates( selectName, selectState, m_rootItem );
 
