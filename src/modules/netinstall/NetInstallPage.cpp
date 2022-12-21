@@ -73,7 +73,7 @@ NetInstallPage::onActivate()
     const QStringList selectNames = gs->value( "netinstallSelect" ).toStringList();
     if ( !selectNames.isEmpty() )
     {
-        m_config->model()->setSelections( selectNames );
+        m_config->model()->setGroupSelections( selectNames );
     }
 
     // If NetInstallAdd is found in global storage, add those items to the tree
@@ -82,4 +82,6 @@ NetInstallPage::onActivate()
     {
         m_config->model()->appendModelData( groups );
     }
+
+    m_config->model()->updateInitialDuplicates();
 }

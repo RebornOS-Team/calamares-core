@@ -62,7 +62,9 @@ public:
      * Individual packages will not be matched.
      *
      */
-    void setSelections( const QStringList& selectNames );
+    void setGroupSelections( const QStringList& selectNames );
+
+    void updateDuplicates( const QList<QString> * selectNames, const QList<Qt::CheckState> * selectStates);
 
     /** @brief Updates the checked flag on matching packages in the tree
      *
@@ -72,6 +74,8 @@ public:
      *
      */
     void updateDuplicates( const QString& selectName, const Qt::CheckState& selectState );
+
+    void updateInitialDuplicates();
 
     /** @brief Propagates selection state @p selectState over @p item
     *

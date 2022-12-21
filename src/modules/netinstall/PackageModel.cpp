@@ -14,14 +14,14 @@
 #include "utils/Variant.h"
 #include "utils/Yaml.h"
 
-/// Recursive helper for setSelections()
+/// Recursive helper for setGroupSelections()
 static void
-setSelections( const QStringList& selectNames, PackageTreeItem* item )
+setGroupSelections( const QStringList& selectNames, PackageTreeItem* item )
 {
     for ( int i = 0; i < item->childCount(); i++ )
     {
         auto* child = item->child( i );
-        setSelections( selectNames, child );
+        setGroupSelections( selectNames, child );
     }
     if ( item->isGroup() && selectNames.contains( item->name() ) )
     {
@@ -105,7 +105,7 @@ updateDuplicates( const QList<QString> * selectNames, const QList<Qt::CheckState
     else 
     {
         int index = selectNames->indexOf(item->packageName());
-        if ( index >= 0 && item->isSelected() != selectStates->value(index) )
+        if ( index >= 0 && !item->packageName().isEmpty() && item->isSelected() != selectStates->value(index) )
         {
             item->setSelected( selectStates->value(index) );
         }
@@ -271,10 +271,6 @@ PackageModel::setData( const QModelIndex& index, const QVariant& value, int role
         cDebug() << Logger::SubEntry << " item->isGroup()" << item->isGroup();
         cDebug() << Logger::SubEntry << " item->name()" << item->name();
         cDebug() << Logger::SubEntry << " item->packageName()" << item->packageName();
-        QList<QString> packageNames = QList<QString>();
-        QList<Qt::CheckState> packageStates = QList<Qt::CheckState>();
-        this->packageSelectionStates( &packageNames, &packageStates );
-        cDebug() << Logger::SubEntry << " packageSelectionStates() Package Names: " << packageNames << "Package States: "<< packageStates;
 
         if( !item->isGroup() )
         {
@@ -325,11 +321,11 @@ PackageModel::headerData( int section, Qt::Orientation orientation, int role ) c
 }
 
 void
-PackageModel::setSelections( const QStringList& selectNames )
+PackageModel::setGroupSelections( const QStringList& selectNames )
 {
     if ( m_rootItem )
     {
-        ::setSelections( selectNames, m_rootItem );
+        ::setGroupSelections( selectNames, m_rootItem );
     }
 }
 
@@ -347,9 +343,22 @@ PackageModel::packageSelectionStates( QList<QString> * packageNames, QList<Qt::C
 }
 
 void
+PackageModel::updateDuplicates( const QList<QString> * selectNames, const QList<Qt::CheckState> * selectStates)
+{
+    if ( m_rootItem )
+    {
+        ::updateDuplicates( selectNames, selectStates, m_rootItem );
+
+        emit dataChanged( this->index( 0, 0 ),
+                          this->index( 1000, 1000 ),
+                          QVector< int >( Qt::CheckStateRole ) );
+    }
+}
+
+void
 PackageModel::updateDuplicates( const QString& selectName, const Qt::CheckState& selectState )
 {
-    if ( m_rootItem && !selectName.isEmpty() )
+    if ( m_rootItem )
     {
         ::updateDuplicates( selectName, selectState, m_rootItem );
 
@@ -357,6 +366,15 @@ PackageModel::updateDuplicates( const QString& selectName, const Qt::CheckState&
                           this->index( 1000, 1000 ),
                           QVector< int >( Qt::CheckStateRole ) );
     }
+}
+
+void 
+PackageModel::updateInitialDuplicates()
+{
+    QList<QString> packageNames = QList<QString>();
+    QList<Qt::CheckState> packageStates = QList<Qt::CheckState>();
+    this->packageSelectionStates( &packageNames, &packageStates );
+    this->updateDuplicates( &packageNames, &packageStates );
 }
 
 PackageTreeItem::List
