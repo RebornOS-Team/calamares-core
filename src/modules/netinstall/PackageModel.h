@@ -73,6 +73,13 @@ public:
      */
     void updatePackageSelectionStates( const QString& selectName, const Qt::CheckState& selectState );
 
+    /** @brief Propagates selection state @p selectState over @p item
+    *
+    * Propagates @p selectState throughout the tree under @p item
+    * and all the duplicates of its packages
+    */
+    void propagatePackageSelectionStates( const Qt::CheckState& selectState, PackageTreeItem* item );
+
     PackageTreeItem::List getPackages() const;
     PackageTreeItem::List getItemPackages( PackageTreeItem* item ) const;
 

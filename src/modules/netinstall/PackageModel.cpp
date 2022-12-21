@@ -44,8 +44,8 @@ void PackageModel::internalSetSelections( const QStringList& selectNames, Packag
  * Propagates @p selectState throughout the tree under @p item
  * and all the duplicates of its packages
  */
-static void
-propagatePackageSelectionStates( const Qt::CheckState& selectState, PackageTreeItem* item )
+void
+PackageModel::propagatePackageSelectionStates( const Qt::CheckState& selectState, PackageTreeItem* item )
 {
     if ( selectState != Qt::PartiallyChecked && item->isGroup() )
     {
@@ -58,7 +58,7 @@ propagatePackageSelectionStates( const Qt::CheckState& selectState, PackageTreeI
             }
             else
             {
-                propagatePackageSelectionStates(selectState, child)
+                propagatePackageSelectionStates(selectState, child);
             }
         }
     }
@@ -242,25 +242,7 @@ PackageModel::setData( const QModelIndex& index, const QVariant& value, int role
             cDebug() << Logger::SubEntry << "Running this->updatePackageSelectionStates(" <<item->packageName()<<" ,"<<item->isSelected()<<")";
             this->updatePackageSelectionStates(item->packageName(), item->isSelected());
         } else {
-            if ( item->isSelected() != Qt::PartiallyChecked )
-            {
-                for ( int i = 0; i < item->childCount(); i++ )
-                {
-                    auto* child = item->child( i );                
-                    if ( !child->isGroup() )
-                    {
-                        if ( !child->packageName().isEmpty() )
-                        {
-                            cDebug() << Logger::SubEntry << Logger::SubEntry << "Running this->updatePackageSelectionStates(" <<child->packageName()<<" ,"<<item->isSelected()<<")";
-                            this->updatePackageSelectionStates( child->packageName(), item->isSelected() );
-                        }
-                    }
-                    // else
-                    // {
-                    //     this->updatePackageSelectionStates( child->packageName(), item->isSelected() );
-                    // }
-                }
-            }
+            propagatePackageSelectionStates( item->isSelected(), item );
         }
 
         emit dataChanged( this->index( 0, 0 ),
@@ -283,7 +265,11 @@ PackageModel::flags( const QModelIndex& index ) const
         if ( item->isImmutable() || item->isNoncheckable() )
         {
             return QAbstractItemModel::flags( index );  //Qt::NoItemFlags;
-        }
+        } 
+        // else if ( item->isNoncheckable() )
+        // {
+        //     return static_cast<Qt::ItemFlags>(~ Qt::ItemIsEnabled & QAbstractItemModel::flags( index ));
+        // }
         return Qt::ItemIsUserCheckable | QAbstractItemModel::flags( index );
     }
     return QAbstractItemModel::flags( index );
