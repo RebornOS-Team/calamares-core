@@ -118,6 +118,8 @@ public:
     //FIXME: make this horrible method private. -- Teo 12/2015
     Device* immutableDeviceCopy( const Device* device );
 
+    void removeEspMounts();
+
     /**
      * @brief bootLoaderModel returns a model which represents the available boot
      * loader locations.

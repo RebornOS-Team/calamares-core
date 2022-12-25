@@ -95,7 +95,16 @@ doAutopartition( PartitionCoreModule* core, Device* dev, Choices::AutoPartitionO
     // the logical sector size (usually 512B). EFI starts with 2MiB
     // empty and a EFI boot partition, while BIOS starts at
     // the 1MiB boundary (usually sector 2048).
-    int empty_space_sizeB = isEfi ? 2_MiB : 1_MiB;
+    // ARM empty sectors are 16 MiB in size.
+    int empty_space_sizeB;
+    if ( gs->contains( "arm_install" ) && gs->value( "arm_install" ).toBool() )
+    {
+        empty_space_sizeB = 16_MiB;
+    }
+    else
+    {
+        empty_space_sizeB = isEfi ? 2_MiB : 1_MiB;
+    }
 
     // Since sectors count from 0, if the space is 2048 sectors in size,
     // the first free sector has number 2048 (and there are 2048 sectors
@@ -213,6 +222,8 @@ doAutopartition( PartitionCoreModule* core, Device* dev, Choices::AutoPartitionO
 void
 doReplacePartition( PartitionCoreModule* core, Device* dev, Partition* partition, Choices::ReplacePartitionOptions o )
 {
+    Calamares::GlobalStorage* gs = Calamares::JobQueue::instance()->globalStorage();
+
     qint64 firstSector, lastSector;
 
     cDebug() << "doReplacePartition for device" << partition->partitionPath();
@@ -243,6 +254,35 @@ doReplacePartition( PartitionCoreModule* core, Device* dev, Partition* partition
     if ( !partition->roles().has( PartitionRole::Unallocated ) )
     {
         core->deletePartition( dev, partition );
+    }
+
+    qint64 newFirstSector = firstSector;
+    if ( o.newEfiPartition && PartUtils::isEfiSystem() )
+    {
+        qint64 uefisys_part_sizeB = PartUtils::efiFilesystemMinimumSize();
+        qint64 efiSectorCount = CalamaresUtils::bytesToSectors( uefisys_part_sizeB, dev->logicalSize() );
+        Q_ASSERT( efiSectorCount > 0 );
+
+        // Since sectors count from 0, and this partition is created starting
+        // at firstFreeSector, we need efiSectorCount sectors, numbered
+        // firstFreeSector..firstFreeSector+efiSectorCount-1.
+        qint64 lastSector = newFirstSector + efiSectorCount - 1;
+        Partition* efiPartition = KPMHelpers::createNewPartition( dev->partitionTable(),
+                                                                  *dev,
+                                                                  PartitionRole( PartitionRole::Primary ),
+                                                                  FileSystem::Fat32,
+                                                                  QString(),
+                                                                  newFirstSector,
+                                                                  lastSector,
+                                                                  KPM_PARTITION_FLAG( None ) );
+        PartitionInfo::setFormat( efiPartition, true );
+        PartitionInfo::setMountPoint( efiPartition, gs->value( "efiSystemPartition" ).toString() );
+        if ( gs->contains( "efiSystemPartitionName" ) )
+        {
+            efiPartition->setLabel( gs->value( "efiSystemPartitionName" ).toString() );
+        }
+        core->createPartition( dev, efiPartition, KPM_PARTITION_FLAG_ESP );
+        newFirstSector = lastSector + 1;
     }
 
     core->layoutApply( dev, firstSector, lastSector, o.luksFsType, o.luksPassphrase );

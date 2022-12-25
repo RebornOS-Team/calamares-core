@@ -33,15 +33,18 @@ struct ReplacePartitionOptions
     QString defaultFsType;  // e.g. "ext4" or "btrfs"
     QString luksFsType;  // optional ("luks", "luks2")
     QString luksPassphrase;  // optional
+    bool newEfiPartition;
 
     ReplacePartitionOptions( const QString& pt,
                              const QString& fs,
                              const QString& luksFs,
-                             const QString& luksPassphrase )
+                             const QString& luksPassphrase,
+                             const bool& newEsp )
         : defaultPartitionTableType( pt )
         , defaultFsType( fs )
         , luksFsType( luksFs )
         , luksPassphrase( luksPassphrase )
+        , newEfiPartition( newEsp )
     {
     }
 };
@@ -59,7 +62,7 @@ struct AutoPartitionOptions : ReplacePartitionOptions
                           const QString& efi,
                           qint64 requiredBytes,
                           Config::SwapChoice s )
-        : ReplacePartitionOptions( pt, fs, luksFs, luksPassphrase )
+        : ReplacePartitionOptions( pt, fs, luksFs, luksPassphrase , false)
         , efiPartitionMountPoint( efi )
         , requiredSpaceB( requiredBytes > 0 ? quint64( requiredBytes ) : 0U )
         , swap( s )

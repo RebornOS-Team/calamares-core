@@ -17,6 +17,7 @@
 #include "core/BootLoaderModel.h"
 #include "core/DeviceModel.h"
 #include "core/PartitionCoreModule.h"
+#include "core/PartitionInfo.h"
 #include "gui/ChoicePage.h"
 #include "gui/PartitionBarsView.h"
 #include "gui/PartitionLabelsView.h"
@@ -440,6 +441,70 @@ PartitionViewStep::isAtEnd() const
 void
 PartitionViewStep::onActivate()
 {
+
+    auto gs = Calamares::JobQueue::instance()->globalStorage();
+
+    // Alter GS based on prior module
+    QString efiLocation;
+    if ( !m_config->bootloaderVar().isEmpty() && gs->contains( m_config->bootloaderVar() ) )
+    {
+        m_bootloader = gs->value( m_config->bootloaderVar() ).toString();
+        gs->insert( "curBootloader", m_bootloader );
+
+        cDebug() << "The bootloader is " << m_bootloader;
+        if ( m_bootloader.toLower() == "grub" )
+        {
+            efiLocation = "/boot/efi";
+        }
+        else if ( m_bootloader.toLower() == "refind" )
+        {
+            efiLocation = "/boot";
+        }
+        else
+        {
+            efiLocation = "/efi";
+        }
+        cDebug() << "The efi location is " << efiLocation;
+        Calamares::JobQueue::instance()->globalStorage()->insert( "efiSystemPartition", efiLocation );
+    }
+
+    if ( PartUtils::isEfiSystem() && !m_config->bootloaderVar().isEmpty() )
+    {
+        // Alter GS based on prior module
+        QString efiLocation;
+        if ( Calamares::JobQueue::instance()->globalStorage()->contains( m_config->bootloaderVar() ) )
+        {
+            QString bootLoader
+                = Calamares::JobQueue::instance()->globalStorage()->value( m_config->bootloaderVar() ).toString();
+            cDebug() << "The bootloader is " << bootLoader;
+            if ( bootLoader.toLower() == "grub" )
+            {
+                efiLocation = "/boot/efi";
+            }
+            else if ( bootLoader.toLower() == "refind" )
+            {
+                efiLocation = "/boot";
+            }
+            else
+            {
+                efiLocation = "/efi";
+            }
+            cDebug() << "The efi location is " << efiLocation;
+            Calamares::JobQueue::instance()->globalStorage()->insert( "efiSystemPartition", efiLocation );
+        }
+
+        // This may not be our first trip so reset the efi mountpoint if needed
+        if ( m_core->isDirty() )
+        {
+            QList< Partition* > efiSystemPartitions = m_core->efiSystemPartitions();
+            if ( m_choicePage->efiIndex() >= 0
+                 && PartitionInfo::mountPoint( efiSystemPartitions.at( m_choicePage->efiIndex() ) ) != "" )
+            {
+                PartitionInfo::setMountPoint( efiSystemPartitions.at( m_choicePage->efiIndex() ), efiLocation );
+            }
+        }
+    }
+
     m_config->fillGSSecondaryConfiguration();
 
     // if we're coming back to PVS from the next VS
@@ -495,6 +560,47 @@ shouldWarnForGPTOnBIOS( const PartitionCoreModule* core )
 void
 PartitionViewStep::onLeave()
 {
+    auto gs = Calamares::JobQueue::instance()->globalStorage();
+
+    // Put the ESPs in global storage
+    if ( PartUtils::isEfiSystem() )
+    {
+        QList< Partition* > efiSystemPartitions = m_core->efiSystemPartitions();
+        QStringList espPaths;
+        for ( auto partition : efiSystemPartitions )
+        {
+            if ( !partition->partitionPath().trimmed().isEmpty() )
+            {
+                espPaths.append( partition->partitionPath() );
+            }
+        }
+        gs->insert( "espList", espPaths );
+    }
+
+    // Check the size of the ESP for systemd-boot
+    if ( PartUtils::isEfiSystem() && m_bootloader.trimmed() == "systemd-boot" )
+    {
+        const QString espMountPoint = gs->value( "efiSystemPartition" ).toString();
+        Partition* esp = m_core->findPartitionByMountPoint( espMountPoint );
+
+        qint64 minEspSize = gs->value( "efiSystemPartitionMinSize_i" ).toLongLong();
+        if ( esp != nullptr && esp->capacity() < minEspSize )
+        {
+            QString minSizeString = gs->value( "efiSystemPartitionMinSize" ).toString();
+
+            QString message = tr( "EFI partition too small" );
+            QString description = tr( "The size of the EFI partition is smaller than recommended "
+                                      "for systemd-boot.  If you proceed with this partition size, "
+                                      "the installation may fail or the system may not boot.  "
+                                      "The recommended minimum size is %1" )
+                                      .arg( minSizeString );
+
+            QMessageBox mb( QMessageBox::Warning, message, description, QMessageBox::Ok, m_choicePage );
+            Calamares::fixButtonLabels( &mb );
+            mb.exec();
+        }
+    }
+
     if ( m_widget->currentWidget() == m_choicePage )
     {
         m_choicePage->onLeave();
@@ -516,19 +622,18 @@ PartitionViewStep::onLeave()
             Logger::Once o;
 
             const bool okType = esp && PartUtils::isEfiFilesystemSuitableType( esp );
-            const bool okSize = esp && PartUtils::isEfiFilesystemSuitableSize( esp );
             const bool okFlag = esp && PartUtils::isEfiBootable( esp );
 
             if ( !esp )
             {
                 message = tr( "No EFI system partition configured" );
             }
-            else if ( !( okType && okSize && okFlag ) )
+            else if ( !( okType && okFlag ) )
             {
                 message = tr( "EFI system partition configured incorrectly" );
             }
 
-            if ( !esp || !( okType && okSize && okFlag ) )
+            if ( !esp || !( okType && okFlag ) )
             {
                 description = tr( "An EFI system partition is necessary to start %1."
                                   "<br/><br/>"
@@ -548,14 +653,6 @@ PartitionViewStep::onLeave()
                 cDebug() << o << "ESP wrong type";
                 description.append( ' ' );
                 description.append( tr( "The filesystem must have type FAT32." ) );
-            }
-            if ( !okSize )
-            {
-                cDebug() << o << "ESP too small";
-                const qint64 atLeastBytes = static_cast< qint64 >( PartUtils::efiFilesystemMinimumSize() );
-                const auto atLeastMiB = CalamaresUtils::BytesToMiB( atLeastBytes );
-                description.append( ' ' );
-                description.append( tr( "The filesystem must be at least %1 MiB in size." ).arg( atLeastMiB ) );
             }
             if ( !okFlag )
             {

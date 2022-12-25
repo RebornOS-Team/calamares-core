@@ -131,6 +131,11 @@ public:
      */
     QString luksFileSystemType() const { return m_luksFileSystemType; }
 
+    /** @brief Get the variable name in global storage holding the name of bootloader
+     *
+     */
+    QString bootloaderVar() const { return m_bootloaderVar; }
+
     /** @brief Get the list of configured FS types to use with *erase* mode
      *
      * This list is not empty.
@@ -186,6 +191,8 @@ private:
     InstallChoice m_installChoice = NoChoice;
     qreal m_requiredStorageGiB = 0.0;  // May duplicate setting in the welcome module
     QStringList m_requiredPartitionTableType;
+
+    QString m_bootloaderVar;
 
     bool m_allowManualPartitioning = true;
 };
