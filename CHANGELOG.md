@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Core `v3.3.0_alpha005_004`
+## Calamares Core `v3.3.0_alpha005_005`
 
 ### For Users
 
