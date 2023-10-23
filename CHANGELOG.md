@@ -1,12 +1,14 @@
 # CHANGELOG
 
-## Calamares Core `3.3.0_alpha005_001`
+## Calamares Core `v3.3.0_alpha005_002`
 
 ### For Users
 
 - Fix hanging while mounting happens in the installer
 
 ### For Developers
+
+- Disable the use of `pybind11`. It currently prevents the python modules from running.
 
 ## Calamares Core `v3.3.0_alpha3_010`
 

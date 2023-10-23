@@ -1,7 +1,7 @@
 # Maintainer: shiva.patt <shivanandvp@rebornos.org>
 
 pkgname=calamares-core-local
-pkgver=3.3.0_alpha005_001
+pkgver=3.3.0_alpha005_002
 pkgrel=1
 
 arch=('x86_64' 'aarch64')
@@ -68,6 +68,7 @@ build() {
     cmake \
         -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_INSTALL_LIBDIR=lib \
+        -DWITH_PYBIND11="OFF" \
         -B "$BUILD_DIRECTORY" -S "$PROJECT_DIRECTORY" && \
     cmake --build "$BUILD_DIRECTORY" --parallel "$NUMBER_OF_PROCESSORS"
 }
