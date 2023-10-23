@@ -91,13 +91,13 @@ class cpuinfo(object):
         return cpu_info
 
 
-def get_host_initcpio(host_initcpio_path):
+def get_host_initcpio():
     """
     Reads the host system mkinitcpio.conf and returns all
     the lines from that file, or an empty list if it does
     not exist.
     """
-    hostfile = host_initcpio_path
+    hostfile = "/etc/mkinitcpio.conf"
     try:
         with open(hostfile, "r") as mkinitcpio_file:
             mklins = [x.strip() for x in mkinitcpio_file.readlines()]
@@ -117,7 +117,7 @@ def write_mkinitcpio_lines(hooks, modules, files, binaries, root_mount_point):
     :param files:
     :param root_mount_point:
     """
-    mklins = get_host_initcpio(host_initcpio_path)
+    mklins = get_host_initcpio()
 
     target_path = os.path.join(root_mount_point, "etc/mkinitcpio.conf")
     with open(target_path, "w") as mkinitcpio_file:
@@ -248,8 +248,6 @@ def run():
 
     :return:
     """
-    cfg = libcalamares.job.configuration
-    host_initcpio_path = cfg.get("path", "/etc/mkinitcpio.conf")
     partitions = libcalamares.globalstorage.value("partitions")
     root_mount_point = libcalamares.globalstorage.value("rootMountPoint")
 
