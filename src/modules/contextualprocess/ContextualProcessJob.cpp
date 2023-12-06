@@ -112,7 +112,7 @@ ContextualProcessJob::~ContextualProcessJob()
 QString
 ContextualProcessJob::prettyName() const
 {
-    return tr( "Contextual Processes Job" );
+    return tr( "Performing contextual processes' job…", "@status" );
 }
 
 Calamares::JobResult

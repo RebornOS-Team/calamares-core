@@ -7,7 +7,7 @@
 # Pierfrancesco Passerini <p.passerini@gmail.com>, 2019
 # Pietro F. Fontana, 2020
 # Saverio <saverio.brancaccio@gmail.com>, 2020
-# Giuseppe Pignataro <rogepix@gmail.com>, 2021
+# Giuseppe Pignataro (Fastbyte01) <rogepix@gmail.com>, 2021
 # Vincenzo Reale <vinx.reale@gmail.com>, 2022
 # vincenzo sammarco, 2022
 # Paolo Zamponi <feus73@gmail.com>, 2023

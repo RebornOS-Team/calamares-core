@@ -11,12 +11,12 @@
     <message>
       <location filename="../src/libcalamares/CalamaresAbout.cpp" line="20"/>
       <source>Thanks to &lt;a href="https://calamares.io/team/"&gt;the Calamares team&lt;/a&gt; and the &lt;a href="https://app.transifex.com/calamares/calamares/"&gt;Calamares translators team&lt;/a&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>Teşekkürler &lt;a href="https://calamares.io/team/"&gt;Calamares takımı&lt;/a&gt; ve &lt;a href="https://app.transifex.com/calamares/calamares/"&gt;Calamares çevirmenleri&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/CalamaresAbout.cpp" line="25"/>
       <source>&lt;a href="https://calamares.io/"&gt;Calamares&lt;/a&gt; development is sponsored by &lt;br/&gt;&lt;a href="http://www.blue-systems.com/"&gt;Blue Systems&lt;/a&gt; - Liberating Software.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;a href="https://calamares.io/"&gt;Calamares&lt;/a&gt; gelişim sponsoru &lt;br/&gt;&lt;a href="http://www.blue-systems.com/"&gt;Blue Systems&lt;/a&gt; - Özgür Yazılım.</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/CalamaresAbout.cpp" line="40"/>
@@ -2637,7 +2637,7 @@ Kurulum sürdürülebilir; ancak bazı özellikler devre dışı bırakılabilir
     <message>
       <location filename="../src/modules/keyboard/KeyboardPage.ui" line="153"/>
       <source>Keyboard Switch:</source>
-      <translation type="unfinished"/>
+      <translation>Klavye değiştir:</translation>
     </message>
   </context>
   <context>
