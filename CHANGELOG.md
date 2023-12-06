@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Calamares Core `v3.3.0_alpha006_001`
+
+### For Users
+
+- Update the installer from upstream, bringing new features and bug-fixes.
+
+### For Developers
+
+- Re-enable the use of `pybind11` instead of boost.
+
 ## Calamares Core `v3.3.0_alpha005_005`
 
 ### For Users
