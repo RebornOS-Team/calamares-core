@@ -37,7 +37,6 @@ depends=(
     'adobe-source-han-sans-otc-fonts'
     'python'
     'adobe-source-han-serif-otc-fonts'
-    'boost'
     'mkinitcpio-openswap'
 )
 optdepends=()

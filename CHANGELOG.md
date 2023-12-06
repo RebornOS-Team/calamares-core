@@ -9,6 +9,7 @@
 ### For Developers
 
 - Re-enable the use of `pybind11` instead of boost.
+- Remove dependency on `boost`.
 
 ## Calamares Core `v3.3.0_alpha005_005`
 
