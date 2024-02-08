@@ -47,7 +47,7 @@
 
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 
-set(CALAMARES_VERSION 3.3.0)
+set(CALAMARES_VERSION 3.3.2)
 set(CALAMARES_RELEASE_MODE OFF) # Set to ON during a release
 
 if(CMAKE_SCRIPT_MODE_FILE)
@@ -156,13 +156,12 @@ set( CALAMARES_DESCRIPTION_SUMMARY
 #       `txstats.py -e`. See also
 #
 # Total 80 languages
-set( _tx_complete az_AZ ca en es fi_FI fr he hr ja lt pl sq sv
-    tr_TR uk zh_TW )
-set( _tx_good as az be bg ca@valencia cs_CZ da de fa fur hi is
-    it_IT ko nl pt_BR pt_PT ru si sk tg vi zh_CN )
-set( _tx_ok ar ast bn el en_GB eo es_AR es_MX et eu gl hu id ml mr
-    nb oc ro sl sr sr@latin th )
-set( _tx_incomplete bqi es_PR gu ie ja-Hira ka kk kn lo lv mk ne_NP
+set( _tx_complete de en es_AR fi_FI hr hu ja lt tr_TR uk zh_TW )
+set( _tx_good az az_AZ be bg ca cs_CZ es fr fur he hi is it_IT ko
+    pl pt_BR pt_PT ru si sq sv zh_CN )
+set( _tx_ok ar as ast bn ca@valencia da el en_GB eo es_MX et eu fa
+    gl id ka ml mr nb nl oc ro sk sl sr sr@latin tg th vi )
+set( _tx_incomplete bqi es_PR gu ie ja-Hira kk kn lo lv mk ne_NP
     ro_RO ta_IN te ur uz zh zh_HK )
 # Total 80 languages
 
@@ -514,6 +513,7 @@ if(NOT CALAMARES_RELEASE_MODE)
     list(APPEND CALAMARES_TRANSLATION_LANGUAGES ${_tx_incomplete})
 endif()
 list(SORT CALAMARES_TRANSLATION_LANGUAGES)
+list(REMOVE_DUPLICATES CALAMARES_TRANSLATION_LANGUAGES)
 
 add_subdirectory(lang) # i18n tools
 

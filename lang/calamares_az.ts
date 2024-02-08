@@ -11,12 +11,12 @@
     <message>
       <location filename="../src/libcalamares/CalamaresAbout.cpp" line="20"/>
       <source>Thanks to &lt;a href="https://calamares.io/team/"&gt;the Calamares team&lt;/a&gt; and the &lt;a href="https://app.transifex.com/calamares/calamares/"&gt;Calamares translators team&lt;/a&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;a href="https://calamares.io/team/"&gt;Calamares komandasına&lt;/a&gt; və &lt;a href="https://app.transifex.com/calamares/calamares/"&gt;Calamares tərcüməçilər komandasına&lt;/a&gt; təşəkkürlər. </translation>
     </message>
     <message>
       <location filename="../src/libcalamares/CalamaresAbout.cpp" line="25"/>
       <source>&lt;a href="https://calamares.io/"&gt;Calamares&lt;/a&gt; development is sponsored by &lt;br/&gt;&lt;a href="http://www.blue-systems.com/"&gt;Blue Systems&lt;/a&gt; - Liberating Software.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;a href="https://calamares.io/"&gt;Calamares&lt;/a&gt; tərtibatı &lt;br/&gt; &lt;a href="http://www.blue-systems.com/"&gt;Blue Systems&lt;/a&gt; - Liberating Software tərəfindən maliyələşir.</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/CalamaresAbout.cpp" line="40"/>
@@ -29,8 +29,9 @@
     <name>AutoMountManagementJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/AutoMountManagementJob.cpp" line="22"/>
-      <source>Manage auto-mount settings</source>
-      <translation>Avtomatik qoşulma ayarlarını idarə edin</translation>
+      <source>Managing auto-mount settings…</source>
+      <comment>@status</comment>
+      <translation>Avtomatik qoşulma ayarlarınln idarə edilməsi...</translation>
     </message>
   </context>
   <context>
@@ -56,21 +57,25 @@
     <message>
       <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="60"/>
       <source>Master Boot Record of %1</source>
+      <comment>@info</comment>
       <translation>%1 əsas önyükləyicinin qeydə alınması</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="93"/>
       <source>Boot Partition</source>
+      <comment>@info</comment>
       <translation>Önyükləyici bölməsi</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="100"/>
       <source>System Partition</source>
+      <comment>@info</comment>
       <translation>Sistem bölməsi</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/BootLoaderModel.cpp" line="131"/>
       <source>Do not install a boot loader</source>
+      <comment>@label</comment>
       <translation>Heç bir önyükləyici quraşdırma</translation>
     </message>
     <message>
@@ -122,23 +127,13 @@
     </message>
     <message>
       <location filename="../src/calamares/DebugWindow.ui" line="102"/>
-      <source>Crashes Calamares, so that Dr. Konqui can look at it.</source>
-      <translation>Calamares çökür, belə ki, Dr. Konqui onu görə bilir.</translation>
+      <source>Crashes Calamares, so that Dr. Konqi can look at it.</source>
+      <translation>Clamares-i qəza baş vermiş kim bağlayın ki, məlumatlara Dr. Konqui-də baxmaq mümkün olsun.</translation>
     </message>
     <message>
       <location filename="../src/calamares/DebugWindow.ui" line="115"/>
       <source>Reloads the stylesheet from the branding directory.</source>
       <translation>Üslub cədvəlini marka kataloqundan yenidən yükləyir.</translation>
-    </message>
-    <message>
-      <location filename="../src/calamares/DebugWindow.ui" line="141"/>
-      <source>Uploads the session log to the configured pastebin.</source>
-      <translation>Sessiya jurnalını konfiqurasiya edilmiş pastebin'ə yükləyir.</translation>
-    </message>
-    <message>
-      <location filename="../src/calamares/DebugWindow.ui" line="144"/>
-      <source>Send Session Log</source>
-      <translation>Sessiya jurnalını göndərin</translation>
     </message>
     <message>
       <location filename="../src/calamares/DebugWindow.ui" line="118"/>
@@ -156,27 +151,40 @@
       <translation>Vidjetlər ağacı</translation>
     </message>
     <message>
+      <location filename="../src/calamares/DebugWindow.ui" line="141"/>
+      <source>Uploads the session log to the configured pastebin.</source>
+      <translation>Sessiya jurnalını konfiqurasiya edilmiş pastebin'ə yükləyir.</translation>
+    </message>
+    <message>
+      <location filename="../src/calamares/DebugWindow.ui" line="144"/>
+      <source>Send Session Log</source>
+      <translation>Sessiya jurnalını göndərin</translation>
+    </message>
+    <message>
       <location filename="../src/calamares/DebugWindow.cpp" line="164"/>
-      <source>Debug information</source>
+      <source>Debug Information</source>
+      <comment>@title</comment>
       <translation>Sazlama məlumatları</translation>
     </message>
   </context>
   <context>
     <name>Calamares::ExecutionViewStep</name>
     <message>
-      <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="76"/>
+      <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="77"/>
       <source>%p%</source>
       <comment>Progress percentage indicator: %p is where the number 0..100 is placed</comment>
       <translation>%p%</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
-      <source>Set up</source>
-      <translation>Ayarlamaq</translation>
+      <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="118"/>
+      <source>Set Up</source>
+      <comment>@label</comment>
+      <translation>Ayarlayın</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="116"/>
+      <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="118"/>
       <source>Install</source>
+      <comment>@label</comment>
       <translation>Quraşdırmaq</translation>
     </message>
   </context>
@@ -212,69 +220,139 @@
   <context>
     <name>Calamares::ProcessJob</name>
     <message>
-      <location filename="../src/libcalamares/ProcessJob.cpp" line="39"/>
-      <source>Run command '%1' in target system.</source>
-      <translation>'%1' əmrini hədəf sistemdə başlatmaq.</translation>
+      <location filename="../src/libcalamares/ProcessJob.cpp" line="49"/>
+      <source>Running command %1 in target system…</source>
+      <comment>@status</comment>
+      <translation>%1 əmrinin hədəf sistemdə başladılması...</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/ProcessJob.cpp" line="39"/>
-      <source> Run command '%1'.</source>
-      <translation> '%1' əmrini başlatmaq.</translation>
+      <location filename="../src/libcalamares/ProcessJob.cpp" line="53"/>
+      <source>Running command %1…</source>
+      <comment>@status</comment>
+      <translation>%1 əmri başladılır...</translation>
+    </message>
+  </context>
+  <context>
+    <name>Calamares::Python::Job</name>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="214"/>
+      <source>Running %1 operation.</source>
+      <translation>%1 əməliyyatı icra olunur.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/ProcessJob.cpp" line="45"/>
-      <source>Running command %1 %2</source>
-      <translation>%1 əmri icra olunur %2</translation>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="229"/>
+      <source>Bad working directory path</source>
+      <translation>İş qovluğuna səhv yol</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="230"/>
+      <source>Working directory %1 for python job %2 is not readable.</source>
+      <translation>%1 qovluğu %2 python işləri üçün açıla bilmir.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="238"/>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="314"/>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="340"/>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="357"/>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="365"/>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="373"/>
+      <source>Bad main script file</source>
+      <translation>Korlanmış əsas əmrlər faylı</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="239"/>
+      <source>Main script file %1 for python job %2 is not readable.</source>
+      <translation>%1 əsas əmrlər faylı %2 python işləri üçün açıla bilmir.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="300"/>
+      <source>Bad internal script</source>
+      <translation>Yararsız daxili əmr faylı</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="301"/>
+      <source>Internal script for python job %1 raised an exception.</source>
+      <translation>%1 python tapşırığı üçün daxili əmr faylı bir istisna yaratdı.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="315"/>
+      <source>Main script file %1 for python job %2 could not be loaded because it raised an  exception.</source>
+      <translation>%2 python tapşırığı üçün %1 əmr faylı yüklənə bilmədi, çünki o, bir istisna yaratdı.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="341"/>
+      <source>Main script file %1 for python job %2 raised an exception.</source>
+      <translation>%2 python tapşırığı üçün %1 əmr faylı bir xəta yaratdı.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="358"/>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="366"/>
+      <source>Main script file %1 for python job %2 returned invalid results.</source>
+      <translation>%2 python tapşırığı üçün %1 əmr faylı düzgün olmayan nəticələr göstərdi.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamares/python/PythonJob.cpp" line="374"/>
+      <source>Main script file %1 for python job %2 does not contain a run() function.</source>
+      <translation>%2 python tapşırığı üçün %1 əsas əmr faylında "run()" funksiyası yoxdur.</translation>
     </message>
   </context>
   <context>
     <name>Calamares::PythonJob</name>
     <message>
       <location filename="../src/libcalamares/PythonJob.cpp" line="233"/>
-      <source>Running %1 operation.</source>
-      <translation>%1 əməliyyatı icra olunur.</translation>
+      <source>Running %1 operation…</source>
+      <comment>@status</comment>
+      <translation>%1 əməliyyatı başlayır...</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/PythonJob.cpp" line="262"/>
+      <location filename="../src/libcalamares/PythonJob.cpp" line="261"/>
       <source>Bad working directory path</source>
+      <comment>@error</comment>
       <translation>İş qovluğuna səhv yol</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/PythonJob.cpp" line="263"/>
+      <location filename="../src/libcalamares/PythonJob.cpp" line="262"/>
       <source>Working directory %1 for python job %2 is not readable.</source>
+      <comment>@error</comment>
       <translation>%1 qovluğu %2 python işləri üçün açıla bilmir.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/PythonJob.cpp" line="269"/>
+      <location filename="../src/libcalamares/PythonJob.cpp" line="270"/>
       <source>Bad main script file</source>
+      <comment>@error</comment>
       <translation>Korlanmış əsas əmrlər faylı</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/PythonJob.cpp" line="270"/>
+      <location filename="../src/libcalamares/PythonJob.cpp" line="271"/>
       <source>Main script file %1 for python job %2 is not readable.</source>
+      <comment>@error</comment>
       <translation>%1 əsas əmrlər faylı %2 python işləri üçün açıla bilmir.</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/PythonJob.cpp" line="343"/>
-      <source>Boost.Python error in job "%1".</source>
-      <translation>Boost.Python iş xətası "%1".</translation>
+      <source>Boost.Python error in job "%1"</source>
+      <comment>@error</comment>
+      <translation>"%1" tapşırığının icrasında Boost.Python xətası</translation>
     </message>
   </context>
   <context>
     <name>Calamares::QmlViewStep</name>
     <message>
-      <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="68"/>
-      <source>Loading ...</source>
+      <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="73"/>
+      <source>Loading…</source>
+      <comment>@status</comment>
       <translation>Yüklənir...</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="89"/>
-      <source>QML Step &lt;i&gt;%1&lt;/i&gt;.</source>
+      <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="100"/>
+      <source>QML step &lt;i&gt;%1&lt;/i&gt;.</source>
+      <comment>@label</comment>
       <translation>QML addımı &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="266"/>
+      <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="286"/>
       <source>Loading failed.</source>
+      <comment>@info</comment>
       <translation>Yüklənmə alınmadı.</translation>
     </message>
   </context>
@@ -283,67 +361,36 @@
     <message>
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="99"/>
       <source>Requirements checking for module '%1' is complete.</source>
+      <comment>@info</comment>
       <translation>"%1" modulu üçün tələblərin yoxlanılması tamamlandı.</translation>
     </message>
     <message numerus="yes">
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="123"/>
-      <source>Waiting for %n module(s).</source>
+      <source>Waiting for %n module(s)…</source>
+      <comment>@status</comment>
       <translation>
-        <numerusform>%n modul üçün gözləyir.</numerusform>
-        <numerusform>%n modul üçün gösləyir.</numerusform>
+        <numerusform>%n modul(lar) üçün gözləmə.</numerusform>
+        <numerusform>%n modul(lar) üçün gözləmə...</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="124"/>
       <source>(%n second(s))</source>
+      <comment>@status</comment>
       <translation>
-        <numerusform>(%n saniyə)</numerusform>
+        <numerusform>(%n saniyə(lər))</numerusform>
         <numerusform>(%n saniyə)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="129"/>
       <source>System-requirements checking is complete.</source>
+      <comment>@info</comment>
       <translation>Sistem uyğunluqları yoxlaması başa çatdı.</translation>
     </message>
   </context>
   <context>
     <name>Calamares::ViewManager</name>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
-      <source>Setup Failed</source>
-      <translation>Quraşdırılma xətası</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
-      <source>Installation Failed</source>
-      <translation>Quraşdırılma alınmadı</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
-      <source>Error</source>
-      <translation>Xəta</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="90"/>
-      <source>&amp;Yes</source>
-      <translation>&amp;Bəli</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="91"/>
-      <source>&amp;No</source>
-      <translation>&amp;Xeyr</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="92"/>
-      <source>&amp;Close</source>
-      <translation>&amp;Bağlamaq</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/utils/Paste.cpp" line="183"/>
-      <source>Install Log Paste URL</source>
-      <translation>Jurnal yerləşdirmə URL-nu daxil etmək</translation>
-    </message>
     <message>
       <location filename="../src/libcalamaresui/utils/Paste.cpp" line="165"/>
       <source>The upload was unsuccessful. No web-paste was done.</source>
@@ -363,124 +410,184 @@ Link copied to clipboard</source>
 Keçid mübadilə yaddaşına kopyalandı</translation>
     </message>
     <message>
+      <location filename="../src/libcalamaresui/utils/Paste.cpp" line="183"/>
+      <source>Install Log Paste URL</source>
+      <translation>Jurnal yerləşdirmə URL-nu daxil etmək</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="90"/>
+      <source>&amp;Yes</source>
+      <translation>&amp;Bəli</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="91"/>
+      <source>&amp;No</source>
+      <translation>&amp;Xeyr</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="92"/>
+      <source>&amp;Close</source>
+      <translation>&amp;Bağlamaq</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="155"/>
+      <source>Setup Failed</source>
+      <comment>@title</comment>
+      <translation>Quraşdırılma xətası</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
+      <source>Installation Failed</source>
+      <comment>@title</comment>
+      <translation>Quraşdırılma alınmadı</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
+      <source>Error</source>
+      <comment>@title</comment>
+      <translation>Xəta</translation>
+    </message>
+    <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="184"/>
       <source>Calamares Initialization Failed</source>
+      <comment>@title</comment>
       <translation>Calamares işə salına bilmədi</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="185"/>
       <source>%1 can not be installed. Calamares was unable to load all of the configured modules. This is a problem with the way Calamares is being used by the distribution.</source>
+      <comment>@info</comment>
       <translation>%1 quraşdırılmadı. Calamares konfiqurasiya edilmiş modulların hamısını yükləyə bilmədi. Bu Calamares'i, sizin distribütör tərəfindən necə istifadə edilməsindən asılı olan bir problemdir.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="191"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="192"/>
       <source>&lt;br/&gt;The following modules could not be loaded:</source>
+      <comment>@info</comment>
       <translation>&lt;br/&gt;Yüklənə bilməyən modullar aşağıdakılardır:</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="333"/>
-      <source>Continue with setup?</source>
-      <translation>Quraşdırılma davam etdirilsin?</translation>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="332"/>
+      <source>Continue with Setup?</source>
+      <comment>@title</comment>
+      <translation>Ayarlama ilə davam edək?</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="333"/>
-      <source>Continue with installation?</source>
-      <translation>Quraşdırılma davam etdirilsin?</translation>
+      <source>Continue with Installation?</source>
+      <comment>@title</comment>
+      <translation>Quraşdırma ilə davam edək?</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="335"/>
       <source>The %1 setup program is about to make changes to your disk in order to set up %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
+      <comment>%1 is short product name, %2 is short product name with version</comment>
       <translation>%1 quraşdırıcı proqramı %2 quraşdırmaq üçün Sizin diskdə dəyişiklik etməyə hazırdır.&lt;br/&gt;&lt;strong&gt;Bu dəyişikliyi ləğv etmək mümkün olmayacaq.&lt;/strong&gt;</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="338"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="339"/>
       <source>The %1 installer is about to make changes to your disk in order to install %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
+      <comment>%1 is short product name, %2 is short product name with version</comment>
       <translation>%1 quraşdırıcı proqramı %2 quraşdırmaq üçün Sizin diskdə dəyişiklik etməyə hazırdır.&lt;br/&gt;&lt;strong&gt;Bu dəyişikliyi ləğv etmək mümkün olmayacaq.&lt;/strong&gt;</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="341"/>
-      <source>&amp;Set up now</source>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="344"/>
+      <source>&amp;Set Up Now</source>
+      <comment>@button</comment>
       <translation>&amp;İndi ayarlamaq</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="341"/>
-      <source>&amp;Install now</source>
-      <translation>Q&amp;uraşdırmağa başlamaq</translation>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="344"/>
+      <source>&amp;Install Now</source>
+      <comment>@button</comment>
+      <translation>&amp;İndi quraşdırın</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
-      <source>Go &amp;back</source>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="351"/>
+      <source>Go &amp;Back</source>
+      <comment>@button</comment>
       <translation>&amp;Geriyə</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="395"/>
-      <source>&amp;Set up</source>
-      <translation>A&amp;yarlamaq</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="395"/>
-      <source>&amp;Install</source>
-      <translation>Qu&amp;raşdırmaq</translation>
-    </message>
-    <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="397"/>
-      <source>Setup is complete. Close the setup program.</source>
-      <translation>Quraşdırma başa çatdı. Quraşdırma proqramını bağlayın.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="398"/>
-      <source>The installation is complete. Close the installer.</source>
-      <translation>Quraşdırma başa çatdı. Quraşdırıcını bağlayın.</translation>
+      <source>&amp;Set Up</source>
+      <comment>@button</comment>
+      <translation>&amp;Ayarlayın</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="398"/>
+      <source>&amp;Install</source>
+      <comment>@button</comment>
+      <translation>Qu&amp;raşdırmaq</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="400"/>
-      <source>Cancel setup without changing the system.</source>
-      <translation>Sistemi dəyişdirmədən quraşdırmanı ləğv etmək.</translation>
+      <source>Setup is complete. Close the setup program.</source>
+      <comment>@tooltip</comment>
+      <translation>Quraşdırma başa çatdı. Quraşdırma proqramını bağlayın.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="401"/>
-      <source>Cancel installation without changing the system.</source>
-      <translation>Sistemə dəyişiklik etmədən quraşdırmadan imtina etmək.</translation>
+      <source>The installation is complete. Close the installer.</source>
+      <comment>@tooltip</comment>
+      <translation>Quraşdırma başa çatdı. Quraşdırıcını bağlayın.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="411"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="403"/>
+      <source>Cancel the setup process without changing the system.</source>
+      <comment>@tooltip</comment>
+      <translation>Sistemdə dəyişiklik etmədən ayarlama prosesini ləğv etmək.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="404"/>
+      <source>Cancel the installation process without changing the system.</source>
+      <comment>@tooltip</comment>
+      <translation>Sistemdə dəyişiklik etmədən quraşdırma prosesini ləğv etmək.</translation>
+    </message>
+    <message>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="414"/>
       <source>&amp;Next</source>
+      <comment>@button</comment>
       <translation>İ&amp;rəli</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="416"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="419"/>
       <source>&amp;Back</source>
+      <comment>@button</comment>
       <translation>&amp;Geriyə</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="422"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="425"/>
       <source>&amp;Done</source>
+      <comment>@button</comment>
       <translation>&amp;Hazır</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="441"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="444"/>
       <source>&amp;Cancel</source>
-      <translation>İm&amp;tina etmək</translation>
+      <comment>@button</comment>
+      <translation>&amp;İmtina etmək</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="513"/>
-      <source>Cancel setup?</source>
-      <translation>Quraşdırılmadan imtina edilsin?</translation>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="516"/>
+      <source>Cancel Setup?</source>
+      <comment>@title</comment>
+      <translation>Ayarlama ləğv edilsin?</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="513"/>
-      <source>Cancel installation?</source>
-      <translation>Yüklənmədən imtina edilsin?</translation>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="516"/>
+      <source>Cancel Installation?</source>
+      <comment>@title</comment>
+      <translation>Quraşdırma ləğv edilsin?</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="514"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="517"/>
       <source>Do you really want to cancel the current setup process?
 The setup program will quit and all changes will be lost.</source>
       <translation>Siz doğrudanmı hazırkı quraşdırmadan imtina etmək istəyirsiniz?
 Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamaresui/ViewManager.cpp" line="516"/>
+      <location filename="../src/libcalamaresui/ViewManager.cpp" line="519"/>
       <source>Do you really want to cancel the current install process?
 The installer will quit and all changes will be lost.</source>
       <translation>Siz doğrudanmı hazırkı yüklənmədən imtina etmək istəyirsiniz?
@@ -490,35 +597,39 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
   <context>
     <name>CalamaresPython::Helper</name>
     <message>
-      <location filename="../src/libcalamares/PythonHelper.cpp" line="307"/>
+      <location filename="../src/libcalamares/PythonHelper.cpp" line="309"/>
       <source>Unknown exception type</source>
+      <comment>@error</comment>
       <translation>Naməlum istisna hal</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/PythonHelper.cpp" line="325"/>
-      <source>unparseable Python error</source>
-      <translation>görünməmiş Python xətası</translation>
+      <location filename="../src/libcalamares/PythonHelper.cpp" line="327"/>
+      <source>Unparseable Python error</source>
+      <comment>@error</comment>
+      <translation>Təhlil edilə bilməyən Python xətası</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/PythonHelper.cpp" line="369"/>
-      <source>unparseable Python traceback</source>
-      <translation>görünməmiş Python izi</translation>
+      <location filename="../src/libcalamares/PythonHelper.cpp" line="371"/>
+      <source>Unparseable Python traceback</source>
+      <comment>@error</comment>
+      <translation>Təhlili mümkün olmayan Python izləri</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/PythonHelper.cpp" line="376"/>
-      <source>Unfetchable Python error.</source>
-      <translation>Oxunmayan Python xətası.</translation>
+      <location filename="../src/libcalamares/PythonHelper.cpp" line="378"/>
+      <source>Unfetchable Python error</source>
+      <comment>@error</comment>
+      <translation>Əldə edilə bilməyən Python xətası</translation>
     </message>
   </context>
   <context>
     <name>CalamaresWindow</name>
     <message>
-      <location filename="../src/calamares/CalamaresWindow.cpp" line="403"/>
+      <location filename="../src/calamares/CalamaresWindow.cpp" line="405"/>
       <source>%1 Setup Program</source>
       <translation>%1 Quraşdırıcı proqram</translation>
     </message>
     <message>
-      <location filename="../src/calamares/CalamaresWindow.cpp" line="404"/>
+      <location filename="../src/calamares/CalamaresWindow.cpp" line="406"/>
       <source>%1 Installer</source>
       <translation>%1 Quraşdırıcı</translation>
     </message>
@@ -527,18 +638,27 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>ChangeFilesystemLabelJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="34"/>
-      <source>Set filesystem label on %1.</source>
-      <translation>Fayl sistemi yarlığını %1 üzərində qurun.</translation>
+      <source>Set filesystem label on %1</source>
+      <comment>@title</comment>
+      <translation>%1 üzərindəki fayl sistemi etiketini təyin edin</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="41"/>
-      <source>Set filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; fayl sistemi yarlığını &lt;strong&gt;%2&lt;/strong&gt; bölməsinə qurun.</translation>
+      <source>Set filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt; fayl sistemi etiketini &lt;strong&gt;%2&lt;/strong&gt; bölməsinə təyin edin</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="71"/>
-      <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="83"/>
+      <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="50"/>
+      <source>Setting filesystem label &lt;strong&gt;%1&lt;/strong&gt; to partition &lt;strong&gt;%2&lt;/strong&gt;…</source>
+      <comment>@status</comment>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt; fayl sistemi etiketini &lt;strong&gt;%2&lt;/strong&gt;bölməsinə ayarlayın...</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="72"/>
+      <location filename="../src/modules/partition/jobs/ChangeFilesystemLabelJob.cpp" line="84"/>
       <source>The installer failed to update partition table on disk '%1'.</source>
+      <comment>@info</comment>
       <translation>Quraşdırıcının '%1' diskindəki bölməni yeniləməsi baş tutmadı.</translation>
     </message>
   </context>
@@ -555,190 +675,209 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="137"/>
       <source>Select storage de&amp;vice:</source>
+      <comment>@label</comment>
       <translation>Yaddaş ci&amp;hazını seçmək:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="138"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1024"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1075"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1128"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1034"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1085"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1138"/>
       <source>Current:</source>
+      <comment>@label</comment>
       <translation>Cari:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="139"/>
       <source>After:</source>
+      <comment>@label</comment>
       <translation>Sonra:</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1649"/>
-      <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.</source>
-      <translation>&lt;strong&gt;Əl ilə bölmək&lt;/strong&gt;&lt;br/&gt;Siz bölməni özünüz yarada və ölçüsünü dəyişə bilərsiniz.</translation>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="896"/>
+      <source>Reuse %1 as home partition for %2</source>
+      <comment>@label</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="891"/>
-      <source>Reuse %1 as home partition for %2.</source>
-      <translation>%1 Ev bölməsi olaraq %2 üçün istifadə edilsin.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1025"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1035"/>
       <source>&lt;strong&gt;Select a partition to shrink, then drag the bottom bar to resize&lt;/strong&gt;</source>
       <translation>&lt;strong&gt;Kiçiltmək üçün bir bölmə seçərək altdakı çübüğü sürüşdürərək ölçüsünü verin&lt;/strong&gt;</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1049"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1059"/>
       <source>%1 will be shrunk to %2MiB and a new %3MiB partition will be created for %4.</source>
+      <comment>@info, %1 is partition name, %4 is product name</comment>
       <translation>%1 %2MB-a qədər azalacaq və %4 üçün yeni bölmə %3MB disk bölməsi yaradılacaq.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1677"/>
-      <source>Boot loader location:</source>
-      <translation>Ön yükləyici (boot) yeri:</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1119"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1129"/>
       <source>&lt;strong&gt;Select a partition to install on&lt;/strong&gt;</source>
+      <comment>@label</comment>
       <translation>&lt;strong&gt;Quraşdırılacaq disk bölməsini seçin&lt;/strong&gt;</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1179"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1189"/>
       <source>An EFI system partition cannot be found anywhere on this system. Please go back and use manual partitioning to set up %1.</source>
+      <comment>@info, %1 is product name</comment>
       <translation>EFI sistem bölməsi tapılmadı. Geriyə qayıdın və %1 bölməsini əllə yaradın.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1187"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1197"/>
       <source>The EFI system partition at %1 will be used for starting %2.</source>
+      <comment>@info, %1 is partition path, %2 is product name</comment>
       <translation>%1 EFI sistemi %2 başlatmaq üçün istifadə olunacaqdır.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1195"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1205"/>
       <source>EFI system partition:</source>
+      <comment>@label</comment>
       <translation>EFI sistem bölməsi:</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1324"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1334"/>
       <source>This storage device does not seem to have an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
       <translation>Bu cihazıda əməliyyat sistemi görünmür. Nə etmək istəyərdiniz?&lt;br/&gt;Bu cihazda dəyişiklik etmədən öncə siz seçiminizi dəqiqləşdirə, dəyişə və təsdiq edə bilərsiniz.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1329"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1366"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1387"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1412"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1339"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1376"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1397"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1422"/>
       <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color="red"&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
       <translation>&lt;strong&gt;Diski təmizləmək&lt;/strong&gt;&lt;br/&gt; &lt;font color="red"&gt;Silmək&lt;/font&gt;seçimi hal-hazırda, seçilmiş diskdəki bütün verilənləri siləcəkdir.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1333"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1362"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1383"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1408"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1343"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1372"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1393"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1418"/>
       <source>&lt;strong&gt;Install alongside&lt;/strong&gt;&lt;br/&gt;The installer will shrink a partition to make room for %1.</source>
       <translation>&lt;strong&gt;Yanına quraşdırın&lt;/strong&gt;&lt;br/&gt;Quraşdırıcı, bölməni kiçildərək %1 üçün boş disk sahəsi yaradacaqdır.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1337"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1370"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1391"/>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1416"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1347"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1380"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1401"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1426"/>
       <source>&lt;strong&gt;Replace a partition&lt;/strong&gt;&lt;br/&gt;Replaces a partition with %1.</source>
       <translation>&lt;strong&gt;Bölməni başqası ilə əvəzləmək&lt;/strong&gt;&lt;br/&gt;Bölməni %1 ilə əvəzləyir.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1356"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1366"/>
       <source>This storage device has %1 on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
       <translation>Bu cihazda %1 var. Nə etmək istəyirsiniz?&lt;br/&gt;Bu cihazda dəyişiklik etmədən öncə siz seçiminizi dəqiqləşdirə, dəyişə və təsdiq edə bilərsiniz.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1378"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1388"/>
       <source>This storage device already has an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
       <translation>Bu cihazda artıq bir əməliyyat sistemi var. Nə etmək istərdiniz?.&lt;br/&gt;Bu cihazda dəyişiklik etmədən öncə siz seçiminizi dəqiqləşdirə, dəyişə və təsdiq edə bilərsiniz.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1403"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1413"/>
       <source>This storage device has multiple operating systems on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
       <translation>Bu cihazda bir neçə əməliyyat sistemi mövcuddur. Nə etmək istərdiniz? Bu cihazda dəyişiklik etmədən öncə siz seçiminizi dəqiqləşdirə, dəyişə və təsdiq edə bilərsiniz.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1475"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1485"/>
       <source>This storage device already has an operating system on it, but the partition table &lt;strong&gt;%1&lt;/strong&gt; is different from the needed &lt;strong&gt;%2&lt;/strong&gt;.&lt;br/&gt;</source>
       <translation>Bu yaddaş qurğusunda artıq əməliyyat sistemi var, lakin, bölmə cədvəli &lt;strong&gt;%1&lt;/strong&gt;, lazım olan &lt;strong&gt;%2&lt;/strong&gt; ilə fərqlidir.&lt;br/&gt;</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1498"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1508"/>
       <source>This storage device has one of its partitions &lt;strong&gt;mounted&lt;/strong&gt;.</source>
+      <comment>@info</comment>
       <translation>Bu yaddaş qurğusunda bölmələrdən biri &lt;strong&gt;quraşdırılmışdır&lt;/strong&gt;.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1503"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1513"/>
       <source>This storage device is a part of an &lt;strong&gt;inactive RAID&lt;/strong&gt; device.</source>
+      <comment>@info</comment>
       <translation>Bu yaddaş qurğusu &lt;strong&gt;qeyri-aktiv RAİD&lt;/strong&gt; qurğusunun bir hissəsidir.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1618"/>
-      <source>No Swap</source>
-      <translation>Mübadilə bölməsi olmadan</translation>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1628"/>
+      <source>No swap</source>
+      <comment>@label</comment>
+      <translation>Mübadilə bölməsi yoxdur</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1627"/>
-      <source>Reuse Swap</source>
-      <translation>Mövcud mübadilə bölməsini istifadə etmək</translation>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1637"/>
+      <source>Reuse swap</source>
+      <comment>@label</comment>
+      <translation>Mübadilə bölməsini yenidən istifadə edin</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1630"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1640"/>
       <source>Swap (no Hibernate)</source>
+      <comment>@label</comment>
       <translation>Mübadilə bölməsi (yuxu rejimi olmadan)</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1633"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1643"/>
       <source>Swap (with Hibernate)</source>
+      <comment>@label</comment>
       <translation>Mübadilə bölməsi (yuxu rejimi ilə)</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1636"/>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1646"/>
       <source>Swap to file</source>
+      <comment>@label</comment>
       <translation>Mübadilə faylı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1659"/>
+      <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.</source>
+      <translation>&lt;strong&gt;Əl ilə bölmək&lt;/strong&gt;&lt;br/&gt;Siz bölməni özünüz yarada və ölçüsünü dəyişə bilərsiniz.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1687"/>
+      <source>Bootloader location:</source>
+      <comment>@label</comment>
+      <translation>Önyükləmə yeri:</translation>
     </message>
   </context>
   <context>
     <name>ClearMountsJob</name>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="272"/>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="267"/>
       <source>Successfully unmounted %1.</source>
       <translation>%1 uğurla ayrıldı.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="279"/>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="274"/>
       <source>Successfully disabled swap %1.</source>
       <translation>%1 mübadilə bölməsi uğurla söndürüldü.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="305"/>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="300"/>
       <source>Successfully cleared swap %1.</source>
       <translation>%1 mübadilə bölməsi uğurla təmizləndi</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="319"/>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="314"/>
       <source>Successfully closed mapper device %1.</source>
       <translation>Yerləşdirmə cihazı %1 uğurla bağlandı</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="332"/>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="327"/>
       <source>Successfully disabled volume group %1.</source>
       <translation>Tutum qrupu %1, uğurla söndürüldü</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="371"/>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="366"/>
       <source>Clear mounts for partitioning operations on %1</source>
+      <comment>@title</comment>
       <translation>%1-də bölmə əməliyyatı üçün qoşulma nöqtələrini silmək</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="377"/>
-      <source>Clearing mounts for partitioning operations on %1.</source>
-      <translation>%1-də bölmə əməliyyatı üçün qoşulma nöqtələrini silinir.</translation>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="372"/>
+      <source>Clearing mounts for partitioning operations on %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="396"/>
+      <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="391"/>
       <source>Cleared all mounts for %1</source>
       <translation>%1 üçün bütün qoşulma nöqtələri silindi</translation>
     </message>
@@ -747,13 +886,10 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>ClearTempMountsJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="33"/>
-      <source>Clear all temporary mounts.</source>
-      <translation>Bütün müvəqqəti qoşulma nöqtələrini ləğv etmək.</translation>
-    </message>
-    <message>
       <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="40"/>
-      <source>Clearing all temporary mounts.</source>
-      <translation>Bütün müvəqqəti qoşulma nöqtələri ləğv edilir.</translation>
+      <source>Clearing all temporary mounts…</source>
+      <comment>@status</comment>
+      <translation>Bütün müvəqqəti bağlantılar təmizlənir...</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="70"/>
@@ -777,28 +913,81 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
   <context>
     <name>Config</name>
     <message>
+      <location filename="../src/modules/finished/Config.cpp" line="142"/>
+      <source>Setup Failed</source>
+      <comment>@title</comment>
+      <translation>Quraşdırılma xətası</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finished/Config.cpp" line="142"/>
+      <source>Installation Failed</source>
+      <comment>@title</comment>
+      <translation>Quraşdırılma alınmadı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finished/Config.cpp" line="144"/>
+      <source>The setup of %1 did not complete successfully.</source>
+      <comment>@info</comment>
+      <translation>%1 qurulması uğurla çaşa çatmadı.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finished/Config.cpp" line="145"/>
+      <source>The installation of %1 did not complete successfully.</source>
+      <comment>@info</comment>
+      <translation>%1 quraşdırılması uğurla tamamlanmadı.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finished/Config.cpp" line="149"/>
+      <source>Setup Complete</source>
+      <comment>@title</comment>
+      <translation>Quraşdırma tamamlandı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finished/Config.cpp" line="150"/>
+      <source>Installation Complete</source>
+      <comment>@title</comment>
+      <translation>Quraşdırma tamamlandı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finished/Config.cpp" line="151"/>
+      <source>The setup of %1 is complete.</source>
+      <comment>@info</comment>
+      <translation>%1 quraşdırmaq başa çatdı.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finished/Config.cpp" line="152"/>
+      <source>The installation of %1 is complete.</source>
+      <comment>@info</comment>
+      <translation>%1-n quraşdırılması başa çatdı.</translation>
+    </message>
+    <message>
       <location filename="../src/modules/keyboard/Config.cpp" line="505"/>
-      <source>Set keyboard model to %1.&lt;br/&gt;</source>
-      <translation>Klaviatura modelini %1 olaraq təyin etmək.&lt;br/&gt;</translation>
+      <source>Keyboard model has been set to %1&lt;br/&gt;.</source>
+      <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
+      <translation>Klaviatura modeli %1&lt;br/&gt; təyin edilib.</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboard/Config.cpp" line="512"/>
-      <source>Set keyboard layout to %1/%2.</source>
-      <translation>Klaviatura qatını %1/%2 olaraq təyin etmək.</translation>
+      <source>Keyboard layout has been set to %1/%2.</source>
+      <comment>@label, %1 is layout, %2 is layout variant</comment>
+      <translation>Klaviatura qatı %1/%2 təyin edilib</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/Config.cpp" line="373"/>
-      <source>Set timezone to %1/%2.</source>
-      <translation>Saat quraşağını təyin etmək %1/%2</translation>
+      <source>Set timezone to %1/%2</source>
+      <comment>@action</comment>
+      <translation>Saat qurşağını %1/%2 olaraq ayarlamaq</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/Config.cpp" line="410"/>
       <source>The system language will be set to %1.</source>
+      <comment>@info</comment>
       <translation>Sistem dili %1 təyin ediləcək.</translation>
     </message>
     <message>
-      <location filename="../src/modules/locale/Config.cpp" line="417"/>
+      <location filename="../src/modules/locale/Config.cpp" line="416"/>
       <source>The numbers and dates locale will be set to %1.</source>
+      <comment>@info</comment>
       <translation>Yerli say və tarix formatı %1 təyin olunacaq.</translation>
     </message>
     <message>
@@ -817,6 +1006,11 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <translation>Şəbəkənin quraşdırılması. (Söndürüldü: daxili xəta)</translation>
     </message>
     <message>
+      <location filename="../src/modules/netinstall/Config.cpp" line="59"/>
+      <source>Network Installation. (Disabled: Unable to fetch package lists, check your network connection)</source>
+      <translation>Şəbəkə üzərindən quraşdırmaq (Söndürüldü: paket siyahıları qəbul edilmir, şəbəkə bağlantınızı yoxlayın)</translation>
+    </message>
+    <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="61"/>
       <source>Network Installation. (Disabled: No package list)</source>
       <translation>Şəbəkənin quraşdırılması. (Söndürüldü: Paket siyahısı yoxdur)</translation>
@@ -827,9 +1021,95 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <translation>Paket seçimi</translation>
     </message>
     <message>
-      <location filename="../src/modules/netinstall/Config.cpp" line="59"/>
-      <source>Network Installation. (Disabled: Unable to fetch package lists, check your network connection)</source>
-      <translation>Şəbəkə üzərindən quraşdırmaq (Söndürüldü: paket siyahıları qəbul edilmir, şəbəkə bağlantınızı yoxlayın)</translation>
+      <location filename="../src/modules/packagechooser/Config.cpp" line="110"/>
+      <source>Package Selection</source>
+      <translation>Paket seçimi</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooser/Config.cpp" line="112"/>
+      <source>Please pick a product from the list. The selected product will be installed.</source>
+      <translation>Lütfən məhsulu siyahıdan seçin. Seçilmiş məhsul quraşdırılacaqdır.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
+      <source>Packages</source>
+      <translation>Paketlər</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooser/Config.cpp" line="247"/>
+      <source>Install option: &lt;strong&gt;%1&lt;/strong&gt;</source>
+      <translation>Quraşdırma seçimi: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooser/Config.cpp" line="247"/>
+      <source>None</source>
+      <translation>Heç biri</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/summary/Config.cpp" line="35"/>
+      <source>Summary</source>
+      <comment>@label</comment>
+      <translation>Nəticə</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/summary/Config.cpp" line="39"/>
+      <source>This is an overview of what will happen once you start the setup procedure.</source>
+      <translation>Bu quraşdırma proseduruna başladıqdan sonra nələrin baş verəcəyinə ümumi baxışdır.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/summary/Config.cpp" line="44"/>
+      <source>This is an overview of what will happen once you start the install procedure.</source>
+      <translation>Bu quraşdırma proseduruna başladıqdan sonra nələrin baş verəcəyinə ümumi baxışdır.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="235"/>
+      <source>Your username is too long.</source>
+      <translation>İstifadəçi adınız çox uzundur.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="241"/>
+      <source>Your username must start with a lowercase letter or underscore.</source>
+      <translation>İstifadəçi adınız yalnız kiçik və ya alt cizgili hərflərdən ibarət olmalıdır.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="245"/>
+      <source>Only lowercase letters, numbers, underscore and hyphen are allowed.</source>
+      <translation>Yalnız kiçik hərflərdən, simvollardan, alt cizgidən və defisdən istifadə oluna bilər.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="251"/>
+      <source>'%1' is not allowed as username.</source>
+      <translation>İstifadəçi adı '%1' ola bilməz</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="300"/>
+      <source>Your hostname is too short.</source>
+      <translation>Host adınız çox qısadır.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="304"/>
+      <source>Your hostname is too long.</source>
+      <translation>Host adınız çox uzundur.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="310"/>
+      <source>'%1' is not allowed as hostname.</source>
+      <translation>Host_adı '%1' ola bilməz</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="315"/>
+      <source>Only letters, numbers, underscore and hyphen are allowed.</source>
+      <translation>Yalnız kiçik hərflərdən, saylardan, alt cizgidən və defisdən istifadə oluna bilər.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="598"/>
+      <source>Your passwords do not match!</source>
+      <translation>Şifrənizin təkrarı eyni deyil!</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/Config.cpp" line="612"/>
+      <source>OK!</source>
+      <translation>OLDU!</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="57"/>
@@ -876,143 +1156,14 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <source>&lt;h1&gt;Welcome to the %1 installer&lt;/h1&gt;</source>
       <translation>&lt;h1&gt;%1 quraşdırıcısına xoş gəldiniz&lt;/h1&gt;</translation>
     </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="235"/>
-      <source>Your username is too long.</source>
-      <translation>İstifadəçi adınız çox uzundur.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="251"/>
-      <source>'%1' is not allowed as username.</source>
-      <translation>İstifadəçi adı '%1' ola bilməz</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="241"/>
-      <source>Your username must start with a lowercase letter or underscore.</source>
-      <translation>İstifadəçi adınız yalnız kiçik və ya alt cizgili hərflərdən ibarət olmalıdır.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="245"/>
-      <source>Only lowercase letters, numbers, underscore and hyphen are allowed.</source>
-      <translation>Yalnız kiçik hərflərdən, simvollardan, alt cizgidən və defisdən istifadə oluna bilər.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="300"/>
-      <source>Your hostname is too short.</source>
-      <translation>Host adınız çox qısadır.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="304"/>
-      <source>Your hostname is too long.</source>
-      <translation>Host adınız çox uzundur.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="310"/>
-      <source>'%1' is not allowed as hostname.</source>
-      <translation>Host_adı '%1' ola bilməz</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="315"/>
-      <source>Only letters, numbers, underscore and hyphen are allowed.</source>
-      <translation>Yalnız kiçik hərflərdən, saylardan, alt cizgidən və defisdən istifadə oluna bilər.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="598"/>
-      <source>Your passwords do not match!</source>
-      <translation>Şifrənizin təkrarı eyni deyil!</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="612"/>
-      <source>OK!</source>
-      <translation>OLDU!</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="142"/>
-      <source>Setup Failed</source>
-      <translation>Quraşdırılma xətası</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="142"/>
-      <source>Installation Failed</source>
-      <translation>Quraşdırılma alınmadı</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="144"/>
-      <source>The setup of %1 did not complete successfully.</source>
-      <translation>%1 qurulması uğurla çaşa çatmadı.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="145"/>
-      <source>The installation of %1 did not complete successfully.</source>
-      <translation>%1 quraşdırılması uğurla tamamlanmadı.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="149"/>
-      <source>Setup Complete</source>
-      <translation>Quraşdırma tamamlandı</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="150"/>
-      <source>Installation Complete</source>
-      <translation>Quraşdırma tamamlandı</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="151"/>
-      <source>The setup of %1 is complete.</source>
-      <translation>%1 quraşdırmaq başa çatdı.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/finished/Config.cpp" line="152"/>
-      <source>The installation of %1 is complete.</source>
-      <translation>%1-n quraşdırılması başa çatdı.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/packagechooser/Config.cpp" line="111"/>
-      <source>Package Selection</source>
-      <translation>Paket seçimi</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/packagechooser/Config.cpp" line="113"/>
-      <source>Please pick a product from the list. The selected product will be installed.</source>
-      <translation>Lütfən məhsulu siyahıdan seçin. Seçilmiş məhsul quraşdırılacaqdır.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/packagechooser/Config.cpp" line="242"/>
-      <source>Packages</source>
-      <translation>Paketlər</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/packagechooser/Config.cpp" line="248"/>
-      <source>Install option: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation>Quraşdırma seçimi: &lt;strong&gt;%1&lt;/strong&gt;</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/packagechooser/Config.cpp" line="248"/>
-      <source>None</source>
-      <translation>Heç biri</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/summary/Config.cpp" line="94"/>
-      <source>Summary</source>
-      <translation>Nəticə</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/summary/Config.cpp" line="98"/>
-      <source>This is an overview of what will happen once you start the setup procedure.</source>
-      <translation>Bu quraşdırma proseduruna başladıqdan sonra nələrin baş verəcəyinə ümumi baxışdır.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/summary/Config.cpp" line="103"/>
-      <source>This is an overview of what will happen once you start the install procedure.</source>
-      <translation>Bu quraşdırma proseduruna başladıqdan sonra nələrin baş verəcəyinə ümumi baxışdır.</translation>
-    </message>
   </context>
   <context>
     <name>ContextualProcessJob</name>
     <message>
       <location filename="../src/modules/contextualprocess/ContextualProcessJob.cpp" line="115"/>
-      <source>Contextual Processes Job</source>
-      <translation>Şəraitə bağlı proseslərlə iş</translation>
+      <source>Performing contextual processes' job…</source>
+      <comment>@status</comment>
+      <translation>Kontekstual proseslərin işini yerinə yetirilir...</translation>
     </message>
   </context>
   <context>
@@ -1080,31 +1231,37 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="67"/>
       <source>En&amp;crypt</source>
+      <comment>@action</comment>
       <translation>&amp;Şifrələmək</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="195"/>
       <source>Logical</source>
+      <comment>@label</comment>
       <translation>Məntiqi</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="200"/>
       <source>Primary</source>
+      <comment>@label</comment>
       <translation>Əsas</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="219"/>
       <source>GPT</source>
+      <comment>@label</comment>
       <translation>GPT</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="91"/>
       <source>Mountpoint already in use. Please select another one.</source>
+      <comment>@info</comment>
       <translation>Qoşulma nöqtəsi artıq istifadə olunur. Lütfən başqasını seçin.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="96"/>
       <source>Mountpoint must start with a &lt;tt&gt;/&lt;/tt&gt;.</source>
+      <comment>@info</comment>
       <translation>Qoşulma nöqtəsi &lt;tt&gt;/&lt;/tt&gt; ilə başlamalıdır.</translation>
     </message>
   </context>
@@ -1112,43 +1269,51 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>CreatePartitionJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="181"/>
-      <source>Create new %1MiB partition on %3 (%2) with entries %4.</source>
-      <translation>Yeni %1MiB bölməsini %3 (%2) üzərində %4 girişləri ilə yaradın.</translation>
+      <source>Create new %1MiB partition on %3 (%2) with entries %4</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="189"/>
-      <source>Create new %1MiB partition on %3 (%2).</source>
-      <translation>Yeni %1MiB bölməsini %3 (%2) üzərində yaradın.</translation>
+      <source>Create new %1MiB partition on %3 (%2)</source>
+      <comment>@title</comment>
+      <translation>%3 (%2) üzərində yeno %1MB-lıq bölmə yaradın</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="196"/>
-      <source>Create new %2MiB partition on %4 (%3) with file system %1.</source>
-      <translation>%1 fayl sistemi ilə %4 (%3)-də yeni %2MB bölmə yaratmaq.</translation>
+      <source>Create new %2MiB partition on %4 (%3) with file system %1</source>
+      <comment>@title</comment>
+      <translation>%1 fayl sistemi ilə %4 (%3) üzərində %2MB-lıq bölmə yaradın</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="212"/>
-      <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2) with entries &lt;em&gt;%4&lt;/em&gt;.</source>
-      <translation>Yeni &lt;strong&gt;%1MiB&lt;/strong&gt; bölməsini &lt;strong&gt;%3&lt;/strong&gt; (%2) üzərində &lt;em&gt;%4&lt;/em&gt; girişlərində yaradın.</translation>
+      <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2) with entries &lt;em&gt;%4&lt;/em&gt;</source>
+      <comment>@info</comment>
+      <translation>&lt;strong&gt;%3&lt;/strong&gt; (%2) üzərində &lt;em&gt;%4&lt;/em&gt; girişləri ilə yeni &lt;strong&gt;%1MB&lt;/strong&gt; bölmə yaradın</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="221"/>
-      <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2).</source>
-      <translation>Yeni &lt;strong&gt;%1MiB&lt;/strong&gt; bölməsini &lt;strong&gt;%3&lt;/strong&gt; (%2) üzərində yaradın.</translation>
+      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="222"/>
+      <source>Create new &lt;strong&gt;%1MiB&lt;/strong&gt; partition on &lt;strong&gt;%3&lt;/strong&gt; (%2)</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="228"/>
-      <source>Create new &lt;strong&gt;%2MiB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; fayl sistemi ilə &lt;strong&gt;%4&lt;/strong&gt; (%3)-də yeni &lt;strong&gt;%2MB&lt;/strong&gt; bölmə yaratmaq.</translation>
+      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="229"/>
+      <source>Create new &lt;strong&gt;%2MiB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="252"/>
-      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="255"/>
-      <source>Creating new %1 partition on %2.</source>
-      <translation>%2-də yeni %1 bölmə yaratmaq.</translation>
+      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="254"/>
+      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="257"/>
+      <source>Creating new %1 partition on %2…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="272"/>
+      <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="274"/>
       <source>The installer failed to create partition on disk '%1'.</source>
+      <comment>@info</comment>
       <translation>Quraşdırıcı '%1' diskində bölmə yarada bilmədi.</translation>
     </message>
   </context>
@@ -1184,18 +1349,16 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>CreatePartitionTableJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="41"/>
-      <source>Create new %1 partition table on %2.</source>
-      <translation>%2-də yeni %1 bölmələr cədvəli yaratmaq.</translation>
+      <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
+      <source>Creating new %1 partition table on %2…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="49"/>
-      <source>Create new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3).</source>
-      <translation>&lt;strong&gt;%2&lt;/strong&gt; (%3)`də yeni &lt;strong&gt;%1&lt;/strong&gt; bölmələr cədvəli yaratmaq.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
-      <source>Creating new %1 partition table on %2.</source>
-      <translation>%2-də yeni %1 bölməsi yaratmaq.</translation>
+      <source>Creating new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3)…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="86"/>
@@ -1212,29 +1375,33 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="39"/>
-      <source>Create user &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; istifadəçi hesabı yaratmaq.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/CreateUserJob.cpp" line="120"/>
-      <source>Preserving home directory</source>
-      <translation>Ev qovluğunun saxlanılması</translation>
+      <source>Create user &lt;strong&gt;%1&lt;/strong&gt;</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="45"/>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="137"/>
-      <source>Creating user %1</source>
-      <translation>İsitfadəçi %1 yaradılır</translation>
+      <source>Creating user %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/users/CreateUserJob.cpp" line="120"/>
+      <source>Preserving home directory…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="145"/>
       <source>Configuring user %1</source>
+      <comment>@status</comment>
       <translation>%1 istifadəçisinin tənzimlənməsi</translation>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="153"/>
-      <source>Setting file permissions</source>
-      <translation>Fayl icazələrinin quruaşdırılması</translation>
+      <source>Setting file permissions…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -1242,6 +1409,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/partition/gui/CreateVolumeGroupDialog.cpp" line="28"/>
       <source>Create Volume Group</source>
+      <comment>@title</comment>
       <translation>Tutumlar qrupu yaratmaq</translation>
     </message>
   </context>
@@ -1249,18 +1417,16 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>CreateVolumeGroupJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="32"/>
-      <source>Create new volume group named %1.</source>
-      <translation>%1 adlı yeni tutumlar qrupu yaratmaq.</translation>
+      <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
+      <source>Creating new volume group named %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="38"/>
-      <source>Create new volume group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; adlı yeni tutumlar qrupu yaratmaq.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
-      <source>Creating new volume group named %1.</source>
-      <translation>%1 adlı yeni tutumlar qrupu yaradılır.</translation>
+      <source>Creating new volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="51"/>
@@ -1273,13 +1439,15 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="26"/>
       <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="38"/>
-      <source>Deactivate volume group named %1.</source>
-      <translation>%1 adlı tutumlar qrupu qeyri-aktiv edildi.</translation>
+      <source>Deactivating volume group named %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="32"/>
-      <source>Deactivate volume group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; adlı tutumlar qrupunu qeyri-aktiv etmək.</translation>
+      <source>Deactivating volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="46"/>
@@ -1291,18 +1459,16 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>DeletePartitionJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="73"/>
-      <source>Delete partition %1.</source>
-      <translation>%1 bölməsini silmək.</translation>
+      <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
+      <source>Deleting partition %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="79"/>
-      <source>Delete partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; bölməsini silmək.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
-      <source>Deleting partition %1.</source>
-      <translation>%1 bölməsinin silinməsi.</translation>
+      <source>Deleting partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="99"/>
@@ -1313,9 +1479,14 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
   <context>
     <name>DeviceInfoWidget</name>
     <message>
-      <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="139"/>
-      <source>This device has a &lt;strong&gt;%1&lt;/strong&gt; partition table.</source>
-      <translation>Bu cihazda &lt;strong&gt;%1&lt;/strong&gt; bölmələr cədvəli var.</translation>
+      <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="78"/>
+      <source>&lt;br&gt;&lt;br&gt;This partition table type is only advisable on older systems which start from a &lt;strong&gt;BIOS&lt;/strong&gt; boot environment. GPT is recommended in most other cases.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Warning:&lt;/strong&gt; the MBR partition table is an obsolete MS-DOS era standard.&lt;br&gt;Only 4 &lt;em&gt;primary&lt;/em&gt; partitions may be created, and of those 4, one can be an &lt;em&gt;extended&lt;/em&gt; partition, which may in turn contain many &lt;em&gt;logical&lt;/em&gt; partitions.</source>
+      <translation>&lt;br&gt;&lt;br&gt;Bu, &lt;strong&gt;BIOS&lt;/strong&gt; ön yükləyici mühiti istifadə edən köhnə sistemlər üçün bölmələr cədvəlidir. Əksər hallarda bunun əvəzinə GPT istifadə etmək daha yaxşıdır. Diqqət:&lt;/strong&gt;MBR, köhnəlmiş MS-DOS standartında bölmələr cədvəlidir. &lt;br&gt;Sadəcə 4 &lt;em&gt;ilkin&lt;/em&gt; bölüm yaratmağa imkan verir və 4-dən çox bölmədən yalnız biri &lt;em&gt;extended&lt;/em&gt; genişləndirilmiş ola bilər, və beləliklə daha çox &lt;em&gt;məntiqi&lt;/em&gt; bölmələr yaradıla bilər.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="89"/>
+      <source>&lt;br&gt;&lt;br&gt;This is the recommended partition table type for modern systems which start from an &lt;strong&gt;EFI&lt;/strong&gt; boot environment.</source>
+      <translation>&lt;br&gt;&lt;br&gt;Bu &lt;strong&gt;EFI&lt;/strong&gt; ön yükləyici mühiti istifadə edən müasir sistemlər üçün məsləhət görülən bölmələr cədvəli növüdür.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="95"/>
@@ -1328,14 +1499,9 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <translation>Bu quraşdırıcı seçilmiş qurğuda &lt;strong&gt;bölmələr cədvəli aşkar edə bilmədi&lt;/strong&gt;.&lt;br&gt;&lt;br&gt;Bu cihazda ya bölmələr cədvəli yoxdur, ya bölmələr cədvəli korlanıb, ya da növü naməlumdur.&lt;br&gt;Bu quraşdırıcı bölmələr cədvəlini avtomatik, ya da əllə bölmək səhifəsi vasitəsi ilə yarada bilər.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="89"/>
-      <source>&lt;br&gt;&lt;br&gt;This is the recommended partition table type for modern systems which start from an &lt;strong&gt;EFI&lt;/strong&gt; boot environment.</source>
-      <translation>&lt;br&gt;&lt;br&gt;Bu &lt;strong&gt;EFI&lt;/strong&gt; ön yükləyici mühiti istifadə edən müasir sistemlər üçün məsləhət görülən bölmələr cədvəli növüdür.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="78"/>
-      <source>&lt;br&gt;&lt;br&gt;This partition table type is only advisable on older systems which start from a &lt;strong&gt;BIOS&lt;/strong&gt; boot environment. GPT is recommended in most other cases.&lt;br&gt;&lt;br&gt;&lt;strong&gt;Warning:&lt;/strong&gt; the MBR partition table is an obsolete MS-DOS era standard.&lt;br&gt;Only 4 &lt;em&gt;primary&lt;/em&gt; partitions may be created, and of those 4, one can be an &lt;em&gt;extended&lt;/em&gt; partition, which may in turn contain many &lt;em&gt;logical&lt;/em&gt; partitions.</source>
-      <translation>&lt;br&gt;&lt;br&gt;Bu, &lt;strong&gt;BIOS&lt;/strong&gt; ön yükləyici mühiti istifadə edən köhnə sistemlər üçün bölmələr cədvəlidir. Əksər hallarda bunun əvəzinə GPT istifadə etmək daha yaxşıdır. Diqqət:&lt;/strong&gt;MBR, köhnəlmiş MS-DOS standartında bölmələr cədvəlidir. &lt;br&gt;Sadəcə 4 &lt;em&gt;ilkin&lt;/em&gt; bölüm yaratmağa imkan verir və 4-dən çox bölmədən yalnız biri &lt;em&gt;extended&lt;/em&gt; genişləndirilmiş ola bilər, və beləliklə daha çox &lt;em&gt;məntiqi&lt;/em&gt; bölmələr yaradıla bilər.</translation>
+      <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="139"/>
+      <source>This device has a &lt;strong&gt;%1&lt;/strong&gt; partition table.</source>
+      <translation>Bu cihazda &lt;strong&gt;%1&lt;/strong&gt; bölmələr cədvəli var.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/DeviceInfoWidget.cpp" line="147"/>
@@ -1362,17 +1528,20 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>DracutLuksCfgJob</name>
     <message>
       <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="117"/>
-      <source>Write LUKS configuration for Dracut to %1</source>
-      <translation>%1 -də Dracut üçün LUKS tənzimləməlirini yazmaq</translation>
+      <source>Writing LUKS configuration for Dracut to %1…</source>
+      <comment>@status</comment>
+      <translation>Dracut üçün LUKS tənzimləməsini %1-ə yazır...</translation>
     </message>
     <message>
       <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="121"/>
-      <source>Skip writing LUKS configuration for Dracut: "/" partition is not encrypted</source>
-      <translation>Dracut üçün LUKS tənzimləmələrini yazmağı ötürmək: "/" bölməsi şifrələnmədi</translation>
+      <source>Skipping writing LUKS configuration for Dracut: "/" partition is not encrypted</source>
+      <comment>@info</comment>
+      <translation>Dracut üçün LUKS tənzimləməsinin yazılması ötürüldü: "/" bölməsi şiftrələnməyib</translation>
     </message>
     <message>
       <location filename="../src/modules/dracutlukscfg/DracutLuksCfgJob.cpp" line="138"/>
       <source>Failed to open %1</source>
+      <comment>@error</comment>
       <translation>%1 açılmadı</translation>
     </message>
   </context>
@@ -1380,8 +1549,9 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>DummyCppJob</name>
     <message>
       <location filename="../src/modules/dummycpp/DummyCppJob.cpp" line="35"/>
-      <source>Dummy C++ Job</source>
-      <translation>Dummy C++ Job</translation>
+      <source>Performing dummy C++ job…</source>
+      <comment>@status</comment>
+      <translation>Saxta C++ tapşırığı yerinə yetirilir...</translation>
     </message>
   </context>
   <context>
@@ -1483,12 +1653,14 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="153"/>
       <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="168"/>
       <source>Please enter the same passphrase in both boxes.</source>
+      <comment>@tooltip</comment>
       <translation>Lütfən, hər iki sahəyə eyni şifrəni daxil edin.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="158"/>
-      <source>Password must be a minimum of %1 characters</source>
-      <translation>Şifrə ən az %1 işarədən ibarət olmalıdır</translation>
+      <source>Password must be a minimum of %1 characters.</source>
+      <comment>@tooltip</comment>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -1509,57 +1681,68 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="179"/>
       <source>Set partition information</source>
+      <comment>@title</comment>
       <translation>Bölmə məlumatlarını ayarlamaq</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="208"/>
       <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition with features &lt;em&gt;%3&lt;/em&gt;</source>
+      <comment>@info</comment>
       <translation>&lt;strong&gt;Yeni&lt;/strong&gt; %2 sistem bölməsində &lt;em&gt;%3&lt;/em&gt; xüsusiyyətləri ilə %1 quraşdırın</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="216"/>
-      <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition.</source>
-      <translation>%2 &lt;strong&gt;yeni&lt;/strong&gt; sistem diskinə %1 quraşdırmaq.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="217"/>
+      <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="225"/>
-      <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;.</source>
-      <translation>&lt;strong&gt;Yeni&lt;/strong&gt; %2 bölməsini &lt;strong&gt;%1&lt;/strong&gt; qoşulma nöqtəsi və &lt;em&gt;%3&lt;/em&gt; xüsusiyyətləri ilə qurun.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="226"/>
+      <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="233"/>
-      <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3.</source>
-      <translation>&lt;strong&gt;yeni&lt;/strong&gt; %2 bölməsini &lt;strong&gt;%1&lt;/strong&gt;%3 qoşulma nöqtəsi ilə qurun.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="235"/>
+      <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="247"/>
-      <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt; with features &lt;em&gt;%4&lt;/em&gt;.</source>
-      <translation>%3 &lt;strong&gt;%1&lt;/strong&gt; sistem bölməsində &lt;em&gt;%4&lt;/em&gt; xüsusiyyətləri ilə %2 quraşdırın.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="250"/>
+      <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt; with features &lt;em&gt;%4&lt;/em&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="266"/>
-      <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; %3 bölməsini &lt;strong&gt;%2&lt;/strong&gt; qoşulma nöqtəsi və &lt;em&gt;%4&lt;/em&gt; xüsusiyyətləri ilə qurun.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="260"/>
+      <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="275"/>
-      <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4.</source>
-      <translation>%3 bölməsinə &lt;strong&gt;%1&lt;/strong&gt; ilə &lt;strong&gt;%2&lt;/strong&gt;%4 qoşulma nöqtəsi ayarlamaq.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="270"/>
+      <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="256"/>
-      <source>Install %2 on %3 system partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>%3 &lt;strong&gt;%1&lt;/strong&gt; sistem bölməsində %2 quraşdırın.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="280"/>
+      <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4…</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="290"/>
-      <source>Install boot loader on &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>Ön yükləyicini &lt;strong&gt;%1&lt;/strong&gt; üzərində quraşdırın.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="296"/>
+      <source>Install boot loader on &lt;strong&gt;%1&lt;/strong&gt;…</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="299"/>
-      <source>Setting up mount points.</source>
-      <translation>Qoşulma nöqtəsini ayarlamaq.</translation>
+      <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="305"/>
+      <source>Setting up mount points…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -1572,31 +1755,37 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="75"/>
       <source>&lt;h1&gt;All done.&lt;/h1&gt;&lt;br/&gt;%1 has been set up on your computer.&lt;br/&gt;You may now start using your new system.</source>
+      <comment>@info</comment>
       <translation>&lt;h1&gt;Hər şey hazırdır.&lt;/h1&gt;&lt;br/&gt;%1 kompyuterinizə qurulub.&lt;br/&gt;Siz indi yeni sisteminizi başlada bilərsiniz.</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="79"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style="font-style:italic;"&gt;Done&lt;/span&gt; or close the setup program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <comment>@tooltip</comment>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu çərçivə işarələnərsə siz &lt;span style="font-style:italic;"&gt;Hazır&lt;/span&gt; düyməsinə vurduğunuz və ya quraşdırıcı proqramı bağlatdığınız zaman sisteminiz dərhal yenidən başladılacaqdır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="87"/>
       <source>&lt;h1&gt;All done.&lt;/h1&gt;&lt;br/&gt;%1 has been installed on your computer.&lt;br/&gt;You may now restart into your new system, or continue using the %2 Live environment.</source>
+      <comment>@info</comment>
       <translation>&lt;h1&gt;Hər şey hazırdır.&lt;/h1&gt;&lt;br/&gt;%1 kompyuterinizə quraşdırıldı.&lt;br/&gt;Siz yenidən başladaraq yeni sisteminizə daxil ola və ya %2 Canlı mühitini istifadə etməyə davam edə bilərsiniz.</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="92"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style="font-style:italic;"&gt;Done&lt;/span&gt; or close the installer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <comment>@tooltip</comment>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bu çərçivə işarələnərsə siz &lt;span style="font-style:italic;"&gt;Hazır&lt;/span&gt; düyməsinə vurduğunuz və ya quraşdırıcınıı bağladığınız zaman sisteminiz dərhal yenidən başladılacaqdır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="105"/>
       <source>&lt;h1&gt;Setup Failed&lt;/h1&gt;&lt;br/&gt;%1 has not been set up on your computer.&lt;br/&gt;The error message was: %2.</source>
+      <comment>@info, %1 is product name with version</comment>
       <translation>&lt;h1&gt;Quraşdırılma alınmadı&lt;/h1&gt;&lt;br/&gt;%1 kompyuterinizə quraşdırıla bilmədi.&lt;br/&gt;Baş vermiş xəta: %2.</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="113"/>
       <source>&lt;h1&gt;Installation Failed&lt;/h1&gt;&lt;br/&gt;%1 has not been installed on your computer.&lt;br/&gt;The error message was: %2.</source>
+      <comment>@info, %1 is product name with version</comment>
       <translation>&lt;h1&gt;Quraşdırılma alınmadı&lt;/h1&gt;&lt;br/&gt;%1 kompyuterinizə quraşdırıla bilmədi.&lt;br/&gt;Baş vermiş xəta: %2.</translation>
     </message>
   </context>
@@ -1605,6 +1794,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/finishedq/FinishedQmlViewStep.cpp" line="35"/>
       <source>Finish</source>
+      <comment>@label</comment>
       <translation>Son</translation>
     </message>
   </context>
@@ -1613,6 +1803,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/finished/FinishedViewStep.cpp" line="46"/>
       <source>Finish</source>
+      <comment>@label</comment>
       <translation>Son</translation>
     </message>
   </context>
@@ -1620,24 +1811,27 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>FormatPartitionJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="39"/>
-      <source>Format partition %1 (file system: %2, size: %3 MiB) on %4.</source>
-      <translation>%4 üzərində %1 bölməsini format etmək (fayl sistemi: %2, ölçüsü: %3 MB).</translation>
+      <source>Format partition %1 (file system: %2, size: %3 MiB) on %4</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="49"/>
-      <source>Format &lt;strong&gt;%3MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%3MB&lt;/strong&gt; bölməsini &lt;strong&gt;%2&lt;/strong&gt; fayl sistemi ilə &lt;strong&gt;%1&lt;/strong&gt; formatlamaq.</translation>
+      <source>Format &lt;strong&gt;%3MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="61"/>
+      <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="62"/>
       <source>%1 (%2)</source>
       <comment>partition label %1 (device path %2)</comment>
       <translation>%1 (%2)</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="63"/>
-      <source>Formatting partition %1 with file system %2.</source>
-      <translation>%1 bölməsini %2 fayl sistemi ilə formatlamaq.</translation>
+      <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="64"/>
+      <source>Formatting partition %1 with file system %2…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="73"/>
@@ -1777,9 +1971,10 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
   <context>
     <name>HostInfoJob</name>
     <message>
-      <location filename="../src/modules/hostinfo/HostInfoJob.cpp" line="41"/>
-      <source>Collecting information about your machine.</source>
-      <translation>Komputeriniz haqqında məlumat toplanması.</translation>
+      <location filename="../src/modules/hostinfo/HostInfoJob.cpp" line="39"/>
+      <source>Collecting information about your machine…</source>
+      <comment>@status</comment>
+      <translation>Cihazınız haqqında məlumatlar toplanır...</translation>
     </message>
   </context>
   <context>
@@ -1812,33 +2007,38 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>InitcpioJob</name>
     <message>
       <location filename="../src/modules/initcpio/InitcpioJob.cpp" line="31"/>
-      <source>Creating initramfs with mkinitcpio.</source>
-      <translation>mkinitcpio köməyi ilə initramfs yaradılması.</translation>
+      <source>Creating initramfs with mkinitcpio…</source>
+      <comment>@status</comment>
+      <translation>"mkinitcpio" ilə "initramfs" yaradılır...</translation>
     </message>
   </context>
   <context>
     <name>InitramfsJob</name>
     <message>
       <location filename="../src/modules/initramfs/InitramfsJob.cpp" line="27"/>
-      <source>Creating initramfs.</source>
-      <translation>initramfs yaradılması.</translation>
+      <source>Creating initramfs…</source>
+      <comment>@status</comment>
+      <translation>"initramfs" yaradılır...</translation>
     </message>
   </context>
   <context>
     <name>InteractiveTerminalPage</name>
     <message>
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="49"/>
-      <source>Konsole not installed</source>
-      <translation>Konsole quraşdırılmayıb</translation>
+      <source>Konsole not installed.</source>
+      <comment>@error</comment>
+      <translation>Konsole quraşdırılmayıb.</translation>
     </message>
     <message>
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="50"/>
       <source>Please install KDE Konsole and try again!</source>
+      <comment>@info</comment>
       <translation>Lütfən KDE Konsole tətbiqini quraşdırın və yenidən cəhd edin!</translation>
     </message>
     <message>
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="122"/>
       <source>Executing script: &amp;nbsp;&lt;code&gt;%1&lt;/code&gt;</source>
+      <comment>@info</comment>
       <translation>Ssenari icra olunur. &amp;nbsp;&lt;code&gt;%1&lt;/code&gt;</translation>
     </message>
   </context>
@@ -1847,6 +2047,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalViewStep.cpp" line="40"/>
       <source>Script</source>
+      <comment>@label</comment>
       <translation>Ssenari</translation>
     </message>
   </context>
@@ -1855,6 +2056,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/keyboardq/KeyboardQmlViewStep.cpp" line="32"/>
       <source>Keyboard</source>
+      <comment>@label</comment>
       <translation>Klaviatura</translation>
     </message>
   </context>
@@ -1863,6 +2065,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/keyboard/KeyboardViewStep.cpp" line="41"/>
       <source>Keyboard</source>
+      <comment>@label</comment>
       <translation>Klaviatura</translation>
     </message>
   </context>
@@ -1870,22 +2073,26 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>LCLocaleDialog</name>
     <message>
       <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="23"/>
-      <source>System locale setting</source>
-      <translation>Ümumi məkan ayarları</translation>
+      <source>System Locale Setting</source>
+      <comment>@title</comment>
+      <translation>Sistemin yerli dil ayarları</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="30"/>
       <source>The system locale setting affects the language and character set for some command line user interface elements.&lt;br/&gt;The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
+      <comment>@info</comment>
       <translation>Ümumi məkan ayarları, əmrlər sətiri interfeysinin ayrıca elementləri üçün dil və kodlaşmaya təsir edir. &lt;br/&gt;Hazırkı seçim &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="54"/>
       <source>&amp;Cancel</source>
-      <translation>İm&amp;tina etmək</translation>
+      <comment>@button</comment>
+      <translation>&amp;İmtina etmək</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="55"/>
       <source>&amp;OK</source>
+      <comment>@button</comment>
       <translation>&amp;OK</translation>
     </message>
   </context>
@@ -1922,31 +2129,37 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="142"/>
       <source>I accept the terms and conditions above.</source>
+      <comment>@info</comment>
       <translation>Mən yuxarıda göstərilən şərtləri qəbul edirəm.</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="144"/>
       <source>Please review the End User License Agreements (EULAs).</source>
+      <comment>@info</comment>
       <translation>Lütfən lisenziya razılaşması (EULA) ilə tanış olun.</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="149"/>
       <source>This setup procedure will install proprietary software that is subject to licensing terms.</source>
+      <comment>@info</comment>
       <translation>Bu quraşdırma proseduru lisenziya şərtlərinə tabe olan xüsusi proqram təminatını quraşdıracaqdır.</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="152"/>
       <source>If you do not agree with the terms, the setup procedure cannot continue.</source>
+      <comment>@info</comment>
       <translation>Lisenziya razılaşmalarını qəbul etməsəniz quraşdırılma davam etdirilə bilməz.</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="157"/>
       <source>This setup procedure can install proprietary software that is subject to licensing terms in order to provide additional features and enhance the user experience.</source>
+      <comment>@info</comment>
       <translation>Bu quraşdırma proseduru, əlavə xüsusiyyətlər təmin etmək və istifadəçi təcrübəsini artırmaq üçün lisenziyalaşdırma şərtlərinə tabe olan xüsusi proqram təminatını quraşdıra bilər.</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="162"/>
       <source>If you do not agree with the terms, proprietary software will not be installed, and open source alternatives will be used instead.</source>
+      <comment>@info</comment>
       <translation>Şərtlərlə razılaşmasanız, xüsusi proqram quraşdırılmayacaq və bunun əvəzinə açıq mənbə kodu ilə alternativlər istifadə ediləcəkdir.</translation>
     </message>
   </context>
@@ -1955,6 +2168,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/license/LicenseViewStep.cpp" line="45"/>
       <source>License</source>
+      <comment>@label</comment>
       <translation>Lisenziya</translation>
     </message>
   </context>
@@ -1963,59 +2177,70 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="88"/>
       <source>URL: %1</source>
+      <comment>@label</comment>
       <translation>URL: %1</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="109"/>
       <source>&lt;strong&gt;%1 driver&lt;/strong&gt;&lt;br/&gt;by %2</source>
+      <comment>@label, %1 is product name, %2 is product vendor</comment>
       <extracomment>%1 is an untranslatable product name, example: Creative Audigy driver</extracomment>
       <translation>&lt;strong&gt;%1 sürücü&lt;/strong&gt;%2 tərəfindən</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="116"/>
       <source>&lt;strong&gt;%1 graphics driver&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;by %2&lt;/font&gt;</source>
+      <comment>@label, %1 is product name, %2 is product vendor</comment>
       <extracomment>%1 is usually a vendor name, example: Nvidia graphics driver</extracomment>
       <translation>&lt;strong&gt;%1 grafik sürücü&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;%2 tərəfindən&lt;/font&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="122"/>
       <source>&lt;strong&gt;%1 browser plugin&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;by %2&lt;/font&gt;</source>
+      <comment>@label, %1 is product name, %2 is product vendor</comment>
       <translation>&lt;strong&gt;%1 brauzer əlavəsi&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;%2 tərəfindən&lt;/font&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="128"/>
       <source>&lt;strong&gt;%1 codec&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;by %2&lt;/font&gt;</source>
+      <comment>@label, %1 is product name, %2 is product vendor</comment>
       <translation>&lt;strong&gt;%1 kodek&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;%2 tərəfindən&lt;/font&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="134"/>
       <source>&lt;strong&gt;%1 package&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;by %2&lt;/font&gt;</source>
+      <comment>@label, %1 is product name, %2 is product vendor</comment>
       <translation>&lt;strong&gt;%1 paket&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;%2 ərəfindən&lt;/font&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="140"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;by %2&lt;/font&gt;</source>
+      <comment>@label, %1 is product name, %2 is product vendor</comment>
       <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt;&lt;font color="Grey"&gt;%2 ərəfindən&lt;/font&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="163"/>
       <source>File: %1</source>
+      <comment>@label</comment>
       <translation>%1 faylı</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="186"/>
-      <source>Hide license text</source>
-      <translation>Lisenziya mətnini gizlətmək</translation>
+      <source>Hide the license text</source>
+      <comment>@tooltip</comment>
+      <translation>Lisenziya mətnini gizlədin</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="186"/>
       <source>Show the license text</source>
+      <comment>@tooltip</comment>
       <translation>Lisenziya mətnini göstərmək</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicenseWidget.cpp" line="190"/>
-      <source>Open license agreement in browser.</source>
-      <translation>Lisenziya razılaşmasını brauzerdə açmaq.</translation>
+      <source>Open the license agreement in browser</source>
+      <comment>@tooltip</comment>
+      <translation>Lisenziya razılaşmasını veb-bələdçidə açın</translation>
     </message>
   </context>
   <context>
@@ -2023,18 +2248,21 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/locale/LocalePage.cpp" line="130"/>
       <source>Region:</source>
+      <comment>@label</comment>
       <translation>Məkan:</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/LocalePage.cpp" line="131"/>
       <source>Zone:</source>
+      <comment>@label</comment>
       <translation>Saat qurşağı:</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/LocalePage.cpp" line="132"/>
       <location filename="../src/modules/locale/LocalePage.cpp" line="133"/>
-      <source>&amp;Change...</source>
-      <translation>&amp;Dəyişmək...</translation>
+      <source>&amp;Change…</source>
+      <comment>@button</comment>
+      <translation>&amp;Dəyişdirin…</translation>
     </message>
   </context>
   <context>
@@ -2042,13 +2270,14 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/localeq/LocaleQmlViewStep.cpp" line="32"/>
       <source>Location</source>
+      <comment>@label</comment>
       <translation>Məkan</translation>
     </message>
   </context>
   <context>
     <name>LocaleTests</name>
     <message>
-      <location filename="../src/libcalamares/locale/Tests.cpp" line="271"/>
+      <location filename="../src/libcalamares/locale/Tests.cpp" line="266"/>
       <source>Quit</source>
       <translation>Çıxış</translation>
     </message>
@@ -2058,6 +2287,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/locale/LocaleViewStep.cpp" line="71"/>
       <source>Location</source>
+      <comment>@label</comment>
       <translation>Məkan</translation>
     </message>
   </context>
@@ -2094,19 +2324,37 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
   <context>
     <name>MachineIdJob</name>
     <message>
-      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="35"/>
+      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="55"/>
       <source>Generate machine-id.</source>
       <translation>Komputerin İD-ni yaratmaq.</translation>
     </message>
     <message>
-      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="51"/>
+      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="71"/>
       <source>Configuration Error</source>
       <translation>Tənzimləmə xətası</translation>
     </message>
     <message>
-      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="52"/>
+      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="72"/>
       <source>No root mount point is set for MachineId.</source>
       <translation>Komputer İD-si üçün kök qoşulma nöqtəsi təyin edilməyib.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/machineid/Workers.cpp" line="63"/>
+      <location filename="../src/modules/machineid/Workers.cpp" line="71"/>
+      <location filename="../src/modules/machineid/Workers.cpp" line="75"/>
+      <location filename="../src/modules/machineid/Workers.cpp" line="92"/>
+      <source>File not found</source>
+      <translation>Fayl tapılmadı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/machineid/Workers.cpp" line="64"/>
+      <source>Path &lt;pre&gt;%1&lt;/pre&gt; must be an absolute path.</source>
+      <translation>&lt;pre&gt;%1&lt;/pre&gt; yolu mütləq bir yol olmalıdır.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/machineid/Workers.cpp" line="93"/>
+      <source>Could not create new random file &lt;pre&gt;%1&lt;/pre&gt;.</source>
+      <translation>Yeni təsadüfi&lt;pre&gt;%1&lt;/pre&gt; faylı yaradıla bilmir.</translation>
     </message>
   </context>
   <context>
@@ -2114,6 +2362,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/localeq/Map.qml" line="237"/>
       <source>Timezone: %1</source>
+      <comment>@label</comment>
       <translation>Saat qurşağı: %1</translation>
     </message>
     <message>
@@ -2121,6 +2370,26 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <source>Please select your preferred location on the map so the installer can suggest the locale
             and timezone settings for you. You can fine-tune the suggested settings below. Search the map by dragging
             to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.</source>
+      <comment>@info</comment>
+      <translation>Lütfən, xəritədə üstünlük verdiyiniz yeri seçin, belə ki, quraşdırıcı sizin üçün yerli 
+             və saat qurşağı parametrlərini təklif edə bilər. Aşağıda təklif olunan parametrləri dəqiq tənzimləyə bilərsiniz. Xəritəni sürüşdürərək axtarın.
+             miqyası dəyişmək üçün +/- düymələrindən və ya siçanla sürüşdürmə çubuğundan istifadə etmək.</translation>
+    </message>
+  </context>
+  <context>
+    <name>Map-qt6</name>
+    <message>
+      <location filename="../src/modules/localeq/Map-qt6.qml" line="237"/>
+      <source>Timezone: %1</source>
+      <comment>@label</comment>
+      <translation>Saat qurşağı: %1</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/localeq/Map-qt6.qml" line="258"/>
+      <source>Please select your preferred location on the map so the installer can suggest the locale
+            and timezone settings for you. You can fine-tune the suggested settings below. Search the map by dragging
+            to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.</source>
+      <comment>@label</comment>
       <translation>Lütfən, xəritədə üstünlük verdiyiniz yeri seçin, belə ki, quraşdırıcı sizin üçün yerli 
              və saat qurşağı parametrlərini təklif edə bilər. Aşağıda təklif olunan parametrləri dəqiq tənzimləyə bilərsiniz. Xəritəni sürüşdürərək axtarın.
              miqyası dəyişmək üçün +/- düymələrindən və ya siçanla sürüşdürmə çubuğundan istifadə etmək.</translation>
@@ -2183,6 +2452,11 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <translation>İş Masası</translation>
     </message>
     <message>
+      <location filename="../src/modules/netinstall/NetInstallViewStep.cpp" line="60"/>
+      <source>Applications</source>
+      <translation>Tətbiqlər</translation>
+    </message>
+    <message>
       <location filename="../src/modules/netinstall/NetInstallViewStep.cpp" line="61"/>
       <source>Communication</source>
       <comment>label for netinstall module</comment>
@@ -2230,11 +2504,6 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <comment>label for netinstall module</comment>
       <translation>Vasitələr, Alətlər</translation>
     </message>
-    <message>
-      <location filename="../src/modules/netinstall/NetInstallViewStep.cpp" line="60"/>
-      <source>Applications</source>
-      <translation>Tətbiqlər</translation>
-    </message>
   </context>
   <context>
     <name>NotesQmlViewStep</name>
@@ -2279,30 +2548,70 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>Offline</name>
     <message>
       <location filename="../src/modules/localeq/Offline.qml" line="47"/>
-      <source>Select your preferred Region, or use the default settings.</source>
-      <translation>Üstünlük verdiyiniz Bölgənizi seçin və ilkin ayarlardan istifadə edin.</translation>
+      <source>Select your preferred region, or use the default settings</source>
+      <comment>@label</comment>
+      <translation>Üstünlük verdiyiniz bölgəni seçin və ya ilkin ayarları istifadə edin</translation>
     </message>
     <message>
       <location filename="../src/modules/localeq/Offline.qml" line="103"/>
       <location filename="../src/modules/localeq/Offline.qml" line="180"/>
       <location filename="../src/modules/localeq/Offline.qml" line="224"/>
       <source>Timezone: %1</source>
+      <comment>@label</comment>
       <translation>Saat qurşağı: %1</translation>
     </message>
     <message>
       <location filename="../src/modules/localeq/Offline.qml" line="120"/>
-      <source>Select your preferred Zone within your Region.</source>
-      <translation>Bölgənizlə birlikdə üstünlük verdiyiniz zonanı seçin.</translation>
+      <source>Select your preferred zone within your region</source>
+      <comment>@label</comment>
+      <translation>Bölgənizlə birlikdə üstünlük verdiyiniz zonanı seçin</translation>
     </message>
     <message>
       <location filename="../src/modules/localeq/Offline.qml" line="193"/>
       <source>Zones</source>
+      <comment>@button</comment>
       <translation>Zonalar</translation>
     </message>
     <message>
       <location filename="../src/modules/localeq/Offline.qml" line="240"/>
-      <source>You can fine-tune Language and Locale settings below.</source>
-      <translation>Dil və Yer ayarlarını aşağıda dəqiq tənzimləyə bilərsiniz.</translation>
+      <source>You can fine-tune language and locale settings below</source>
+      <comment>@label</comment>
+      <translation>Yerli dil və format ayarlarını aşağıda dəqiq ayarlaya bilərsiniz</translation>
+    </message>
+  </context>
+  <context>
+    <name>Offline-qt6</name>
+    <message>
+      <location filename="../src/modules/localeq/Offline-qt6.qml" line="47"/>
+      <source>Select your preferred region, or use the default settings</source>
+      <comment>@label</comment>
+      <translation>Üstünlük verdiyiniz bölgəni seçin və ya ilkin ayarları istifadə edin</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/localeq/Offline-qt6.qml" line="103"/>
+      <location filename="../src/modules/localeq/Offline-qt6.qml" line="180"/>
+      <location filename="../src/modules/localeq/Offline-qt6.qml" line="224"/>
+      <source>Timezone: %1</source>
+      <comment>@label</comment>
+      <translation>Saat qurşağı: %1</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/localeq/Offline-qt6.qml" line="120"/>
+      <source>Select your preferred zone within your region</source>
+      <comment>@label</comment>
+      <translation>Bölgənizlə birlikdə üstünlük verdiyiniz zonanı seçin</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/localeq/Offline-qt6.qml" line="193"/>
+      <source>Zones</source>
+      <comment>@button</comment>
+      <translation>Zonalar</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/localeq/Offline-qt6.qml" line="240"/>
+      <source>You can fine-tune language and locale settings below</source>
+      <comment>@label</comment>
+      <translation>Yerli dil və format ayarlarını aşağıda dəqiq ayarlaya bilərsiniz</translation>
     </message>
   </context>
   <context>
@@ -2367,10 +2676,26 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <source>The password contains forbidden words in some form</source>
       <translation>Şifrə qadağan edilmiş sözlərdən ibarətdir</translation>
     </message>
+    <message numerus="yes">
+      <location filename="../src/modules/users/CheckPWQuality.cpp" line="219"/>
+      <source>The password contains fewer than %n digits</source>
+      <translation>
+        <numerusform>Şifrə %1-dən az rəqəmdən ibarətdir</numerusform>
+        <numerusform>Şifrə %n -dən(dan) az rəqəmdən ibarətdir</numerusform>
+      </translation>
+    </message>
     <message>
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="222"/>
       <source>The password contains too few digits</source>
       <translation>Şifrə çox az rəqəmdən ibarətdir</translation>
+    </message>
+    <message numerus="yes">
+      <location filename="../src/modules/users/CheckPWQuality.cpp" line="226"/>
+      <source>The password contains fewer than %n uppercase letters</source>
+      <translation>
+        <numerusform>Şifrə %n -dən/dan az böyük hərflərdən ibarətdir</numerusform>
+        <numerusform>Şifrə %n -dən/dan az böyük hərfdən ibarətdir</numerusform>
+      </translation>
     </message>
     <message>
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="229"/>
@@ -2390,47 +2715,6 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <source>The password contains too few lowercase letters</source>
       <translation>Şifrə çox az kiçik hərflərdən ibarətdir</translation>
     </message>
-    <message>
-      <location filename="../src/modules/users/CheckPWQuality.cpp" line="243"/>
-      <source>The password contains too few non-alphanumeric characters</source>
-      <translation>Şifrə çox az alfasayısal olmayan simvollardan ibarətdir</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/CheckPWQuality.cpp" line="250"/>
-      <source>The password is too short</source>
-      <translation>Şifrə çox qısadır</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/CheckPWQuality.cpp" line="259"/>
-      <source>The password does not contain enough character classes</source>
-      <translation>Şifrənin tərkibində kifayət qədər simvol sinifi yoxdur</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/CheckPWQuality.cpp" line="266"/>
-      <source>The password contains too many same characters consecutively</source>
-      <translation>Şifrə ardıcıl olaraq çox oxşar simvollardan ibarətdir</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/CheckPWQuality.cpp" line="276"/>
-      <source>The password contains too many characters of the same class consecutively</source>
-      <translation>Şifrə ardıcıl olaraq eyni sinifin çox simvolundan ibarətdir</translation>
-    </message>
-    <message numerus="yes">
-      <location filename="../src/modules/users/CheckPWQuality.cpp" line="219"/>
-      <source>The password contains fewer than %n digits</source>
-      <translation>
-        <numerusform>Şifrə %1-dən az rəqəmdən ibarətdir</numerusform>
-        <numerusform>Şifrə %n -dən(dan) az rəqəmdən ibarətdir</numerusform>
-      </translation>
-    </message>
-    <message numerus="yes">
-      <location filename="../src/modules/users/CheckPWQuality.cpp" line="226"/>
-      <source>The password contains fewer than %n uppercase letters</source>
-      <translation>
-        <numerusform>Şifrə %n -dən/dan az böyük hərflərdən ibarətdir</numerusform>
-        <numerusform>Şifrə %n -dən/dan az böyük hərfdən ibarətdir</numerusform>
-      </translation>
-    </message>
     <message numerus="yes">
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="240"/>
       <source>The password contains fewer than %n non-alphanumeric characters</source>
@@ -2439,6 +2723,11 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
         <numerusform>Şifrə %n -dən/dan az hərf-rəqəm olmayan simvollardan ibarətdir</numerusform>
       </translation>
     </message>
+    <message>
+      <location filename="../src/modules/users/CheckPWQuality.cpp" line="243"/>
+      <source>The password contains too few non-alphanumeric characters</source>
+      <translation>Şifrə çox az alfasayısal olmayan simvollardan ibarətdir</translation>
+    </message>
     <message numerus="yes">
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="247"/>
       <source>The password is shorter than %n characters</source>
@@ -2446,6 +2735,11 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
         <numerusform>Şifrə %n simvoldan qısadır</numerusform>
         <numerusform>Şifrə %n simvoldan qısadır</numerusform>
       </translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/CheckPWQuality.cpp" line="250"/>
+      <source>The password is too short</source>
+      <translation>Şifrə çox qısadır</translation>
     </message>
     <message>
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="252"/>
@@ -2460,6 +2754,11 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
         <numerusform>Şifrə %n simvol sinifindən azdır</numerusform>
       </translation>
     </message>
+    <message>
+      <location filename="../src/modules/users/CheckPWQuality.cpp" line="259"/>
+      <source>The password does not contain enough character classes</source>
+      <translation>Şifrənin tərkibində kifayət qədər simvol sinifi yoxdur</translation>
+    </message>
     <message numerus="yes">
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="263"/>
       <source>The password contains more than %n same characters consecutively</source>
@@ -2468,6 +2767,11 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
         <numerusform>Şifrə ardıcıl olaraq %n eyni simvollardan ibarətdir</numerusform>
       </translation>
     </message>
+    <message>
+      <location filename="../src/modules/users/CheckPWQuality.cpp" line="266"/>
+      <source>The password contains too many same characters consecutively</source>
+      <translation>Şifrə ardıcıl olaraq çox oxşar simvollardan ibarətdir</translation>
+    </message>
     <message numerus="yes">
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="270"/>
       <source>The password contains more than %n characters of the same class consecutively</source>
@@ -2475,6 +2779,11 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
         <numerusform>Şifrə ardıcıl eyni sinifin %n-dən/dan çox simvolundan ibarətdir</numerusform>
         <numerusform>Şifrə ardıcıl eyni sinifin %n-dən/dan çox simvolundan ibarətdir</numerusform>
       </translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/CheckPWQuality.cpp" line="276"/>
+      <source>The password contains too many characters of the same class consecutively</source>
+      <translation>Şifrə ardıcıl olaraq eyni sinifin çox simvolundan ibarətdir</translation>
     </message>
     <message numerus="yes">
       <location filename="../src/modules/users/CheckPWQuality.cpp" line="281"/>
@@ -2574,11 +2883,6 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <source>Unknown error</source>
       <translation>Naməlum xəta</translation>
     </message>
-    <message>
-      <location filename="../src/modules/users/Config.cpp" line="840"/>
-      <source>Password is empty</source>
-      <translation>Şifrə böşdur</translation>
-    </message>
   </context>
   <context>
     <name>PackageChooserPage</name>
@@ -2625,7 +2929,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <name>Page_Keyboard</name>
     <message>
       <location filename="../src/modules/keyboard/KeyboardPage.ui" line="74"/>
-      <source>Keyboard Model:</source>
+      <source>Keyboard model:</source>
       <translation>Klaviatura modeli:</translation>
     </message>
     <message>
@@ -2635,8 +2939,9 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     </message>
     <message>
       <location filename="../src/modules/keyboard/KeyboardPage.ui" line="153"/>
-      <source>Keyboard Switch:</source>
-      <translation type="unfinished"/>
+      <source>Switch Keyboard:</source>
+      <extracomment>shortcut for switching between keyboard layouts</extracomment>
+      <translation>Klaviaturanı dəyişin:</translation>
     </message>
   </context>
   <context>
@@ -2741,35 +3046,41 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="182"/>
       <source>Home</source>
+      <comment>@label</comment>
       <translation>Home</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="186"/>
       <source>Boot</source>
+      <comment>@label</comment>
       <translation>Boot</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="191"/>
       <source>EFI system</source>
+      <comment>@label</comment>
       <translation>EFI sistemi</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="195"/>
       <source>Swap</source>
+      <comment>@label</comment>
       <translation>Swap - Mübadilə</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="199"/>
       <source>New partition for %1</source>
+      <comment>@label</comment>
       <translation>%1 üçün yeni bölmə</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="203"/>
       <source>New partition</source>
+      <comment>@label</comment>
       <translation>Yeni bölmə</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="227"/>
+      <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="228"/>
       <source>%1  %2</source>
       <extracomment>size[number] filesystem[name]</extracomment>
       <translation>%1  %2</translation>
@@ -2781,37 +3092,44 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="157"/>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="201"/>
       <source>Free Space</source>
+      <comment>@title</comment>
       <translation>Boş disk sahəsi</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="161"/>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="205"/>
-      <source>New partition</source>
-      <translation>Yeni bölmə</translation>
+      <source>New Partition</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="298"/>
+      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="307"/>
       <source>Name</source>
+      <comment>@title</comment>
       <translation>Adı</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="300"/>
+      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="309"/>
       <source>File System</source>
+      <comment>@title</comment>
       <translation>Fayl sistemi</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="302"/>
+      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="311"/>
       <source>File System Label</source>
+      <comment>@title</comment>
       <translation>Fayl sistemi yarlığı</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="304"/>
+      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="313"/>
       <source>Mount Point</source>
+      <comment>@title</comment>
       <translation>Qoşulma nöqtəsi</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="306"/>
+      <location filename="../src/modules/partition/core/PartitionModel.cpp" line="315"/>
       <source>Size</source>
+      <comment>@title</comment>
       <translation>Ölçüsü</translation>
     </message>
   </context>
@@ -2893,12 +3211,14 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
     <name>PartitionViewStep</name>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="56"/>
-      <source>Gathering system information...</source>
-      <translation>Sistem məlumatları toplanır ...</translation>
+      <source>Gathering system information…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="107"/>
       <source>Partitions</source>
+      <comment>@label</comment>
       <translation>Bölmələr</translation>
     </message>
     <message>
@@ -2919,80 +3239,103 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="296"/>
       <source>Current:</source>
+      <comment>@label</comment>
       <translation>Cari:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="314"/>
       <source>After:</source>
+      <comment>@label</comment>
       <translation>Sonra:</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="535"/>
-      <source>No EFI system partition configured</source>
-      <translation>EFI sistemi bölməsi tənzimlənməyib</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="539"/>
-      <source>EFI system partition configured incorrectly</source>
-      <translation>EFİ sistem bölməsi səhv yaradıldı</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="544"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="536"/>
       <source>An EFI system partition is necessary to start %1.&lt;br/&gt;&lt;br/&gt;To configure an EFI system partition, go back and select or create a suitable filesystem.</source>
       <translation>EFİ fayl sistemi %1 başladılması üçün lazımdır.&lt;br/&gt; &lt;br/&gt; EFİ fayl sistemini quraşdırmaq üçün geri qayıdın və uyğun fayl sistemini seçin və ya yaradın.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="555"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="542"/>
+      <source>An EFI system partition is necessary to start %1.&lt;br/&gt;&lt;br/&gt;The EFI system partition does not meet recommendations. It is recommended to go back and select or create a suitable filesystem.</source>
+      <translation>%1 başlatmaq üçün EFİ sistem bölməsi vacibdir. &lt;br/&gt;&lt;br/&gt;EFİ bölməsi lazımi qaydada deyil. Geriyə qayıtmanız və uyğun fayl sistemi yaratmanız tövsiyyə olunur.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="550"/>
       <source>The filesystem must be mounted on &lt;strong&gt;%1&lt;/strong&gt;.</source>
       <translation>Fayl sistemi burada qoşulmalıdır: &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="561"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="551"/>
       <source>The filesystem must have type FAT32.</source>
       <translation>Fayl sistemi FAT32 olmalıdır.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="569"/>
-      <source>The filesystem must be at least %1 MiB in size.</source>
-      <translation>Fayl sisteminin ölçüsü ən az %1 MiB olmalıdır.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="575"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="552"/>
       <source>The filesystem must have flag &lt;strong&gt;%1&lt;/strong&gt; set.</source>
       <translation>Fayl sisteminə &lt;strong&gt;%1&lt;/strong&gt; bayrağı təyin olunmalıdır.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="581"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="560"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="562"/>
+      <source>The filesystem must be at least %1 MiB in size.</source>
+      <translation>Fayl sisteminin ölçüsü ən az %1 MiB olmalıdır.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="564"/>
+      <source>The minimum recommended size for the filesystem is %1 MiB.</source>
+      <translation>Fayl sistemi üçün tövsiyyə olunan ölçü %1 MiB-dır</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="566"/>
       <source>You can continue without setting up an EFI system partition but your system may fail to start.</source>
       <translation>Siz, EFİ sistem bölməsini ayarlamadan davam edə bilərsiniz, lakin bu sisteminizin işə düşə bilməməsinə səbəb ola bilər.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="599"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="568"/>
+      <source>You can continue with this EFI system partition configuration but your system may fail to start.</source>
+      <translation>Bu EFİ sistem bölməsi tənzimləməsi ilə davam edə bilərsiniz, lakin sisteminizin açılmaya bilər.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="580"/>
+      <source>No EFI system partition configured</source>
+      <translation>EFI sistemi bölməsi tənzimlənməyib</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="588"/>
+      <source>EFI system partition configured incorrectly</source>
+      <translation>EFİ sistem bölməsi səhv yaradıldı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="608"/>
+      <source>EFI system partition recommendation</source>
+      <translation>EFİ sistem bölməsi tövsiyəsi</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="627"/>
       <source>Option to use GPT on BIOS</source>
       <translation>BIOS-da GPT istifadəsi seçimi</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="600"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="628"/>
       <source>A GPT partition table is the best option for all systems. This installer supports such a setup for BIOS systems too.&lt;br/&gt;&lt;br/&gt;To configure a GPT partition table on BIOS, (if not done so already) go back and set the partition table to GPT, next create a 8 MB unformatted partition with the &lt;strong&gt;%2&lt;/strong&gt; flag enabled.&lt;br/&gt;&lt;br/&gt;An unformatted 8 MB partition is necessary to start %1 on a BIOS system with GPT.</source>
       <translation>GPT bölmə cədvəli bütün sistemlər üçün yaxşıdır. Bu quraşdırıcı BIOS sistemləri üçün də belə bir quruluşu dəstəkləyir.&lt;br/&gt;&lt;br/&gt;BİOS-da GPT bölmələr cədvəlini ayarlamaq üçün (əgər bu edilməyibsə) geriyə qayıdın və bölmələr cədvəlini GPT-yə qurun, sonra isə &lt;strong&gt;%2&lt;/strong&gt; bayrağı seçilmiş 8 MB-lıq formatlanmamış bölmə yaradın.&lt;br/&gt;&lt;br/&gt;8 MB-lıq formatlanmamış bölmə GPT ilə BİOS sistemində %1 başlatmaq üçün lazımdır.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="622"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="650"/>
       <source>Boot partition not encrypted</source>
       <translation>Ön yükləyici bölməsi çifrələnməyib</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="623"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="651"/>
       <source>A separate boot partition was set up together with an encrypted root partition, but the boot partition is not encrypted.&lt;br/&gt;&lt;br/&gt;There are security concerns with this kind of setup, because important system files are kept on an unencrypted partition.&lt;br/&gt;You may continue if you wish, but filesystem unlocking will happen later during system startup.&lt;br/&gt;To encrypt the boot partition, go back and recreate it, selecting &lt;strong&gt;Encrypt&lt;/strong&gt; in the partition creation window.</source>
       <translation>Şifrəli bir kök bölməsi ilə birlikdə ayrı bir ön yükləyici bölməsi qurulub, ancaq ön yükləyici bölməsi şifrələnməyib.&lt;br/&gt;&lt;br/&gt;Bu cür quraşdırma ilə bağlı təhlükəsizlik problemləri olur, çünki vacib sistem sənədləri şifrəsiz bölmədə saxlanılır.&lt;br/&gt;İstəyirsinizsə davam edə bilərsiniz, lakin, fayl sisteminin kilidi, sistem başladıldıqdan daha sonra açılacaqdır.&lt;br/&gt;Yükləmə hissəsini şifrələmək üçün geri qayıdın və bölmə yaratma pəncərəsində &lt;strong&gt;Şifrələmə&lt;/strong&gt; menyusunu seçərək onu yenidən yaradın.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="715"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="743"/>
       <source>has at least one disk device available.</source>
       <translation>ən az bir disk qurğusu mövcuddur.</translation>
     </message>
     <message>
-      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="716"/>
+      <location filename="../src/modules/partition/PartitionViewStep.cpp" line="744"/>
       <source>There are no partitions to install on.</source>
       <translation>Quraşdırmaq üçün bölmə yoxdur.</translation>
     </message>
@@ -3001,8 +3344,9 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
     <name>PlasmaLnfJob</name>
     <message>
       <location filename="../src/modules/plasmalnf/PlasmaLnfJob.cpp" line="33"/>
-      <source>Plasma Look-and-Feel Job</source>
-      <translation>Plasma Xarici Görünüş Mövzusu İşləri</translation>
+      <source>Applying Plasma Look-and-Feel…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/plasmalnf/PlasmaLnfJob.cpp" line="57"/>
@@ -3014,12 +3358,12 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
   <context>
     <name>PlasmaLnfPage</name>
     <message>
-      <location filename="../src/modules/plasmalnf/PlasmaLnfPage.cpp" line="79"/>
+      <location filename="../src/modules/plasmalnf/PlasmaLnfPage.cpp" line="80"/>
       <source>Please choose a look-and-feel for the KDE Plasma Desktop. You can also skip this step and configure the look-and-feel once the system is set up. Clicking on a look-and-feel selection will give you a live preview of that look-and-feel.</source>
       <translation>Lütfən, KDE Plasma İş Masası üçün Xarici Görünüşü seçin. Siz həmçinin bu mərhələni ötürə və sistem qurulduqdan sonra Plasma xarici görünüşünü ayarlaya bilərsiniz. Xarici Görünüşə klikləməniz onun canlı görüntüsünü sizə göstərəcəkdir.</translation>
     </message>
     <message>
-      <location filename="../src/modules/plasmalnf/PlasmaLnfPage.cpp" line="84"/>
+      <location filename="../src/modules/plasmalnf/PlasmaLnfPage.cpp" line="87"/>
       <source>Please choose a look-and-feel for the KDE Plasma Desktop. You can also skip this step and configure the look-and-feel once the system is installed. Clicking on a look-and-feel selection will give you a live preview of that look-and-feel.</source>
       <translation>Lütfən, KDE Plasma İş Masası üçün Xarici Görünüşü seçin. Siz həmçinin bu mərhələni ötürə və sistem qurulduqdan sonra Plasma xarici görünüşünü ayarlaya bilərsiniz. Xarici Görünüşə klikləməniz onun canlı görüntüsünü sizə göstərəcəkdir.</translation>
     </message>
@@ -3029,6 +3373,7 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
     <message>
       <location filename="../src/modules/plasmalnf/PlasmaLnfViewStep.cpp" line="43"/>
       <source>Look-and-Feel</source>
+      <comment>@label</comment>
       <translation>Xarici Görünüş</translation>
     </message>
   </context>
@@ -3036,8 +3381,9 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
     <name>PreserveFiles</name>
     <message>
       <location filename="../src/modules/preservefiles/PreserveFiles.cpp" line="56"/>
-      <source>Saving files for later ...</source>
-      <translation>Fayllar daha sonra saxlanılır...</translation>
+      <source>Saving files for later…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/preservefiles/PreserveFiles.cpp" line="64"/>
@@ -3053,14 +3399,14 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
   <context>
     <name>ProcessResult</name>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="303"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="301"/>
       <source>
 There was no output from the command.</source>
       <translation>
 Əmrlərdən çıxarış alınmadı.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="304"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="302"/>
       <source>
 Output:
 </source>
@@ -3069,52 +3415,52 @@ Output:
 </translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="308"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="307"/>
       <source>External command crashed.</source>
       <translation>Xarici əmr qəzası baş verdi.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="309"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="308"/>
       <source>Command &lt;i&gt;%1&lt;/i&gt; crashed.</source>
       <translation>&lt;i&gt;%1&lt;/i&gt; əmrində qəza baş verdi.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="314"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="315"/>
       <source>External command failed to start.</source>
       <translation>Xarici əmr başladıla bilmədi.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="315"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="316"/>
       <source>Command &lt;i&gt;%1&lt;/i&gt; failed to start.</source>
       <translation>&lt;i&gt;%1&lt;/i&gt; əmri əmri başladıla bilmədi.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="319"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="322"/>
       <source>Internal error when starting command.</source>
       <translation>Əmr başlayarkən daxili xəta.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="320"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="323"/>
       <source>Bad parameters for process job call.</source>
       <translation>İş prosesini çağırmaq üçün xətalı parametr.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="324"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="329"/>
       <source>External command failed to finish.</source>
       <translation>Xarici əmr başa çatdırıla bilmədi.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="325"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="330"/>
       <source>Command &lt;i&gt;%1&lt;/i&gt; failed to finish in %2 seconds.</source>
       <translation>&lt;i&gt;%1&lt;/i&gt; əmrini %2 saniyədə başa çatdırmaq mümkün olmadı.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="332"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="338"/>
       <source>External command finished with errors.</source>
       <translation>Xarici əmr xəta ilə başa çatdı.</translation>
     </message>
     <message>
-      <location filename="../src/libcalamares/utils/System.cpp" line="333"/>
+      <location filename="../src/libcalamares/utils/System.cpp" line="339"/>
       <source>Command &lt;i&gt;%1&lt;/i&gt; finished with exit code %2.</source>
       <translation>&lt;i&gt;%1&lt;/i&gt; əmri %2 xəta kodu ilə başa çatdı.</translation>
     </message>
@@ -3122,28 +3468,32 @@ Output:
   <context>
     <name>QObject</name>
     <message>
-      <location filename="../src/libcalamares/locale/Translation.cpp" line="155"/>
+      <location filename="../src/libcalamares/locale/Translation.cpp" line="170"/>
       <source>%1 (%2)</source>
       <translation>%1 (%2)</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/partition/FileSystem.cpp" line="33"/>
       <source>unknown</source>
+      <comment>@partition info</comment>
       <translation>naməlum</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/partition/FileSystem.cpp" line="35"/>
       <source>extended</source>
+      <comment>@partition info</comment>
       <translation>genişləndirilmiş</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/partition/FileSystem.cpp" line="37"/>
       <source>unformatted</source>
+      <comment>@partition info</comment>
       <translation>format olunmamış</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/partition/FileSystem.cpp" line="39"/>
       <source>swap</source>
+      <comment>@partition info</comment>
       <translation>mübadilə</translation>
     </message>
     <message>
@@ -3153,26 +3503,12 @@ Output:
       <translation>Standart</translation>
     </message>
     <message>
-      <location filename="../src/modules/machineid/Workers.cpp" line="64"/>
-      <location filename="../src/modules/machineid/Workers.cpp" line="72"/>
-      <location filename="../src/modules/machineid/Workers.cpp" line="76"/>
-      <location filename="../src/modules/machineid/Workers.cpp" line="93"/>
-      <source>File not found</source>
-      <translation>Fayl tapılmadı</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/machineid/Workers.cpp" line="65"/>
-      <source>Path &lt;pre&gt;%1&lt;/pre&gt; must be an absolute path.</source>
-      <translation>&lt;pre&gt;%1&lt;/pre&gt; yolu mütləq bir yol olmalıdır.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="81"/>
+      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="101"/>
       <source>Directory not found</source>
       <translation>Qovluq tapılmadı</translation>
     </message>
     <message>
-      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="82"/>
-      <location filename="../src/modules/machineid/Workers.cpp" line="94"/>
+      <location filename="../src/modules/machineid/MachineIdJob.cpp" line="102"/>
       <source>Could not create new random file &lt;pre&gt;%1&lt;/pre&gt;.</source>
       <translation>Yeni təsadüfi&lt;pre&gt;%1&lt;/pre&gt; faylı yaradıla bilmir.</translation>
     </message>
@@ -3194,6 +3530,7 @@ Output:
     <message>
       <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="39"/>
       <source>Unpartitioned space or unknown partition table</source>
+      <comment>@info</comment>
       <translation>Bölünməmiş disk sahəsi və ya naməlum bölmələr cədvəli</translation>
     </message>
   </context>
@@ -3211,8 +3548,9 @@ Output:
     <name>RemoveUserJob</name>
     <message>
       <location filename="../src/modules/removeuser/RemoveUserJob.cpp" line="32"/>
-      <source>Remove live user from target system</source>
-      <translation>Canlı istifadəçini hədəf sistemindən silmək</translation>
+      <source>Removing live user from the target system…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -3220,13 +3558,15 @@ Output:
     <message>
       <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="26"/>
       <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="38"/>
-      <source>Remove Volume Group named %1.</source>
-      <translation>%1 adlı Tutum Qrupunu silmək.</translation>
+      <source>Removing Volume Group named %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="32"/>
-      <source>Remove Volume Group named &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; adlı Tutum Qrupunu silmək.</translation>
+      <source>Removing Volume Group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="46"/>
@@ -3255,90 +3595,110 @@ Output:
     <name>ResizeFSJob</name>
     <message>
       <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="43"/>
-      <source>Resize Filesystem Job</source>
-      <translation>Fayl sisteminin ölçüsünü dəyişmək</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="161"/>
-      <source>Invalid configuration</source>
-      <translation>Etibarsız Tənzimləmə</translation>
+      <source>Performing file system resize…</source>
+      <comment>@status</comment>
+      <translation>Fayl sisteminin ölçüsü dəyişdirilir...</translation>
     </message>
     <message>
       <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="162"/>
+      <source>Invalid configuration</source>
+      <comment>@error</comment>
+      <translation>Etibarsız Tənzimləmə</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="163"/>
       <source>The file-system resize job has an invalid configuration and will not run.</source>
+      <comment>@error</comment>
       <translation>Fayl sisteminin ölçüsünü dəyişmək işinin tənzimlənməsi etibarsızdır və baçladıla bilməz.</translation>
     </message>
     <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="167"/>
-      <source>KPMCore not Available</source>
-      <translation>KPMCore mövcud deyil</translation>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="169"/>
+      <source>KPMCore not available</source>
+      <comment>@error</comment>
+      <translation>"KPMCore" əlçatan deyil</translation>
     </message>
     <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="168"/>
-      <source>Calamares cannot start KPMCore for the file-system resize job.</source>
-      <translation>Calamares bu fayl sisteminin ölçüsünü dəyişmək üçün KPMCore proqramını işə sala bilmir.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="176"/>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="185"/>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="196"/>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="205"/>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="223"/>
-      <source>Resize Failed</source>
-      <translation>Ölçüsünü dəyişmə alınmadı</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="178"/>
-      <source>The filesystem %1 could not be found in this system, and cannot be resized.</source>
-      <translation>%1 fayl sistemi bu sistemdə tapılmadı və ölçüsü dəyişdirilə bilmədi.</translation>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="170"/>
+      <source>Calamares cannot start KPMCore for the file system resize job.</source>
+      <comment>@error</comment>
+      <translation>Calamares bu fayl sisteminin ölçüsünü dəyişmək üçün "KPMCore" proqramını işə sala bilmir.</translation>
     </message>
     <message>
       <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="179"/>
+      <source>Resize failed.</source>
+      <comment>@error</comment>
+      <translation>Ölçüsünü dəyişmək mümkün olmadı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="181"/>
+      <source>The filesystem %1 could not be found in this system, and cannot be resized.</source>
+      <comment>@info</comment>
+      <translation>%1 fayl sistemi bu sistemdə tapılmadı və ölçüsü dəyişdirilə bilmədi.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="182"/>
       <source>The device %1 could not be found in this system, and cannot be resized.</source>
+      <comment>@info</comment>
       <translation>%1 qurğusu bu sistemdə tapılmadı və ölçüsü dəyişdirilə bilməz.</translation>
     </message>
     <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="187"/>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="198"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="189"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="201"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="212"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="231"/>
+      <source>Resize Failed</source>
+      <comment>@error</comment>
+      <translation>Ölçüsünü dəyişmə alınmadı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="191"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="203"/>
       <source>The filesystem %1 cannot be resized.</source>
+      <comment>@error</comment>
       <translation>%1 fayl sisteminin ölçüsü dəyişdirilə bilmədi.</translation>
     </message>
     <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="188"/>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="199"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="192"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="204"/>
       <source>The device %1 cannot be resized.</source>
+      <comment>@error</comment>
       <translation>%1 qurğusunun ölçüsü dəyişdirilə bilmədi.</translation>
     </message>
     <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="206"/>
-      <source>The filesystem %1 must be resized, but cannot.</source>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="213"/>
+      <source>The file system %1 must be resized, but cannot.</source>
+      <comment>@info</comment>
       <translation>%1 fayl sisteminin ölçüsü dəyişdirilməlidir, lakin bu mümkün deyil.</translation>
     </message>
     <message>
-      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="207"/>
+      <location filename="../src/modules/fsresizer/ResizeFSJob.cpp" line="214"/>
       <source>The device %1 must be resized, but cannot</source>
+      <comment>@info</comment>
       <translation>%1 qurğusunun ölçüsü dəyişdirilməlidir, lakin, bu mümkün deyil</translation>
     </message>
   </context>
   <context>
     <name>ResizePartitionJob</name>
     <message>
-      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="41"/>
-      <source>Resize partition %1.</source>
-      <translation>%1 bölməsinin ölçüsünü dəyişmək.</translation>
+      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="39"/>
+      <source>Resize partition %1</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="47"/>
-      <source>Resize &lt;strong&gt;%2MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MiB&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%2MB&lt;/strong&gt; &lt;strong&gt;%1&lt;/strong&gt; bölməsinin ölçüsünü &lt;strong&gt;%3MB&lt;/strong&gt;-a dəyişmək.</translation>
+      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="45"/>
+      <source>Resize &lt;strong&gt;%2MiB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MiB&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="57"/>
-      <source>Resizing %2MiB partition %1 to %3MiB.</source>
-      <translation>%2 MB %1 bölməsinin ölçüsünü %3MB-a dəyişmək.</translation>
+      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="54"/>
+      <source>Resizing %2MiB partition %1 to %3MiB…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="74"/>
+      <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="70"/>
       <source>The installer failed to resize partition %1 on disk '%2'.</source>
       <translation>Quraşdırıcı %1 bölməsinin ölçüsünü "%2" diskində dəyişə bilmədi.</translation>
     </message>
@@ -3348,6 +3708,7 @@ Output:
     <message>
       <location filename="../src/modules/partition/gui/ResizeVolumeGroupDialog.cpp" line="30"/>
       <source>Resize Volume Group</source>
+      <comment>@title</comment>
       <translation>Tutum qrupunun ölçüsünü dəyişmək</translation>
     </message>
   </context>
@@ -3355,17 +3716,24 @@ Output:
     <name>ResizeVolumeGroupJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="28"/>
-      <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="46"/>
-      <source>Resize volume group named %1 from %2 to %3.</source>
-      <translation>%1 adlı tutum qrupunun ölçüsünü %2-dən %3-ə dəyişmək.</translation>
+      <source>Resize volume group named %1 from %2 to %3</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="37"/>
-      <source>Resize volume group named &lt;strong&gt;%1&lt;/strong&gt; from &lt;strong&gt;%2&lt;/strong&gt; to &lt;strong&gt;%3&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; adlı tutum qrupunun ölçüsünü &lt;strong&gt;%2&lt;/strong&gt;-dən strong&gt;%3&lt;/strong&gt;-ə dəyişmək.</translation>
+      <source>Resize volume group named &lt;strong&gt;%1&lt;/strong&gt; from &lt;strong&gt;%2&lt;/strong&gt; to &lt;strong&gt;%3&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="57"/>
+      <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="47"/>
+      <source>Resizing volume group named %1 from %2 to %3…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="58"/>
       <source>The installer failed to resize a volume group named '%1'.</source>
       <translation>Quraşdırıcı "%1" adlı tutum qrupunun ölçüsünü dəyişə bilmədi.</translation>
     </message>
@@ -3382,13 +3750,15 @@ Output:
     <name>ScanningDialog</name>
     <message>
       <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
-      <source>Scanning storage devices...</source>
-      <translation>Yaddaş qurğusu axtarılır...</translation>
+      <source>Scanning storage devices…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="68"/>
-      <source>Partitioning</source>
-      <translation>Bölüşdürmə</translation>
+      <source>Partitioning…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -3405,8 +3775,9 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/users/SetHostNameJob.cpp" line="48"/>
-      <source>Setting hostname %1.</source>
-      <translation>%1 host adının ayarlanması.</translation>
+      <source>Setting hostname %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/users/SetHostNameJob.cpp" line="121"/>
@@ -3425,111 +3796,141 @@ Output:
     <name>SetKeyboardLayoutJob</name>
     <message>
       <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="66"/>
-      <source>Set keyboard model to %1, layout to %2-%3</source>
-      <translation>Klaviatura modeliini  %1, qatını isə %2-%3 təyin etmək</translation>
+      <source>Setting keyboard model to %1, layout as %2-%3…</source>
+      <comment>@status, %1 model, %2 layout, %3 variant</comment>
+      <translation>Klaviatura modelini %1, qatını isə %2-%3 təyin edin...</translation>
     </message>
     <message>
-      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="366"/>
+      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="368"/>
       <source>Failed to write keyboard configuration for the virtual console.</source>
+      <comment>@error</comment>
       <translation>Virtual konsol üçün klaviatura tənzimləmələrini yazmaq mümkün olmadı.</translation>
     </message>
     <message>
-      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="367"/>
-      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="393"/>
-      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="410"/>
+      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="369"/>
       <source>Failed to write to %1</source>
+      <comment>@error, %1 is virtual console configuration path</comment>
       <translation>%1-ə yazmaq mümkün olmadı</translation>
     </message>
     <message>
-      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="392"/>
+      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="394"/>
       <source>Failed to write keyboard configuration for X11.</source>
+      <comment>@error</comment>
       <translation>X11 üçün klaviatura tənzimləmələrini yazmaq mümükün olmadı.</translation>
     </message>
     <message>
-      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="409"/>
+      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="395"/>
+      <source>Failed to write to %1</source>
+      <comment>@error, %1 is keyboard configuration path</comment>
+      <translation>%1-ə yazmaq mümkün olmadı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="411"/>
       <source>Failed to write keyboard configuration to existing /etc/default directory.</source>
+      <comment>@error</comment>
       <translation>Klaviatura tənzimləmələri möcvcud /etc/default qovluğuna yazıla bilmədi.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="412"/>
+      <source>Failed to write to %1</source>
+      <comment>@error, %1 is default keyboard path</comment>
+      <translation>%1-ə yazmaq mümkün olmadı</translation>
     </message>
   </context>
   <context>
     <name>SetPartFlagsJob</name>
     <message>
       <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="44"/>
-      <source>Set flags on partition %1.</source>
-      <translation>%1 bölməsində bayraqlar qoymaq.</translation>
+      <source>Set flags on partition %1</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="50"/>
-      <source>Set flags on %1MiB %2 partition.</source>
-      <translation>%1 MB %2 bölməsində bayraqlar qoymaq.</translation>
+      <source>Set flags on %1MiB %2 partition</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="54"/>
-      <source>Set flags on new partition.</source>
-      <translation>Yeni bölmədə bayraq qoymaq.</translation>
+      <source>Set flags on new partition</source>
+      <comment>@title</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="65"/>
-      <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; bölməsindəki bayraqları ləğv etmək.</translation>
+      <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="71"/>
-      <source>Clear flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-      <translation>%1MB &lt;strong&gt;%2&lt;/strong&gt; bölməsindəki bayraqları ləğv etmək.</translation>
+      <source>Clear flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="75"/>
-      <source>Clear flags on new partition.</source>
-      <translation>Yeni bölmədəki bayraqları ləğv etmək.</translation>
+      <source>Clear flags on new partition</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="80"/>
-      <source>Flag partition &lt;strong&gt;%1&lt;/strong&gt; as &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; bölməsini &lt;strong&gt;%2&lt;/strong&gt; kimi bayraqlamaq.</translation>
+      <source>Set flags on partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%2&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="89"/>
-      <source>Flag %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition as &lt;strong&gt;%3&lt;/strong&gt;.</source>
-      <translation>%1MB &lt;strong&gt;%2&lt;/strong&gt; bölməsini &lt;strong&gt;%3&lt;/strong&gt; kimi bayraqlamaq.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="88"/>
+      <source>Set flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition to &lt;strong&gt;%3&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="96"/>
-      <source>Flag new partition as &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>Yeni bölməni &lt;strong&gt;%1&lt;/strong&gt; kimi bayraqlamaq.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="94"/>
+      <source>Set flags on new partition to &lt;strong&gt;%1&lt;/strong&gt;</source>
+      <comment>@info</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="107"/>
-      <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; bölməsindəki bayraqları ləöv etmək.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="105"/>
+      <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="113"/>
-      <source>Clearing flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-      <translation>%1MB &lt;strong&gt;%2&lt;/strong&gt; bölməsindəki bayraqların ləğv edilməsi.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="112"/>
+      <source>Clearing flags on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="118"/>
-      <source>Clearing flags on new partition.</source>
-      <translation>Yeni bölmədəki bayraqların ləğv edilməsi.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="117"/>
+      <source>Clearing flags on new partition…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="123"/>
-      <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
-      <translation>&lt;strong&gt;%2&lt;/strong&gt; bayraqlarının &lt;strong&gt;%1&lt;/strong&gt; bölməsində ayarlanması.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="122"/>
+      <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="132"/>
-      <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
-      <translation>&lt;strong&gt;%3&lt;/strong&gt; bayraqlarının %1MB &lt;strong&gt;%2&lt;/strong&gt; bölməsində ayarlanması.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="130"/>
+      <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MiB &lt;strong&gt;%2&lt;/strong&gt; partition…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="139"/>
-      <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition.</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt; bayraqlarının yeni bölmədə ayarlanması.</translation>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="136"/>
+      <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="152"/>
+      <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="149"/>
       <source>The installer failed to set flags on partition %1.</source>
       <translation>Quraşdırıcı %1 bölməsinə bayraqlar qoya bilmədi.</translation>
     </message>
@@ -3543,71 +3944,74 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/users/SetPasswordJob.cpp" line="44"/>
-      <source>Setting password for user %1.</source>
-      <translation>%1 istifadəçisi üçün şifrə ayarlamaq.</translation>
+      <source>Setting password for user %1…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/users/SetPasswordJob.cpp" line="77"/>
+      <location filename="../src/modules/users/SetPasswordJob.cpp" line="80"/>
       <source>Bad destination system path.</source>
       <translation>Səhv sistem yolu təyinatı.</translation>
     </message>
     <message>
-      <location filename="../src/modules/users/SetPasswordJob.cpp" line="78"/>
+      <location filename="../src/modules/users/SetPasswordJob.cpp" line="81"/>
       <source>rootMountPoint is %1</source>
       <translation>rootMountPoint %1-dir</translation>
     </message>
     <message>
-      <location filename="../src/modules/users/SetPasswordJob.cpp" line="84"/>
+      <location filename="../src/modules/users/SetPasswordJob.cpp" line="89"/>
       <source>Cannot disable root account.</source>
       <translation>Kök hesabını qeyri-aktiv etmək olmur.</translation>
     </message>
     <message>
-      <location filename="../src/modules/users/SetPasswordJob.cpp" line="93"/>
-      <source>Cannot set password for user %1.</source>
-      <translation>%1 istifadəçisi üçün şifrə yaradıla bilmədi.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/users/SetPasswordJob.cpp" line="85"/>
-      <location filename="../src/modules/users/SetPasswordJob.cpp" line="94"/>
+      <location filename="../src/modules/users/SetPasswordJob.cpp" line="90"/>
+      <location filename="../src/modules/users/SetPasswordJob.cpp" line="108"/>
       <source>usermod terminated with error code %1.</source>
       <translation>usermod %1 xəta kodu ilə sonlandı.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/users/SetPasswordJob.cpp" line="107"/>
+      <source>Cannot set password for user %1.</source>
+      <translation>%1 istifadəçisi üçün şifrə yaradıla bilmədi.</translation>
     </message>
   </context>
   <context>
     <name>SetTimezoneJob</name>
     <message>
       <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="32"/>
-      <source>Set timezone to %1/%2</source>
-      <translation>Saat qurşağını %1/%2 olaraq ayarlamaq</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="59"/>
-      <source>Cannot access selected timezone path.</source>
-      <translation>Seçilmiş saat qurşağı yoluna daxil olmaq mümkün deyil.</translation>
+      <source>Setting timezone to %1/%2…</source>
+      <comment>@status</comment>
+      <translation>Saat qurşağını %1/%2 olaraq ayarlayın...</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="60"/>
+      <source>Cannot access selected timezone path.</source>
+      <comment>@error</comment>
+      <translation>Seçilmiş saat qurşağı yoluna daxil olmaq mümkün deyil.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="61"/>
       <source>Bad path: %1</source>
+      <comment>@error</comment>
       <translation>Etibarsız yol: %1</translation>
     </message>
     <message>
-      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="68"/>
+      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="71"/>
+      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="79"/>
       <source>Cannot set timezone.</source>
+      <comment>@error</comment>
       <translation>Saat qurşağını qurmaq mümkün deyil.</translation>
     </message>
     <message>
-      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="69"/>
+      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="72"/>
       <source>Link creation failed, target: %1; link name: %2</source>
+      <comment>@info</comment>
       <translation>Keçid yaradılması alınmadı, hədəf: %1; keçed adı: %2</translation>
     </message>
     <message>
-      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="74"/>
-      <source>Cannot set timezone,</source>
-      <translation>Saat qurşağı qurulmadı,</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="75"/>
+      <location filename="../src/modules/locale/SetTimezoneJob.cpp" line="80"/>
       <source>Cannot open /etc/timezone for writing</source>
+      <comment>@info</comment>
       <translation>/etc/timezone qovluğu yazılmaq üçün açılmadı</translation>
     </message>
   </context>
@@ -3615,8 +4019,9 @@ Output:
     <name>SetupGroupsJob</name>
     <message>
       <location filename="../src/modules/users/MiscJobs.cpp" line="181"/>
-      <source>Preparing groups.</source>
-      <translation>Qruplar hazırlanır.</translation>
+      <source>Preparing groups…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/users/MiscJobs.cpp" line="193"/>
@@ -3634,8 +4039,9 @@ Output:
     <name>SetupSudoJob</name>
     <message>
       <location filename="../src/modules/users/MiscJobs.cpp" line="34"/>
-      <source>Configure &lt;pre&gt;sudo&lt;/pre&gt; users.</source>
-      <translation>&lt;pre&gt;sudo&lt;/pre&gt; istifadəçilərinin tənzimlənməsi.</translation>
+      <source>Configuring &lt;pre&gt;sudo&lt;/pre&gt; users…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/users/MiscJobs.cpp" line="70"/>
@@ -3652,14 +4058,16 @@ Output:
     <name>ShellProcessJob</name>
     <message>
       <location filename="../src/modules/shellprocess/ShellProcessJob.cpp" line="38"/>
-      <source>Shell Processes Job</source>
-      <translation>Shell prosesləri ilə iş</translation>
+      <source>Running shell processes…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
     <name>SlideCounter</name>
     <message>
-      <location filename="../src/qml/calamares/slideshow/SlideCounter.qml" line="27"/>
+      <location filename="../src/qml/calamares-qt5/slideshow/SlideCounter.qml" line="27"/>
+      <location filename="../src/qml/calamares-qt6/slideshow/SlideCounter.qml" line="27"/>
       <source>%L1 / %L2</source>
       <extracomment>slide counter, %1 of %2 (numeric)</extracomment>
       <translation>%L1 / %L2</translation>
@@ -3702,8 +4110,9 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="106"/>
-      <source>Sending installation feedback.</source>
-      <translation>Quraşdırılma hesabatının göndərməsi.</translation>
+      <source>Sending installation feedback…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="124"/>
@@ -3725,8 +4134,9 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="198"/>
-      <source>Configuring KDE user feedback.</source>
-      <translation>KDE istifadəçi hesabatının tənzimlənməsi.</translation>
+      <source>Configuring KDE user feedback…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="220"/>
@@ -3754,8 +4164,9 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="141"/>
-      <source>Configuring machine feedback.</source>
-      <translation>kompyuter hesabatının tənzimlənməsi.</translation>
+      <source>Configuring machine feedback…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="164"/>
@@ -3817,6 +4228,7 @@ Output:
     <message>
       <location filename="../src/modules/tracking/TrackingViewStep.cpp" line="49"/>
       <source>Feedback</source>
+      <comment>@title</comment>
       <translation>Hesabat</translation>
     </message>
   </context>
@@ -3824,8 +4236,9 @@ Output:
     <name>UmountJob</name>
     <message>
       <location filename="../src/modules/umount/UmountJob.cpp" line="39"/>
-      <source>Unmount file systems.</source>
-      <translation>Fayl sistemini ayırmaq.</translation>
+      <source>Unmounting file systems…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/umount/UmountJob.cpp" line="123"/>
@@ -3984,19 +4397,22 @@ Output:
       <translation>Bu&amp;raxılış haqqında qeydlər</translation>
     </message>
     <message>
-      <location filename="../src/modules/welcome/WelcomePage.cpp" line="212"/>
-      <source>%1 support</source>
-      <translation>%1 dəstəyi</translation>
-    </message>
-    <message>
       <location filename="../src/calamares/DebugWindow.cpp" line="235"/>
-      <source>About %1 setup</source>
+      <source>About %1 Setup</source>
+      <comment>@title</comment>
       <translation>%1 quraşdırması haqqında</translation>
     </message>
     <message>
       <location filename="../src/calamares/DebugWindow.cpp" line="236"/>
-      <source>About %1 installer</source>
+      <source>About %1 Installer</source>
+      <comment>@title</comment>
       <translation>%1 quraşdırıcısı haqqında</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/welcome/WelcomePage.cpp" line="212"/>
+      <source>%1 Support</source>
+      <comment>@action</comment>
+      <translation type="unfinished"/>
     </message>
   </context>
   <context>
@@ -4004,6 +4420,7 @@ Output:
     <message>
       <location filename="../src/modules/welcomeq/WelcomeQmlViewStep.cpp" line="40"/>
       <source>Welcome</source>
+      <comment>@title</comment>
       <translation>Xoş Gəldiniz</translation>
     </message>
   </context>
@@ -4012,6 +4429,7 @@ Output:
     <message>
       <location filename="../src/modules/welcome/WelcomeViewStep.cpp" line="46"/>
       <source>Welcome</source>
+      <comment>@title</comment>
       <translation>Xoş Gəldiniz</translation>
     </message>
   </context>
@@ -4019,8 +4437,9 @@ Output:
     <name>ZfsJob</name>
     <message>
       <location filename="../src/modules/zfs/ZfsJob.cpp" line="102"/>
-      <source>Create ZFS pools and datasets</source>
-      <translation>ZFS mənbələri - zpool və verilənlər dəsti yaratmaq</translation>
+      <source>Creating ZFS pools and datasets…</source>
+      <comment>@status</comment>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/zfs/ZfsJob.cpp" line="162"/>
@@ -4063,24 +4482,36 @@ Output:
     <name>calamares-sidebar</name>
     <message>
       <location filename="../src/calamares/calamares-sidebar.qml" line="89"/>
-      <location filename="../src/calamares/CalamaresWindow.cpp" line="157"/>
       <source>About</source>
       <translation>Haqqında</translation>
     </message>
     <message>
       <location filename="../src/calamares/calamares-sidebar.qml" line="115"/>
-      <location filename="../src/calamares/CalamaresWindow.cpp" line="172"/>
       <source>Debug</source>
       <translation>Sazlama</translation>
     </message>
     <message>
+      <location filename="../src/calamares/CalamaresWindow.cpp" line="157"/>
+      <source>About</source>
+      <comment>@button</comment>
+      <translation>Haqqında</translation>
+    </message>
+    <message>
       <location filename="../src/calamares/CalamaresWindow.cpp" line="159"/>
       <source>Show information about Calamares</source>
+      <comment>@tooltip</comment>
       <translation>Calamares haqqında məlumatlar göstərilsin</translation>
     </message>
     <message>
-      <location filename="../src/calamares/CalamaresWindow.cpp" line="174"/>
+      <location filename="../src/calamares/CalamaresWindow.cpp" line="173"/>
+      <source>Debug</source>
+      <comment>@button</comment>
+      <translation>Sazlama</translation>
+    </message>
+    <message>
+      <location filename="../src/calamares/CalamaresWindow.cpp" line="175"/>
       <source>Show debug information</source>
+      <comment>@tooltip</comment>
       <translation>Sazlama məlumatlarını göstərmək</translation>
     </message>
   </context>
@@ -4117,27 +4548,68 @@ Output:
     </message>
   </context>
   <context>
+    <name>finishedq-qt6</name>
+    <message>
+      <location filename="../src/modules/finishedq/finishedq-qt6.qml" line="35"/>
+      <source>Installation Completed</source>
+      <comment>@title</comment>
+      <translation>Quraşdırma başa çatdı</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finishedq/finishedq-qt6.qml" line="42"/>
+      <source>%1 has been installed on your computer.&lt;br/&gt;
+            You may now restart into your new system, or continue using the Live environment.</source>
+      <comment>@info, %1 is the product name</comment>
+      <translation>%1 komputerinizə quraşdırıldı.&lt;br/&gt;
+             Siz indi yeni quraşdırılmış sistemə daxil ola bilərsiniz, və ya Canlı mühitdən istifadə etməyə davam edə bilərsiniz.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finishedq/finishedq-qt6.qml" line="65"/>
+      <source>Close Installer</source>
+      <comment>@button</comment>
+      <translation>Quraşdırıcını bağlayın</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finishedq/finishedq-qt6.qml" line="71"/>
+      <source>Restart System</source>
+      <comment>@button</comment>
+      <translation>Sistemi yenidən başladın</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/finishedq/finishedq-qt6.qml" line="89"/>
+      <source>&lt;p&gt;A full log of the install is available as installation.log in the home directory of the Live user.&lt;br/&gt;
+            This log is copied to /var/log/installation.log of the target system.&lt;/p&gt;</source>
+      <comment>@info</comment>
+      <translation>&lt;p&gt;Quraşdırmanın tam jurnalı, Canlı mühit istifadəçisinin ev qovluğunda installation.log kimi mövcuddur.&lt;br/&gt;
+            Bu jurnal, hədəf sistemin /var/log/installation.log qovluğuna kopyalandı.&lt;/p&gt;</translation>
+    </message>
+  </context>
+  <context>
     <name>finishedq@mobile</name>
     <message>
       <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="36"/>
       <source>Installation Completed</source>
+      <comment>@title</comment>
       <translation>Quraşdırma başa çatdı</translation>
     </message>
     <message>
       <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="43"/>
       <source>%1 has been installed on your computer.&lt;br/&gt;
             You may now restart your device.</source>
+      <comment>@info, %1 is the product name</comment>
       <translation>%1 kompyuterinizə quraşdırıldı.&lt;br/&gt;
            Cihazınızı indi yenidən başlada bilərsiniz.</translation>
     </message>
     <message>
-      <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="65"/>
+      <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="66"/>
       <source>Close</source>
+      <comment>@button</comment>
       <translation>Bağlayın</translation>
     </message>
     <message>
-      <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="71"/>
+      <location filename="../src/modules/finishedq/finishedq@mobile.qml" line="72"/>
       <source>Restart</source>
+      <comment>@button</comment>
       <translation>Yenidən başladın</translation>
     </message>
   </context>
@@ -4145,28 +4617,66 @@ Output:
     <name>keyboardq</name>
     <message>
       <location filename="../src/modules/keyboardq/keyboardq.qml" line="61"/>
-      <source>To activate keyboard preview, select a layout.</source>
-      <translation>Klaviatura önbaxışını aktiv etmək üçün bir qat seçin.</translation>
+      <source>Select a layout to activate keyboard preview</source>
+      <comment>@label</comment>
+      <translation>Klaviaturaya öncədən baxış üçün bir dil qatı seçin</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboardq/keyboardq.qml" line="144"/>
-      <source>&lt;b&gt;Keyboard Model:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</source>
+      <source>&lt;b&gt;Keyboard model:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</source>
+      <comment>@label</comment>
       <translation>&lt;b&gt;Klaviatura modeli:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboardq/keyboardq.qml" line="185"/>
       <source>Layout</source>
+      <comment>@label</comment>
       <translation>Qat</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboardq/keyboardq.qml" line="258"/>
       <source>Variant</source>
+      <comment>@label</comment>
       <translation>Variant</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboardq/keyboardq.qml" line="311"/>
-      <source>Type here to test your keyboard</source>
-      <translation>Buraya yazaraq klaviaturanı yoxlayın</translation>
+      <source>Type here to test your keyboard…</source>
+      <comment>@label</comment>
+      <translation>Klaviaturanı sınamaq üçün buraya yazın...</translation>
+    </message>
+  </context>
+  <context>
+    <name>keyboardq-qt6</name>
+    <message>
+      <location filename="../src/modules/keyboardq/keyboardq-qt6.qml" line="61"/>
+      <source>Select a layout to activate keyboard preview</source>
+      <comment>@label</comment>
+      <translation>Klaviaturaya öncədən baxış üçün bir dil qatı seçin</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/keyboardq/keyboardq-qt6.qml" line="144"/>
+      <source>&lt;b&gt;Keyboard model:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</source>
+      <comment>@label</comment>
+      <translation>&lt;b&gt;Klaviatura modeli:&amp;nbsp;&amp;nbsp;&lt;/b&gt;</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/keyboardq/keyboardq-qt6.qml" line="185"/>
+      <source>Layout</source>
+      <comment>@label</comment>
+      <translation>Qat</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/keyboardq/keyboardq-qt6.qml" line="258"/>
+      <source>Variant</source>
+      <comment>@label</comment>
+      <translation>Variant</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/keyboardq/keyboardq-qt6.qml" line="311"/>
+      <source>Type here to test your keyboard…</source>
+      <comment>@label</comment>
+      <translation>Klaviaturanı sınamaq üçün buraya yazın...</translation>
     </message>
   </context>
   <context>
@@ -4175,12 +4685,14 @@ Output:
       <location filename="../src/modules/localeq/localeq.qml" line="76"/>
       <location filename="../src/modules/localeq/localeq.qml" line="106"/>
       <source>Change</source>
+      <comment>@button</comment>
       <translation>Dəyişdirmək</translation>
     </message>
     <message>
       <location filename="../src/modules/localeq/localeq.qml" line="142"/>
       <source>&lt;h3&gt;Languages&lt;/h3&gt; &lt;/br&gt;
                             The system locale setting affects the language and character set for some command line user interface elements. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
+      <comment>@info</comment>
       <translation>&lt;h3&gt;Dillər&lt;/h3&gt; &lt;/br&gt;
                    Sistemin yerli dil ayarları bəzi əmrlər və interfeys elementləri üçün işarələr toplusuna təsir edir. Cari ayar belədir: &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
@@ -4188,6 +4700,33 @@ Output:
       <location filename="../src/modules/localeq/localeq.qml" line="213"/>
       <source>&lt;h3&gt;Locales&lt;/h3&gt; &lt;/br&gt;
                                 The system locale setting affects the numbers and dates format. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
+      <comment>@info</comment>
+      <translation>&lt;h3&gt;Yerli dil&lt;/h3&gt; &lt;/br&gt;
+                        Sistemin yerli dil ayarları say və tarix formatlarına təsir edir. Cari ayar belədir: &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+  </context>
+  <context>
+    <name>localeq-qt6</name>
+    <message>
+      <location filename="../src/modules/localeq/localeq-qt6.qml" line="76"/>
+      <location filename="../src/modules/localeq/localeq-qt6.qml" line="106"/>
+      <source>Change</source>
+      <comment>@button</comment>
+      <translation>Dəyişdirmək</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/localeq/localeq-qt6.qml" line="142"/>
+      <source>&lt;h3&gt;Languages&lt;/h3&gt; &lt;/br&gt;
+                            The system locale setting affects the language and character set for some command line user interface elements. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
+      <comment>@info</comment>
+      <translation>&lt;h3&gt;Dillər&lt;/h3&gt; &lt;/br&gt;
+                   Sistemin yerli dil ayarları bəzi əmrlər və interfeys elementləri üçün işarələr toplusuna təsir edir. Cari ayar belədir: &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/localeq/localeq-qt6.qml" line="213"/>
+      <source>&lt;h3&gt;Locales&lt;/h3&gt; &lt;/br&gt;
+                                The system locale setting affects the numbers and dates format. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
+      <comment>@info</comment>
       <translation>&lt;h3&gt;Yerli dil&lt;/h3&gt; &lt;/br&gt;
                         Sistemin yerli dil ayarları say və tarix formatlarına təsir edir. Cari ayar belədir: &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
@@ -4238,6 +4777,46 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="233"/>
+      <source>Please select an option for your install, or use the default: LibreOffice included.</source>
+      <translation>Lütfən quraşdırmanız üçün bir seçim edin və ya ilkin variandan istifadə edin: LibreOffice daxildir.</translation>
+    </message>
+  </context>
+  <context>
+    <name>packagechooserq-qt6</name>
+    <message>
+      <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="45"/>
+      <source>LibreOffice is a powerful and free office suite, used by millions of people around the world. It includes several applications that make it the most versatile Free and Open Source office suite on the market.&lt;br/&gt;
+                    Default option.</source>
+      <translation>LibreOffice bütün dünyada milyonlarla insanın istifadə etdiyi güclü və pulsuz ofis proqramları dəstidir. Buraya, onu bazarda hərtərəfli Pulsuz və Açıq mənbəli ofis proqramları dəsti halına gətirən bir neçə tətbiqlər daxildir. &lt;br/&gt;
+                    İlkin seçimlər.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="59"/>
+      <source>LibreOffice</source>
+      <translation>LibreOffice</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="108"/>
+      <source>If you don't want to install an office suite, just select No Office Suite. You can always add one (or more) later on your installed system as the need arrives.</source>
+      <translation>Əgər ofis proqramları quraşdırmaq istəməsəniz, sadəcə "Ofis dəsti olmadan' seçin. Sİz daha sonra quraşdırılmış sistemə istədiyiniz tətbiqi (həmçinin ofis üçün) quraşdıra bilərsiniz.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="121"/>
+      <source>No Office Suite</source>
+      <translation>Ofis dəsti olmadan</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="172"/>
+      <source>Create a minimal Desktop install, remove all extra applications and decide later on what you would like to add to your system. Examples of what won't be on such an install, there will be no Office Suite, no media players, no image viewer or print support.  It will be just a desktop, file browser, package manager, text editor and simple web-browser.</source>
+      <translation>Minimum İş masası quraşdırması yaradın, bütün əlavə tətbiqləri silin və sonra sisteminizə nə əlavə etmək istədiyinizə qərar verin. Məsələn belə bir quraşdırmada Office Suite, media oynadıcı, şəkillərə baxış və ya printer dəstəyi üçün tətbiqləri quraşdırmaq istəməyə bilərsiniz. Bu, yalnızca fayl bələdçisi, paket idarəedicisi, mətn redaktoru və sadə veb bələdçidən ibarət sadə İş masası olacaq.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="185"/>
+      <source>Minimal Install</source>
+      <translation>Minimum quraşdırma</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="233"/>
       <source>Please select an option for your install, or use the default: LibreOffice included.</source>
       <translation>Lütfən quraşdırmanız üçün bir seçim edin və ya ilkin variandan istifadə edin: LibreOffice daxildir.</translation>
     </message>
@@ -4309,8 +4888,8 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="63"/>
-      <source>Your Full Name</source>
-      <translation>Tam adınız</translation>
+      <source>Your full name</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="80"/>
@@ -4319,8 +4898,8 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="87"/>
-      <source>Login Name</source>
-      <translation>Giriş Adı</translation>
+      <source>Login name</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="116"/>
@@ -4344,13 +4923,18 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="153"/>
-      <source>Computer Name</source>
-      <translation>Kompyuterin adı</translation>
+      <source>Computer name</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="180"/>
       <source>This name will be used if you make the computer visible to others on a network.</source>
       <translation>Əgər gizlədilməzsə komputer şəbəkədə bu adla görünəcək.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq.qml" line="193"/>
+      <source>Only letters, numbers, underscore and hyphen are allowed, minimal of two characters.</source>
+      <translation>Yalnız hərflərə, saylara, alt cizgisinə və tire işarəsinə icazə verilir, ən az iki simvol.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="202"/>
@@ -4369,33 +4953,13 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="238"/>
-      <source>Repeat Password</source>
-      <translation>Şifrənin təkararı</translation>
+      <source>Repeat password</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="265"/>
       <source>Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.</source>
       <translation>Düzgün yazılmasını yoxlamaq üçün eyni şifrəni iki dəfə daxil edin. Güclü şifrə üçün rəqəm, hərf və durğu işarələrinin qarışıöğından istifadə edin. Şifrə ən azı səkkiz simvoldan uzun olmalı və müntəzəm olaraq dəyişdirilməlidir.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/usersq/usersq.qml" line="410"/>
-      <source>Validate passwords quality</source>
-      <translation>Şifrənin keyfiyyətini yoxlamaq</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/usersq/usersq.qml" line="420"/>
-      <source>When this box is checked, password-strength checking is done and you will not be able to use a weak password.</source>
-      <translation>Bu qutu işarələndikdə, şifrənin etibarlıq səviyyəsi yoxlanılır və siz zəif şifrədən istifadə edə bilməyəcəksiniz.</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/usersq/usersq.qml" line="402"/>
-      <source>Log in automatically without asking for the password</source>
-      <translation>Şifrə soruşmadan sistemə daxil olmaq</translation>
-    </message>
-    <message>
-      <location filename="../src/modules/usersq/usersq.qml" line="193"/>
-      <source>Only letters, numbers, underscore and hyphen are allowed, minimal of two characters.</source>
-      <translation>Yalnız hərflərə, saylara, alt cizgisinə və tire işarəsinə icazə verilir, ən az iki simvol.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="297"/>
@@ -4414,46 +4978,224 @@ Output:
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="328"/>
-      <source>Root Password</source>
-      <translation>Kök Şifrəsi</translation>
+      <source>Root password</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="346"/>
-      <source>Repeat Root Password</source>
-      <translation>Kök Şifrəsini təkrar yazın</translation>
+      <source>Repeat root password</source>
+      <translation type="unfinished"/>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="372"/>
       <source>Enter the same password twice, so that it can be checked for typing errors.</source>
       <translation>Düzgün yazılmasını yoxlamaq üçün eyni şifrəni iki dəfə daxil edin.</translation>
     </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq.qml" line="402"/>
+      <source>Log in automatically without asking for the password</source>
+      <translation>Şifrə soruşmadan sistemə daxil olmaq</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq.qml" line="410"/>
+      <source>Validate passwords quality</source>
+      <translation>Şifrənin keyfiyyətini yoxlamaq</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq.qml" line="420"/>
+      <source>When this box is checked, password-strength checking is done and you will not be able to use a weak password.</source>
+      <translation>Bu qutu işarələndikdə, şifrənin etibarlıq səviyyəsi yoxlanılır və siz zəif şifrədən istifadə edə bilməyəcəksiniz.</translation>
+    </message>
+  </context>
+  <context>
+    <name>usersq-qt6</name>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="42"/>
+      <source>Pick your user name and credentials to login and perform admin tasks</source>
+      <translation>İnzibatçı tapşırıqlarını yerinə yetirmək və sistemə giriş üçün istifadəçi adını və istifadəçi hesabı məlumatlarını daxil edin</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="55"/>
+      <source>What is your name?</source>
+      <translation>Adınız nədir?</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="62"/>
+      <source>Your full name</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="79"/>
+      <source>What name do you want to use to log in?</source>
+      <translation>Giriş üçün hansı adı istifadə etmək istəyirsiniz?</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="86"/>
+      <source>Login name</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="115"/>
+      <source>If more than one person will use this computer, you can create multiple accounts after installation.</source>
+      <translation>Əgər bu komputeri bir neçə şəxs istifadə ediləcəksə o zaman quraşdırmadan sonra birdən çox hesab yarada bilərsiniz.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="128"/>
+      <source>Only lowercase letters, numbers, underscore and hyphen are allowed.</source>
+      <translation>Yalnız kiçik hərflərdən, simvollardan, alt cizgidən və defisdən istifadə oluna bilər.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="137"/>
+      <source>root is not allowed as username.</source>
+      <translation>kökə istifadəçi_adı kimi icazə verilmir.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="146"/>
+      <source>What is the name of this computer?</source>
+      <translation>Bu kompyuterin adı nədir?</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="152"/>
+      <source>Computer name</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="179"/>
+      <source>This name will be used if you make the computer visible to others on a network.</source>
+      <translation>Əgər gizlədilməzsə komputer şəbəkədə bu adla görünəcək.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="192"/>
+      <source>Only letters, numbers, underscore and hyphen are allowed, minimal of two characters.</source>
+      <translation>Yalnız hərflərə, saylara, alt cizgisinə və tire işarəsinə icazə verilir, ən az iki simvol.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="201"/>
+      <source>localhost is not allowed as hostname.</source>
+      <translation>yerli hosta host_adı kimi icazə verilmir.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="210"/>
+      <source>Choose a password to keep your account safe.</source>
+      <translation>Hesabınızın təhlükəsizliyi üçün şifrə seçin.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="220"/>
+      <source>Password</source>
+      <translation>Şifrə</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="237"/>
+      <source>Repeat password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="264"/>
+      <source>Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.</source>
+      <translation>Düzgün yazılmasını yoxlamaq üçün eyni şifrəni iki dəfə daxil edin. Güclü şifrə üçün rəqəm, hərf və durğu işarələrinin qarışıöğından istifadə edin. Şifrə ən azı səkkiz simvoldan uzun olmalı və müntəzəm olaraq dəyişdirilməlidir.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="296"/>
+      <source>Reuse user password as root password</source>
+      <translation>İstifadəçi şifrəsini kök şifrəsi kimi istifadə etmək</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="304"/>
+      <source>Use the same password for the administrator account.</source>
+      <translation>İdarəçi hesabı üçün eyni şifrədən istifadə etmək.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="317"/>
+      <source>Choose a root password to keep your account safe.</source>
+      <translation>Hesabınızı qorumaq üçün kök şifrəsini seçin.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="327"/>
+      <source>Root password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="345"/>
+      <source>Repeat root password</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="371"/>
+      <source>Enter the same password twice, so that it can be checked for typing errors.</source>
+      <translation>Düzgün yazılmasını yoxlamaq üçün eyni şifrəni iki dəfə daxil edin.</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="401"/>
+      <source>Log in automatically without asking for the password</source>
+      <translation>Şifrə soruşmadan sistemə daxil olmaq</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="409"/>
+      <source>Validate passwords quality</source>
+      <translation>Şifrənin keyfiyyətini yoxlamaq</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/usersq/usersq-qt6.qml" line="419"/>
+      <source>When this box is checked, password-strength checking is done and you will not be able to use a weak password.</source>
+      <translation>Bu qutu işarələndikdə, şifrənin etibarlıq səviyyəsi yoxlanılır və siz zəif şifrədən istifadə edə bilməyəcəksiniz.</translation>
+    </message>
   </context>
   <context>
     <name>welcomeq</name>
     <message>
-      <location filename="../src/modules/welcomeq/welcomeq.qml" line="35"/>
+      <location filename="../src/modules/welcomeq/welcomeq.qml" line="38"/>
       <source>&lt;h3&gt;Welcome to the %1 &lt;quote&gt;%2&lt;/quote&gt; installer&lt;/h3&gt;
             &lt;p&gt;This program will ask you some questions and set up %1 on your computer.&lt;/p&gt;</source>
       <translation>&lt;h3&gt;%1quraşdırıcısına &lt;quote&gt;%2&lt;/quote&gt; Xoş Gəldiniz&lt;/h3&gt;
             &lt;p&gt;Bu proqram sizə bəzi suallar verəcək və %1 komputerinizə quraşdıracaq.&lt;/p&gt;</translation>
     </message>
     <message>
-      <location filename="../src/modules/welcomeq/welcomeq.qml" line="66"/>
+      <location filename="../src/modules/welcomeq/welcomeq.qml" line="69"/>
       <source>Support</source>
       <translation>Dəstək</translation>
     </message>
     <message>
-      <location filename="../src/modules/welcomeq/welcomeq.qml" line="77"/>
-      <source>Known issues</source>
-      <translation>Məlum problemlər</translation>
+      <location filename="../src/modules/welcomeq/welcomeq.qml" line="80"/>
+      <source>Known Issues</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/welcomeq/welcomeq.qml" line="88"/>
-      <source>Release notes</source>
-      <translation>Buraxılış qeydləri</translation>
+      <location filename="../src/modules/welcomeq/welcomeq.qml" line="91"/>
+      <source>Release Notes</source>
+      <translation type="unfinished"/>
     </message>
     <message>
-      <location filename="../src/modules/welcomeq/welcomeq.qml" line="100"/>
+      <location filename="../src/modules/welcomeq/welcomeq.qml" line="103"/>
+      <source>Donate</source>
+      <translation>Maddi dəstək</translation>
+    </message>
+  </context>
+  <context>
+    <name>welcomeq-qt6</name>
+    <message>
+      <location filename="../src/modules/welcomeq/welcomeq-qt6.qml" line="38"/>
+      <source>&lt;h3&gt;Welcome to the %1 &lt;quote&gt;%2&lt;/quote&gt; installer&lt;/h3&gt;
+            &lt;p&gt;This program will ask you some questions and set up %1 on your computer.&lt;/p&gt;</source>
+      <translation>&lt;h3&gt;%1quraşdırıcısına &lt;quote&gt;%2&lt;/quote&gt; Xoş Gəldiniz&lt;/h3&gt;
+            &lt;p&gt;Bu proqram sizə bəzi suallar verəcək və %1 komputerinizə quraşdıracaq.&lt;/p&gt;</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/welcomeq/welcomeq-qt6.qml" line="69"/>
+      <source>Support</source>
+      <translation>Dəstək</translation>
+    </message>
+    <message>
+      <location filename="../src/modules/welcomeq/welcomeq-qt6.qml" line="80"/>
+      <source>Known Issues</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/welcomeq/welcomeq-qt6.qml" line="91"/>
+      <source>Release Notes</source>
+      <translation type="unfinished"/>
+    </message>
+    <message>
+      <location filename="../src/modules/welcomeq/welcomeq-qt6.qml" line="103"/>
       <source>Donate</source>
       <translation>Maddi dəstək</translation>
     </message>
