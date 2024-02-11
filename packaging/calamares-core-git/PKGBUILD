@@ -9,6 +9,14 @@ pkgdesc='Calamares Installer for RebornOS. This is practically just bare Calamar
 url='https://github.com/RebornOS-Team/calamares-core'
 license=('GPL3')
 depends=(
+    'qt5-base' # For Qt modules
+    'python' # For python modules
+    'kirigami2' # For Qt-Quick (QML) modules
+    'kpmcore' # For partitioning
+
+    'mkinitcpio-openswap' # For swap to be used with encryption
+
+    # Temporary stand-in
     'qt5-location'
     'qt5-svg'
     'qt5-tools'
@@ -39,17 +47,48 @@ depends=(
     'adobe-source-han-serif-otc-fonts'
     'mkinitcpio-openswap'
 )
-optdepends=()
+optdepends=(
+    'breeze' # For theming
+    'qt5ct' # For theming
+)
 provides=('calamares')
 conflicts=('calamares' 'calamares-core' 'calamares-core-git' 'calamares-core-local')
 makedepends=(
     'extra-cmake-modules'
-    'git'
-    'qt5-tools'
-    'python'
-    'python-yaml'
-    'python-pyaml'
-    'yaml-cpp'
+    'base-devel'          # For Arch Linux to build packages.
+    'git'                 # For Arch Linux to build packages
+
+    'gcc'                 # Required for building Calamares.         
+    'cmake'               # Required for building Calamares.
+    'yaml-cpp'            # Required for building Calamares.
+    'qt5-base'            # Required for building Calamares.
+    
+    'python'              # Optional for building Calamares, specifically for PyBind11 (which we use as of 2024-02-09), and Python modules (which we use as of 2024-02-09).
+    'extra-cmake-modules' # Optional for building Calamares, specifically for building tests.
+    'python-yaml'         # Optional for building Calamares, specifically for configvalidator.
+    'python-jsonschema'   # Optional for building Calamares, specifically for configvalidator.
+    'kpmcore'             # Optional for building Calamares, specifically for building libcalamares. 
+    'gettext'             # Optional for building Calamares, specifically for translations.
+    'ki18n5'              # Optional for building Calamares, specifically for translations. 
+    'qt5-declarative'     # Optional for building Calamares, specifically for QML.
+    'kwidgetsaddons5'     # Optional for building Calamares, specifically for NA.
+    'kcoreaddons5'        # Optional for building Calamares, specifically for NA.  
+
+    'icu'                 # Required for building the modules users, and usersq.
+    'kparts5'             # Required for building the module interactiveterminal. 
+    'kservice5'           # Required for building the module interactiveterminal. 
+    'kpmcore'             # Required for building the modules partition, fsresizer.
+    'plasma-framework5'   # Required for building the module plasmalnf.
+    'kpackage5'           # Required for building the module plasmalnf.
+
+    'ki18n5'              # Optional for building the module users.
+    'kconfig5'            # Optional for building the module plasmalnf, plymouthcfg.
+    'plasma-framework5'   # Optional for building the module plymouthcfg.
+    'kpackage5'           # Optional for building the module plymouthcfg.
+    'libxcrypt'           # Optional for building the module users.
+    'pkgconf'             # Optional for building the module users.
+    'libpwquality'        # Optional for building the module users.
+    'parted'              # Optional for building the module welcome.
 )
 
 source=("git+https://github.com/RebornOS-Team/calamares-core")  

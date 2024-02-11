@@ -14,18 +14,19 @@ find_package(${qtname} ${QT_VERSION} CONFIG REQUIRED Core)
 set(_extra_libraries "")
 set(_extra_src "")
 
+# Disabled because it is broken as of 2024-02-09
 ### OPTIONAL AppData XML support in PackageModel
 #
 #
-option(BUILD_APPDATA "Support appdata: items in PackageChooser (requires QtXml)" OFF)
-if(BUILD_APPDATA)
-    find_package(${qtname} REQUIRED COMPONENTS Xml)
-    if(TARGET ${qtname}::Xml)
-        add_definitions(-DHAVE_APPDATA)
-        list(APPEND _extra_libraries ${qtname}::Xml)
-        list(APPEND _extra_src ${_packagechooser}/ItemAppData.cpp)
-    endif()
-endif()
+# option(BUILD_APPDATA "Support appdata: items in PackageChooser (requires QtXml)" OFF)
+# if(BUILD_APPDATA)
+#     find_package(${qtname} REQUIRED COMPONENTS Xml)
+#     if(TARGET ${qtname}::Xml)
+#         add_definitions(-DHAVE_APPDATA)
+#         list(APPEND _extra_libraries ${qtname}::Xml)
+#         list(APPEND _extra_src ${_packagechooser}/ItemAppData.cpp)
+#     endif()
+# endif()
 
 ### OPTIONAL AppStream support in PackageModel
 #
@@ -39,7 +40,7 @@ calamares_add_plugin(packagechooserq
         Config.cpp 
         PackageModel.cpp
         PackageChooserQmlViewStep.cpp
-        ItemAppData.cpp
+        # ItemAppData.cpp # Disabled because it is broken as of 2024-02-09
         # ItemAppStream.cpp
         # ${_packagechooser}/Config.cpp
         # ${_packagechooser}/PackageModel.cpp
