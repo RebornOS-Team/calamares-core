@@ -76,7 +76,7 @@ To keep this project in sync with the upstream Calamares source, please follow t
 
 1. **Fetch changes from the upstream Github source**: The below script clones the [upstream Calamares source](https://github.com/calamares/calamares) to the `_calamares` branch (force overwrites it).
 ```sh
-sh scripts/update-calamares-branch.sh
+sh scripts/update_calamares_branch.sh
 ```
 
 2. **Merge upstream changes**
