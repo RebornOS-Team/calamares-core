@@ -9,35 +9,35 @@ pkgdesc='Calamares Installer for RebornOS. This is practically just bare Calamar
 url='https://github.com/RebornOS-Team/calamares-core'
 license=('GPL3')
 depends=(
-    'qt5-base' # For Qt modules
+    'qt6-base' # For Qt modules
     'python' # For python modules
-    'kirigami2' # For Qt-Quick (QML) modules
+    'kirigami' # For Qt-Quick (QML) modules
     'kpmcore' # For partitioning
 
     'mkinitcpio-openswap' # For swap to be used with encryption
 
     # Temporary stand-in
-    'qt5-location'
-    'qt5-svg'
-    'qt5-tools'
-    'qt5-webengine'
-    'qt5-xmlpatterns'
-    'qt5ct'
-    'qqc2-desktop-style5'
-    'polkit-qt5'
-    'kconfig5'
-    'kcoreaddons5'
-    'kdbusaddons5'
-    'ki18n5'
-    'kpackage5'
-    'kparts5'
+    'qt6-location'
+    'qt6-svg'
+    'qt6-tools'
+    'qt6-webengine'
+    # 'qt5-xmlpatterns' # TODO
+    'qt6ct'
+    'qqc2-desktop-style'
+    'polkit-qt6'
+    'kconfig'
+    'kcoreaddons'
+    'kdbusaddons'
+    'ki18n'
+    'kpackage'
+    'kparts'
     'kpmcore'
     'appstream-qt'
     'libatasmart'
     'libpwquality'
-    'plasma-framework5'
+    # 'plasma-framework5' # TODO
     'parted'
-    'solid5'
+    'solid'
     'udisks2'
     'yaml-cpp'
     'polkit'
@@ -49,7 +49,7 @@ depends=(
 )
 optdepends=(
     'breeze' # For theming
-    'qt5ct' # For theming
+    'qt6ct'  # For theming
 )
 provides=('calamares')
 conflicts=('calamares' 'calamares-core' 'calamares-core-git' 'calamares-core-local')
@@ -60,7 +60,7 @@ makedepends=(
     'gcc'                 # Required for building Calamares.         
     'cmake'               # Required for building Calamares.
     'yaml-cpp'            # Required for building Calamares.
-    'qt5-base'            # Required for building Calamares.
+    'qt6-base'            # Required for building Calamares.
     
     'python'              # Optional for building Calamares, specifically for PyBind11 (which we use as of 2024-02-09), and Python modules (which we use as of 2024-02-09).
     'extra-cmake-modules' # Optional for building Calamares, specifically for building tests.
@@ -68,22 +68,22 @@ makedepends=(
     'python-jsonschema'   # Optional for building Calamares, specifically for configvalidator.
     'kpmcore'             # Optional for building Calamares, specifically for building libcalamares. 
     'gettext'             # Optional for building Calamares, specifically for translations.
-    'ki18n5'              # Optional for building Calamares, specifically for translations. 
-    'qt5-declarative'     # Optional for building Calamares, specifically for QML.
-    'kwidgetsaddons5'     # Optional for building Calamares, specifically for NA.
-    'kcoreaddons5'        # Optional for building Calamares, specifically for NA.  
+    'ki18n'               # Optional for building Calamares, specifically for translations. 
+    'qt6-declarative'     # Optional for building Calamares, specifically for QML.
+    'kwidgetsaddons'      # Optional for building Calamares, specifically for NA.
+    'kcoreaddons'         # Optional for building Calamares, specifically for NA.  
 
     'icu'                 # Required for building the modules users, and usersq.
-    'kparts5'             # Required for building the module interactiveterminal. 
-    'kservice5'           # Required for building the module interactiveterminal. 
+    'kparts'              # Required for building the module interactiveterminal. 
+    'kservice'            # Required for building the module interactiveterminal. 
     'kpmcore'             # Required for building the modules partition, fsresizer.
-    'plasma-framework5'   # Required for building the module plasmalnf.
-    'kpackage5'           # Required for building the module plasmalnf.
+    # 'plasma-framework5'   # TODO # Required for building the module plasmalnf.
+    'kpackage'            # Required for building the module plasmalnf.
 
-    'ki18n5'              # Optional for building the module users.
-    'kconfig5'            # Optional for building the module plasmalnf, plymouthcfg.
-    'plasma-framework5'   # Optional for building the module plymouthcfg.
-    'kpackage5'           # Optional for building the module plymouthcfg.
+    'ki18n'               # Optional for building the module users.
+    'kconfig'             # Optional for building the module plasmalnf, plymouthcfg.
+    # 'plasma-framework5'   # TODO # Optional for building the module plymouthcfg.
+    'kpackage'            # Optional for building the module plymouthcfg.
     'libxcrypt'           # Optional for building the module users.
     'pkgconf'             # Optional for building the module users.
     'libpwquality'        # Optional for building the module users.

@@ -25,10 +25,10 @@ LAUNCH_INSTALLER_COMMAND="env \
     HOME="$HOME" \
     DEFAULT_USER="$USER" \
     PATH=$PATH \
-    KDE_SESSION_VERSION=5 \
+    KDE_SESSION_VERSION=6 \
     KDE_FULL_SESSION=true \
     QT_QUICK_CONTROLS_STYLE="Fusion" \
-    QT_QPA_PLATFORMTHEME="qt5ct" \
+    QT_QPA_PLATFORMTHEME="qt6ct" \
     calamares "$@""
 
 {
