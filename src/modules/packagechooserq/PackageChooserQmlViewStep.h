@@ -11,6 +11,7 @@
 #ifndef PACKAGECHOOSERQMLVIEWSTEP_H
 #define PACKAGECHOOSERQMLVIEWSTEP_H
 
+// Config from packagechooser module
 #include "Config.h"
 
 #include "DllMacro.h"
@@ -29,8 +30,6 @@ class PLUGINDLLEXPORT PackageChooserQmlViewStep : public Calamares::QmlViewStep
 
 public:
     explicit PackageChooserQmlViewStep( QObject* parent = nullptr );
-
-    void onActivate() override;
 
     QString prettyName() const override;
     QString prettyStatus() const override;
@@ -52,7 +51,6 @@ public:
 
 private:
     Config* m_config;
-    Calamares::Locale::TranslatedString* m_stepName;  // As it appears in the sidebar
 };
 
 CALAMARES_PLUGIN_FACTORY_DECLARATION( PackageChooserQmlViewStepFactory )

@@ -1,8 +1,8 @@
 <RCC>
     <qresource>
         <file>packagechooserq.qml</file>
-        <file>images/desktops/gnome.png</file>
-        <file>images/desktops/plasma.png</file>
-        <file>images/desktops/budgie.png</file>
+        <file>images/libreoffice.jpg</file>
+        <file>images/no-selection.png</file>
+        <file>images/plasma.png</file>
     </qresource>
 </RCC>

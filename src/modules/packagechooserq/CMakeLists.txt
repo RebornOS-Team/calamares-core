@@ -2,7 +2,6 @@
 #
 #   SPDX-FileCopyrightText: 2020 Adriaan de Groot <groot@kde.org>
 #   SPDX-FileCopyrightText: 2021 Anke Boersma <demm@kaosx.us>
-#   SPDX-FileCopyrightText: 2021 shivanandvp <shivanandvp@rebornos.org>
 #   SPDX-License-Identifier: BSD-2-Clause
 #
 if(NOT WITH_QML)
@@ -15,14 +14,13 @@ find_package(${qtname} ${QT_VERSION} CONFIG REQUIRED Core)
 # include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../packagechooser )
 set(_packagechooser ${CMAKE_CURRENT_SOURCE_DIR}/../packagechooser)
 
-# Disabled because it is broken as of 2024-02-09
-# ### OPTIONAL AppData XML support in PackageModel
-# #
-# #
-# option(BUILD_APPDATA "Support appdata: items in PackageChooser (requires QtXml)" OFF)
-# if(BUILD_APPDATA)
-#     find_package(${qtname} REQUIRED COMPONENTS Xml)
-# endif()
+### OPTIONAL AppData XML support in PackageModel
+#
+#
+option(BUILD_APPDATA "Support appdata: items in PackageChooser (requires QtXml)" OFF)
+if(BUILD_APPDATA)
+    find_package(${qtname} REQUIRED COMPONENTS Xml)
+endif()
 
 ### OPTIONAL AppStream support in PackageModel
 #
@@ -33,14 +31,10 @@ calamares_add_plugin(packagechooserq
     TYPE viewmodule
     EXPORT_MACRO PLUGINDLLEXPORT_PRO
     SOURCES
-        Config.cpp 
-        PackageModel.cpp
         PackageChooserQmlViewStep.cpp
-        # ItemAppData.cpp # Disabled because it is broken as of 2024-02-09
-        # ItemAppStream.cpp
-        # ${_packagechooser}/Config.cpp
-        # ${_packagechooser}/PackageModel.cpp
-        # ${_extra_src} # Causes the build to fail
+        ${_packagechooser}/Config.cpp
+        ${_packagechooser}/PackageModel.cpp
+        ${_extra_src}
     RESOURCES
         packagechooserq${QT_VERSION_SUFFIX}.qrc
     LINK_PRIVATE_LIBRARIES

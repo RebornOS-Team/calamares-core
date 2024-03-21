@@ -1,7 +1,7 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org>
 
 pkgname=calamares-core-git
-pkgver=3.3.2_001
+pkgver=3.3.5_001
 pkgrel=1
 
 arch=('x86_64' 'aarch64')
