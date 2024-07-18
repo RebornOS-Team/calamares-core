@@ -16,6 +16,7 @@
 #include "compat/Variant.h"
 #include "locale/Global.h"
 #include "utils/Logger.h"
+#include "utils/Runner.h"
 #include "utils/StringExpander.h"
 #include "utils/System.h"
 #include "utils/Variant.h"
@@ -55,6 +56,41 @@ get_variant_stringlist( const QVariantList& l )
     return retl;
 }
 
+/** @brief Inserts the keys from @p map into @p expander as "gs"-keys
+ *
+ * For each key k in @p map, a key with literal `gs[` + prefix + '.' + key +
+ * literal `]` is inserted into the exapander.
+ */
+static void
+expand_tree( Calamares::String::DictionaryExpander& expander, const QString& prefix, const QVariantMap& map )
+{
+    // With the current prefix, turn a key into gs[prefix.key]
+    auto gs_key = [ &prefix ]( const QString& k ) -> QString
+    { return QStringLiteral( "gs[" ) + ( prefix.isEmpty() ? QString() : prefix + '.' ) + k + ']'; };
+
+    for ( QVariantMap::const_iterator valueiter = map.cbegin(); valueiter != map.cend(); ++valueiter )
+    {
+        const QString key = valueiter.key();
+        const QVariant value = valueiter.value();
+
+        switch ( Calamares::typeOf( value ) )
+        {
+        case Calamares::MapVariantType:
+            expand_tree( expander, prefix.isEmpty() ? key : ( prefix + '.' + key ), value.toMap() );
+            break;
+        case Calamares::StringVariantType:
+            expander.add( gs_key( key ), value.toString() );
+            break;
+        case Calamares::IntVariantType:
+            expander.add( gs_key( key ), QString::number( value.toInt() ) );
+            break;
+        default:
+            // Silently ignore
+            break;
+        }
+    }
+}
+
 static Calamares::String::DictionaryExpander
 get_gs_expander( System::RunLocation location )
 {
@@ -88,6 +124,11 @@ get_gs_expander( System::RunLocation location )
         }
     }
 
+    if ( gs )
+    {
+        expand_tree( expander, QString(), gs->data() );
+    }
+
     return expander;
 }
 
@@ -100,6 +141,11 @@ CommandLine::CommandLine( const QVariantMap& m )
         m_command = command;
         m_timeout = timeout >= 0 ? std::chrono::seconds( timeout ) : CommandLine::TimeoutNotSet();
         m_environment = Calamares::getStringList( m, "environment" );
+
+        if ( m.contains( "verbose" ) )
+        {
+            m_verbose = Calamares::getBool( m, "verbose", false );
+        }
     }
     else
     {
@@ -119,7 +165,12 @@ CommandLine::expand( KMacroExpanderBase& expander ) const
     QStringList e = m_environment;
     std::for_each( e.begin(), e.end(), [ &expander ]( QString& s ) { expander.expandMacrosShellQuote( s ); } );
 
-    return { c, m_environment, m_timeout };
+    CommandLine l { c, m_environment, m_timeout };
+    if ( m_verbose.has_value() )
+    {
+        l.updateVerbose( m_verbose.value() );
+    }
+    return l;
 }
 
 Calamares::CommandLine
@@ -212,7 +263,16 @@ CommandList::run()
         shell_cmd << ( environmentSetting + processed_cmd );
 
         std::chrono::seconds timeout = i->timeout() >= std::chrono::seconds::zero() ? i->timeout() : m_timeout;
-        ProcessResult r = System::runCommand( location, shell_cmd, QString(), QString(), timeout );
+
+        Calamares::Utils::Runner runner( shell_cmd );
+        runner.setLocation( location ).setTimeout( timeout ).setWorkingDirectory( QString() );
+        if ( i->isVerbose() )
+        {
+            runner.enableOutputProcessing();
+            QObject::connect(
+                &runner, &Calamares::Utils::Runner::output, []( QString output ) { cDebug() << output; } );
+        }
+        ProcessResult r = runner.run();
 
         if ( r.getExitCode() != 0 )
         {
@@ -247,6 +307,12 @@ CommandList::expand() const
 {
     auto expander = get_gs_expander( System::RunLocation::RunInHost );
     return expand( expander );
+}
+
+void
+CommandList::updateVerbose( bool verbose )
+{
+    std::for_each( begin(), end(), [ verbose ]( CommandLine& command ) { command.updateVerbose( verbose ); } );
 }
 
 }  // namespace Calamares

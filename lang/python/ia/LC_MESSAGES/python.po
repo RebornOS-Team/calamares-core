@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-12 21:37+0100\n"
+"POT-Creation-Date: 2024-05-01 00:08+0200\n"
 "PO-Revision-Date: 2017-08-09 10:34+0000\n"
 "Last-Translator: F V, 2024\n"
 "Language-Team: Interlingua (https://app.transifex.com/calamares/teams/20061/ia/)\n"
@@ -25,17 +25,17 @@ msgstr ""
 msgid "Install bootloader."
 msgstr "Installar cargator de initio."
 
-#: src/modules/bootloader/main.py:666
+#: src/modules/bootloader/main.py:671
 msgid "Failed to install grub, no partitions defined in global storage"
 msgstr ""
-"Non poteva installar le “grub”, nulle partitiones definite in le "
+"Impossibile installar le “grub”, necun partitiones definite in le "
 "immagazinage global."
 
-#: src/modules/bootloader/main.py:926
+#: src/modules/bootloader/main.py:931
 msgid "Bootloader installation error"
 msgstr "Error de installation del cargator de initio"
 
-#: src/modules/bootloader/main.py:927
+#: src/modules/bootloader/main.py:932
 msgid ""
 "The bootloader could not be installed. The installation command "
 "<pre>{!s}</pre> returned error code {!s}."
@@ -65,7 +65,7 @@ msgstr "Non pote configurar LightDM"
 
 #: src/modules/displaymanager/main.py:685
 msgid "No LightDM greeter installed."
-msgstr "Nulle systema de benvenita de LightDM installate."
+msgstr "Necun systema de benvenita de LightDM installate."
 
 #: src/modules/displaymanager/main.py:716
 msgid "Cannot write SLIM configuration file"
@@ -75,12 +75,12 @@ msgstr "Non pote scriber le file de configuration de SLIM"
 msgid "SLIM config file {!s} does not exist"
 msgstr "Le file de configuration de SLIM {!s} non existe"
 
-#: src/modules/displaymanager/main.py:938
+#: src/modules/displaymanager/main.py:940
 msgid "No display managers selected for the displaymanager module."
 msgstr ""
-"Nulle gestor de visualisation seligite pro le modulo de «displaymanager»."
+"Necun gestor de visualisation seligite pro le modulo de «displaymanager»."
 
-#: src/modules/displaymanager/main.py:939
+#: src/modules/displaymanager/main.py:941
 msgid ""
 "The displaymanagers list is empty or undefined in both globalstorage and "
 "displaymanager.conf."
@@ -88,7 +88,7 @@ msgstr ""
 "Le lista de “displaymanagers” es vacue o non definite in “globalstorage” e "
 "in “displaymanager.conf”."
 
-#: src/modules/displaymanager/main.py:1026
+#: src/modules/displaymanager/main.py:1028
 msgid "Display manager configuration was incomplete"
 msgstr "Le configuration del gestor de visualisation esseva incomplete"
 
@@ -98,7 +98,7 @@ msgstr "Creation de initramfs con dracut."
 
 #: src/modules/dracut/main.py:63
 msgid "Failed to run dracut"
-msgstr "Non poteva executar dracut"
+msgstr "Impossibile executar dracut"
 
 #: src/modules/dracut/main.py:64
 #, python-brace-format
@@ -109,7 +109,7 @@ msgstr ""
 
 #: src/modules/dummypython/main.py:35
 msgid "Dummy python job."
-msgstr "Carga ficticie de python."
+msgstr "Labor ficticie de python."
 
 #: src/modules/dummypython/main.py:37 src/modules/dummypython/main.py:104
 #: src/modules/dummypython/main.py:105
@@ -120,34 +120,34 @@ msgstr "Passo ficticie de python {}"
 msgid "Writing fstab."
 msgstr "Scribente le “fstab”."
 
-#: src/modules/fstab/main.py:378 src/modules/fstab/main.py:384
-#: src/modules/fstab/main.py:412 src/modules/initcpiocfg/main.py:256
-#: src/modules/initcpiocfg/main.py:260 src/modules/initramfscfg/main.py:85
+#: src/modules/fstab/main.py:382 src/modules/fstab/main.py:388
+#: src/modules/fstab/main.py:416 src/modules/initcpiocfg/main.py:257
+#: src/modules/initcpiocfg/main.py:261 src/modules/initramfscfg/main.py:85
 #: src/modules/initramfscfg/main.py:89 src/modules/localecfg/main.py:140
-#: src/modules/mount/main.py:334 src/modules/networkcfg/main.py:106
+#: src/modules/mount/main.py:344 src/modules/networkcfg/main.py:106
 #: src/modules/openrcdmcryptcfg/main.py:72
 #: src/modules/openrcdmcryptcfg/main.py:76 src/modules/rawfs/main.py:164
 msgid "Configuration Error"
 msgstr "Error de configuration"
 
-#: src/modules/fstab/main.py:379 src/modules/initramfscfg/main.py:86
-#: src/modules/mount/main.py:335 src/modules/openrcdmcryptcfg/main.py:73
+#: src/modules/fstab/main.py:383 src/modules/initramfscfg/main.py:86
+#: src/modules/mount/main.py:345 src/modules/openrcdmcryptcfg/main.py:73
 #: src/modules/rawfs/main.py:165
 msgid "No partitions are defined for <pre>{!s}</pre> to use."
-msgstr "Nulle partitiones es definite pro esser usate per <pre>{!s}</pre>."
+msgstr "Necun partitiones es definite pro esser usate per <pre>{!s}</pre>."
 
-#: src/modules/fstab/main.py:385 src/modules/initramfscfg/main.py:90
+#: src/modules/fstab/main.py:389 src/modules/initramfscfg/main.py:90
 #: src/modules/localecfg/main.py:141 src/modules/networkcfg/main.py:107
 #: src/modules/openrcdmcryptcfg/main.py:77
 msgid "No root mount point is given for <pre>{!s}</pre> to use."
 msgstr ""
-"Nulle puncto de montage de radice es date pro esser usate per "
+"Necun puncto de montage de radice es date pro esser usate per "
 "<pre>{!s}</pre>."
 
-#: src/modules/fstab/main.py:413
+#: src/modules/fstab/main.py:417
 msgid "No <pre>{!s}</pre> configuration is given for <pre>{!s}</pre> to use."
 msgstr ""
-"Nulle configuration <pre>{!s}</pre> es date pro esser usate per "
+"Necun configuration <pre>{!s}</pre> es date pro esser usate per "
 "<pre>{!s}</pre>."
 
 #: src/modules/grubcfg/main.py:30
@@ -162,13 +162,13 @@ msgstr "Configurante le horologio del apparato."
 msgid "Configuring mkinitcpio."
 msgstr " Configurante “mkinitcpio”."
 
-#: src/modules/initcpiocfg/main.py:257
+#: src/modules/initcpiocfg/main.py:258
 msgid "No partitions are defined for <pre>initcpiocfg</pre>."
-msgstr "Nulle partitiones es definite pro <pre>initcpiocfg</pre>."
+msgstr "Necun partitiones es definite pro <pre>initcpiocfg</pre>."
 
-#: src/modules/initcpiocfg/main.py:261
+#: src/modules/initcpiocfg/main.py:262
 msgid "No root mount point for <pre>initcpiocfg</pre>."
-msgstr "Nulle partitiones es definite pro <pre>initcpiocfg</pre>."
+msgstr "Necun partitiones es definite pro <pre>initcpiocfg</pre>."
 
 #: src/modules/initramfscfg/main.py:32
 msgid "Configuring initramfs."
@@ -184,7 +184,7 @@ msgstr "Creante “initramfs” con “mkinitfs”."
 
 #: src/modules/mkinitfs/main.py:49
 msgid "Failed to run mkinitfs on the target"
-msgstr "Non poteva executar “mkinitfs” sur le scopo"
+msgstr "Impossibile executar “mkinitfs” sur le scopo"
 
 #: src/modules/mkinitfs/main.py:50
 msgid "The exit code was {}"
@@ -194,23 +194,23 @@ msgstr "Le codice de exito esseva {}"
 msgid "Mounting partitions."
 msgstr "Montage de partitiones."
 
-#: src/modules/mount/main.py:164 src/modules/mount/main.py:200
+#: src/modules/mount/main.py:171 src/modules/mount/main.py:207
 msgid "Internal error mounting zfs datasets"
 msgstr "Error interne durante le montage de collection de datos de zfs"
 
-#: src/modules/mount/main.py:176
+#: src/modules/mount/main.py:183
 msgid "Failed to import zpool"
-msgstr "Non poteva importar “zpool”"
+msgstr "Impossibile importar “zpool”"
 
-#: src/modules/mount/main.py:192
+#: src/modules/mount/main.py:199
 msgid "Failed to unlock zpool"
-msgstr "Non poteva disblocar “zpool”"
+msgstr "Impossibile disblocar “zpool”"
 
-#: src/modules/mount/main.py:209 src/modules/mount/main.py:214
+#: src/modules/mount/main.py:216 src/modules/mount/main.py:221
 msgid "Failed to set zfs mountpoint"
-msgstr "Non poteva definir le puncto de montage de zfs"
+msgstr "Impossibile definir le puncto de montage de zfs"
 
-#: src/modules/mount/main.py:370
+#: src/modules/mount/main.py:383
 msgid "zfs mounting error"
 msgstr "Error de montage de zfs"
 
@@ -246,12 +246,12 @@ msgid_plural "Removing %(num)d packages."
 msgstr[0] "Removente un pacchetto."
 msgstr[1] "Removente %(num)d pacchettos."
 
-#: src/modules/packages/main.py:740 src/modules/packages/main.py:752
-#: src/modules/packages/main.py:780
+#: src/modules/packages/main.py:769 src/modules/packages/main.py:781
+#: src/modules/packages/main.py:809
 msgid "Package Manager error"
 msgstr "Error del gestor de pacchettos"
 
-#: src/modules/packages/main.py:741
+#: src/modules/packages/main.py:770
 msgid ""
 "The package manager could not prepare updates. The command <pre>{!s}</pre> "
 "returned error code {!s}."
@@ -259,7 +259,7 @@ msgstr ""
 "Le gestor de pacchettos non poteva preparar le actualisationes. Le commando "
 "<pre>{!s}</pre> retornava le codice de error {!s}."
 
-#: src/modules/packages/main.py:753
+#: src/modules/packages/main.py:782
 msgid ""
 "The package manager could not update the system. The command <pre>{!s}</pre>"
 " returned error code {!s}."
@@ -267,12 +267,12 @@ msgstr ""
 "Le gestor de pacchettos non poteva actualisar le systema. Le commando "
 "<pre>{!s}</pre> retornava le codice de error {!s}."
 
-#: src/modules/packages/main.py:781
+#: src/modules/packages/main.py:810
 msgid ""
 "The package manager could not make changes to the installed system. The "
 "command <pre>{!s}</pre> returned error code {!s}."
 msgstr ""
-"Le gestor de pacchettos non poteva facer le cambiamentos al systema "
+"Le gestor de pacchettos non poteva facer le modificationes al systema "
 "installate. Le commando <pre>{!s}</pre> retornava le codice de error {!s}."
 
 #: src/modules/plymouthcfg/main.py:27
@@ -378,11 +378,11 @@ msgstr "Initiante a dispacchettar {}"
 
 #: src/modules/unpackfs/main.py:323 src/modules/unpackfs/main.py:467
 msgid "Failed to unpack image \"{}\""
-msgstr "Non poteva dispacchettar le imagina “{}”"
+msgstr "Impossibile dispacchettar le imagina “{}”"
 
 #: src/modules/unpackfs/main.py:430
 msgid "No mount point for root partition"
-msgstr "Nulle puncto de montage pro le partition radice"
+msgstr "Necun puncto de montage pro le partition radice"
 
 #: src/modules/unpackfs/main.py:431
 msgid "globalstorage does not contain a \"rootMountPoint\" key."
@@ -409,7 +409,7 @@ msgstr "Il non ha information de configuration."
 #: src/modules/unpackfs/main.py:456
 msgid "The filesystem for \"{}\" ({}) is not supported by your current kernel"
 msgstr ""
-"Le systema de files para “{}” ({}) non es supportate per tu kernel actual"
+"Le systema de files para “{}” ({}) non es supportate per tu nucleo actual"
 
 #: src/modules/unpackfs/main.py:460
 msgid "The source filesystem \"{}\" does not exist"
@@ -420,7 +420,7 @@ msgid ""
 "Failed to find unsquashfs, make sure you have the squashfs-tools package "
 "installed."
 msgstr ""
-"Non poteva trovar “unsquashfs”, assecura te que tu ha le pacchetto "
+"Impossibile trovar “unsquashfs”, assecura te que tu ha le pacchetto "
 "“squashfs-tools” installate."
 
 #: src/modules/unpackfs/main.py:481

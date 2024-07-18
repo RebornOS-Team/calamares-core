@@ -31,6 +31,8 @@
 
 #include <QtTest/QtTest>
 
+#include <utility>
+
 #include <fcntl.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -56,6 +58,8 @@ private Q_SLOTS:
     void testCommandConstructors();
     void testCommandConstructorsYAML();
     void testCommandRunning();
+    void testCommandTimeout();
+    void testCommandVerbose();
 
     /** @section Test that all the UMask objects work correctly. */
     void testUmask();
@@ -282,9 +286,17 @@ LibCalamaresTests::testCommandExpansion_data()
     QTest::addColumn< QString >( "command" );
     QTest::addColumn< QString >( "expected" );
 
-    QTest::newRow( "empty" ) << QString() << QString();
-    QTest::newRow( "ls   " ) << QStringLiteral( "ls" ) << QStringLiteral( "ls" );
-    QTest::newRow( "user " ) << QStringLiteral( "chmod $USER" ) << QStringLiteral( "chmod alice" );
+    QTest::newRow( "empty  " ) << QString() << QString();
+    QTest::newRow( "ls     " ) << QStringLiteral( "ls" ) << QStringLiteral( "ls" );
+    QTest::newRow( "$USER  " ) << QStringLiteral( "chmod $USER" ) << QStringLiteral( "chmod alice" );
+    QTest::newRow( "${USER}" ) << QStringLiteral( "chmod ${USER}" ) << QStringLiteral( "chmod alice" );
+    QTest::newRow( "gs-user" ) << QStringLiteral( "chmod ${gs[username]}" ) << QStringLiteral( "chmod alice" );
+    QTest::newRow( "gs-*   " ) << QStringLiteral(
+        "${gs[username]} has ${gs[branding.bootloader]} ${gs[branding.ducks]} ducks" )
+                               << QStringLiteral( "alice has found 3 ducks" );
+    // QStringList does not expand
+    QTest::newRow( "gs-list" ) << QStringLiteral( "colors ${gs[branding.color]}" )
+                               << QStringLiteral( "colors ${gs[branding.color]}" );
 }
 
 void
@@ -294,6 +306,12 @@ LibCalamaresTests::testCommandExpansion()
         = Calamares::JobQueue::instance() ? Calamares::JobQueue::instance()->globalStorage() : nullptr;
     QVERIFY( gs );
     gs->insert( QStringLiteral( "username" ), QStringLiteral( "alice" ) );
+
+    QVariantMap m;
+    m.insert( QStringLiteral( "bootloader" ), QStringLiteral( "found" ) );
+    m.insert( QStringLiteral( "ducks" ), 3 );
+    m.insert( QStringLiteral( "color" ), QStringList { "green", "red" } );
+    gs->insert( QStringLiteral( "branding" ), m );
 
     QFETCH( QString, command );
     QFETCH( QString, expected );
@@ -350,8 +368,14 @@ commands:
     QCOMPARE( m[ "commands" ].toList().count(), 4 );
 
     {
-        // Take care! The second parameter is a bool, so "3" here means "true"
+#ifdef THIS_DOES_NOT_COMPILE_AND_THATS_THE_POINT
+        // Take care! The second parameter is a bool, so "3" here would
+        // mean "true", except the int overload is deleted to prevent just that.
         Calamares::CommandList cmds( m[ "commands" ], 3 );
+        // .. and there's no conversion from std::chrono::duration to bool either.
+        Calamares::CommandList cmds( m[ "commands" ], std::chrono::seconds( 3 ) );
+#endif
+        Calamares::CommandList cmds( m[ "commands" ], true );
         QCOMPARE( cmds.defaultTimeout(), std::chrono::seconds( 10 ) );
         // But the 4 commands are there anyway
         QCOMPARE( cmds.count(), 4 );
@@ -432,6 +456,89 @@ LibCalamaresTests::testCommandRunning()
 
 
     tempRoot.setAutoRemove( true );
+}
+
+void
+LibCalamaresTests::testCommandTimeout()
+{
+
+    QTemporaryDir tempRoot( QDir::tempPath() + QStringLiteral( "/test-job-XXXXXX" ) );
+    tempRoot.setAutoRemove( false );
+
+    const QString testExecutable = tempRoot.filePath( "example.sh" );
+
+    cDebug() << "Creating example executable" << testExecutable;
+
+    {
+        QFile f( testExecutable );
+        QVERIFY( f.open( QIODevice::WriteOnly ) );
+        f.write( "#! /bin/sh\necho early\nsleep 3\necho late" );
+        f.close();
+        Calamares::Permissions::apply( testExecutable, 0755 );
+    }
+
+    {
+        Calamares::CommandList l( false );  // no chroot
+        Calamares::CommandLine c( testExecutable, {}, std::chrono::seconds( 2 ) );
+        l.push_back( c );
+
+        const auto r = l.run();
+        QVERIFY( !bool( r ) );  // Because it times out after 2 seconds
+        // The **command** timed out, but the job result is a generic "error"
+        // QCOMPARE( r.errorCode(), static_cast<std::underlying_type_t<Calamares::ProcessResult::Code>>(Calamares::ProcessResult::Code::TimedOut));
+        QCOMPARE( r.errorCode(), -1 );
+    }
+}
+
+void
+LibCalamaresTests::testCommandVerbose()
+{
+    Logger::setupLogLevel( Logger::LOGDEBUG );
+
+    QTemporaryDir tempRoot( QDir::tempPath() + QStringLiteral( "/test-job-XXXXXX" ) );
+    tempRoot.setAutoRemove( false );
+
+    const QString testExecutable = tempRoot.filePath( "example.sh" );
+
+    cDebug() << "Creating example executable" << testExecutable;
+    {
+        QFile f( testExecutable );
+        QVERIFY( f.open( QIODevice::WriteOnly ) );
+        f.write( "#! /bin/sh\necho one\necho two\necho error 1>&2\nsleep 1; echo three\n" );
+        f.close();
+        Calamares::Permissions::apply( testExecutable, 0755 );
+    }
+
+    // Note that, because of the blocking way run() works,
+    // in this single-threaded test with no event loop,
+    // there's nothing for the verbose version to connect
+    // to for sending output.
+
+    cDebug() << "Running command non-verbose";
+    {
+        Calamares::CommandList l( false );  // no chroot
+        Calamares::CommandLine c( testExecutable, {}, std::chrono::seconds( 2 ) );
+        c.updateVerbose( false );
+        QVERIFY( !c.isVerbose() );
+
+        l.push_back( c );
+
+        const auto r = l.run();
+        QVERIFY( bool( r ) );
+    }
+
+    cDebug() << "Running command verbosely";
+    {
+        Calamares::CommandList l( false );  // no chroot
+        Calamares::CommandLine c( testExecutable, {}, std::chrono::seconds( 2 ) );
+        c.updateVerbose( true );
+        QVERIFY( c.isVerbose() );
+
+        l.push_back( c );
+
+        const auto r = l.run();
+        QVERIFY( bool( r ) );
+    }
 }
 
 void

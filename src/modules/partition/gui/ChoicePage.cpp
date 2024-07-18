@@ -140,6 +140,7 @@ ChoicePage::retranslate()
 
     updateSwapChoicesTr();
     updateChoiceButtonsTr();
+    updateActionDescriptionsTr();
 }
 
 /** @brief Sets the @p model for the given @p box and adjusts UI sizes to match.
@@ -185,7 +186,6 @@ ChoicePage::init( PartitionCoreModule* core )
     setModelToComboBox( m_drivesCombo, core->deviceModel() );
 
     connect( m_drivesCombo, qOverload< int >( &QComboBox::currentIndexChanged ), this, &ChoicePage::applyDeviceChoice );
-
     connect( m_encryptWidget, &EncryptWidget::stateChanged, this, &ChoicePage::onEncryptWidgetStateChanged );
     connect( m_reuseHomeCheckBox, &QCheckBox::stateChanged, this, &ChoicePage::onHomeCheckBoxStateChanged );
 
@@ -361,10 +361,7 @@ ChoicePage::setupChoices()
 Device*
 ChoicePage::selectedDevice()
 {
-    Device* currentDevice = nullptr;
-    currentDevice
-        = m_core->deviceModel()->deviceForIndex( m_core->deviceModel()->index( m_drivesCombo->currentIndex() ) );
-
+    Device* const currentDevice = m_core->deviceModel()->deviceForIndex( m_core->deviceModel()->index( m_drivesCombo->currentIndex() ) );
     return currentDevice;
 }
 
@@ -679,7 +676,11 @@ ChoicePage::onLeave()
 {
     if ( m_config->installChoice() == InstallChoice::Alongside )
     {
-        doAlongsideApply();
+        if ( m_afterPartitionSplitterWidget->splitPartitionSize() >= 0
+             && m_afterPartitionSplitterWidget->newPartitionSize() >= 0 )
+        {
+            doAlongsideApply();
+        }
     }
 
     if ( m_isEfi
@@ -1030,6 +1031,10 @@ ChoicePage::updateActionChoicePreview( InstallChoice choice )
         if ( m_enableEncryptionWidget )
         {
             m_encryptWidget->show();
+            if ( m_config->preCheckEncryption() )
+            {
+                m_encryptWidget->setEncryptionCheckbox( true );
+            }
         }
         m_previewBeforeLabel->setText( tr( "Current:", "@label" ) );
         m_selectLabel->setText( tr( "<strong>Select a partition to shrink, "
@@ -1057,7 +1062,8 @@ ChoicePage::updateActionChoicePreview( InstallChoice choice )
                      Q_UNUSED( path )
                      sizeLabel->setText(
                          tr( "%1 will be shrunk to %2MiB and a new "
-                             "%3MiB partition will be created for %4.", "@info, %1 is partition name, %4 is product name" )
+                             "%3MiB partition will be created for %4.",
+                             "@info, %1 is partition name, %4 is product name" )
                              .arg( m_beforePartitionBarsView->selectionModel()->currentIndex().data().toString() )
                              .arg( Calamares::BytesToMiB( size ) )
                              .arg( Calamares::BytesToMiB( sizeNext ) )
@@ -1081,7 +1087,14 @@ ChoicePage::updateActionChoicePreview( InstallChoice choice )
     case InstallChoice::Erase:
     case InstallChoice::Replace:
     {
-        m_encryptWidget->setVisible( shouldShowEncryptWidget( choice ) );
+        if ( shouldShowEncryptWidget( choice ) )
+        {
+            m_encryptWidget->show();
+            if ( m_config->preCheckEncryption() )
+            {
+                m_encryptWidget->setEncryptionCheckbox( true );
+            }
+        }
         m_previewBeforeLabel->setText( tr( "Current:", "@label" ) );
         m_afterPartitionBarsView = new PartitionBarsView( m_previewAfterFrame );
         m_afterPartitionBarsView->setNestedPartitionsMode( mode );
@@ -1188,14 +1201,16 @@ ChoicePage::setupEfiSystemPartitionSelector()
     {
         m_efiLabel->setText( tr( "An EFI system partition cannot be found anywhere "
                                  "on this system. Please go back and use manual "
-                                 "partitioning to set up %1.", "@info, %1 is product name" )
+                                 "partitioning to set up %1.",
+                                 "@info, %1 is product name" )
                                  .arg( Calamares::Branding::instance()->shortProductName() ) );
         updateNextEnabled();
     }
     else if ( efiSystemPartitions.count() == 1 )  //probably most usual situation
     {
         m_efiLabel->setText( tr( "The EFI system partition at %1 will be used for "
-                                 "starting %2.", "@info, %1 is partition path, %2 is product name" )
+                                 "starting %2.",
+                                 "@info, %1 is partition path, %2 is product name" )
                                  .arg( efiSystemPartitions.first()->partitionPath() )
                                  .arg( Calamares::Branding::instance()->shortProductName() ) );
     }
@@ -1327,27 +1342,10 @@ ChoicePage::setupActions()
         }
     }
 
-    if ( osproberEntriesForCurrentDevice.count() == 0 )
+    m_osproberEntriesCount = osproberEntriesForCurrentDevice.count();
+    if ( m_osproberEntriesCount == 0 )
     {
-        CALAMARES_RETRANSLATE(
-            cDebug() << "Setting texts for 0 osprober entries";
-            m_messageLabel->setText( tr( "This storage device does not seem to have an operating system on it. "
-                                         "What would you like to do?<br/>"
-                                         "You will be able to review and confirm your choices "
-                                         "before any change is made to the storage device." ) );
-
-            m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
-                                        "This will <font color=\"red\">delete</font> all data "
-                                        "currently present on the selected storage device." ) );
-
-            m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
-                                            "The installer will shrink a partition to make room for %1." )
-                                            .arg( Calamares::Branding::instance()->shortVersionedName() ) );
-
-            m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
-                                          "Replaces a partition with %1." )
-                                          .arg( Calamares::Branding::instance()->shortVersionedName() ) ); );
-
+        m_osproberOneEntryName.clear();
         m_replaceButton->hide();
         m_alongsideButton->hide();
         m_grp->setExclusive( false );
@@ -1355,78 +1353,16 @@ ChoicePage::setupActions()
         m_alongsideButton->setChecked( false );
         m_grp->setExclusive( true );
     }
-    else if ( osproberEntriesForCurrentDevice.count() == 1 )
+    else if ( m_osproberEntriesCount == 1 )
     {
-        QString osName = osproberEntriesForCurrentDevice.first().prettyName;
-
-        if ( !osName.isEmpty() )
-        {
-            CALAMARES_RETRANSLATE(
-                cDebug() << "Setting texts for 1 non-empty osprober entry";
-                m_messageLabel->setText( tr( "This storage device has %1 on it. "
-                                             "What would you like to do?<br/>"
-                                             "You will be able to review and confirm your choices "
-                                             "before any change is made to the storage device." )
-                                             .arg( osName ) );
-
-                m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
-                                                "The installer will shrink a partition to make room for %1." )
-                                                .arg( Calamares::Branding::instance()->shortVersionedName() ) );
-
-                m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
-                                            "This will <font color=\"red\">delete</font> all data "
-                                            "currently present on the selected storage device." ) );
-
-                m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
-                                              "Replaces a partition with %1." )
-                                              .arg( Calamares::Branding::instance()->shortVersionedName() ) ); );
-        }
-        else
-        {
-            CALAMARES_RETRANSLATE(
-                cDebug() << "Setting texts for 1 empty osprober entry";
-                m_messageLabel->setText( tr( "This storage device already has an operating system on it. "
-                                             "What would you like to do?<br/>"
-                                             "You will be able to review and confirm your choices "
-                                             "before any change is made to the storage device." ) );
-
-                m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
-                                                "The installer will shrink a partition to make room for %1." )
-                                                .arg( Calamares::Branding::instance()->shortVersionedName() ) );
-
-                m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
-                                            "This will <font color=\"red\">delete</font> all data "
-                                            "currently present on the selected storage device." ) );
-
-                m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
-                                              "Replaces a partition with %1." )
-                                              .arg( Calamares::Branding::instance()->shortVersionedName() ) ); );
-        }
+        m_osproberOneEntryName = osproberEntriesForCurrentDevice.first().prettyName;
     }
     else
     {
         // osproberEntriesForCurrentDevice has at least 2 items.
-
-        CALAMARES_RETRANSLATE(
-            cDebug() << "Setting texts for >= 2 osprober entries";
-
-            m_messageLabel->setText( tr( "This storage device has multiple operating systems on it. "
-                                         "What would you like to do?<br/>"
-                                         "You will be able to review and confirm your choices "
-                                         "before any change is made to the storage device." ) );
-
-            m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
-                                            "The installer will shrink a partition to make room for %1." )
-                                            .arg( Calamares::Branding::instance()->shortVersionedName() ) );
-
-            m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
-                                        "This will <font color=\"red\">delete</font> all data "
-                                        "currently present on the selected storage device." ) );
-
-            m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
-                                          "Replaces a partition with %1." )
-                                          .arg( Calamares::Branding::instance()->shortVersionedName() ) ); );
+        m_osproberOneEntryName.clear();
     }
+    updateActionDescriptionsTr();
 
 #ifdef DEBUG_PARTITION_UNSAFE
 #ifdef DEBUG_PARTITION_BAIL_OUT
@@ -1505,7 +1441,8 @@ ChoicePage::setupActions()
     {
         if ( atLeastOneIsMounted )
         {
-            m_messageLabel->setText( tr( "This storage device has one of its partitions <strong>mounted</strong>.", "@info" ) );
+            m_messageLabel->setText(
+                tr( "This storage device has one of its partitions <strong>mounted</strong>.", "@info" ) );
         }
         else
         {
@@ -1575,7 +1512,10 @@ ChoicePage::calculateNextEnabled() const
         }
     }
 
-    if ( m_config->installChoice() != InstallChoice::Manual && m_encryptWidget->isVisible() )
+    // You can have an invisible encryption checkbox, which is
+    // still checked -- then do the encryption.
+    if ( m_config->installChoice() != InstallChoice::Manual
+         && ( m_encryptWidget->isVisible() || m_encryptWidget->isEncryptionCheckboxChecked() ) )
     {
         switch ( m_encryptWidget->state() )
         {
@@ -1759,4 +1699,97 @@ ChoicePage::shouldShowEncryptWidget( Config::InstallChoice choice ) const
     const bool suitableChoice
         = choice == InstallChoice::Erase || choice == InstallChoice::Alongside || choice == InstallChoice::Replace;
     return suitableChoice && m_enableEncryptionWidget && suitableFS;
+}
+
+void
+ChoicePage::updateActionDescriptionsTr()
+{
+    if ( m_osproberEntriesCount == 0 )
+    {
+        cDebug() << "Setting texts for 0 osprober entries";
+        m_messageLabel->setText( tr( "This storage device does not seem to have an operating system on it. "
+                                     "What would you like to do?<br/>"
+                                     "You will be able to review and confirm your choices "
+                                     "before any change is made to the storage device." ) );
+
+        m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
+                                    "This will <font color=\"red\">delete</font> all data "
+                                    "currently present on the selected storage device." ) );
+
+        m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
+                                        "The installer will shrink a partition to make room for %1." )
+                                        .arg( Calamares::Branding::instance()->shortVersionedName() ) );
+
+        m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
+                                      "Replaces a partition with %1." )
+                                      .arg( Calamares::Branding::instance()->shortVersionedName() ) );
+    }
+    if ( m_osproberEntriesCount == 1 )
+    {
+        if ( !m_osproberOneEntryName.isEmpty() )
+        {
+            cDebug() << "Setting texts for 1 non-empty osprober entry";
+            m_messageLabel->setText( tr( "This storage device has %1 on it. "
+                                         "What would you like to do?<br/>"
+                                         "You will be able to review and confirm your choices "
+                                         "before any change is made to the storage device." )
+                                         .arg( m_osproberOneEntryName ) );
+
+            m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
+                                            "The installer will shrink a partition to make room for %1." )
+                                            .arg( Calamares::Branding::instance()->shortVersionedName() ) );
+
+            m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
+                                        "This will <font color=\"red\">delete</font> all data "
+                                        "currently present on the selected storage device." ) );
+
+            m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
+                                          "Replaces a partition with %1." )
+                                          .arg( Calamares::Branding::instance()->shortVersionedName() ) );
+        }
+        else
+        {
+            cDebug() << "Setting texts for 1 empty osprober entry";
+            m_messageLabel->setText( tr( "This storage device already has an operating system on it. "
+                                         "What would you like to do?<br/>"
+                                         "You will be able to review and confirm your choices "
+                                         "before any change is made to the storage device." ) );
+
+            m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
+                                            "The installer will shrink a partition to make room for %1." )
+                                            .arg( Calamares::Branding::instance()->shortVersionedName() ) );
+
+            m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
+                                        "This will <font color=\"red\">delete</font> all data "
+                                        "currently present on the selected storage device." ) );
+
+            m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
+                                          "Replaces a partition with %1." )
+                                          .arg( Calamares::Branding::instance()->shortVersionedName() ) );
+        }
+    }
+    if ( m_osproberEntriesCount >= 2 )
+    {
+        cDebug() << "Setting texts for >= 2 osprober entries";
+
+        m_messageLabel->setText( tr( "This storage device has multiple operating systems on it. "
+                                     "What would you like to do?<br/>"
+                                     "You will be able to review and confirm your choices "
+                                     "before any change is made to the storage device." ) );
+
+        m_alongsideButton->setText( tr( "<strong>Install alongside</strong><br/>"
+                                        "The installer will shrink a partition to make room for %1." )
+                                        .arg( Calamares::Branding::instance()->shortVersionedName() ) );
+
+        m_eraseButton->setText( tr( "<strong>Erase disk</strong><br/>"
+                                    "This will <font color=\"red\">delete</font> all data "
+                                    "currently present on the selected storage device." ) );
+
+        m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
+                                      "Replaces a partition with %1." ) );
+    }
+    if ( m_osproberEntriesCount < 0 )
+    {
+        cWarning() << "Invalid osprober count, labels and buttons not updated.";
+    }
 }
