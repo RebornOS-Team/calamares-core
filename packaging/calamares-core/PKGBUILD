@@ -1,7 +1,7 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org>
 
 pkgname=calamares-core
-pkgver=3.3.8_001
+pkgver=3.3.8_002
 pkgrel=1
 
 arch=('x86_64' 'aarch64')

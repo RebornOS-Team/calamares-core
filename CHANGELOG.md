@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## Calamares Core `v3.3.8_001`
+## Calamares Core `v3.3.8_002`
 
 ### For Users
 
+- Make the partition label color gray from black to improve readability.
 - Update the installer from upstream, bringing new features and bug-fixes.
 
 ### For Developers
