@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Calamares Core `v3.3.9_001`
+
+### For Users
+
+- Update the installer from upstream, bringing new features and bug-fixes.
+
+### For Developers
+
+NA
+
 ## Calamares Core `v3.3.8_002`
 
 ### For Users
