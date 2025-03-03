@@ -29,7 +29,7 @@ jobs:
           sudo -u rebornos sh -c "packaging/build_package.sh stable --noconfirm"
       - name: ⬆ Upload Package Artifact
         id: upload_package_step
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with: 
           name: Stable Package
           path: packaging/${{ github.event.repository.name }}/${{ github.event.repository.name }}*.pkg.tar.*
@@ -54,7 +54,7 @@ jobs:
           echo "GIT_VERSION=$GIT_VERSION"
       - name: ⬇ Download Package Artifact
         id: download_package_step         
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: Stable Package
           path: output
