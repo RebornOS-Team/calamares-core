@@ -83,7 +83,7 @@ sh scripts/update_calamares_branch.sh
 ```sh
 git checkout main
 
-git merge calamares
+git merge _calamares
 ```
 
 3. **Manually handle merge conflicts**: Follow [this guide for commandline operations](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts) or [this guide if you are using *Visual Studio Code*](https://code.visualstudio.com/docs/sourcecontrol/overview#_merge-conflicts).
