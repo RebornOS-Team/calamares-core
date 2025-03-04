@@ -56,6 +56,8 @@ private Q_SLOTS:
 
     void testUserYAML_data();
     void testUserYAML();
+    void testUserUmask_data();
+    void testUserUmask();
 };
 
 UserTests::UserTests() {}
@@ -510,6 +512,75 @@ UserTests::testUserYAML()
     c.setConfigurationMap( map );
     QCOMPARE( c.userShell(), shell );
 }
+
+void
+UserTests::testUserUmask_data()
+{
+    QTest::addColumn< QString >( "filename" );
+    QTest::addColumn< int >( "permission" );
+    QTest::addColumn< int >( "umask" );
+    QTest::addColumn< QString >( "umask_string" );
+
+    QTest::newRow( "good " ) << "tests/8a-issue-2362.conf" << 0700 << 0077 << QStringLiteral( "077" );
+    QTest::newRow( "open " ) << "tests/8b-issue-2362.conf" << 0755 << 0022 << QStringLiteral( "022" );
+    QTest::newRow( "weird" ) << "tests/8c-issue-2362.conf" << 0126 << 0651 << QStringLiteral( "651" );
+    QTest::newRow( "rwxx " ) << "tests/8d-issue-2362.conf" << 0710 << 0067 << QStringLiteral( "067" );
+    QTest::newRow( "-wrd " ) << "tests/8e-issue-2362.conf" << 0214 << 0563 << QStringLiteral( "563" );
+    QTest::newRow( "bogus" ) << "tests/8f-issue-2362.conf" << -1 << -1
+                             << QStringLiteral( "-01" );  // Bogus 3-character representation
+    QTest::newRow( "good2" ) << "tests/8g-issue-2362.conf" << 0750 << 0027 << QStringLiteral( "027" );
+    QTest::newRow( "numrc" ) << "tests/8h-issue-2362.conf" << 0751 << 0026 << QStringLiteral( "026" );
+}
+
+void
+UserTests::testUserUmask()
+{
+    static constexpr int no_permissions = -1;
+    const QString old_shell = QStringLiteral( "/bin/ls" );
+    const QString new_shell = QStringLiteral( "/usr/bin/new" );
+    // nobody and root are always forbidden, even if not mentioned in the config, entries are alphabetical
+    const QStringList forbidden { QStringLiteral( "me" ),
+                                  QStringLiteral( "moi" ),
+                                  QStringLiteral( "myself" ),
+                                  QStringLiteral( "nobody" ),
+                                  QStringLiteral( "root" ) };
+    Config c;
+    c.setUserShell( old_shell );
+    QCOMPARE( c.homePermissions(), no_permissions );
+    QCOMPARE( c.homeUMask(), no_permissions );
+
+    QFETCH( QString, filename );
+    QFETCH( int, permission );
+    QFETCH( int, umask );
+    QFETCH( QString, umask_string );
+
+    // Checks that the test-data is valid
+    if ( permission != -1 )
+    {
+        QCOMPARE( permission & umask, 0 );
+        QCOMPARE( permission | umask, 0777 );
+    }
+
+    QFileInfo fi( QString( "%1/%2" ).arg( BUILD_AS_TEST, filename ) );
+    QVERIFY( fi.exists() );
+
+    bool ok = false;
+    const auto map = Calamares::YAML::load( fi, &ok );
+    QVERIFY( ok );
+    QVERIFY( map.count() > 0 );
+
+    QCOMPARE( c.userShell(), old_shell );
+    c.setConfigurationMap( map );
+    QCOMPARE( c.userShell(), new_shell );
+
+    QCOMPARE( c.homePermissions(), permission );
+    QCOMPARE( c.homeUMask(), umask );
+    // The QChar() is needed to disambiguate from the overload that takes a double
+    QCOMPARE( QStringLiteral( "%1" ).arg( umask, 3, 8, QChar( '0' ) ), umask_string );
+
+    QCOMPARE( c.forbiddenLoginNames(), forbidden );
+}
+
 
 QTEST_GUILESS_MAIN( UserTests )
 

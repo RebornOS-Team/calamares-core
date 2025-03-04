@@ -616,7 +616,7 @@ canonicalFilesystemName( const QString& fsName, FileSystem::Type* fsType )
         *fsType = FileSystem::Unknown;
     }
 #ifdef DEBUG_FILESYSTEMS
-    // This bit is for distro's debugging their settings, and shows
+    // This bit is for distros who are debugging their settings, and shows
     // all the strings that KPMCore is matching against for FS type.
     {
         Logger::CDebug d;

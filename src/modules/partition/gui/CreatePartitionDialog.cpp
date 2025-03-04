@@ -18,6 +18,7 @@
 #include "core/KPMHelpers.h"
 #include "core/PartUtils.h"
 #include "core/PartitionInfo.h"
+#include "core/PartitionCoreModule.h"
 #include "gui/PartitionDialogHelpers.h"
 #include "gui/PartitionSizeController.h"
 
@@ -46,18 +47,14 @@
 using Calamares::Partition::untranslatedFS;
 using Calamares::Partition::userVisibleFS;
 
-static QSet< FileSystem::Type > s_unmountableFS( { FileSystem::Unformatted,
-                                                   FileSystem::LinuxSwap,
-                                                   FileSystem::Extended,
-                                                   FileSystem::Unknown,
-                                                   FileSystem::Lvm2_PV } );
-
-CreatePartitionDialog::CreatePartitionDialog( Device* device,
+CreatePartitionDialog::CreatePartitionDialog( PartitionCoreModule* core,
+                                              Device* device,
                                               PartitionNode* parentPartition,
                                               const QStringList& usedMountPoints,
                                               QWidget* parentWidget )
     : QDialog( parentWidget )
     , m_ui( new Ui_CreatePartitionDialog )
+    , m_core( core )
     , m_partitionSizeController( new PartitionSizeController( this ) )
     , m_device( device )
     , m_parent( parentPartition )
@@ -82,8 +79,7 @@ CreatePartitionDialog::CreatePartitionDialog( Device* device,
         m_ui->lvNameLineEdit->setValidator( validator );
     }
 
-    if ( device->partitionTable()->type() == PartitionTable::msdos
-         || device->partitionTable()->type() == PartitionTable::msdos_sectorbased )
+    if ( KPMHelpers::isMSDOSPartition( device->partitionTable()->type() ) )
     {
         initMbrPartitionTypeUi();
     }
@@ -129,17 +125,23 @@ CreatePartitionDialog::CreatePartitionDialog( Device* device,
              this,
              &CreatePartitionDialog::checkMountPointSelection );
 
+    connect( m_ui->fsComboBox,
+             &QComboBox::currentTextChanged,
+             this,
+             &CreatePartitionDialog::checkMountPointSelection );
+
     // Select a default
     m_ui->fsComboBox->setCurrentIndex( defaultFsIndex );
     updateMountPointUi();
     checkMountPointSelection();
 }
 
-CreatePartitionDialog::CreatePartitionDialog( Device* device,
+CreatePartitionDialog::CreatePartitionDialog( PartitionCoreModule* core,
+                                              Device* device,
                                               const FreeSpace& freeSpacePartition,
                                               const QStringList& usedMountPoints,
                                               QWidget* parentWidget )
-    : CreatePartitionDialog( device, freeSpacePartition.p->parent(), usedMountPoints, parentWidget )
+    : CreatePartitionDialog( core, device, freeSpacePartition.p->parent(), usedMountPoints, parentWidget )
 {
     standardMountPoints( *( m_ui->mountPointComboBox ), QString() );
     setFlagList( *( m_ui->m_listFlags ),
@@ -148,11 +150,12 @@ CreatePartitionDialog::CreatePartitionDialog( Device* device,
     initPartResizerWidget( freeSpacePartition.p );
 }
 
-CreatePartitionDialog::CreatePartitionDialog( Device* device,
+CreatePartitionDialog::CreatePartitionDialog( PartitionCoreModule* core,
+                                              Device* device,
                                               const FreshPartition& existingNewPartition,
                                               const QStringList& usedMountPoints,
                                               QWidget* parentWidget )
-    : CreatePartitionDialog( device, existingNewPartition.p->parent(), usedMountPoints, parentWidget )
+    : CreatePartitionDialog( core, device, existingNewPartition.p->parent(), usedMountPoints, parentWidget )
 {
     standardMountPoints( *( m_ui->mountPointComboBox ), PartitionInfo::mountPoint( existingNewPartition.p ) );
     setFlagList( *( m_ui->m_listFlags ),
@@ -344,8 +347,10 @@ CreatePartitionDialog::updateMountPointUi()
 void
 CreatePartitionDialog::checkMountPointSelection()
 {
-    validateMountPoint( selectedMountPoint( m_ui->mountPointComboBox ),
+    validateMountPoint( m_core,
+                        selectedMountPoint( m_ui->mountPointComboBox ),
                         m_usedMountPoints,
+                        m_ui->fsComboBox->currentText(),
                         m_ui->mountPointExplanation,
                         m_ui->buttonBox->button( QDialogButtonBox::Ok ) );
 }

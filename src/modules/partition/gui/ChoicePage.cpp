@@ -34,11 +34,13 @@
 #include "Branding.h"
 #include "GlobalStorage.h"
 #include "JobQueue.h"
+#include "compat/CheckBox.h"
 #include "partition/PartitionIterator.h"
 #include "partition/PartitionQuery.h"
 #include "utils/Gui.h"
 #include "utils/Logger.h"
 #include "utils/Retranslator.h"
+#include "utils/String.h"
 #include "utils/Units.h"
 #include "widgets/PrettyRadioButton.h"
 
@@ -187,7 +189,8 @@ ChoicePage::init( PartitionCoreModule* core )
 
     connect( m_drivesCombo, qOverload< int >( &QComboBox::currentIndexChanged ), this, &ChoicePage::applyDeviceChoice );
     connect( m_encryptWidget, &EncryptWidget::stateChanged, this, &ChoicePage::onEncryptWidgetStateChanged );
-    connect( m_reuseHomeCheckBox, &QCheckBox::stateChanged, this, &ChoicePage::onHomeCheckBoxStateChanged );
+    connect(
+        m_reuseHomeCheckBox, Calamares::checkBoxStateChangedSignal, this, &ChoicePage::onHomeCheckBoxStateChanged );
 
     ChoicePage::applyDeviceChoice();
 }
@@ -361,7 +364,8 @@ ChoicePage::setupChoices()
 Device*
 ChoicePage::selectedDevice()
 {
-    Device* const currentDevice = m_core->deviceModel()->deviceForIndex( m_core->deviceModel()->index( m_drivesCombo->currentIndex() ) );
+    Device* const currentDevice
+        = m_core->deviceModel()->deviceForIndex( m_core->deviceModel()->index( m_drivesCombo->currentIndex() ) );
     return currentDevice;
 }
 
@@ -584,8 +588,21 @@ ChoicePage::applyActionChoice( InstallChoice choice )
                  &ChoicePage::doAlongsideSetupSplitter,
                  Qt::UniqueConnection );
         break;
-    case InstallChoice::NoChoice:
     case InstallChoice::Manual:
+        if ( m_core->isDirty() )
+        {
+            ScanningDialog::run(
+                QtConcurrent::run(
+                    [ = ]
+                    {
+                        QMutexLocker locker( &m_coreMutex );
+                        m_core->revertDevice( selectedDevice() );
+                    } ),
+                [] {},
+                this );
+        }
+        break;
+    case InstallChoice::NoChoice:
         break;
     }
     updateNextEnabled();
@@ -674,6 +691,12 @@ ChoicePage::onHomeCheckBoxStateChanged()
 void
 ChoicePage::onLeave()
 {
+    Calamares::GlobalStorage* gs = Calamares::JobQueue::instance()->globalStorage();
+    const bool useLuksPassphrase = ( m_encryptWidget->state() == EncryptWidget::Encryption::Confirmed );
+    const QString storedLuksPassphrase
+        = useLuksPassphrase ? Calamares::String::obscure( m_encryptWidget->passphrase() ) : QString();
+    gs->insert( "luksPassphrase", storedLuksPassphrase );
+
     if ( m_config->installChoice() == InstallChoice::Alongside )
     {
         if ( m_afterPartitionSplitterWidget->splitPartitionSize() >= 0
@@ -1031,9 +1054,10 @@ ChoicePage::updateActionChoicePreview( InstallChoice choice )
         if ( m_enableEncryptionWidget )
         {
             m_encryptWidget->show();
-            if ( m_config->preCheckEncryption() )
+            if ( m_config->preCheckEncryption() && !m_preCheckActivated )
             {
                 m_encryptWidget->setEncryptionCheckbox( true );
+                m_preCheckActivated = true;
             }
         }
         m_previewBeforeLabel->setText( tr( "Current:", "@label" ) );
@@ -1090,9 +1114,10 @@ ChoicePage::updateActionChoicePreview( InstallChoice choice )
         if ( shouldShowEncryptWidget( choice ) )
         {
             m_encryptWidget->show();
-            if ( m_config->preCheckEncryption() )
+            if ( m_config->preCheckEncryption() && !m_preCheckActivated )
             {
                 m_encryptWidget->setEncryptionCheckbox( true );
+                m_preCheckActivated = true;
             }
         }
         m_previewBeforeLabel->setText( tr( "Current:", "@label" ) );
@@ -1786,7 +1811,8 @@ ChoicePage::updateActionDescriptionsTr()
                                     "currently present on the selected storage device." ) );
 
         m_replaceButton->setText( tr( "<strong>Replace a partition</strong><br/>"
-                                      "Replaces a partition with %1." ) );
+                                      "Replaces a partition with %1." )
+                                      .arg( Calamares::Branding::instance()->shortVersionedName() ) );
     }
     if ( m_osproberEntriesCount < 0 )
     {

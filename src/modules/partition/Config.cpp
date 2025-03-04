@@ -448,6 +448,14 @@ Config::setConfigurationMap( const QVariantMap& configurationMap )
     m_showNotEncryptedBootMessage = Calamares::getBool( configurationMap, "showNotEncryptedBootMessage", true );
     m_requiredPartitionTableType = Calamares::getStringList( configurationMap, "requiredPartitionTableType" );
 
+    {
+        bool bogus = true;
+        const auto lvmConfiguration = Calamares::getSubMap( configurationMap, "lvm", bogus );
+        m_isLVMEnabled = Calamares::getBool( lvmConfiguration, "enable", true );
+    }
+
+    m_essentialMounts= Calamares::getStringList( configurationMap, "essentialMounts" );
+
     Calamares::GlobalStorage* gs = Calamares::JobQueue::instance()->globalStorage();
     gs->insert( "armInstall", Calamares::getBool( configurationMap, "armInstall", false ) );
     fillGSConfigurationEFI( gs, configurationMap );

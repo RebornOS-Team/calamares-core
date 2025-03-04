@@ -275,7 +275,7 @@ bool
 Settings::isModuleEnabled( const QString& module ) const
 {
     // Iterate over the list of modules searching for a match
-    for ( const auto& moduleInstance : qAsConst( m_moduleInstances ) )
+    for ( const auto& moduleInstance : std::as_const( m_moduleInstances ) )
     {
         if ( moduleInstance.key().module() == module )
         {
