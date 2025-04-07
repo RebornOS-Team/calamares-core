@@ -708,7 +708,7 @@ install(
 #
 #
 if(INSTALL_POLKIT)
-    install(FILES com.github.calamares.calamares.policy DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
+    install(FILES io.calamares.calamares.policy DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
 endif()
 
 if(INSTALL_COMPLETION)
