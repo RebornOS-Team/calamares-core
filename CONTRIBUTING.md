@@ -26,7 +26,7 @@ rules of decent behavior in both communities are pretty much the same).
 
 ## Join the Conversation
 
-GitHub Issues are **one** place for discussing Calamares if there are concrete
+Issues are **one** place for discussing Calamares if there are concrete
 problems or a new feature to discuss.
 Issues are not a help channel.
 Visit Matrix for help with configuration or compilation.
