@@ -178,7 +178,7 @@ QStringList
 Config::groupsForThisUser() const
 {
     QStringList l;
-    l.reserve( defaultGroups().size() + 1 );
+    l.reserve( defaultGroups().size() + 2 );
 
     for ( const auto& g : defaultGroups() )
     {
@@ -187,6 +187,13 @@ Config::groupsForThisUser() const
     if ( doAutoLogin() && !autoLoginGroup().isEmpty() )
     {
         l << autoLoginGroup();
+    }
+    if ( !m_nopasswdGroup.isEmpty() && m_userPassword.isEmpty() )
+    {
+        // The user has no password, which is allowed by the
+        // configuration in this distro, and there is a special
+        // group for passwordless-login.
+        l << m_nopasswdGroup;
     }
 
     return l;
@@ -987,6 +994,8 @@ Config::setConfigurationMap( const QVariantMap& configurationMap )
         {
             m_homeDirPermissions = -1;
         }
+
+        m_nopasswdGroup = Calamares::getString( userSettings, "nopasswd_group" );
     }
 
     setAutoLoginGroup( either< QString, const QString& >(
