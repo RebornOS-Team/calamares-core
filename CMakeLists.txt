@@ -140,7 +140,7 @@ set(USE_services "" CACHE STRING "Select the services module to use")
 ### Calamares application info
 #
 set(CALAMARES_ORGANIZATION_NAME "Calamares")
-set(CALAMARES_ORGANIZATION_DOMAIN "github.com/calamares")
+set(CALAMARES_ORGANIZATION_DOMAIN "calamares.io")
 set(CALAMARES_APPLICATION_NAME "Calamares")
 set(CALAMARES_DESCRIPTION_SUMMARY "The distribution-independent installer framework")
 
