@@ -182,7 +182,7 @@ cat <<EOF
 # Next steps for this release:
   git push origin v$V
   # Upload tarball $TAR_FILE and the signature $TAR_FILE.asc
-  # Announce via https://github.com/calamares/calamares/releases/new
+  # Announce on the website (and the releases page of the forge).
   # SHA256: $SHA256
 EOF
 
