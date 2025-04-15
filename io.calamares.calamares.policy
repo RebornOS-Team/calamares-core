@@ -8,9 +8,9 @@
 <policyconfig>
 
  <vendor>Calamares</vendor>
- <vendor_url>https://github.com/calamares</vendor_url>
+ <vendor_url>https://calamares.io/</vendor_url>
 
- <action id="com.github.calamares.calamares.pkexec.run">
+ <action id="io.calamares.calamares.pkexec.run">
     <description>Run Installer</description>
     <message>Authentication is required to run the installation program</message>
     <icon_name>drive-harddisk</icon_name>
