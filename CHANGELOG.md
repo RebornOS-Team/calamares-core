@@ -1,10 +1,11 @@
 # CHANGELOG
 
-## Calamares Core `v3.3.9_002`
+## Calamares Core `v3.3.9_003`
 
 ### For Users
 
-- Removed the `crc32-intel` module, as it is deprecated in favor of `crc32c`
+- Update the installer from upstream, bringing new features and bug-fixes.
+- Remove the `crc32-intel` module, as it is deprecated in favor of `crc32c`
 
 ### For Developers
 
