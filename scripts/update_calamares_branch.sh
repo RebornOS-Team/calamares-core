@@ -5,7 +5,7 @@ INITIAL_BRANCH="$(git branch --show-current)"
 (
     cd "$PROJECT_DIRECTORY" \
         && { 
-            git remote add upstream "https://github.com/calamares/calamares" \
+            git remote add upstream "https://codeberg.org/Calamares/calamares" \
             || true
         } \
         && git fetch --all \
