@@ -38,7 +38,6 @@ calamares_add_plugin(welcomeq
         ${CHECKER_SOURCES}
         WelcomeQmlViewStep.cpp
         ${_welcome}/Config.cpp
-        process.h
     RESOURCES
     welcomeq${QT_VERSION_SUFFIX}.qrc
     LINK_PRIVATE_LIBRARIES

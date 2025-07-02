@@ -178,7 +178,7 @@ network:
                 )
 
         try:
-            shutil.copy(source_resolv, target_resolv, follow_symlinks=True)
+            shutil.copy(source_resolv, target_resolv, follow_symlinks=False)
         except Exception as err:
             libcalamares.utils.debug(
                 "Can't copy resolv.conf from {}: {}".format(source_resolv, err)

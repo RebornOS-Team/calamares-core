@@ -6,7 +6,6 @@ $id: https://calamares.io/schemas/initcpiocfg
 additionalProperties: false
 type: object
 properties:
-    path: { type: string }
     useSystemdHook: { type: boolean }
     hooks:
         type: object

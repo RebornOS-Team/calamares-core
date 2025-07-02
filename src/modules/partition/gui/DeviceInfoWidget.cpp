@@ -46,7 +46,7 @@ DeviceInfoWidget::DeviceInfoWidget( QWidget* parent )
     m_ptLabel->setAlignment( Qt::AlignCenter );
 
     QPalette palette;
-    palette.setBrush( WindowText, QColor( "#E3E3E3" ) );  //light grey
+    palette.setBrush( WindowText, QColor( "#4D4D4D" ) );  //dark grey
 
     m_ptIcon->setAutoFillBackground( true );
     m_ptLabel->setAutoFillBackground( true );

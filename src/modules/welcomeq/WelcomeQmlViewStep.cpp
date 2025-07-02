@@ -21,17 +21,12 @@
 #include "modulesystem/ModuleManager.h"
 #include "utils/Yaml.h"
 
-#include <QtQml>
-#include "process.h"
-
 CALAMARES_PLUGIN_FACTORY_DEFINITION( WelcomeQmlViewStepFactory, registerPlugin< WelcomeQmlViewStep >(); )
 
 WelcomeQmlViewStep::WelcomeQmlViewStep( QObject* parent )
     : Calamares::QmlViewStep( parent )
     , m_config( new Config( this ) )
 {
-    qmlRegisterType<Process>("Process", 1, 0, "Process");
-
     connect( Calamares::ModuleManager::instance(),
              &Calamares::ModuleManager::requirementsComplete,
              this,
