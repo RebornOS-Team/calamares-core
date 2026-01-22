@@ -17,7 +17,7 @@
       <location filename="../src/libcalamares/CalamaresAbout.cpp" line="34"/>
       <source>Copyright %1-%2 %3 &amp;lt;%4&amp;gt;&lt;br/&gt;</source>
       <extracomment>Copyright year-year Name &lt;email-address&gt;</extracomment>
-      <translation type="unfinished"/>
+      <translation>Autoriõigused %1-%2 %3 &amp;lt;%4&amp;gt;&lt;br/&gt;</translation>
     </message>
   </context>
   <context>
@@ -41,7 +41,7 @@
       <location filename="../src/modules/partition/jobs/AutoMountManagementJob.cpp" line="22"/>
       <source>Managing auto-mount settings…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Halda automaatse haakimise seadistusi…</translation>
     </message>
   </context>
   <context>
@@ -233,13 +233,13 @@
       <location filename="../src/libcalamares/ProcessJob.cpp" line="49"/>
       <source>Running command %1 in target system…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Käivitan sihtsüsteemis käsku %1…</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/ProcessJob.cpp" line="53"/>
       <source>Running command %1…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Käivitan käsku %1…</translation>
     </message>
   </context>
   <context>
@@ -318,7 +318,7 @@
       <location filename="../src/libcalamares/PythonJob.cpp" line="266"/>
       <source>Bad working directory path</source>
       <comment>@error</comment>
-      <translation>Halb töökausta tee</translation>
+      <translation>Vigane töökausta asukoht</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/PythonJob.cpp" line="267"/>
@@ -351,7 +351,7 @@
       <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="73"/>
       <source>Loading…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Laadin…</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="100"/>
@@ -363,7 +363,7 @@
       <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="286"/>
       <source>Loading failed.</source>
       <comment>@info</comment>
-      <translation type="unfinished"/>
+      <translation>Laadimine ei õnnestunud.</translation>
     </message>
   </context>
   <context>
@@ -387,9 +387,9 @@
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="125"/>
       <source>(%n second(s))</source>
       <comment>@status</comment>
-      <translation type="unfinished">
-        <numerusform/>
-        <numerusform/>
+      <translation>
+        <numerusform>(%n sekund)</numerusform>
+        <numerusform>(%n sekundit)</numerusform>
       </translation>
     </message>
     <message>
@@ -439,13 +439,13 @@ Link copied to clipboard</source>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="155"/>
       <source>Setup Failed</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Seadistamine ei õnnestunud</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
       <source>Installation Failed</source>
       <comment>@title</comment>
-      <translation>Paigaldamine ebaõnnestus</translation>
+      <translation>Paigaldamine ei õnnestunud</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
@@ -475,13 +475,13 @@ Link copied to clipboard</source>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="336"/>
       <source>Continue with Setup?</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Kas jätkame seadistamisega?</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="337"/>
       <source>Continue with Installation?</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Kas jätkame paigaldamisega?</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="339"/>
@@ -499,25 +499,25 @@ Link copied to clipboard</source>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
       <source>&amp;Set Up Now</source>
       <comment>@button</comment>
-      <translation type="unfinished"/>
+      <translation>&amp;Seadista kohe</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
       <source>&amp;Install Now</source>
       <comment>@button</comment>
-      <translation type="unfinished"/>
+      <translation>&amp;Paigalda kohe</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="355"/>
       <source>Go &amp;Back</source>
       <comment>@button</comment>
-      <translation type="unfinished"/>
+      <translation>Mine &amp;tagasi</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="402"/>
       <source>&amp;Set Up</source>
       <comment>@button</comment>
-      <translation type="unfinished"/>
+      <translation>&amp;Seadista</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="402"/>
@@ -529,25 +529,25 @@ Link copied to clipboard</source>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="404"/>
       <source>Setup is complete. Close the setup program.</source>
       <comment>@tooltip</comment>
-      <translation type="unfinished"/>
+      <translation>Seadistamine on lõppenud. Võid seadistusrakenduse sulgeda.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="405"/>
       <source>The installation is complete. Close the installer.</source>
       <comment>@tooltip</comment>
-      <translation>Paigaldamine on lõpetatud. Sulge paigaldaja.</translation>
+      <translation>Paigaldamine on lõppenud. Võid paigaldusrakenduse sulgeda.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="407"/>
       <source>Cancel the setup process without changing the system.</source>
       <comment>@tooltip</comment>
-      <translation type="unfinished"/>
+      <translation>Katkesta seadistamine ilma süsteemi muutmata.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="408"/>
       <source>Cancel the installation process without changing the system.</source>
       <comment>@tooltip</comment>
-      <translation type="unfinished"/>
+      <translation>Katkesta paigaldamine ilma süsteemi muutmata.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="418"/>
@@ -577,13 +577,13 @@ Link copied to clipboard</source>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="524"/>
       <source>Cancel Setup?</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Kas tühistame seadistamise?</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="524"/>
       <source>Cancel Installation?</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Kas tühistame paigaldamise?</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="525"/>
@@ -702,7 +702,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="897"/>
       <source>Reuse %1 as home partition for %2</source>
       <comment>@label</comment>
-      <translation type="unfinished"/>
+      <translation>Taaskasuta %1 %2 kodupartitsioonina</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1041"/>
@@ -713,7 +713,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1065"/>
       <source>%1 will be shrunk to %2MiB and a new %3MiB partition will be created for %4.</source>
       <comment>@info, %1 is partition name, %4 is product name</comment>
-      <translation type="unfinished"/>
+      <translation>%1 vähendatakse suuruseni %2MiB ja %4 jaoks luuakse uus %3MiB partitsioon.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1144"/>
@@ -804,13 +804,13 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1570"/>
       <source>No swap</source>
       <comment>@label</comment>
-      <translation type="unfinished"/>
+      <translation>Saaleala pole</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1579"/>
       <source>Reuse swap</source>
       <comment>@label</comment>
-      <translation type="unfinished"/>
+      <translation>Taaskasuta saaleala</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1582"/>
@@ -839,7 +839,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1629"/>
       <source>Bootloader location:</source>
       <comment>@label</comment>
-      <translation type="unfinished"/>
+      <translation>Käivituslaaduri asukoht:</translation>
     </message>
   </context>
   <context>
@@ -867,24 +867,24 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="327"/>
       <source>Successfully disabled volume group %1.</source>
-      <translation type="unfinished"/>
+      <translation>%1 kettagrupi kasutuselt eemaldamine õnnestus.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="366"/>
       <source>Clear mounts for partitioning operations on %1</source>
       <comment>@title</comment>
-      <translation>Tühjenda monteeringud partitsioneerimistegevustes %1 juures</translation>
+      <translation>Tühjenda haakepunktid partitsioneerimistegevustes %1 juures</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="372"/>
       <source>Clearing mounts for partitioning operations on %1…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Tühjendan haakepunktide partitsioneerimistegevustes %1 juures…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/ClearMountsJob.cpp" line="391"/>
       <source>Cleared all mounts for %1</source>
-      <translation>Kõik monteeringud tühjendatud %1 jaoks</translation>
+      <translation>Kõik haakepunktid on tühjendatud %1 jaoks</translation>
     </message>
   </context>
   <context>
@@ -894,12 +894,12 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="40"/>
       <source>Clearing all temporary mounts…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Tühjendan kõiki ajutisi haakepunkte…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/ClearTempMountsJob.cpp" line="70"/>
       <source>Cleared all temporary mounts.</source>
-      <translation>Kõik ajutised monteeringud tühjendatud.</translation>
+      <translation>Kõik ajutised haakimised tühjendatud.</translation>
     </message>
   </context>
   <context>
@@ -921,7 +921,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/finished/Config.cpp" line="142"/>
       <source>Setup Failed</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Seadistamine ei õnnestunud</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/Config.cpp" line="143"/>
@@ -957,7 +957,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/finished/Config.cpp" line="153"/>
       <source>The setup of %1 is complete.</source>
       <comment>@info</comment>
-      <translation type="unfinished"/>
+      <translation>%1 seadistus on valmis.</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/Config.cpp" line="154"/>
@@ -969,19 +969,19 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/keyboard/Config.cpp" line="583"/>
       <source>Keyboard model has been set to %1.</source>
       <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-      <translation type="unfinished"/>
+      <translation>Klahvistiku mudel on %1.</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboard/Config.cpp" line="591"/>
       <source>Keyboard layout has been set to %1/%2.</source>
       <comment>@label, %1 is layout, %2 is layout variant</comment>
-      <translation type="unfinished"/>
+      <translation>Klahvistiku paigutus on %1/%2.</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/Config.cpp" line="381"/>
       <source>Set timezone to %1.</source>
       <comment>@action</comment>
-      <translation type="unfinished"/>
+      <translation>Määra ajavööndiks %1</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/Config.cpp" line="418"/>
@@ -1028,7 +1028,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/packagechooser/Config.cpp" line="110"/>
       <source>Package Selection</source>
-      <translation type="unfinished"/>
+      <translation>Paketivalik</translation>
     </message>
     <message>
       <location filename="../src/modules/packagechooser/Config.cpp" line="112"/>
@@ -1038,17 +1038,17 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/packagechooser/Config.cpp" line="241"/>
       <source>Packages</source>
-      <translation type="unfinished"/>
+      <translation>Paketid</translation>
     </message>
     <message>
       <location filename="../src/modules/packagechooser/Config.cpp" line="247"/>
       <source>Install option: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished"/>
+      <translation>Paigaldusvalik: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/packagechooser/Config.cpp" line="247"/>
       <source>None</source>
-      <translation type="unfinished"/>
+      <translation>Puudub</translation>
     </message>
     <message>
       <location filename="../src/modules/summary/Config.cpp" line="35"/>
@@ -1059,7 +1059,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/summary/Config.cpp" line="39"/>
       <source>This is an overview of what will happen once you start the setup procedure.</source>
-      <translation type="unfinished"/>
+      <translation>See on ülevaade sellest mis juhtub, kui alustad seadistusprotseduuri.</translation>
     </message>
     <message>
       <location filename="../src/modules/summary/Config.cpp" line="44"/>
@@ -1074,17 +1074,17 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="243"/>
       <source>Your username must start with a lowercase letter or underscore.</source>
-      <translation type="unfinished"/>
+      <translation>Sinu kasutajanimi peab algama väiketähe või alakriipsuga.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="247"/>
       <source>Only lowercase letters, numbers, underscore and hyphen are allowed.</source>
-      <translation type="unfinished"/>
+      <translation>Lubatud on vaid väiketähed, numbrid, alakriips ja sidekriips.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="253"/>
       <source>'%1' is not allowed as username.</source>
-      <translation type="unfinished"/>
+      <translation>'%1' pole kasutajanimena lubatud.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="302"/>
@@ -1099,42 +1099,42 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="312"/>
       <source>'%1' is not allowed as hostname.</source>
-      <translation type="unfinished"/>
+      <translation>'%1' pole hostinimena lubatud.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="317"/>
       <source>Only letters, numbers, underscore and hyphen are allowed.</source>
-      <translation type="unfinished"/>
+      <translation>Lubatud on vaid tähed, numbrid, alakriips ja sidekriips.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="598"/>
       <source>Your passwords do not match!</source>
-      <translation>Sinu paroolid ei ühti!</translation>
+      <translation>Sinu salasõnad ei ühti!</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="612"/>
       <source>OK!</source>
-      <translation type="unfinished"/>
+      <translation>Sobib!</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="57"/>
       <source>This computer does not satisfy the minimum requirements for setting up %1.&lt;br/&gt;Setup cannot continue.</source>
-      <translation type="unfinished"/>
+      <translation>See arvuti ei taga %1 seadistamiseks vajalikke miinimumtingimusi.&lt;br/&gt;Seadistamine ei saa jätkuda.</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="60"/>
       <source>This computer does not satisfy the minimum requirements for installing %1.&lt;br/&gt;Installation cannot continue.</source>
-      <translation type="unfinished"/>
+      <translation>See arvuti ei taga %1 paigaldamiseks vajalikke miinimumtingimusi.&lt;br/&gt;Paigaldamine ei saa jätkuda.</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="66"/>
       <source>This computer does not satisfy some of the recommended requirements for setting up %1.&lt;br/&gt;Setup can continue, but some features might be disabled.</source>
-      <translation type="unfinished"/>
+      <translation>See arvuti ei taga mõnda %1 seadistamiseks soovitatud tingimust.&lt;br/&gt;Seadistaminemine võib jätkuda, ent mõni funktsionaalsus võib olla kasutuselt eemaldatud.</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="70"/>
       <source>This computer does not satisfy some of the recommended requirements for installing %1.&lt;br/&gt;Installation can continue, but some features might be disabled.</source>
-      <translation>See arvuti ei rahulda mõnda %1 paigaldamiseks soovitatud tingimust.&lt;br/&gt;Paigaldamine võib jätkuda, ent mõned funktsioonid võivad olla keelatud.</translation>
+      <translation>See arvuti ei taga mõnda %1 paigaldamiseks soovitatud tingimust.&lt;br/&gt;Paigaldamine võib jätkuda, ent mõni funktsionaalsus võib olla kasutuselt eemaldatud.</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="80"/>
@@ -1176,7 +1176,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="18"/>
       <source>Create a Partition</source>
-      <translation>Loo sektsioon</translation>
+      <translation>Loo partitsioon</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="42"/>
@@ -1216,7 +1216,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="165"/>
       <source>&amp;Mount Point:</source>
-      <translation>&amp;Monteerimispunkt:</translation>
+      <translation>&amp;Haakepunkt:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="191"/>
@@ -1226,7 +1226,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="224"/>
       <source>Label for the filesystem</source>
-      <translation type="unfinished"/>
+      <translation>Failisüsteemi silt</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="234"/>
@@ -1261,13 +1261,13 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="91"/>
       <source>Mountpoint already in use. Please select another one.</source>
       <comment>@info</comment>
-      <translation>Monteerimispunkt on juba kasutusel. Palun vali mõni teine.</translation>
+      <translation>Haakepunkt on juba kasutusel. Palun vali mõni teine.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionDialogHelpers.cpp" line="96"/>
       <source>Mountpoint must start with a &lt;tt&gt;/&lt;/tt&gt;.</source>
       <comment>@info</comment>
-      <translation type="unfinished"/>
+      <translation>Haakepunkti alguses peab olema &lt;tt&gt;/&lt;/tt&gt;.</translation>
     </message>
   </context>
   <context>
@@ -1357,13 +1357,13 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="58"/>
       <source>Creating new %1 partition table on %2…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Loon uut %1 partitsioonitabelit %2 jaoks…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="49"/>
       <source>Creating new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3)…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Loon uut &lt;strong&gt;%1&lt;/strong&gt; partitsioonitabelit &lt;strong&gt;%2&lt;/strong&gt; jaoks (%3)…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="86"/>
@@ -1381,32 +1381,32 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="39"/>
       <source>Create user &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished"/>
+      <translation>Loo kasutaja &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="45"/>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="143"/>
       <source>Creating user %1…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Loon kasutajat %1…</translation>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="126"/>
       <source>Preserving home directory…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Säilitan kodukausta…</translation>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="152"/>
       <source>Configuring user %1</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Seadistan kasutajat %1</translation>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="160"/>
       <source>Setting file permissions…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Määran failiõigusi…</translation>
     </message>
   </context>
   <context>
@@ -1415,7 +1415,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/gui/CreateVolumeGroupDialog.cpp" line="28"/>
       <source>Create Volume Group</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Loo kettagrupp</translation>
     </message>
   </context>
   <context>
@@ -1425,18 +1425,18 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="44"/>
       <source>Creating new volume group named %1…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Loon uut kettagruppi nimega %1…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="38"/>
       <source>Creating new volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Loon uut kettagruppi nimega &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/CreateVolumeGroupJob.cpp" line="51"/>
       <source>The installer failed to create a volume group named '%1'.</source>
-      <translation>Paigaldaja ei saanud luua kettagruppi "%1".</translation>
+      <translation>Paigaldaja ei saanud luua kettagruppi „%1“.</translation>
     </message>
   </context>
   <context>
@@ -1446,13 +1446,13 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="38"/>
       <source>Deactivating volume group named %1…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Keelan kettagrupi nimega %1…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="32"/>
       <source>Deactivating volume group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Keelan kettagrupi nimega &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeactivateVolumeGroupJob.cpp" line="46"/>
@@ -1467,13 +1467,13 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
       <source>Deleting partition %1…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Kustutan partitsiooni: %1…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="79"/>
       <source>Deleting partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Kustutan partitsiooni: &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="99"/>
@@ -1589,7 +1589,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="103"/>
       <source>&amp;Mount Point:</source>
-      <translation>&amp;Monteerimispunkt:</translation>
+      <translation>&amp;Haakepunkt:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="129"/>
@@ -1614,7 +1614,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="179"/>
       <source>Label for the filesystem</source>
-      <translation type="unfinished"/>
+      <translation>Failisüsteemi silt</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="189"/>
@@ -1716,7 +1716,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="179"/>
       <source>Set partition information</source>
       <comment>@title</comment>
-      <translation>Sea partitsiooni teave</translation>
+      <translation>Määra partitsiooni teave</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="208"/>
@@ -2336,7 +2336,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/luksbootkeyfile/LuksBootKeyFileJob.cpp" line="254"/>
       <location filename="../src/modules/luksbootkeyfile/LuksBootKeyFileJob.cpp" line="262"/>
       <source>No partitions are defined.</source>
-      <translation type="unfinished"/>
+      <translation>Ühtegi partitsiooni pole kirjeldatud</translation>
     </message>
     <message>
       <location filename="../src/modules/luksbootkeyfile/LuksBootKeyFileJob.cpp" line="297"/>
@@ -2934,7 +2934,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
     <message>
       <location filename="../src/modules/packagechooser/PackageChooserPage.cpp" line="25"/>
       <source>Package Selection</source>
-      <translation type="unfinished"/>
+      <translation>Paketivalik</translation>
     </message>
     <message>
       <location filename="../src/modules/packagechooser/PackageChooserPage.cpp" line="26"/>
@@ -3155,7 +3155,7 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="205"/>
       <source>New Partition</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Uus partitsioon</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="307"/>
@@ -3173,13 +3173,13 @@ Paigaldaja sulgub ning kõik muutused kaovad.</translation>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="311"/>
       <source>File System Label</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Failisüsteemi silt</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="313"/>
       <source>Mount Point</source>
       <comment>@title</comment>
-      <translation>Monteerimispunkt</translation>
+      <translation>Haakepunkt</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="315"/>
@@ -3686,18 +3686,18 @@ Väljund:
       <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="38"/>
       <source>Removing Volume Group named %1…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Eemaldan kettagrupi nimega %1…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="32"/>
       <source>Removing Volume Group named &lt;strong&gt;%1&lt;/strong&gt;…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Eemaldan kettagrupi nimega &lt;strong&gt;%1&lt;/strong&gt;…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/RemoveVolumeGroupJob.cpp" line="46"/>
       <source>The installer failed to remove a volume group named '%1'.</source>
-      <translation>Paigaldaja ei saanud eemaldada kettagruppi "%1".</translation>
+      <translation>Paigaldaja ei saanud eemaldada kettagruppi „%1“.</translation>
     </message>
   </context>
   <context>
@@ -3859,7 +3859,7 @@ Väljund:
     <message>
       <location filename="../src/modules/partition/jobs/ResizeVolumeGroupJob.cpp" line="58"/>
       <source>The installer failed to resize a volume group named '%1'.</source>
-      <translation>Paigaldaja ei saanud muuta kettagrupi "%1" suurust.</translation>
+      <translation>Paigaldaja ei saanud muuta kettagrupi „%1“ suurust.</translation>
     </message>
   </context>
   <context>
@@ -4270,7 +4270,7 @@ Väljund:
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="106"/>
       <source>Sending installation feedback…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Saadan paigalduse tagasisidet…</translation>
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="124"/>
@@ -4318,13 +4318,13 @@ Väljund:
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="135"/>
       <source>Machine feedback</source>
-      <translation>Seadme tagasiside</translation>
+      <translation>Arvuti või seadme tagasiside</translation>
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="141"/>
       <source>Configuring machine feedback…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Seadistan arvuti või seadme tagasiside tagasisidet…</translation>
     </message>
     <message>
       <location filename="../src/modules/tracking/TrackingJobs.cpp" line="164"/>
@@ -4353,7 +4353,7 @@ Väljund:
     <message>
       <location filename="../src/modules/tracking/page_trackingstep.ui" line="76"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to send &lt;span style=" font-weight:600;"&gt;no information at all&lt;/span&gt; about your installation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished"/>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klõpsides siin &lt;span style=" font-weight:600;"&gt;ei saada sa üldse teavet&lt;/span&gt;oma paigalduse kohta.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/tracking/page_trackingstep.ui" line="275"/>
@@ -4396,7 +4396,7 @@ Väljund:
       <location filename="../src/modules/umount/UmountJob.cpp" line="39"/>
       <source>Unmounting file systems…</source>
       <comment>@status</comment>
-      <translation type="unfinished"/>
+      <translation>Haagin failisüsteemid lahti…</translation>
     </message>
     <message>
       <location filename="../src/modules/umount/UmountJob.cpp" line="135"/>
@@ -4486,13 +4486,13 @@ Väljund:
       <location filename="../src/calamares/VariantModel.cpp" line="246"/>
       <source>Key</source>
       <comment>Column header for key/value</comment>
-      <translation type="unfinished"/>
+      <translation>Võti</translation>
     </message>
     <message>
       <location filename="../src/calamares/VariantModel.cpp" line="250"/>
       <source>Value</source>
       <comment>Column header for key/value</comment>
-      <translation type="unfinished"/>
+      <translation>Väärtus</translation>
     </message>
   </context>
   <context>
@@ -4500,7 +4500,7 @@ Väljund:
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="18"/>
       <source>Create Volume Group</source>
-      <translation type="unfinished"/>
+      <translation>Loo kettagrupp</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="24"/>
@@ -5081,7 +5081,7 @@ The vertical scrollbar is adjustable, current width set to 10.</source>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="129"/>
       <source>Only lowercase letters, numbers, underscore and hyphen are allowed.</source>
-      <translation type="unfinished"/>
+      <translation>Lubatud on vaid tähed, numbrid, alakriips ja sidekriips.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="138"/>
@@ -5214,7 +5214,7 @@ The vertical scrollbar is adjustable, current width set to 10.</source>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="128"/>
       <source>Only lowercase letters, numbers, underscore and hyphen are allowed.</source>
-      <translation type="unfinished"/>
+      <translation>Lubatud on vaid tähed, numbrid, alakriips ja sidekriips.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="137"/>

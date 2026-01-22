@@ -59,7 +59,7 @@
     <message>
       <location filename="../src/modules/partition/gui/BootInfoWidget.cpp" line="82"/>
       <source>This system was started with a &lt;strong&gt;BIOS&lt;/strong&gt; boot environment.&lt;br&gt;&lt;br&gt;To configure startup from a BIOS environment, this installer must install a boot loader, like &lt;strong&gt;GRUB&lt;/strong&gt;, either at the beginning of a partition or on the &lt;strong&gt;Master Boot Record&lt;/strong&gt; near the beginning of the partition table (preferred). This is automatic, unless you choose manual partitioning, in which case you must set it up on your own.</source>
-      <translation>このシステムは &lt;strong&gt;BIOS&lt;/strong&gt; ブート環境で起動されました。&lt;br&gt;&lt;br&gt;BIOS 環境からの起動を設定するため、このインストーラーはパーティションの先頭またはパーティションテーブルの先頭近くの&lt;strong&gt;マスターブートレコード&lt;/strong&gt;に、&lt;strong&gt;GRUB&lt;/strong&gt; などのブートローダーをインストールする必要があります（推奨）。手動パーティションニングを選択しない限り、これは自動的に行われます。手動パーティションニングを選択した場合は、自分で設定する必要があります。</translation>
+      <translation>このシステムは &lt;strong&gt;BIOS&lt;/strong&gt; ブート環境で起動されました。&lt;br&gt;&lt;br&gt;BIOS 環境からの起動を設定するため、このインストーラーはパーティションの先頭またはパーティションテーブルの先頭近くの&lt;strong&gt;マスターブートレコード&lt;/strong&gt;に、&lt;strong&gt;GRUB&lt;/strong&gt; などのブートローダーをインストールする必要があります（推奨）。手動パーティショニングを選択しない限り、これは自動的に行われます。手動パーティショニングを選択した場合は、自分で設定する必要があります。</translation>
     </message>
   </context>
   <context>
@@ -425,17 +425,17 @@ Link copied to clipboard</source>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="90"/>
       <source>&amp;Yes</source>
-      <translation>はい (&amp;Y)</translation>
+      <translation>はい(&amp;Y)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="91"/>
       <source>&amp;No</source>
-      <translation>いいえ (&amp;N)</translation>
+      <translation>いいえ(&amp;N)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="92"/>
       <source>&amp;Close</source>
-      <translation>閉じる (&amp;C)</translation>
+      <translation>閉じる(&amp;C)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="155"/>
@@ -525,7 +525,7 @@ Link copied to clipboard</source>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="402"/>
       <source>&amp;Install</source>
       <comment>@button</comment>
-      <translation>インストール (&amp;I)</translation>
+      <translation>インストール(&amp;I)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="404"/>
@@ -555,25 +555,25 @@ Link copied to clipboard</source>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="418"/>
       <source>&amp;Next</source>
       <comment>@button</comment>
-      <translation>次へ (&amp;N)</translation>
+      <translation>次へ(&amp;N)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="423"/>
       <source>&amp;Back</source>
       <comment>@button</comment>
-      <translation>戻る (&amp;B)</translation>
+      <translation>戻る(&amp;B)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="429"/>
       <source>&amp;Done</source>
       <comment>@button</comment>
-      <translation>実行 (&amp;D)</translation>
+      <translation>実行(&amp;D)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="448"/>
       <source>&amp;Cancel</source>
       <comment>@button</comment>
-      <translation>中止 (&amp;C)</translation>
+      <translation>中止(&amp;C)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="524"/>
@@ -684,7 +684,7 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="137"/>
       <source>Select storage de&amp;vice:</source>
       <comment>@label</comment>
-      <translation>ストレージデバイスを選択 (&amp;V):</translation>
+      <translation>ストレージデバイスを選択(&amp;V):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="138"/>
@@ -954,8 +954,7 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/finished/Config.cpp" line="151"/>
       <source>Installation Complete</source>
       <comment>@title</comment>
-      <translation>インストールが完了
-</translation>
+      <translation>インストール完了</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/Config.cpp" line="153"/>
@@ -1148,7 +1147,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="264"/>
       <source>&lt;h1&gt;Welcome to the Calamares setup program for %1&lt;/h1&gt;</source>
-      <translation>&lt;h1&gt;%1 のCalamaresセットアッププログラムへようこそ&lt;/h1&gt;</translation>
+      <translation>&lt;h1&gt;%1 の Calamares セットアッププログラムへようこそ&lt;/h1&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="265"/>
@@ -1185,7 +1184,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="42"/>
       <source>Si&amp;ze:</source>
-      <translation>サイズ (&amp;Z)</translation>
+      <translation>サイズ(&amp;Z):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="52"/>
@@ -1195,22 +1194,22 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="59"/>
       <source>Partition &amp;Type:</source>
-      <translation>パーティションの種類 (&amp;T):</translation>
+      <translation>パーティションの種類(&amp;T):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="71"/>
       <source>Primar&amp;y</source>
-      <translation>プライマリ (&amp;Y)</translation>
+      <translation>プライマリ(&amp;Y)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="81"/>
       <source>E&amp;xtended</source>
-      <translation>拡張 (&amp;X)</translation>
+      <translation>拡張(&amp;X)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="123"/>
       <source>Fi&amp;le System:</source>
-      <translation>ファイルシステム (&amp;L):</translation>
+      <translation>ファイルシステム(&amp;L):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="155"/>
@@ -1220,7 +1219,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="165"/>
       <source>&amp;Mount Point:</source>
-      <translation>マウントポイント (&amp;M)</translation>
+      <translation>マウントポイント(&amp;M):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="191"/>
@@ -1241,7 +1240,7 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="67"/>
       <source>En&amp;crypt</source>
       <comment>@action</comment>
-      <translation>暗号化 (&amp;C)</translation>
+      <translation>暗号化(&amp;C)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="195"/>
@@ -1477,7 +1476,7 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="79"/>
       <source>Deleting partition &lt;strong&gt;%1&lt;/strong&gt;…</source>
       <comment>@status</comment>
-      <translation>パーティション &lt;strong&gt;%1&lt;/strong&gt; を削除しています…</translation>
+      <translation>パーティション &lt;strong&gt;%1&lt;/strong&gt; を削除…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="99"/>
@@ -1573,12 +1572,12 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="54"/>
       <source>Con&amp;tent:</source>
-      <translation>コンテンツ (&amp;T):</translation>
+      <translation>コンテンツ(&amp;T):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="64"/>
       <source>&amp;Keep</source>
-      <translation>保持 (&amp;K)</translation>
+      <translation>保持(&amp;K)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="74"/>
@@ -1593,12 +1592,12 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="103"/>
       <source>&amp;Mount Point:</source>
-      <translation>マウントポイント (&amp;M)</translation>
+      <translation>マウントポイント(&amp;M):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="129"/>
       <source>Si&amp;ze:</source>
-      <translation>サイズ (&amp;Z):</translation>
+      <translation>サイズ(&amp;Z):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="139"/>
@@ -1608,7 +1607,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="146"/>
       <source>Fi&amp;le System:</source>
-      <translation>ファイルシステム (&amp;L)</translation>
+      <translation>ファイルシステム(&amp;L):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.ui" line="159"/>
@@ -1641,7 +1640,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/EncryptWidget.ui" line="36"/>
       <source>En&amp;crypt system</source>
-      <translation>システムを暗号化 (&amp;C)</translation>
+      <translation>システムを暗号化(&amp;C)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EncryptWidget.ui" line="43"/>
@@ -1726,7 +1725,7 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="208"/>
       <source>Install %1 on &lt;strong&gt;new&lt;/strong&gt; %2 system partition with features &lt;em&gt;%3&lt;/em&gt;</source>
       <comment>@info</comment>
-      <translation>&lt;strong&gt;新規の&lt;/strong&gt; %2 システムパーティション (機能 &lt;em&gt;%3&lt;/em&gt;) に %1 をインストール</translation>
+      <translation>&lt;strong&gt;新しい&lt;/strong&gt; %2 システムパーティションに %1 をインストールし、&lt;em&gt;%3&lt;/em&gt; を有効にする</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="217"/>
@@ -1738,13 +1737,13 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="226"/>
       <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt; and features &lt;em&gt;%3&lt;/em&gt;</source>
       <comment>@info</comment>
-      <translation>マウントポイント &lt;strong&gt;%1&lt;/strong&gt; と機能 &lt;em&gt;%3&lt;/em&gt; の、&lt;strong&gt;新しい&lt;/strong&gt; %2 パーティションをセットアップ</translation>
+      <translation>&lt;strong&gt;新しい&lt;/strong&gt; %2 パーティションをマウントポイント &lt;strong&gt;%1&lt;/strong&gt; に設定し、&lt;em&gt;%3&lt;/em&gt; を有効にする</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="235"/>
       <source>Set up &lt;strong&gt;new&lt;/strong&gt; %2 partition with mount point &lt;strong&gt;%1&lt;/strong&gt;%3</source>
       <comment>@info</comment>
-      <translation>マウントポイント &lt;strong&gt;%1&lt;/strong&gt;%3 で&lt;strong&gt;新しい&lt;/strong&gt; %2 パーティションをセットアップ</translation>
+      <translation>&lt;strong&gt;新しい&lt;/strong&gt; %2 パーティションをマウントポイント &lt;strong&gt;%1&lt;/strong&gt;%3 に設定</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="250"/>
@@ -1762,13 +1761,13 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="270"/>
       <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt; and features &lt;em&gt;%4&lt;/em&gt;</source>
       <comment>@info</comment>
-      <translation>%3 パーティション &lt;strong&gt;%1&lt;/strong&gt; を、マウントポイント &lt;strong&gt;%2&lt;/strong&gt; と機能 &lt;em&gt;%4&lt;/em&gt; でセットアップ</translation>
+      <translation>%3 パーティション &lt;strong&gt;%1&lt;/strong&gt; をマウントポイント &lt;strong&gt;%2&lt;/strong&gt; に設定し、&lt;em&gt;%4&lt;/em&gt; を有効にする</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="280"/>
       <source>Set up %3 partition &lt;strong&gt;%1&lt;/strong&gt; with mount point &lt;strong&gt;%2&lt;/strong&gt;%4…</source>
       <comment>@info</comment>
-      <translation>%3 パーティション &lt;strong&gt;%1&lt;/strong&gt; をマウントポイント &lt;strong&gt;%2&lt;/strong&gt;%4 でセットアップ…</translation>
+      <translation>%3 パーティション &lt;strong&gt;%1&lt;/strong&gt; をマウントポイント &lt;strong&gt;%2&lt;/strong&gt;%4 に設定…</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/jobs/FillGlobalStorageJob.cpp" line="296"/>
@@ -1788,7 +1787,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/finished/FinishedPage.ui" line="102"/>
       <source>&amp;Restart now</source>
-      <translation>今すぐ再起動 (&amp;R)</translation>
+      <translation>今すぐ再起動(&amp;R)</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="75"/>
@@ -2125,13 +2124,13 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="55"/>
       <source>&amp;Cancel</source>
       <comment>@button</comment>
-      <translation>中止 (&amp;C)</translation>
+      <translation>中止(&amp;C)</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/LCLocaleDialog.cpp" line="56"/>
       <source>&amp;OK</source>
       <comment>@button</comment>
-      <translation>了解 (&amp;O)</translation>
+      <translation>&amp;OK</translation>
     </message>
   </context>
   <context>
@@ -2180,19 +2179,19 @@ The installer will quit and all changes will be lost.</source>
       <location filename="../src/modules/license/LicensePage.cpp" line="149"/>
       <source>This setup procedure will install proprietary software that is subject to licensing terms.</source>
       <comment>@info</comment>
-      <translation>このセットアップ手順では、ライセンス条項の対象となるプロプライエタリソフトウェアをインストールします。</translation>
+      <translation>このセットアップ手続きでは、ライセンス条項の対象となるプロプライエタリソフトウェアをインストールします。</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="154"/>
       <source>If you do not agree with the terms, the setup procedure cannot continue.</source>
       <comment>@info</comment>
-      <translation>条件に同意しない場合はセットアップ手順を続行できません。</translation>
+      <translation>条項に同意しない場合はセットアップ手続きを続行できません。</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="159"/>
       <source>This setup procedure can install proprietary software that is subject to licensing terms in order to provide additional features and enhance the user experience.</source>
       <comment>@info</comment>
-      <translation>このセットアップ手順では、追加機能を提供し、ユーザーエクスペリエンスを向上させるために、ライセンス条項の対象となるプロプライエタリソフトウェアをインストールできます。</translation>
+      <translation>このセットアップ手続きでは、追加機能を提供しユーザーエクスペリエンスを向上させるために、ライセンス条項の対象となるプロプライエタリソフトウェアをインストールできます。</translation>
     </message>
     <message>
       <location filename="../src/modules/license/LicensePage.cpp" line="165"/>
@@ -2334,7 +2333,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/luksbootkeyfile/LuksBootKeyFileJob.cpp" line="33"/>
       <source>Configuring LUKS key file.</source>
-      <translation>LUKSキーファイルを設定しています。</translation>
+      <translation>LUKS キーファイルを設定しています。</translation>
     </message>
     <message>
       <location filename="../src/modules/luksbootkeyfile/LuksBootKeyFileJob.cpp" line="254"/>
@@ -2351,12 +2350,12 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/luksbootkeyfile/LuksBootKeyFileJob.cpp" line="298"/>
       <source>Root partition %1 is LUKS but no passphrase has been set.</source>
-      <translation>ルートパーティション %1 はLUKSですが、パスワードが設定されていません。</translation>
+      <translation>ルートパーティション %1 は LUKS ですが、パスワードが設定されていません。</translation>
     </message>
     <message>
       <location filename="../src/modules/luksbootkeyfile/LuksBootKeyFileJob.cpp" line="305"/>
       <source>Could not create LUKS key file for root partition %1.</source>
-      <translation>ルートパーティション %1 のLUKSキーファイルを作成できませんでした。</translation>
+      <translation>ルートパーティション %1 の LUKS キーファイルを作成できませんでした。</translation>
     </message>
   </context>
   <context>
@@ -2364,7 +2363,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/machineid/MachineIdJob.cpp" line="55"/>
       <source>Generate machine-id.</source>
-      <translation>machine-id の生成</translation>
+      <translation>マシンIDの生成</translation>
     </message>
     <message>
       <location filename="../src/modules/machineid/MachineIdJob.cpp" line="71"/>
@@ -2558,7 +2557,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/oemid/OEMPage.ui" line="32"/>
       <source>Ba&amp;tch:</source>
-      <translation>バッチ (&amp;t)</translation>
+      <translation>バッチ(&amp;t):</translation>
     </message>
     <message>
       <location filename="../src/modules/oemid/OEMPage.ui" line="42"/>
@@ -3069,7 +3068,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="627"/>
       <source>Use Active Directory</source>
-      <translation>Active Directoryを使用する</translation>
+      <translation>Active Directory を使用する</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="638"/>
@@ -3194,32 +3193,32 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="26"/>
       <source>Storage de&amp;vice:</source>
-      <translation>ストレージデバイス (&amp;V):</translation>
+      <translation>ストレージデバイス(&amp;V):</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="55"/>
       <source>&amp;Revert All Changes</source>
-      <translation>すべての変更を元に戻す (&amp;R)</translation>
+      <translation>すべての変更を元に戻す(&amp;R)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="91"/>
       <source>New Partition &amp;Table</source>
-      <translation>新しいパーティションテーブル (&amp;T)</translation>
+      <translation>新しいパーティションテーブル(&amp;T)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="111"/>
       <source>Cre&amp;ate</source>
-      <translation>作成 (&amp;A)</translation>
+      <translation>作成(&amp;A)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="118"/>
       <source>&amp;Edit</source>
-      <translation>編集 (&amp;E)</translation>
+      <translation>編集(&amp;E)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="125"/>
       <source>&amp;Delete</source>
-      <translation>削除 (&amp;D)</translation>
+      <translation>削除(&amp;D)</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="136"/>
@@ -3441,7 +3440,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="670"/>
       <source>A separate boot partition was set up together with an encrypted root partition, but the boot partition is not encrypted.&lt;br/&gt;&lt;br/&gt;There are security concerns with this kind of setup, because important system files are kept on an unencrypted partition.&lt;br/&gt;You may continue if you wish, but filesystem unlocking will happen later during system startup.&lt;br/&gt;To encrypt the boot partition, go back and recreate it, selecting &lt;strong&gt;Encrypt&lt;/strong&gt; in the partition creation window.</source>
-      <translation>ブートパーティションは暗号化されたルートパーティションとともにセットアップされましたが、ブートパーティションは暗号化されていません。&lt;br/&gt;&lt;br/&gt;重要なシステムファイルが暗号化されていないパーティションに残されているため、このようなセットアップは安全上の懸念があります。&lt;br/&gt;セットアップを続行することはできますが、後でシステムの起動中にファイルシステムが解除されます。&lt;br/&gt;ブートパーティションを暗号化させるには、前の画面に戻って、再度パーティションを作成し、パーティション作成ウィンドウ内で&lt;strong&gt;Encrypt&lt;/strong&gt; (暗号化) を選択してください。</translation>
+      <translation>ブートパーティションは暗号化されたルートパーティションとともにセットアップされましたが、ブートパーティションは暗号化されていません。&lt;br/&gt;&lt;br/&gt;重要なシステムファイルが暗号化されていないパーティションに残されているため、このようなセットアップは安全上の懸念があります。&lt;br/&gt;セットアップを続行することはできますが、後でシステムの起動中にファイルシステムが解除されます。&lt;br/&gt;ブートパーティションを暗号化させるには、前の画面に戻って再度パーティションを作成し、パーティション作成ウィンドウ内で &lt;strong&gt;暗号化&lt;/strong&gt; を選択してください。</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="762"/>
@@ -3715,7 +3714,7 @@ Output:
       <location filename="../src/modules/welcomeq/Requirements.qml" line="39"/>
       <source>&lt;p&gt;This computer does not satisfy some of the recommended requirements for setting up %1.&lt;br/&gt;
         Setup can continue, but some features might be disabled.&lt;/p&gt;</source>
-      <translation>&lt;p&gt;このコンピューターは、%1をセットアップするための推奨要件の一部を満たしていません。&lt;br/&gt;
+      <translation>&lt;p&gt;このコンピューターは %1 をセットアップするための推奨要件の一部を満たしていません。&lt;br/&gt;
 セットアップは続行できますが、一部の機能が無効になる可能性があります。&lt;/p&gt;</translation>
     </message>
   </context>
@@ -4084,7 +4083,7 @@ Output:
     <message>
       <location filename="../src/modules/users/SetPasswordJob.cpp" line="81"/>
       <source>rootMountPoint is %1</source>
-      <translation>root のマウントポイントは %1 。</translation>
+      <translation>rootMountPoint は %1</translation>
     </message>
     <message>
       <location filename="../src/modules/users/SetPasswordJob.cpp" line="89"/>
@@ -4206,27 +4205,27 @@ Output:
     <message>
       <location filename="../src/libcalamaresui/widgets/TranslationFix.cpp" line="23"/>
       <source>&amp;OK</source>
-      <translation>了解 (&amp;O)</translation>
+      <translation>&amp;OK</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/widgets/TranslationFix.cpp" line="24"/>
       <source>&amp;Yes</source>
-      <translation>はい (&amp;Y)</translation>
+      <translation>はい(&amp;Y)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/widgets/TranslationFix.cpp" line="25"/>
       <source>&amp;No</source>
-      <translation>いいえ (&amp;N)</translation>
+      <translation>いいえ(&amp;N)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/widgets/TranslationFix.cpp" line="26"/>
       <source>&amp;Cancel</source>
-      <translation>中止 (&amp;C)</translation>
+      <translation>中止(&amp;C)</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/widgets/TranslationFix.cpp" line="27"/>
       <source>&amp;Close</source>
-      <translation>閉じる (&amp;C)</translation>
+      <translation>閉じる(&amp;C)</translation>
     </message>
   </context>
   <context>
@@ -4400,7 +4399,7 @@ Output:
       <location filename="../src/modules/umount/UmountJob.cpp" line="39"/>
       <source>Unmounting file systems…</source>
       <comment>@status</comment>
-      <translation>ファイル システムをアンマウント…</translation>
+      <translation>ファイルシステムをアンマウント…</translation>
     </message>
     <message>
       <location filename="../src/modules/umount/UmountJob.cpp" line="135"/>
@@ -4410,7 +4409,7 @@ Output:
     <message>
       <location filename="../src/modules/umount/UmountJob.cpp" line="143"/>
       <source>No rootMountPoint is set.</source>
-      <translation>rootMountPoint が設定されていません。</translation>
+      <translation>root マウントポイントが設定されていません。</translation>
     </message>
   </context>
   <context>
@@ -4578,17 +4577,17 @@ Output:
     <message>
       <location filename="../src/modules/welcome/WelcomePage.ui" line="156"/>
       <source>&amp;Support</source>
-      <translation>サポート (&amp;S)</translation>
+      <translation>サポート(&amp;S)</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/WelcomePage.ui" line="166"/>
       <source>Open issues and bug-tracking website</source>
-      <translation>issue 及び bug-track のサイトを開く</translation>
+      <translation>問題点とバグを報告するウェブサイトを開く</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/WelcomePage.ui" line="169"/>
       <source>&amp;Known issues</source>
-      <translation>既知の問題 (&amp;K)</translation>
+      <translation>既知の問題(&amp;K)</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/WelcomePage.ui" line="179"/>
@@ -4598,7 +4597,7 @@ Output:
     <message>
       <location filename="../src/modules/welcome/WelcomePage.ui" line="182"/>
       <source>&amp;Release notes</source>
-      <translation>リリースノート (&amp;R)</translation>
+      <translation>リリースノート(&amp;R)</translation>
     </message>
     <message>
       <location filename="../src/calamares/DebugWindow.cpp" line="237"/>
@@ -4982,7 +4981,7 @@ Output:
     <message>
       <location filename="../src/modules/packagechooserq/packagechooserq.qml" line="233"/>
       <source>Please select an option for your install, or use the default: LibreOffice included.</source>
-      <translation>インストールのオプションを選択するか、デフォルト（LibreOffice が含まれます）を使用してください。</translation>
+      <translation>インストールのオプションを選択するか、LibreOffice が含まれるデフォルトを使用してください。</translation>
     </message>
   </context>
   <context>
@@ -5022,7 +5021,7 @@ Output:
     <message>
       <location filename="../src/modules/packagechooserq/packagechooserq-qt6.qml" line="233"/>
       <source>Please select an option for your install, or use the default: LibreOffice included.</source>
-      <translation>インストールのオプションを選択するか、デフォルト（LibreOffice が含まれます）を使用してください。</translation>
+      <translation>インストールのオプションを選択するか、LibreOffice が含まれるデフォルトを使用してください。</translation>
     </message>
   </context>
   <context>

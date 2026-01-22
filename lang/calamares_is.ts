@@ -282,7 +282,7 @@
     <message>
       <location filename="../src/libcalamares/python/PythonJob.cpp" line="306"/>
       <source>Internal script for python job %1 raised an exception.</source>
-      <translation type="unfinished"/>
+      <translation>Innri-skriftuskrá fyrir python-verkið %1 gaf frá sér frávik.</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/python/PythonJob.cpp" line="320"/>
@@ -378,18 +378,18 @@
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="124"/>
       <source>Waiting for %n module(s)…</source>
       <comment>@status</comment>
-      <translation type="unfinished">
-        <numerusform/>
-        <numerusform/>
+      <translation>
+        <numerusform>Bíð eftir %n einingu…</numerusform>
+        <numerusform>Bíð eftir %n einingum…</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="125"/>
       <source>(%n second(s))</source>
       <comment>@status</comment>
-      <translation type="unfinished">
-        <numerusform/>
-        <numerusform/>
+      <translation>
+        <numerusform>(%n sekúnda)</numerusform>
+        <numerusform>(%n sekúndur)</numerusform>
       </translation>
     </message>
     <message>
@@ -917,7 +917,7 @@ Uppsetningarforritið mun hætta og allar breytingar tapast.</translation>
     <message>
       <location filename="../src/libcalamares/utils/CommandList.cpp" line="236"/>
       <source>The commands use variables that are not defined. Missing variables are: %1.</source>
-      <translation type="unfinished"/>
+      <translation>Skipanirnar nota breytur sem ekki eru skilgreindar. Breyturnar sem vantar eru: %1</translation>
     </message>
   </context>
   <context>
@@ -974,7 +974,7 @@ Uppsetningarforritið mun hætta og allar breytingar tapast.</translation>
       <location filename="../src/modules/keyboard/Config.cpp" line="583"/>
       <source>Keyboard model has been set to %1.</source>
       <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-      <translation type="unfinished"/>
+      <translation>Tegund lyklaborðs hefur verið stillt sem %1.</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboard/Config.cpp" line="591"/>
@@ -986,7 +986,7 @@ Uppsetningarforritið mun hætta og allar breytingar tapast.</translation>
       <location filename="../src/modules/locale/Config.cpp" line="381"/>
       <source>Set timezone to %1.</source>
       <comment>@action</comment>
-      <translation type="unfinished"/>
+      <translation>Setja tímabelti á %1.</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/Config.cpp" line="418"/>
@@ -1691,28 +1691,28 @@ Uppsetningarforritið mun hætta og allar breytingar tapast.</translation>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="47"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Verkfæri vantar</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="48"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>Verkfærið &lt;i&gt;%1&lt;/i&gt; er ekki uppsett á kerfinu.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="55"/>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="69"/>
       <source>Invalid fsarchiver configuration</source>
-      <translation type="unfinished"/>
+      <translation>Ógild uppsetning fsarchiver</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="56"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>Upprunasafnskráin &lt;i&gt;%1&lt;/i&gt; er ekki til staðar.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="70"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>Ekki var hægt að finna áfangastað fyrir &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -1888,7 +1888,7 @@ Uppsetningarforritið mun hætta og allar breytingar tapast.</translation>
     <message>
       <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="162"/>
       <source>Available drive space is all of the hard disks and SSDs connected to the system.</source>
-      <translation type="unfinished"/>
+      <translation>Tiltækt diskapláss telst vera allir harðir diskar og SSD-tæki sem tengd eru við kerfið.</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/checker/GeneralRequirements.cpp" line="165"/>
@@ -3341,7 +3341,7 @@ Uppsetningarforritið mun hætta og allar breytingar tapast.</translation>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="239"/>
       <source>Create a swap file.</source>
-      <translation type="unfinished"/>
+      <translation>Búa til swap-diskminnisskrá.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="268"/>
@@ -3378,7 +3378,7 @@ Uppsetningarforritið mun hætta og allar breytingar tapast.</translation>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="561"/>
       <source>An EFI system partition is necessary to start %1.&lt;br/&gt;&lt;br/&gt;The EFI system partition does not meet recommendations. It is recommended to go back and select or create a suitable filesystem.</source>
-      <translation type="unfinished"/>
+      <translation>EFI-kerfisdisksneið er nauðsynleg til að ræsa %1.&lt;br/&gt;&lt;br/&gt; EFI-kerfisdisksneiðin stenst ekki þær kröfur sem mælt er með. Þú ættir að fara til baka og velja eða útbúa hentugt skráakerfi.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="569"/>
@@ -4243,32 +4243,32 @@ Frálag:
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="26"/>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="45"/>
       <source>Invalid tarball configuration</source>
-      <translation type="unfinished"/>
+      <translation>Ógild uppsetning þjappaðrar safnskrár</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="27"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>Upprunasafnskráin &lt;i&gt;%1&lt;/i&gt; er ekki til staðar.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Verkfæri vantar</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="37"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>Verkfærið &lt;i&gt;%1&lt;/i&gt; er ekki uppsett á kerfinu.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="46"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>Ekki var hægt að finna áfangastað fyrir &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="84"/>
       <source>Tarball extract file %1</source>
-      <translation type="unfinished"/>
+      <translation>Afþjappa skrána %1 úr safnskrá</translation>
     </message>
   </context>
   <context>
@@ -4426,7 +4426,7 @@ Frálag:
     <message>
       <location filename="../src/modules/unpackfsc/UnpackFSCJob.cpp" line="61"/>
       <source>Unpack filesystems</source>
-      <translation type="unfinished"/>
+      <translation>Afpakka skráakerfum</translation>
     </message>
   </context>
   <context>
@@ -4435,32 +4435,32 @@ Frálag:
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="26"/>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="45"/>
       <source>Invalid unsquash configuration</source>
-      <translation type="unfinished"/>
+      <translation>Ógild uppsetning unsquash</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="27"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>Upprunasafnskráin &lt;i&gt;%1&lt;/i&gt; er ekki til staðar.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Verkfæri vantar</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="37"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>Verkfærið &lt;i&gt;%1&lt;/i&gt; er ekki uppsett á kerfinu.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="46"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>Ekki var hægt að finna áfangastað fyrir &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="98"/>
       <source>Unsquash file %1</source>
-      <translation type="unfinished"/>
+      <translation>Unsquash skrána %1</translation>
     </message>
   </context>
   <context>

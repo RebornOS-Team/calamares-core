@@ -508,8 +508,15 @@ main( int argc, char* argv[] )
         return 1;
     }
 
-    cDebug() << Logger::SubEntry << "got" << m->name() << m->typeString() << m->interfaceString();
-    if ( m->type() == Calamares::Module::Type::View )
+    Calamares::Module * module_p{m.get()}; ///< Non-owning pointer to object, unaffected by moves of unique_ptr
+    if ( !module_p )
+    {
+        cError() << "Could not load module" << module.moduleName();
+        return 1;
+    }
+
+    cDebug() << Logger::SubEntry << "got" << module_p->name() << module_p->typeString() << module_p->interfaceString();
+    if ( module_p->type() == Calamares::Module::Type::View )
     {
         // If we forgot the --ui, any ViewModule will core dump as it
         // tries to create the widget **which won't be used anyway**.
@@ -530,15 +537,15 @@ main( int argc, char* argv[] )
         (void)new Calamares::Branding( module.m_branding );
         modulemanager = std::make_unique<Calamares::ModuleManager>( QStringList(), nullptr );
         (void)Calamares::ViewManager::instance( mainWindow );
-        modulemanager->addModule( m.release() ); // Transfers ownership
+        modulemanager->addModule( m.release() ); // Transfers ownership, but module_p is stable
     }
 
-    if ( !m->isLoaded() )
+    if ( !module_p->isLoaded() )
     {
-        m->loadSelf();
+        module_p->loadSelf();
     }
 
-    if ( !m->isLoaded() )
+    if ( !module_p->isLoaded() )
     {
         cError() << "Module" << module.moduleName() << "could not be loaded.";
         return 1;
@@ -558,10 +565,10 @@ main( int argc, char* argv[] )
 
     using TR = Logger::DebugRow< const char*, const QString >;
 
-    cDebug() << Logger::SubEntry << "Module metadata" << TR( "name", m->name() ) << TR( "type", m->typeString() )
-             << TR( "interface", m->interfaceString() );
+    cDebug() << Logger::SubEntry << "Module metadata" << TR( "name", module_p->name() ) << TR( "type", module_p->typeString() )
+             << TR( "interface", module_p->interfaceString() );
 
-    Calamares::JobQueue::instance()->enqueue( 100, m->jobs() );
+    Calamares::JobQueue::instance()->enqueue( 100, module_p->jobs() );
 
     QObject::connect( Calamares::JobQueue::instance(),
                       &Calamares::JobQueue::finished,

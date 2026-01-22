@@ -9,6 +9,7 @@
 
 #include "UnpackFSCJob.h"
 
+#include "ErofsRunner.h"
 #include "FSArchiverRunner.h"
 #include "TarballRunner.h"
 #include "UnsquashRunner.h"
@@ -31,6 +32,7 @@ typeNames()
     static const NamedEnumTable< T > names
     {
         { "none", T::None },
+        { "erofs", T::Erofs },
         { "fsarchiver", T::FSArchive },
         { "fsarchive", T::FSArchive },
         { "fsa", T::FSArchive },
@@ -107,6 +109,9 @@ UnpackFSCJob::exec()
     std::unique_ptr< Runner > r;
     switch ( m_type )
     {
+    case Type::Erofs:
+        r = std::make_unique< ErofsRunner >( m_source, m_destination );
+        break;
     case Type::FSArchive:
         r = std::make_unique< FSArchiverDirRunner >( m_source, m_destination );
         break;

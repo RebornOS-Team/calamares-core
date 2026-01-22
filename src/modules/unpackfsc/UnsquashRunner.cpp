@@ -15,8 +15,6 @@
 
 #include <QString>
 
-static constexpr const int chunk_size = 107;
-
 Calamares::JobResult
 UnsquashRunner::run()
 {
@@ -65,12 +63,13 @@ UnsquashRunner::run()
     }
     if ( m_inodes <= 0 )
     {
-        cWarning() << "No stats could be obtained from" << unsquashExecutable << "-s";
+        cWarning() << "No stats could be obtained from" << unsquashExecutable << "-s "
+                   << m_source;
     }
 
     // Now do the actual unpack
     {
-        m_processed = 0;
+        m_linesProcessed = 0;
         Calamares::Utils::Runner r( { unsquashExecutable,
                                       QStringLiteral( "-i" ),  // List files
                                       QStringLiteral( "-f" ),  // Force-overwrite
@@ -86,15 +85,15 @@ UnsquashRunner::run()
 void
 UnsquashRunner::unsquashProgress( QString line )
 {
-    m_processed++;
-    m_since++;
-    if ( m_since > chunk_size && line.contains( '/' ) )
+    m_linesProcessed++;
+    m_linesSinceLastUIUpdate++;
+    if ( m_linesSinceLastUIUpdate > updateUIEveryNLines && line.contains( '/' ) )
     {
         const QString filename = line.split( '/', SplitSkipEmptyParts ).last().trimmed();
         if ( !filename.isEmpty() )
         {
-            m_since = 0;
-            double p = m_inodes > 0 ? ( double( m_processed ) / double( m_inodes ) ) : 0.5;
+            m_linesSinceLastUIUpdate = 0;
+            double p = m_inodes > 0 ? ( double( m_linesProcessed ) / double( m_inodes ) ) : 0.5;
             Q_EMIT progress( p, tr( "Unsquash file %1" ).arg( filename ) );
         }
     }

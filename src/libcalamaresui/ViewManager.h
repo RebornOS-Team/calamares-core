@@ -224,7 +224,7 @@ signals:
     void ensureSize( QSize size ) const;  // See ViewStep::ensureSize()
     void cancelEnabled( bool enabled ) const;
 
-    void nextEnabledChanged( bool ) const;
+    void nextEnabledChanged( ViewStep*, bool ) const;
     void nextLabelChanged( QString ) const;
     void nextIconChanged( QString ) const;
 

@@ -96,6 +96,8 @@ InstanceDescription::fromSettings( const QVariantMap& m )
         {
             r.m_configFileName = c;
         }
+
+        r.m_autoProceed = m.value( "autoProceed" ).toBool();
     }
     return r;
 }
@@ -354,6 +356,19 @@ Settings::InstanceDescriptionList
 Settings::moduleInstances() const
 {
     return m_moduleInstances;
+}
+
+InstanceDescription
+Settings::moduleInstance( const Calamares::ModuleSystem::InstanceKey& key ) const
+{
+    for ( const auto& instance : m_moduleInstances )
+    {
+        if ( instance.isValid() && instance.key() == key )
+        {
+            return instance;
+        }
+    }
+    return InstanceDescription {};
 }
 
 Settings::ModuleSequence

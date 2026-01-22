@@ -378,9 +378,9 @@
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="124"/>
       <source>Waiting for %n module(s)…</source>
       <comment>@status</comment>
-      <translation type="unfinished">
-        <numerusform/>
-        <numerusform/>
+      <translation>
+        <numerusform>%n modul üçün gözləyir...</numerusform>
+        <numerusform>%n modul üçün gösləyir...</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -974,7 +974,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <location filename="../src/modules/keyboard/Config.cpp" line="583"/>
       <source>Keyboard model has been set to %1.</source>
       <comment>@label, %1 is keyboard model, as in Apple Magic Keyboard</comment>
-      <translation type="unfinished"/>
+      <translation>Klaviatura modeli %1 kimi təyin edildi.</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboard/Config.cpp" line="591"/>
@@ -986,7 +986,7 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
       <location filename="../src/modules/locale/Config.cpp" line="381"/>
       <source>Set timezone to %1.</source>
       <comment>@action</comment>
-      <translation type="unfinished"/>
+      <translation>Saat qurşağını %1 təyin etmək.</translation>
     </message>
     <message>
       <location filename="../src/modules/locale/Config.cpp" line="418"/>
@@ -1691,28 +1691,28 @@ Bu proqramdan çıxılacaq və bütün dəyişikliklər itiriləcəkdir.</transl
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="47"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Çatışmayan alətlər</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="48"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; aləti sistemdə quraşdırılmayıb.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="55"/>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="69"/>
       <source>Invalid fsarchiver configuration</source>
-      <translation type="unfinished"/>
+      <translation>Fsarchiver aləti tənzimləməsi səhvdir</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="56"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; mənbə arxivi mövcud deyil.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="70"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; üçün heç bir təyinat yeri tapılmadı.</translation>
     </message>
   </context>
   <context>
@@ -3342,7 +3342,7 @@ Lütfən bir birinci disk bölümünü çıxarın və əvəzinə genişləndiril
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="239"/>
       <source>Create a swap file.</source>
-      <translation type="unfinished"/>
+      <translation>Swap bölməsi yaratmaq.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="268"/>
@@ -4244,32 +4244,32 @@ Output:
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="26"/>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="45"/>
       <source>Invalid tarball configuration</source>
-      <translation type="unfinished"/>
+      <translation>Səhv arxiv tənzimlənməsi</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="27"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; mənbə arxivi mövcud deyil.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Çatışmayan alətlər</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="37"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; aləti sistemdə quraşdırılmayıb.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="46"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; üçün heç bir təyinat yeri tapılmadı.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="84"/>
       <source>Tarball extract file %1</source>
-      <translation type="unfinished"/>
+      <translation>%1 arxiv faylını çıxarmaq</translation>
     </message>
   </context>
   <context>
@@ -4427,7 +4427,7 @@ Output:
     <message>
       <location filename="../src/modules/unpackfsc/UnpackFSCJob.cpp" line="61"/>
       <source>Unpack filesystems</source>
-      <translation type="unfinished"/>
+      <translation>Fayl sistemlərini paketdən çıxarmaq</translation>
     </message>
   </context>
   <context>
@@ -4436,32 +4436,32 @@ Output:
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="26"/>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="45"/>
       <source>Invalid unsquash configuration</source>
-      <translation type="unfinished"/>
+      <translation>Səhv unsquash tənzimləməsi</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="27"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; mənbə arxivi mövcud deyil.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Çatışmayan alətlər</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="37"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; aləti sistemdə quraşdırılmayıb.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="46"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>&lt;i&gt;%1&lt;/i&gt; üçün heç bir təyinat yeri tapılmadı.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="98"/>
       <source>Unsquash file %1</source>
-      <translation type="unfinished"/>
+      <translation>%1 unsquash faylı</translation>
     </message>
   </context>
   <context>

@@ -95,12 +95,12 @@ git merge _calamares
 # Calamares: Distribution-Independent Installer Framework
 ---------
 
-[![Current issue](https://img.shields.io/badge/issue-in_progress-FE9B48)](https://codeberg.org/Calamares/calamares/labels/hacking%3A%20in-progress)
+[![Current issue](https://img.shields.io/badge/issue-in_progress-FE9B48)](https://codeberg.org/Calamares/calamares/issues?labels=306730)
 [![Releases](https://img.shields.io/github/release/calamares/calamares.svg)](https://codeberg.org/Calamares/calamares/releases)
-[![License](https://img.shields.io/badge/license-Multiple-green)](https://codeberg.org/Calamares/calamares/tree/calamares/LICENSES)
+[![License](https://img.shields.io/badge/license-Multiple-green)](./LICENSES)
 
 
-| [Report a Bug](https://codeberg.org/Calamares/calamares/issues/new) | [Translate](https://app.transifex.com/calamares/calamares/) | [Contribute](CONTRIBUTING.md) | [Chat on Matrix: #calamares:kde.org](https://webchat.kde.org/#/room/%23calamares:kde.org)
+| [Report a Bug](https://codeberg.org/Calamares/calamares/issues/new) | [Translate](https://app.transifex.com/calamares/calamares/) | [Contribute](CONTRIBUTING.md) | [Chat on Matrix: #calamares:kde.org](https://matrix.to/#/#calamares:kde.org)
 |:--:|:--:|:--:|:--:|
 
 
@@ -152,5 +152,5 @@ room, `#calamares:kde.org`. Responsiveness is best during the day
 in Europe, but feel free to idle.
 Matrix is persistent, and we'll see your message eventually.
 
-* [![Join us on Matrix](https://img.shields.io/badge/Matrix-%23calamares:kde.org-blue)](https://webchat.kde.org/#/room/%23calamares:kde.org) (needs a Matrix account)
+* [![Join us on Matrix](https://img.shields.io/badge/Matrix-%23calamares:kde.org-blue)](https://matrix.to/#/#calamares:kde.org) (needs a Matrix account)
 

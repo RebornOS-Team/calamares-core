@@ -56,25 +56,6 @@ public:
      */
     explicit GlobalStorage( QObject* parent = nullptr );
 
-    /** @brief Insert a key and value into the store
-     *
-     * The @p value is added to the store with key @p key. If @p key
-     * already exists in the store, its existing value is overwritten.
-     * The changed() signal is emitted regardless.
-     */
-    void insert( const QString& key, const QVariant& value );
-    /** @brief Removes a key and its value
-     *
-     * The @p key is removed from the store. If the @p key does not
-     * exist, nothing happens. changed() is emitted regardless.
-     *
-     * @return the number of keys remaining
-     */
-    int remove( const QString& key );
-
-    /// @brief Clears all keys in this GS object
-    void clear();
-
     /** @brief dump keys and values to the debug log
      *
      * All the keys and their values are written to the debug log.
@@ -150,6 +131,25 @@ public Q_SLOTS:
      * to check for the presence of a key if you need that.
      */
     QVariant value( const QString& key ) const;
+
+    /** @brief Insert a key and value into the store
+     *
+     * The @p value is added to the store with key @p key. If @p key
+     * already exists in the store, its existing value is overwritten.
+     * The changed() signal is emitted regardless.
+     */
+    void insert( const QString& key, const QVariant& value );
+    /** @brief Removes a key and its value
+     *
+     * The @p key is removed from the store. If the @p key does not
+     * exist, nothing happens. changed() is emitted regardless.
+     *
+     * @return the number of keys remaining
+     */
+    int remove( const QString& key );
+
+    /// @brief Clears all keys in this GS object
+    void clear();
 
 signals:
     /** @brief Emitted any time the store changes

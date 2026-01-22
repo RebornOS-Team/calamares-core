@@ -183,7 +183,7 @@
       <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="77"/>
       <source>%p%</source>
       <comment>Progress percentage indicator: %p is where the number 0..100 is placed</comment>
-      <translation type="unfinished"/>
+      <translation>%p%</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/viewpages/ExecutionViewStep.cpp" line="117"/>
@@ -449,7 +449,7 @@ La retadreso estis copiita al vian tondujon.</translation>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="156"/>
       <source>Installation Failed</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Instalado fiaskis</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
@@ -931,7 +931,7 @@ La instalilo forlasos kaj ĉiuj ŝanĝoj perdos.</translation>
       <location filename="../src/modules/finished/Config.cpp" line="143"/>
       <source>Installation Failed</source>
       <comment>@title</comment>
-      <translation type="unfinished"/>
+      <translation>Instalado fiaskis</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/Config.cpp" line="145"/>

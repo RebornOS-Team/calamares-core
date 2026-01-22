@@ -22,6 +22,7 @@ public:
     enum class Type
     {
         None,  /// << Invalid
+        Erofs,
         FSArchive,
         FSArchiveFS,
         Squashfs,

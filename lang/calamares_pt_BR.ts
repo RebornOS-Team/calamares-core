@@ -378,10 +378,10 @@
       <location filename="../src/libcalamares/modulesystem/RequirementsChecker.cpp" line="124"/>
       <source>Waiting for %n module(s)…</source>
       <comment>@status</comment>
-      <translation type="unfinished">
-        <numerusform/>
-        <numerusform/>
-        <numerusform/>
+      <translation>
+        <numerusform>Esperando por %n módulo…</numerusform>
+        <numerusform>Esperando por %n módulos…</numerusform>
+        <numerusform>Esperando por %n módulos…</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -726,7 +726,7 @@ O instalador será fechado e todas as alterações serão perdidas.</translation
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1144"/>
       <source>&lt;strong&gt;Select a partition to install on&lt;/strong&gt;</source>
       <comment>@label</comment>
-      <translation>&lt;strong&gt;Selecione uma partição para instalação em&lt;/strong&gt;</translation>
+      <translation>&lt;strong&gt;Selecione uma partição para instalação&lt;/strong&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1204"/>
@@ -757,7 +757,7 @@ O instalador será fechado e todas as alterações serão perdidas.</translation
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1764"/>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1786"/>
       <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color="red"&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
-      <translation>&lt;strong&gt;Formatar o disco&lt;/strong&gt;&lt;br/&gt;isso vai &lt;font color="red"&gt;excluir&lt;/font&gt; todos os dados presentes atualmente no dispositivo de armazenamento selecionado.</translation>
+      <translation>&lt;strong&gt;Apagar disco&lt;/strong&gt;&lt;br/&gt;Isto &lt;font color="red"&gt;excluirá&lt;/font&gt; todos os dados presentes atualmente no dispositivo de armazenamento selecionado.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1721"/>
@@ -840,7 +840,7 @@ O instalador será fechado e todas as alterações serão perdidas.</translation
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1601"/>
       <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.</source>
-      <translation>&lt;strong&gt;Particionamento manual&lt;/strong&gt;&lt;br/&gt;Você mesmo pode criar e redimensionar elas</translation>
+      <translation>&lt;strong&gt;Particionamento manual&lt;/strong&gt;&lt;br/&gt;Você mesmo pode criar ou redimensionar partições.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1629"/>
@@ -1198,7 +1198,7 @@ O instalador será fechado e todas as alterações serão perdidas.</translation
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="59"/>
       <source>Partition &amp;Type:</source>
-      <translation>partição &amp;Type:</translation>
+      <translation>Partição &amp;Type:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="71"/>
@@ -1344,7 +1344,7 @@ O instalador será fechado e todas as alterações serão perdidas.</translation
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionTableDialog.ui" line="69"/>
       <source>What kind of partition table do you want to create?</source>
-      <translation>Qual tipo de tabela de partição quer criar?</translation>
+      <translation>Que tipo de tabela de partições você deseja criar?</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionTableDialog.ui" line="76"/>
@@ -1693,28 +1693,28 @@ O instalador será fechado e todas as alterações serão perdidas.</translation
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="47"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Ferramentas ausentes</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="48"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>A ferramenta &lt;i&gt;%1&lt;/i&gt; não está instalada no sistema.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="55"/>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="69"/>
       <source>Invalid fsarchiver configuration</source>
-      <translation type="unfinished"/>
+      <translation>Configuração do fsarchiver inválida</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="56"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>O arquivo fonte &lt;i&gt;%1&lt;/i&gt; não existe.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="70"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>Nenhum destino pôde ser encontrado para &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
   </context>
   <context>
@@ -4254,32 +4254,32 @@ Saída:
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="26"/>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="45"/>
       <source>Invalid tarball configuration</source>
-      <translation type="unfinished"/>
+      <translation>Configuração de tarball inválida</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="27"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>O arquivo fonte &lt;i&gt;%1&lt;/i&gt; não existe.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Ferramentas ausentes</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="37"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>A ferramenta &lt;i&gt;%1&lt;/i&gt; não está instalada no sistema.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="46"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>Nenhum destino pôde ser encontrado para &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="84"/>
       <source>Tarball extract file %1</source>
-      <translation type="unfinished"/>
+      <translation>Arquivo de extração do tarball %1</translation>
     </message>
   </context>
   <context>
@@ -4437,7 +4437,7 @@ Saída:
     <message>
       <location filename="../src/modules/unpackfsc/UnpackFSCJob.cpp" line="61"/>
       <source>Unpack filesystems</source>
-      <translation type="unfinished"/>
+      <translation>Desempacotar sistemas de arquivo</translation>
     </message>
   </context>
   <context>
@@ -4446,32 +4446,32 @@ Saída:
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="26"/>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="45"/>
       <source>Invalid unsquash configuration</source>
-      <translation type="unfinished"/>
+      <translation>Configuração de unsquash inválida</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="27"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation type="unfinished"/>
+      <translation>O arquivo fonte &lt;i&gt;%1&lt;/i&gt; não existe.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation type="unfinished"/>
+      <translation>Ferramentas ausentes</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="37"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation type="unfinished"/>
+      <translation>A ferramenta &lt;i&gt;%1&lt;/i&gt; não está instalada no sistema.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="46"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation type="unfinished"/>
+      <translation>Nenhum destino pôde ser encontrado para &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="98"/>
       <source>Unsquash file %1</source>
-      <translation type="unfinished"/>
+      <translation>Descompactar arquivo %1</translation>
     </message>
   </context>
   <context>

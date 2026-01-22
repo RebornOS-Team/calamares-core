@@ -3046,7 +3046,7 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="325"/>
       <source>Choose a password to keep your account safe.</source>
-      <translation>Оберіть пароль, щоб тримати ваш обліковий запис у безпеці.</translation>
+      <translation>Оберіть пароль, щоб тримати ваш обліковий рахунок у безпеці.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="349"/>
@@ -3084,12 +3084,12 @@ The installer will quit and all changes will be lost.</source>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="472"/>
       <source>Use the same password for the administrator account.</source>
-      <translation>Використовувати той самий пароль і для облікового запису адміністратора.</translation>
+      <translation>Використовувати той самий пароль і для облікового рахунку адміністратора.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="495"/>
       <source>Choose a password for the administrator account.</source>
-      <translation>Оберіть пароль для облікового запису адміністратора.</translation>
+      <translation>Оберіть пароль для облікового рахунку адміністратора.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="519"/>
@@ -5187,7 +5187,7 @@ ls -l /home
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="211"/>
       <source>Choose a password to keep your account safe.</source>
-      <translation>Оберіть пароль, щоб тримати ваш обліковий запис у безпеці.</translation>
+      <translation>Оберіть пароль, щоб тримати ваш обліковий рахунок у безпеці.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="221"/>
@@ -5212,7 +5212,7 @@ ls -l /home
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="305"/>
       <source>Use the same password for the administrator account.</source>
-      <translation>Використовувати той самий пароль і для облікового запису адміністратора.</translation>
+      <translation>Використовувати той самий пароль і для облікового рахунку адміністратора.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="318"/>
@@ -5320,7 +5320,7 @@ ls -l /home
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="210"/>
       <source>Choose a password to keep your account safe.</source>
-      <translation>Оберіть пароль, щоб тримати ваш обліковий запис у безпеці.</translation>
+      <translation>Оберіть пароль, щоб тримати ваш обліковий рахунок у безпеці.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="220"/>
@@ -5345,7 +5345,7 @@ ls -l /home
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="304"/>
       <source>Use the same password for the administrator account.</source>
-      <translation>Використовувати той самий пароль і для облікового запису адміністратора.</translation>
+      <translation>Використовувати той самий пароль і для облікового рахунку адміністратора.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="317"/>

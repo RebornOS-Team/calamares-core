@@ -9,7 +9,7 @@
 # Bobby Rong <admin@bobby285271.top>, 2020
 # Giovanni Schiano-Moriello, 2022
 # 玉堂白鹤 <yjwork@qq.com>, 2022
-# OkayPJ <1535253694@qq.com>, 2023
+# OkayPJ <okaypjkk@outlook.com>, 2023
 # Feng Chao <chaofeng111@qq.com>, 2024
 # 
 #, fuzzy

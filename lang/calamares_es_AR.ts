@@ -487,19 +487,19 @@ Enlace copiado al portapapeles</translation>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="337"/>
       <source>Continue with Installation?</source>
       <comment>@title</comment>
-      <translation>¿Continuar con la instalación de su sistema?</translation>
+      <translation>¿Continuar con la instalación de tu sistema?</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="339"/>
       <source>The %1 setup program is about to make changes to your disk in order to set up %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
       <comment>%1 is short product name, %2 is short product name with version</comment>
-      <translation>El programa de instalación de %1 está a punto de realizar cambios en su disco para configurar %2.&lt;br/&gt; &lt;strong&gt;Vos no podrás deshacer estos cambios&lt;/strong&gt;.</translation>
+      <translation>El programa de instalación de %1 está a punto de realizar cambios en tu disco para configurar %2.&lt;br/&gt; &lt;strong&gt;Vos no podrás deshacer estos cambios&lt;/strong&gt;.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="343"/>
       <source>The %1 installer is about to make changes to your disk in order to install %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
       <comment>%1 is short product name, %2 is short product name with version</comment>
-      <translation>El %1 instalador está a punto de realizar cambios en su disco o unidad para instalar %2. No podrás deshacer estos cambios.</translation>
+      <translation>El %1 instalador está a punto de realizar cambios en tu disco o unidad para instalar %2. No podrás deshacer estos cambios.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="348"/>
@@ -517,7 +517,7 @@ Enlace copiado al portapapeles</translation>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="355"/>
       <source>Go &amp;Back</source>
       <comment>@button</comment>
-      <translation>%Volver</translation>
+      <translation>&amp;Volver</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="402"/>
@@ -643,7 +643,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/calamares/CalamaresWindow.cpp" line="406"/>
       <source>%1 Installer</source>
-      <translation>%1 Instalador</translation>
+      <translation>Instalador de %1</translation>
     </message>
   </context>
   <context>
@@ -778,17 +778,17 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1734"/>
       <source>This storage device has %1 on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
-      <translation>Éste dispositivo de almacenamiento tiene %1. ¿Qué le gustaría hacer?&lt;br/&gt; Podrá revisar y confirmar sus opciones antes de realizar cualquier cambio en el dispositivo de almacenamiento.</translation>
+      <translation>Éste dispositivo de almacenamiento tiene %1. ¿Qué te gustaría hacer?&lt;br/&gt; Podrás revisar y confirmar sus opciones antes de realizar cualquier cambio en el dispositivo de almacenamiento.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1755"/>
       <source>This storage device already has an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
-      <translation>Éste dispositivo de almacenamiento ya tiene un sistema operativo en él ¿Qué le gustaría hacer?&lt;br/&gt; Podrá revisar y confirmar sus opciones antes de realizar cualquier cambio en el dispositivo de almacenamiento.</translation>
+      <translation>Éste dispositivo de almacenamiento ya tiene un sistema operativo en él ¿Qué te gustaría hacer?&lt;br/&gt; Podrás revisar y confirmar tus opciones antes de realizar cualquier cambio en el dispositivo de almacenamiento.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1777"/>
       <source>This storage device has multiple operating systems on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
-      <translation>Éste dispositivo de almacenamiento tiene múltiples sistemas operativos. ¿Qué le gustaría hacer? &lt;br/&gt;Podrá revisar y confirmar sus opciones antes de realizar cualquier cambio en el dispositivo de almacenamiento.</translation>
+      <translation>Éste dispositivo de almacenamiento tiene múltiples sistemas operativos. ¿Qué te gustaría hacer? &lt;br/&gt;Podrás revisar y confirmar tus opciones antes de realizar cualquier cambio en el dispositivo de almacenamiento.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1423"/>
@@ -840,7 +840,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1601"/>
       <source>&lt;strong&gt;Manual partitioning&lt;/strong&gt;&lt;br/&gt;You can create or resize partitions yourself.</source>
-      <translation>&lt;strong&gt;Partición manual&lt;/strong&gt;&lt;br/&gt; Puede crear o cambiar el tamaño de las particiones usted mismo.</translation>
+      <translation>&lt;strong&gt;Partición manual&lt;/strong&gt;&lt;br/&gt; Podés crear o cambiar el tamaño de las particiones vos mismo.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1629"/>
@@ -1020,7 +1020,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="59"/>
       <source>Network Installation. (Disabled: Unable to fetch package lists, check your network connection)</source>
-      <translation>Instalación de Red. (Deshabilitada: no se pueden recuperar listas de paquetes, verifique su conexión de internet)</translation>
+      <translation>Instalación de Red. (Deshabilitada: no se pueden recuperar listas de paquetes, verificá tu conexión de internet)</translation>
     </message>
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="61"/>
@@ -1076,12 +1076,12 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="237"/>
       <source>Your username is too long.</source>
-      <translation>Su nombre de usuario es demasiado largo.</translation>
+      <translation>Tu nombre de usuario es demasiado largo.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="243"/>
       <source>Your username must start with a lowercase letter or underscore.</source>
-      <translation>Su nombre de usuario debe comenzar con una letra minúscula o un guión bajo.</translation>
+      <translation>Tu nombre de usuario debe comenzar con una letra minúscula o un guión bajo.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="247"/>
@@ -1096,12 +1096,12 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="302"/>
       <source>Your hostname is too short.</source>
-      <translation>Su nombre del equipo es demasiado corto.</translation>
+      <translation>Tu nombre del equipo es demasiado corto.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="306"/>
       <source>Your hostname is too long.</source>
-      <translation>Su nombre del equipo es demasiado largo.</translation>
+      <translation>Tu nombre del equipo es demasiado largo.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="312"/>
@@ -1116,7 +1116,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="598"/>
       <source>Your passwords do not match!</source>
-      <translation>Sus contraseñas no coinciden</translation>
+      <translation>Tus contraseñas no coinciden</translation>
     </message>
     <message>
       <location filename="../src/modules/users/Config.cpp" line="612"/>
@@ -1146,7 +1146,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="80"/>
       <source>This program will ask you some questions and set up %2 on your computer.</source>
-      <translation>Éste programa le hará algunas preguntas y configurará %2 en su computadora.</translation>
+      <translation>Éste programa te hará algunas preguntas y configurará %2 en tu equipo.</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/Config.cpp" line="264"/>
@@ -1339,12 +1339,12 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionTableDialog.ui" line="43"/>
       <source>Creating a new partition table will delete all existing data on the disk.</source>
-      <translation>Al crear una nueva tabla de particiones se eliminarán todos los datos existentes en el disco. Hágalo con cuidado.</translation>
+      <translation>Al crear una nueva tabla de particiones se eliminarán todos los datos existentes en el disco. Hacelo con cuidado.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionTableDialog.ui" line="69"/>
       <source>What kind of partition table do you want to create?</source>
-      <translation>¿Qué tipo de tabla de particiones quiere crear?</translation>
+      <translation>¿Qué tipo de tabla de particiones querés crear?</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionTableDialog.ui" line="76"/>
@@ -1407,7 +1407,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="152"/>
       <source>Configuring user %1</source>
       <comment>@status</comment>
-      <translation>Configurando su usuario %1</translation>
+      <translation>Configurando tu usuario %1</translation>
     </message>
     <message>
       <location filename="../src/modules/users/CreateUserJob.cpp" line="160"/>
@@ -1636,7 +1636,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/partition/gui/EditExistingPartitionDialog.cpp" line="281"/>
       <source>Partition %1 could not be decrypted with the given passphrase.&lt;br/&gt;&lt;br/&gt;Edit the partition again and give the correct passphrase or delete and create a new encrypted partition.</source>
-      <translation>La partición %1 no se ha podido descifrar con la contraseña de cifrado proporcionada. Vuelva a editar la partición y escriba la contraseña correcta o elimina y recrée la partición cifrada.</translation>
+      <translation>La partición %1 no se ha podido descifrar con la contraseña de cifrado proporcionada. Volvé a editar la partición y escribí la contraseña correcta o eliminá y recreá la partición cifrada.</translation>
     </message>
   </context>
   <context>
@@ -1649,7 +1649,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/partition/gui/EncryptWidget.ui" line="43"/>
       <source>Your system does not seem to support encryption well enough to encrypt the entire system. You may enable encryption, but performance may suffer.</source>
-      <translation>Su sistema puede tener problemas al utilizar un cifrado de disco completo. Tenga en cuenta que puede dejar el cifrado activado, pero el rendimiento puede verse afectado.</translation>
+      <translation>TU sistema puede tener problemas al utilizar un cifrado de disco completo. Tené en cuenta que puede dejar el cifrado activado, pero el rendimiento puede verse afectado.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EncryptWidget.ui" line="59"/>
@@ -1666,7 +1666,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="181"/>
       <source>Please enter the same passphrase in both boxes.</source>
       <comment>@tooltip</comment>
-      <translation>Por favor introduzca la misma contraseña en ambos cuadros.</translation>
+      <translation>Por favor introducí la misma contraseña en ambos cuadros.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/EncryptWidget.cpp" line="171"/>
@@ -1685,7 +1685,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/libcalamaresui/widgets/ErrorDialog.ui" line="56"/>
       <source>Would you like to paste the install log to the web?</source>
-      <translation>¿Le gustaría pegar el registro de instalación en la web?</translation>
+      <translation>¿Te gustaría pegar el registro de instalación en la web?</translation>
     </message>
   </context>
   <context>
@@ -1797,37 +1797,37 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="75"/>
       <source>&lt;h1&gt;All done.&lt;/h1&gt;&lt;br/&gt;%1 has been set up on your computer.&lt;br/&gt;You may now start using your new system.</source>
       <comment>@info</comment>
-      <translation>&lt;h1&gt;Todo bien&lt;/h1&gt;. &lt;br/&gt;%1  ha sido configurado en su equipo. Ahora puede comenzar a usar su nuevo sistema.</translation>
+      <translation>&lt;h1&gt;Todo bien&lt;/h1&gt;. &lt;br/&gt;%1  ha sido configurado en tu equipo. Ahora podés comenzar a usar tu nuevo sistema.</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="80"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style="font-style:italic;"&gt;Done&lt;/span&gt; or close the setup program.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <comment>@tooltip</comment>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cuando esta casilla está marcada, su sistema se reiniciará inmediatamente cuando haga clic en &lt;span style="font-style:italic;"&gt;"Listo"&lt;/span&gt; o cierre el programa de instalación.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cuando esta casilla está marcada, tu sistema se reiniciará inmediatamente cuando hacé clic en &lt;span style="font-style:italic;"&gt;"Listo"&lt;/span&gt; o cerrá el programa de instalación.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="89"/>
       <source>&lt;h1&gt;All done.&lt;/h1&gt;&lt;br/&gt;%1 has been installed on your computer.&lt;br/&gt;You may now restart into your new system, or continue using the %2 Live environment.</source>
       <comment>@info</comment>
-      <translation>&lt;h1&gt;Todo bien.&lt;/h1&gt;&lt;br/&gt;%1 se ha instalado en su equipo.&lt;br/&gt; Ahora puede reiniciar su nuevo sistema o continuar usando el entorno %2 LIVE.</translation>
+      <translation>&lt;h1&gt;Todo bien.&lt;/h1&gt;&lt;br/&gt;%1 se ha instalado en su equipo.&lt;br/&gt; Ahora podés reiniciar tu nuevo sistema o continuar usando el entorno %2 LIVE.</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="95"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style="font-style:italic;"&gt;Done&lt;/span&gt; or close the installer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <comment>@tooltip</comment>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cuando esta casilla está marcada, su sistema se reiniciará inmediatamente cuando haga clic en &lt;span style="font-style:italic;"&gt;"Listo"&lt;/span&gt; o cierre el instalador.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cuando esta casilla está marcada, tu sistema se reiniciará inmediatamente cuando hagas clic en &lt;span style="font-style:italic;"&gt;"Listo"&lt;/span&gt; o cierre el instalador.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="109"/>
       <source>&lt;h1&gt;Setup Failed&lt;/h1&gt;&lt;br/&gt;%1 has not been set up on your computer.&lt;br/&gt;The error message was: %2.</source>
       <comment>@info, %1 is product name with version</comment>
-      <translation>&lt;h1&gt;Configuración fallida&lt;/h1&gt;&lt;br/&gt;%1 no se ha configurado en su equipo.&lt;br/&gt; El mensaje de error fue: %2.</translation>
+      <translation>&lt;h1&gt;Configuración fallida&lt;/h1&gt;&lt;br/&gt;%1 no se ha configurado en tu equipo.&lt;br/&gt; El mensaje de error fue: %2.</translation>
     </message>
     <message>
       <location filename="../src/modules/finished/FinishedPage.cpp" line="118"/>
       <source>&lt;h1&gt;Installation Failed&lt;/h1&gt;&lt;br/&gt;%1 has not been installed on your computer.&lt;br/&gt;The error message was: %2.</source>
       <comment>@info, %1 is product name with version</comment>
-      <translation>&lt;h1&gt;Instalación fallida&lt;/h1&gt;&lt;br/&gt;%1 no se ha instalado en su equipo.&lt;br/&gt; El mensaje de error fue: %2.</translation>
+      <translation>&lt;h1&gt;Instalación fallida&lt;/h1&gt;&lt;br/&gt;%1 no se ha instalado en tu equipo.&lt;br/&gt; El mensaje de error fue: %2.</translation>
     </message>
   </context>
   <context>
@@ -2015,7 +2015,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/hostinfo/HostInfoJob.cpp" line="39"/>
       <source>Collecting information about your machine…</source>
       <comment>@status</comment>
-      <translation>Recopilando información sobre su equipo...</translation>
+      <translation>Recopilando información sobre tu equipo...</translation>
     </message>
   </context>
   <context>
@@ -2074,7 +2074,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="52"/>
       <source>Please install KDE Konsole and try again!</source>
       <comment>@info</comment>
-      <translation>Por favor instale "KDE Konsole" y pruebe a lanzar este asistente otra vez.</translation>
+      <translation>Por favor instalá "KDE Konsole" y pruebe a lanzar este asistente otra vez.</translation>
     </message>
     <message>
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="127"/>
@@ -2413,7 +2413,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
             to move and using the +/- buttons to zoom in/out or use mouse scrolling for zooming.</source>
       <comment>@info</comment>
       <translation>Elejí tu ubicación más cercana en el mapa para que el instalador pueda sugerir la ubicación
-            y la configuración de la zona horaria para vos. Puede ajustar la configuración sugerida a continuación. Buscá en el mapa arrastrando
+            y la configuración de la zona horaria para vos. Podés ajustar la configuración sugerida a continuación. Buscá en el mapa arrastrando
             para mover y usar los botones +/- para acercar/alejar o usar el desplazamiento del MOUSE para acercar.</translation>
     </message>
   </context>
@@ -2564,7 +2564,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/oemid/OEMPage.ui" line="42"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter a batch-identifier here. This will be stored in the target system.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Introduzca aquí un identificador de lote. Ésto se almacenará en el sistema de destino.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Introducí aquí un identificador de lote. Ésto se almacenará en el sistema de destino.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/oemid/OEMPage.ui" line="52"/>
@@ -2617,7 +2617,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/localeq/Offline.qml" line="240"/>
       <source>You can fine-tune language and locale settings below</source>
       <comment>@label</comment>
-      <translation>A continuación puede ajustar la configuración Regional y de Idioma</translation>
+      <translation>A continuación podés ajustar la configuración Regional y de Idioma</translation>
     </message>
   </context>
   <context>
@@ -2652,7 +2652,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/localeq/Offline-qt6.qml" line="240"/>
       <source>You can fine-tune language and locale settings below</source>
       <comment>@label</comment>
-      <translation>A continuación puede ajustar la configuración Regional y de Idioma</translation>
+      <translation>A continuación podés ajustar la configuración Regional y de Idioma</translation>
     </message>
   </context>
   <context>
@@ -2985,7 +2985,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/keyboard/KeyboardPage.ui" line="146"/>
       <source>Type here to test your keyboard</source>
-      <translation>Tipée aquí para probar su teclado</translation>
+      <translation>Tipeá aquí para probar tu teclado</translation>
     </message>
     <message>
       <location filename="../src/modules/keyboard/KeyboardPage.ui" line="153"/>
@@ -2999,17 +2999,17 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="40"/>
       <source>What is your name?</source>
-      <translation>¿Cuál es su nombre?</translation>
+      <translation>¿Cómo te llamás?</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="55"/>
       <source>Your Full Name</source>
-      <translation>Su nombre completo</translation>
+      <translation>Tu nombre completo</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="124"/>
       <source>What name do you want to use to log in?</source>
-      <translation>¿Qué nombre desea utilizar para iniciar sesión?</translation>
+      <translation>¿Qué nombre querés utilizar para iniciar sesión?</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="148"/>
@@ -3019,7 +3019,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="223"/>
       <source>What is the name of this computer?</source>
-      <translation>¿Cómo se llama éste equipo?</translation>
+      <translation>¿Qué nombre le ponemos al equipo?</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="247"/>
@@ -3034,13 +3034,13 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="325"/>
       <source>Choose a password to keep your account safe.</source>
-      <translation>Elija una contraseña para mantener su cuenta segura.</translation>
+      <translation>Elegí una contraseña para mantener su cuenta segura.</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="349"/>
       <location filename="../src/modules/users/page_usersetup.ui" line="374"/>
       <source>&lt;small&gt;Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.&lt;/small&gt;</source>
-      <translation>&lt;small&gt;Ingrese la misma contraseña dos veces para que se pueda verificar si hay errores tipográficos. Una buena contraseña contendrá una combinación de letras, números y signos de puntuación, debe tener al menos ocho caracteres y debe cambiarse de vez en cuando.&lt;/small&gt;</translation>
+      <translation>&lt;small&gt;Ingresá la misma contraseña dos veces para que se pueda verificar si hay errores tipográficos. Una buena contraseña contendrá una combinación de letras, números y signos de puntuación, debe tener al menos ocho caracteres y debe cambiarse de vez en cuando.&lt;/small&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="355"/>
@@ -3052,7 +3052,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/users/page_usersetup.ui" line="380"/>
       <location filename="../src/modules/users/page_usersetup.ui" line="550"/>
       <source>Repeat Password</source>
-      <translation>Repite la contraseña</translation>
+      <translation>Repeti la contraseña</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="455"/>
@@ -3083,7 +3083,7 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
       <location filename="../src/modules/users/page_usersetup.ui" line="519"/>
       <location filename="../src/modules/users/page_usersetup.ui" line="544"/>
       <source>&lt;small&gt;Enter the same password twice, so that it can be checked for typing errors.&lt;/small&gt;</source>
-      <translation>&lt;small&gt;Ingrese la misma contraseña dos veces para que se pueda verificar si hay errores tipográficos.&lt;/small&gt;</translation>
+      <translation>&lt;small&gt;Ingresá la misma contraseña dos veces para que se pueda verificar si hay errores tipográficos.&lt;/small&gt;</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="627"/>
@@ -3420,12 +3420,12 @@ El instalador se cerrará y se perderán todos los cambios.</translation>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="585"/>
       <source>You can continue without setting up an EFI system partition but your system may fail to start.</source>
-      <translation>Puede continuar sin configurar una partición del sistema EFI, pero es posible que su sistema no se inicie.</translation>
+      <translation>Podés continuar sin configurar una partición del sistema EFI, pero es posible que tu sistema no se inicie.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="587"/>
       <source>You can continue with this EFI system partition configuration but your system may fail to start.</source>
-      <translation>Puede continuar con esta configuración de partición del sistema EFI, pero es posible que su sistema no se inicie.</translation>
+      <translation>Podés continuar con esta configuración de partición del sistema EFI, pero es posible que tu sistema no se inicie.</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/PartitionViewStep.cpp" line="599"/>
@@ -4646,7 +4646,7 @@ La configuración puede continuar, pero es posible que algunas funciones estén 
       <location filename="../src/modules/welcomeq/WelcomeQmlViewStep.cpp" line="40"/>
       <source>Welcome</source>
       <comment>@title</comment>
-      <translation>Bienvenido/a</translation>
+      <translation>Primeros pasos</translation>
     </message>
   </context>
   <context>
@@ -4655,7 +4655,7 @@ La configuración puede continuar, pero es posible que algunas funciones estén 
       <location filename="../src/modules/welcome/WelcomeViewStep.cpp" line="46"/>
       <source>Welcome</source>
       <comment>@title</comment>
-      <translation>Bienvenido/a</translation>
+      <translation>Primeros pasos</translation>
     </message>
   </context>
   <context>
@@ -4868,7 +4868,7 @@ Este registro se copia en /var/log/installation.log del sistema de destino.&lt;/
       <location filename="../src/modules/keyboardq/keyboardq.qml" line="311"/>
       <source>Type here to test your keyboard…</source>
       <comment>@label</comment>
-      <translation>Tipée aquí para probar su teclado</translation>
+      <translation>Tipeá aquí para probar tu teclado</translation>
     </message>
   </context>
   <context>
@@ -4901,7 +4901,7 @@ Este registro se copia en /var/log/installation.log del sistema de destino.&lt;/
       <location filename="../src/modules/keyboardq/keyboardq-qt6.qml" line="311"/>
       <source>Type here to test your keyboard…</source>
       <comment>@label</comment>
-      <translation>Tipée aquí para probar su teclado</translation>
+      <translation>Tipeá aquí para probar tu teclado</translation>
     </message>
   </context>
   <context>
@@ -5152,7 +5152,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="147"/>
       <source>What is the name of this computer?</source>
-      <translation>¿Cómo se llama éste equipo?</translation>
+      <translation>¿Qué nombre le ponemos al equipo?</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="153"/>
@@ -5177,7 +5177,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="211"/>
       <source>Choose a password to keep your account safe.</source>
-      <translation>Elija una contraseña para mantener su cuenta segura.</translation>
+      <translation>Elegí una contraseña para mantener su cuenta segura.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="221"/>
@@ -5192,7 +5192,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="265"/>
       <source>Enter the same password twice, so that it can be checked for typing errors. A good password will contain a mixture of letters, numbers and punctuation, should be at least eight characters long, and should be changed at regular intervals.</source>
-      <translation>Ingrese la misma contraseña dos veces para que se pueda verificar si hay errores tipográficos. Una buena contraseña contendrá una combinación de letras, números y signos de puntuación, debe tener al menos ocho caracteres y debe cambiarse de vez en cuando.</translation>
+      <translation>Ingresá la misma contraseña dos veces para que se pueda verificar si hay errores tipográficos. Una buena contraseña contendrá una combinación de letras, números y signos de puntuación, debe tener al menos ocho caracteres y debe cambiarse de vez en cuando.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="297"/>
@@ -5207,7 +5207,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="318"/>
       <source>Choose a root password to keep your account safe.</source>
-      <translation>Elija una contraseña para mantener su cuenta "ROOT" segura.</translation>
+      <translation>Elegí una contraseña para mantener su cuenta "ROOT" segura.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="328"/>
@@ -5222,7 +5222,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="372"/>
       <source>Enter the same password twice, so that it can be checked for typing errors.</source>
-      <translation>Introduzca la misma contraseña dos veces para verificar si hay errores de escritura.</translation>
+      <translation>Introducí la misma contraseña dos veces para verificar si hay errores de escritura.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="402"/>
@@ -5245,7 +5245,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="42"/>
       <source>Pick your user name and credentials to login and perform admin tasks</source>
-      <translation>Elija su nombre de usuario y credenciales para iniciar sesión y realizar tareas administrativas</translation>
+      <translation>Elegí tu nombre de usuario y credenciales para iniciar sesión y realizar tareas administrativas</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="55"/>
@@ -5285,7 +5285,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="146"/>
       <source>What is the name of this computer?</source>
-      <translation>¿Cómo se llama éste equipo?</translation>
+      <translation>¿Qué nombre le ponemos al equipo?</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="152"/>
@@ -5310,7 +5310,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="210"/>
       <source>Choose a password to keep your account safe.</source>
-      <translation>Elija una contraseña para mantener su cuenta segura.</translation>
+      <translation>Elegí una contraseña para mantener su cuenta segura.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="220"/>
@@ -5340,7 +5340,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="317"/>
       <source>Choose a root password to keep your account safe.</source>
-      <translation>Elija una contraseña para mantener su cuenta "ROOT" segura.</translation>
+      <translation>Elegí una contraseña para mantener tu cuenta "ROOT" segura.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="327"/>
@@ -5355,7 +5355,7 @@ La barra de desplazamiento vertical es ajustable, el ancho actual está establec
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="371"/>
       <source>Enter the same password twice, so that it can be checked for typing errors.</source>
-      <translation>Introduzca la misma contraseña dos veces para verificar si hay errores de escritura.</translation>
+      <translation>Introducí la misma contraseña dos veces para verificar si hay errores de escritura.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="401"/>

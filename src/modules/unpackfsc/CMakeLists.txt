@@ -8,6 +8,7 @@ calamares_add_plugin( unpackfsc
         UnpackFSCJob.cpp
         # The workers for differently-packed filesystems
         Runners.cpp
+        ErofsRunner.cpp
         FSArchiverRunner.cpp
         TarballRunner.cpp
         UnsquashRunner.cpp

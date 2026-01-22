@@ -95,6 +95,7 @@ KEY_ID="55734316C0AE465B"
 # to run and sign.
 rm -f CMakeLists.txt.gpg
 gpg -s -u $KEY_ID CMakeLists.txt
+test -f CMakeLists.txt.gpg || { echo "Could not sign (check GPG key validity)"; exit 1 ; }
 
 ### Get version number for this release
 #

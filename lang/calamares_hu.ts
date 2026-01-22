@@ -1691,7 +1691,7 @@ A telepítő ki fog lépni és minden változtatás elvész.</translation>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="47"/>
       <source>Missing tools</source>
-      <translation>Hiányszó eszközök</translation>
+      <translation>Hiányzó eszközök</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="48"/>
@@ -2589,7 +2589,7 @@ A telepítő ki fog lépni és minden változtatás elvész.</translation>
       <location filename="../src/modules/localeq/Offline.qml" line="47"/>
       <source>Select your preferred region, or use the default settings</source>
       <comment>@label</comment>
-      <translation>Válassza ki a régiót, vagy használja az alapértelmezett beállításokat</translation>
+      <translation>Válassza ki a régiót vagy használja az alapértelmezett beállításokat</translation>
     </message>
     <message>
       <location filename="../src/modules/localeq/Offline.qml" line="103"/>
@@ -2624,7 +2624,7 @@ A telepítő ki fog lépni és minden változtatás elvész.</translation>
       <location filename="../src/modules/localeq/Offline-qt6.qml" line="47"/>
       <source>Select your preferred region, or use the default settings</source>
       <comment>@label</comment>
-      <translation>Válassza ki a régiót, vagy használja az alapértelmezett beállításokat</translation>
+      <translation>Válassza ki a régiót vagy használja az alapértelmezett beállításokat</translation>
     </message>
     <message>
       <location filename="../src/modules/localeq/Offline-qt6.qml" line="103"/>
@@ -4253,7 +4253,7 @@ Kimenet:
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation>Hiányszó eszközök</translation>
+      <translation>Hiányzó eszközök</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="37"/>
@@ -4445,7 +4445,7 @@ Kimenet:
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="36"/>
       <source>Missing tools</source>
-      <translation>Hiányszó eszközök</translation>
+      <translation>Hiányzó eszközök</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="37"/>

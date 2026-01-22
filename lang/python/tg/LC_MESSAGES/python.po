@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Victor Ibragimov <victor.ibragimov@gmail.com>, 2020
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2025
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-29 13:55+0100\n"
 "PO-Revision-Date: 2017-08-09 10:34+0000\n"
-"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>, 2020\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>, 2025\n"
 "Language-Team: Tajik (https://app.transifex.com/calamares/teams/20061/tg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,16 +28,20 @@ msgstr "Насбкунии боркунандаи роҳандозӣ."
 #: src/modules/bootloader/main.py:671
 msgid "Failed to install grub, no partitions defined in global storage"
 msgstr ""
+"Боркунандаи роҳандозии «GRUB» насб карда нашуд, зеро ки ягон қисми диск дар "
+"захирагоҳи умумӣ муайян карда нашудааст"
 
 #: src/modules/bootloader/main.py:931
 msgid "Bootloader installation error"
-msgstr ""
+msgstr "Хатои насби боркунандаи роҳандозӣ"
 
 #: src/modules/bootloader/main.py:932
 msgid ""
 "The bootloader could not be installed. The installation command "
 "<pre>{!s}</pre> returned error code {!s}."
 msgstr ""
+"Боркунандаи роҳандозӣ насб карда нашуд. Фармони насб бо қимати "
+"<pre>{!s}</pre> рамзи хаторо бо қимати «{!s}» изҳор кард."
 
 #: src/modules/displaymanager/main.py:525
 msgid "Cannot write LXDM configuration file"
@@ -93,12 +97,14 @@ msgstr "Эҷодкунии initramfs бо dracut."
 
 #: src/modules/dracut/main.py:63
 msgid "Failed to run dracut"
-msgstr ""
+msgstr "Фармони «dracut» иҷро нашуд"
 
 #: src/modules/dracut/main.py:64
 #, python-brace-format
 msgid "Dracut failed to run on the target with return code: {return_code}"
 msgstr ""
+"«Dracut» дар низоми интихобшуда иҷро нашуд ва рамзи зеринро нишод дод: "
+"{return_code}"
 
 #: src/modules/dummypython/main.py:35
 msgid "Dummy python job."
@@ -138,6 +144,8 @@ msgstr "Нуқтаи васли реша (root) барои истифодаи <p
 #: src/modules/fstab/main.py:417
 msgid "No <pre>{!s}</pre> configuration is given for <pre>{!s}</pre> to use."
 msgstr ""
+"Ягон танзимоти <pre>{!s}</pre> барои истифодаи <pre>{!s}</pre> муайян карда "
+"нашуд."
 
 #: src/modules/grubcfg/main.py:30
 msgid "Configure GRUB."
@@ -153,11 +161,12 @@ msgstr "Танзимкунии mkinitcpio."
 
 #: src/modules/initcpiocfg/main.py:268
 msgid "No partitions are defined for <pre>initcpiocfg</pre>."
-msgstr ""
+msgstr "Ягон қисми диск барои <pre>«initcpiocfg»</pre> муайян карда нашуд."
 
 #: src/modules/initcpiocfg/main.py:272
 msgid "No root mount point for <pre>initcpiocfg</pre>."
 msgstr ""
+"Ягон нуқтаи васли «root» барои <pre>«initcpiocfg»</pre> танзим нашудааст."
 
 #: src/modules/initramfscfg/main.py:32
 msgid "Configuring initramfs."
@@ -185,23 +194,23 @@ msgstr "Васлкунии қисмҳои диск."
 
 #: src/modules/mount/main.py:171 src/modules/mount/main.py:207
 msgid "Internal error mounting zfs datasets"
-msgstr ""
+msgstr "Хатои дохилӣ ҳангоми васлсозии маҷмуъҳои маълумоти «ZFS» ба миён омад"
 
 #: src/modules/mount/main.py:183
 msgid "Failed to import zpool"
-msgstr ""
+msgstr "Ҳавзаи нигоҳдории «zpool» ворид карда нашуд"
 
 #: src/modules/mount/main.py:199
 msgid "Failed to unlock zpool"
-msgstr ""
+msgstr "Қулфи ҳавзаи нигоҳдории «zpool» кушода нашуд"
 
 #: src/modules/mount/main.py:216 src/modules/mount/main.py:221
 msgid "Failed to set zfs mountpoint"
-msgstr ""
+msgstr "Нуқтаи васли «ZFS» танзим карда нашуд"
 
 #: src/modules/mount/main.py:386
 msgid "zfs mounting error"
-msgstr ""
+msgstr "Хатои васлсозии «ZFS»"
 
 #: src/modules/networkcfg/main.py:30
 msgid "Saving network configuration."
@@ -238,25 +247,32 @@ msgstr[1] "Тозакунии %(num)d баста."
 #: src/modules/packages/main.py:775 src/modules/packages/main.py:787
 #: src/modules/packages/main.py:815
 msgid "Package Manager error"
-msgstr ""
+msgstr "Хатои мудири бастаҳои насб"
 
 #: src/modules/packages/main.py:776
 msgid ""
 "The package manager could not prepare updates. The command <pre>{!s}</pre> "
 "returned error code {!s}."
 msgstr ""
+"Мудири бастаҳои насб наметавонад, ки навсозиҳои низомро омода созад. Фармони"
+" насб бо қимати <pre>{!s}</pre> рамзи хаторо бо қимати «{!s}» изҳор кард."
 
 #: src/modules/packages/main.py:788
 msgid ""
 "The package manager could not update the system. The command <pre>{!s}</pre>"
 " returned error code {!s}."
 msgstr ""
+"Мудири бастаҳои насб наметавонад, ки низомро навсозӣ кунад. Фармони насб бо "
+"қимати <pre>{!s}</pre> рамзи хаторо бо қимати «{!s}» изҳор кард."
 
 #: src/modules/packages/main.py:816
 msgid ""
 "The package manager could not make changes to the installed system. The "
 "command <pre>{!s}</pre> returned error code {!s}."
 msgstr ""
+"Мудири бастаҳои насб наметавонад, ки ба низоми насбшуда тағийротро ворид "
+"кунад. Фармони насб бо қимати <pre>{!s}</pre> рамзи хаторо бо қимати «{!s}» "
+"изҳор кард."
 
 #: src/modules/plymouthcfg/main.py:27
 msgid "Configure Plymouth theme"
@@ -323,21 +339,25 @@ msgstr ""
 
 #: src/modules/services-systemd/main.py:26
 msgid "Configure systemd units"
-msgstr ""
+msgstr "Танзимоти воҳидҳои «systemd»"
 
 #: src/modules/services-systemd/main.py:64
 msgid "Cannot modify unit"
-msgstr ""
+msgstr "Воҳид тағйир дода намешавад"
 
 #: src/modules/services-systemd/main.py:65
 msgid ""
 "<code>systemctl {_action!s}</code> call in chroot returned error code "
 "{_exit_code!s}."
 msgstr ""
+"Дархости «<code>systemctl {_action!s}</code>» дар «chroot» рамзи хатои "
+"«{_exit_code!s}»-ро нишон дод."
 
 #: src/modules/services-systemd/main.py:66
 msgid "Cannot {_action!s} systemd unit <code>{_name!s}</code>."
 msgstr ""
+"Амали «{_action!s} systemd» барои воҳиди «<code>{_name!s}</code>» иҷро "
+"намешавад."
 
 #: src/modules/unpackfs/main.py:34
 msgid "Filling up filesystems."
@@ -365,7 +385,7 @@ msgstr "Ягон нуқтаи васл барои қисми диски реша
 
 #: src/modules/unpackfs/main.py:444
 msgid "globalstorage does not contain a \"rootMountPoint\" key."
-msgstr ""
+msgstr "Захирагоҳи «globalstorage» дорои калиди «rootMountPoint» намебошад."
 
 #: src/modules/unpackfs/main.py:447
 msgid "Bad mount point for root partition"
@@ -374,16 +394,17 @@ msgstr "Нуқтаи васли нодуруст барои қисми диск�
 #: src/modules/unpackfs/main.py:448
 msgid "rootMountPoint is \"{}\", which does not exist."
 msgstr ""
+"Нуқтаи васли «rootMountPoint» дорои қимати \"{}\" мебошад, ки вуҷуд надорад."
 
 #: src/modules/unpackfs/main.py:452 src/modules/unpackfs/main.py:468
 #: src/modules/unpackfs/main.py:472 src/modules/unpackfs/main.py:478
 #: src/modules/unpackfs/main.py:515
 msgid "Bad unpackfs configuration"
-msgstr ""
+msgstr "Танзимоти «unpackfs» нодуруст аст"
 
 #: src/modules/unpackfs/main.py:453
 msgid "There is no configuration information."
-msgstr ""
+msgstr "Ягон маълумоти танзимот вуҷуд надорад."
 
 #: src/modules/unpackfs/main.py:469
 msgid "The filesystem for \"{}\" ({}) is not supported by your current kernel"
@@ -398,6 +419,8 @@ msgid ""
 "Failed to find unsquashfs, make sure you have the squashfs-tools package "
 "installed."
 msgstr ""
+"«unsquashfs» ёфт нашуд, мутмаин шавед, ки бастаи «squashfs-tools» насб карда"
+" шудааст."
 
 #: src/modules/unpackfs/main.py:516
 msgid "The destination \"{}\" in the target system is not a directory"
@@ -405,4 +428,4 @@ msgstr "Ҷойи таъиноти \"{}\" дар низоми интихобшу�
 
 #: src/modules/zfshostid/main.py:27
 msgid "Copying zfs generated hostid."
-msgstr ""
+msgstr "Дар ҳоли нусхабардории «hostid», ки бо «zfs» эҷод карда шуд"

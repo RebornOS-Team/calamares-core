@@ -148,7 +148,7 @@
     <message>
       <location filename="../src/calamares/DebugWindow.ui" line="118"/>
       <source>Reload Stylesheet</source>
-      <translation>Przeładowuje Arkusz Stylów</translation>
+      <translation>Przeładuj arkusz stylów</translation>
     </message>
     <message>
       <location filename="../src/calamares/DebugWindow.ui" line="128"/>
@@ -158,7 +158,7 @@
     <message>
       <location filename="../src/calamares/DebugWindow.ui" line="131"/>
       <source>Widget Tree</source>
-      <translation> Drzewo widżetów</translation>
+      <translation>Drzewo widżetów</translation>
     </message>
     <message>
       <location filename="../src/calamares/DebugWindow.ui" line="141"/>
@@ -357,7 +357,7 @@
       <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="100"/>
       <source>QML step &lt;i&gt;%1&lt;/i&gt;.</source>
       <comment>@label</comment>
-      <translation>QML krok &lt;i&gt;%1&lt;/i&gt;.</translation>
+      <translation>Krok QML &lt;i&gt;%1&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/viewpages/QmlViewStep.cpp" line="286"/>
@@ -537,7 +537,7 @@ Link skopiowany do schowka</translation>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="404"/>
       <source>Setup is complete. Close the setup program.</source>
       <comment>@tooltip</comment>
-      <translation>Konfiguracja jest zakończona. Zamknij program instalacyjny.</translation>
+      <translation>Konfiguracja ukończona. Zamknij program instalacyjny.</translation>
     </message>
     <message>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="405"/>
@@ -597,7 +597,7 @@ Link skopiowany do schowka</translation>
       <location filename="../src/libcalamaresui/ViewManager.cpp" line="525"/>
       <source>Do you really want to cancel the current setup process?
 The setup program will quit and all changes will be lost.</source>
-      <translation>Czy naprawdę chcesz anulować bieżący proces konfiguracji?
+      <translation>Czy na pewno chcesz anulować bieżący proces konfiguracji?
 Program instalacyjny zostanie zamknięty, a wszystkie zmiany zostaną utracone.</translation>
     </message>
     <message>
@@ -626,7 +626,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
       <location filename="../src/libcalamares/PythonHelper.cpp" line="371"/>
       <source>Unparseable Python traceback</source>
       <comment>@error</comment>
-      <translation>Błąd Pythone niemożliwy do prześledzenia</translation>
+      <translation>Błąd Pythona niemożliwy do prześledzenia</translation>
     </message>
     <message>
       <location filename="../src/libcalamares/PythonHelper.cpp" line="378"/>
@@ -640,7 +640,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/calamares/CalamaresWindow.cpp" line="405"/>
       <source>%1 Setup Program</source>
-      <translation>%1 Program instalacyjny</translation>
+      <translation>Program instalacyjny %1</translation>
     </message>
     <message>
       <location filename="../src/calamares/CalamaresWindow.cpp" line="406"/>
@@ -1007,27 +1007,27 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="53"/>
       <source>Network Installation. (Disabled: Incorrect configuration)</source>
-      <translation>Instalacja sieciowa. (Wyłączono: Nieprawidłowa konfiguracja)</translation>
+      <translation>Instalacja sieciowa. (Wyłączono: nieprawidłowa konfiguracja)</translation>
     </message>
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="55"/>
       <source>Network Installation. (Disabled: Received invalid groups data)</source>
-      <translation>Instalacja sieciowa. (Niedostępna: Otrzymano nieprawidłowe dane grupowe)</translation>
+      <translation>Instalacja sieciowa. (Wyłączono: otrzymano nieprawidłowe dane grupowe)</translation>
     </message>
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="57"/>
       <source>Network Installation. (Disabled: Internal error)</source>
-      <translation>Instalacja sieciowa. (Wyłączono: Błąd wewnętrzny)</translation>
+      <translation>Instalacja sieciowa. (Wyłączono: błąd wewnętrzny)</translation>
     </message>
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="59"/>
       <source>Network Installation. (Disabled: Unable to fetch package lists, check your network connection)</source>
-      <translation>Instalacja sieciowa. (Wyłączona: Nie można pobrać listy pakietów, sprawdź swoje połączenie z siecią)</translation>
+      <translation>Instalacja sieciowa. (Wyłączono: nie można pobrać listy pakietów, sprawdź swoje połączenie z siecią)</translation>
     </message>
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="61"/>
       <source>Network Installation. (Disabled: No package list)</source>
-      <translation>Instalacja sieciowa. (Wyłączono: Brak listy pakietów)</translation>
+      <translation>Instalacja sieciowa. (Wyłączono: nrak listy pakietów)</translation>
     </message>
     <message>
       <location filename="../src/modules/netinstall/Config.cpp" line="76"/>
@@ -1037,7 +1037,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/packagechooser/Config.cpp" line="110"/>
       <source>Package Selection</source>
-      <translation>Wybór Pakietów</translation>
+      <translation>Wybór pakietów</translation>
     </message>
     <message>
       <location filename="../src/modules/packagechooser/Config.cpp" line="112"/>
@@ -1205,7 +1205,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="71"/>
       <source>Primar&amp;y</source>
-      <translation>Podstawow&amp;y</translation>
+      <translation>Podstawow&amp;a</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="81"/>
@@ -1246,7 +1246,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="67"/>
       <source>En&amp;crypt</source>
       <comment>@action</comment>
-      <translation>Zaszy%fruj</translation>
+      <translation>Zaszy&amp;fruj</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="195"/>
@@ -2070,7 +2070,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="51"/>
       <source>Konsole not installed.</source>
       <comment>@error</comment>
-      <translation>Konsola nie jest zainstalowana.</translation>
+      <translation>Konsole nie jest zainstalowany.</translation>
     </message>
     <message>
       <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="52"/>
@@ -2965,7 +2965,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/packagechooser/PackageChooserPage.cpp" line="25"/>
       <source>Package Selection</source>
-      <translation>Wybór Pakietów</translation>
+      <translation>Wybór pakietów</translation>
     </message>
     <message>
       <location filename="../src/modules/packagechooser/PackageChooserPage.cpp" line="26"/>
@@ -3015,7 +3015,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="55"/>
       <source>Your Full Name</source>
-      <translation>Twoja Pełne Imię</translation>
+      <translation>Twoje imię i nazwisko</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="124"/>
@@ -3040,7 +3040,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="250"/>
       <source>Computer Name</source>
-      <translation>Nazwa Komputera</translation>
+      <translation>Nazwa komputera</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="325"/>
@@ -3063,7 +3063,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
       <location filename="../src/modules/users/page_usersetup.ui" line="380"/>
       <location filename="../src/modules/users/page_usersetup.ui" line="550"/>
       <source>Repeat Password</source>
-      <translation>Powtórz Hasło</translation>
+      <translation>Powtórz hasło</translation>
     </message>
     <message>
       <location filename="../src/modules/users/page_usersetup.ui" line="455"/>
@@ -3204,7 +3204,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="311"/>
       <source>File System Label</source>
       <comment>@title</comment>
-      <translation>Etykieta Systemu Plików</translation>
+      <translation>Etykieta systemu plików</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/core/PartitionModel.cpp" line="313"/>
@@ -3254,22 +3254,22 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="136"/>
       <source>New Volume Group</source>
-      <translation>Nowa Grupa Woluminów</translation>
+      <translation>Nowa grupa woluminów</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="143"/>
       <source>Resize Volume Group</source>
-      <translation>Zmień Rozmiar Grupy Woluminów</translation>
+      <translation>Zmień rozmiar grupy woluminów</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="150"/>
       <source>Deactivate Volume Group</source>
-      <translation>Dezaktywuj Grupę Woluminów</translation>
+      <translation>Dezaktywuj grupę woluminów</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="157"/>
       <source>Remove Volume Group</source>
-      <translation>Usuń Grupę Woluminów</translation>
+      <translation>Usuń grupę woluminów</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/PartitionPage.ui" line="184"/>
@@ -3504,12 +3504,12 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
     <message>
       <location filename="../src/modules/plasmalnf/PlasmaLnfPage.cpp" line="80"/>
       <source>Please choose a look-and-feel for the KDE Plasma Desktop. You can also skip this step and configure the look-and-feel once the system is set up. Clicking on a look-and-feel selection will give you a live preview of that look-and-feel.</source>
-      <translation>Proszę wybrać wygląd i styl dla pulpitu KDE Plazma. Możesz również pominąć ten krok i skonfigurować je po zainstalowaniu systemu. Kliknięcie na wybranym wyglądzie i stylu spowoduje wyświetlenie ich podglądu na żywo.</translation>
+      <translation>Proszę wybrać wygląd i styl dla pulpitu KDE Plasma. Możesz również pominąć ten krok i skonfigurować je po zainstalowaniu systemu. Kliknięcie na wybranym wyglądzie i stylu spowoduje wyświetlenie ich podglądu na żywo.</translation>
     </message>
     <message>
       <location filename="../src/modules/plasmalnf/PlasmaLnfPage.cpp" line="87"/>
       <source>Please choose a look-and-feel for the KDE Plasma Desktop. You can also skip this step and configure the look-and-feel once the system is installed. Clicking on a look-and-feel selection will give you a live preview of that look-and-feel.</source>
-      <translation>Wybierz wygląd i styl pulpitu Plazmy KDE. Możesz również pominąć ten krok i skonfigurować wygląd po zainstalowaniu systemu. Kliknięcie przycisku wyboru wyglądu i stylu daje podgląd na żywo tego wyglądu i stylu.</translation>
+      <translation>Wybierz wygląd i styl pulpitu KDE Plasma. Możesz również pominąć ten krok i skonfigurować wygląd po zainstalowaniu systemu. Kliknięcie przycisku wyboru wyglądu i stylu daje podgląd na żywo tego wyglądu i stylu.</translation>
     </message>
   </context>
   <context>
@@ -3518,7 +3518,7 @@ Instalator zostanie zamknięty i wszystkie zmiany zostaną utracone.</translatio
       <location filename="../src/modules/plasmalnf/PlasmaLnfViewStep.cpp" line="43"/>
       <source>Look-and-Feel</source>
       <comment>@label</comment>
-      <translation>Wygląd-i-Zachowanie</translation>
+      <translation>Wygląd-i-styl</translation>
     </message>
   </context>
   <context>
@@ -3868,7 +3868,7 @@ i nie uruchomi się</translation>
       <location filename="../src/modules/partition/gui/ResizeVolumeGroupDialog.cpp" line="30"/>
       <source>Resize Volume Group</source>
       <comment>@title</comment>
-      <translation>Zmień Rozmiar Grupy Woluminów</translation>
+      <translation>Zmień rozmiar grupy woluminów</translation>
     </message>
   </context>
   <context>
@@ -4545,12 +4545,12 @@ i nie uruchomi się</translation>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="34"/>
       <source>Volume Group Name:</source>
-      <translation>Nazwa Grupy Woluminów :</translation>
+      <translation>Nazwa grupy woluminów:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="47"/>
       <source>Volume Group Type:</source>
-      <translation>Typ Grupy Woluminów</translation>
+      <translation>Typ grupy woluminów:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="60"/>
@@ -4565,7 +4565,7 @@ i nie uruchomi się</translation>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="86"/>
       <source>Total Size:</source>
-      <translation>Łączny Rozmiar :</translation>
+      <translation>Łączny rozmiar:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="106"/>
@@ -4575,12 +4575,12 @@ i nie uruchomi się</translation>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="126"/>
       <source>Total Sectors:</source>
-      <translation>Łącznie Sektorów :</translation>
+      <translation>Łącznie sektorów:</translation>
     </message>
     <message>
       <location filename="../src/modules/partition/gui/VolumeGroupBaseDialog.ui" line="146"/>
       <source>Quantity of LVs:</source>
-      <translation>Ilość Grup Woluminów :</translation>
+      <translation>Liczba grup woluminów:</translation>
     </message>
   </context>
   <context>
@@ -4641,7 +4641,7 @@ i nie uruchomi się</translation>
       <location filename="../src/calamares/DebugWindow.cpp" line="238"/>
       <source>About %1 Installer</source>
       <comment>@title</comment>
-      <translation> Informacje o instalatorze %1</translation>
+      <translation>Informacje o instalatorze %1</translation>
     </message>
     <message>
       <location filename="../src/modules/welcome/WelcomePage.cpp" line="213"/>
@@ -4723,7 +4723,7 @@ i nie uruchomi się</translation>
     <message>
       <location filename="../src/calamares/calamares-sidebar.qml" line="115"/>
       <source>Debug</source>
-      <translation>Debug</translation>
+      <translation>Debugowanie</translation>
     </message>
     <message>
       <location filename="../src/calamares/CalamaresWindow.cpp" line="157"/>
@@ -4741,7 +4741,7 @@ i nie uruchomi się</translation>
       <location filename="../src/calamares/CalamaresWindow.cpp" line="173"/>
       <source>Debug</source>
       <comment>@button</comment>
-      <translation>Debug</translation>
+      <translation>Debugowanie</translation>
     </message>
     <message>
       <location filename="../src/calamares/CalamaresWindow.cpp" line="175"/>
@@ -5131,7 +5131,7 @@ Pionowy pasek przewijania jest regulowany, obecna szerokość ustawiona na 10.</
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="63"/>
       <source>Your full name</source>
-      <translation>Twoje Imię i Nazwisko</translation>
+      <translation>Twoje imię i nazwisko</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="80"/>
@@ -5206,7 +5206,7 @@ Pionowy pasek przewijania jest regulowany, obecna szerokość ustawiona na 10.</
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="297"/>
       <source>Reuse user password as root password</source>
-      <translation>Użyj ponownie hasła użytkownika jako hasła root'a</translation>
+      <translation>Użyj ponownie hasła użytkownika jako hasła roota</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="305"/>
@@ -5216,7 +5216,7 @@ Pionowy pasek przewijania jest regulowany, obecna szerokość ustawiona na 10.</
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="318"/>
       <source>Choose a root password to keep your account safe.</source>
-      <translation>Wybierz hasło root'a, aby zapewnić bezpieczeństwo swojego konta.</translation>
+      <translation>Wybierz hasło roota, aby zapewnić bezpieczeństwo swojego konta.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq.qml" line="328"/>
@@ -5264,7 +5264,7 @@ Pionowy pasek przewijania jest regulowany, obecna szerokość ustawiona na 10.</
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="62"/>
       <source>Your full name</source>
-      <translation>Twoje Imię i Nazwisko</translation>
+      <translation>Twoje imię i nazwisko</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="79"/>
@@ -5339,7 +5339,7 @@ Pionowy pasek przewijania jest regulowany, obecna szerokość ustawiona na 10.</
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="296"/>
       <source>Reuse user password as root password</source>
-      <translation>Użyj ponownie hasła użytkownika jako hasła root'a</translation>
+      <translation>Użyj ponownie hasła użytkownika jako hasła roota</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="304"/>
@@ -5349,7 +5349,7 @@ Pionowy pasek przewijania jest regulowany, obecna szerokość ustawiona na 10.</
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="317"/>
       <source>Choose a root password to keep your account safe.</source>
-      <translation>Wybierz hasło root'a, aby zapewnić bezpieczeństwo swojego konta.</translation>
+      <translation>Wybierz hasło roota, aby zapewnić bezpieczeństwo swojego konta.</translation>
     </message>
     <message>
       <location filename="../src/modules/usersq/usersq-qt6.qml" line="327"/>

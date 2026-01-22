@@ -389,7 +389,7 @@ def get_efi_suffix_generator(name):
     if name.count("${") > 1:
         raise ValueError("EFI ID {!r} contains multiple generators".format(name))
     import re
-    prefix, generator_name = re.match("(.*)\${([^}]*)}$", name).groups()
+    prefix, generator_name = re.match(r"(.*)\${([^}]*)}$", name).groups()
     if generator_name not in ("SERIAL", "RANDOM", "PHRASE"):
         raise ValueError("EFI suffix {!r} is unknown".format(generator_name))
 
@@ -578,6 +578,8 @@ def get_grub_efi_parameters():
         return "arm64-efi", "grubaa64.efi", "bootaa64.efi"
     elif efi_bitness == "64" and cpu_type == "loongarch64":
         return "loongarch64-efi", "grubloongarch64.efi", "bootloongarch64.efi"
+    elif efi_bitness == "64" and cpu_type == "riscv64":
+        return "riscv64-efi", "grubriscv64.efi", "bootriscv64.efi"
     elif efi_bitness == "64":
         # If it's not ARM, must by AMD64
         return "x86_64-efi", "grubx64.efi", "bootx64.efi"
@@ -616,7 +618,6 @@ def run_grub_install(fw_type, partitions, efi_directory, install_hybrid_grub):
     """
 
     is_zfs = any([is_zfs_root(partition) for partition in partitions])
-
     # zfs needs an environment variable set for grub
     if is_zfs:
         check_target_env_call(["sh", "-c", "echo ZPOOL_VDEV_NAME_PATH=1 >> /etc/environment"])
@@ -626,22 +627,21 @@ def run_grub_install(fw_type, partitions, efi_directory, install_hybrid_grub):
         efi_bootloader_id = efi_label(efi_directory)
         efi_target, efi_grub_file, efi_boot_file = get_grub_efi_parameters()
 
-        if is_zfs:
-            check_target_env_call(["sh", "-c", "ZPOOL_VDEV_NAME_PATH=1 " + libcalamares.job.configuration["grubInstall"]
-                                   + " --target=" + efi_target + " --efi-directory=" + efi_directory
-                                   + " --bootloader-id=" + efi_bootloader_id + " --force"])
-        else:
-            check_target_env_call([libcalamares.job.configuration["grubInstall"],
-                                   "--target=" + efi_target,
-                                   "--efi-directory=" + efi_directory,
-                                   "--bootloader-id=" + efi_bootloader_id,
-                                   "--force"])
-    else:
-        if efi_directory is not None and not install_hybrid_grub:
-            libcalamares.utils.warning(_("Cannot install BIOS bootloader on UEFI installation when install_hybrid_grub is 'False'!"))
-            return
+        grubinstall_command = [
+            libcalamares.job.configuration["grubInstall"],
+            "--target=" + efi_target,
+            "--efi-directory=" + efi_directory,
+            "--bootloader-id=" + efi_bootloader_id,
+            "--force"]
 
-        if libcalamares.globalstorage.value("bootLoader") is None:
+        if is_zfs:
+            # Needs environment to be set for GRUB, so go via the shell
+            check_target_env_call(["sh", "-c", "ZPOOL_VDEV_NAME_PATH=1 " + " ".join(grubinstall_command)])
+        else:
+            check_target_env_call(grubinstall_command)
+
+    else:
+        if libcalamares.globalstorage.value("bootLoader") is None and install_hybrid_grub:
             efi_install_path = libcalamares.globalstorage.value("efiSystemPartition")
             if efi_install_path is None or efi_install_path == "":
                 efi_install_path = "/boot/efi"

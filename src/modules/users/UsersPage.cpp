@@ -38,7 +38,7 @@ static inline void
 labelError( QLabel* pix, QLabel* label, Calamares::ImageType icon, const QString& message )
 {
     label->setText( message );
-    pix->setPixmap( Calamares::defaultPixmap( icon, Calamares::Original, label->size() ) );
+    pix->setPixmap( Calamares::defaultPixmap( icon, Calamares::Original, pix->size() ) );
 }
 
 /** @brief Clear error, set happy pixmap on a label to indicate "ok". */
@@ -46,7 +46,7 @@ static inline void
 labelOk( QLabel* pix, QLabel* label )
 {
     label->clear();
-    pix->setPixmap( Calamares::defaultPixmap( Calamares::StatusOk, Calamares::Original, label->size() ) );
+    pix->setPixmap( Calamares::defaultPixmap( Calamares::StatusOk, Calamares::Original, pix->size() ) );
 }
 
 /** @brief Sets error or ok on a label depending on @p status and @p value

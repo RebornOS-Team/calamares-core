@@ -743,6 +743,53 @@ class DMslim(DisplayManager):
     def greeter_setup(self):
         pass
 
+class DMplasmalogin(DisplayManager):
+    name = "plasmalogin"
+    executable = "plasmalogin"
+
+    configuration_file = "/etc/plasmalogin.conf"
+
+    def set_autologin(self, username, do_autologin, default_desktop_environment):
+        import configparser
+
+        # Systems with plasmalogin as Desktop Manager
+        plasmalogin_conf_path = os.path.join(self.root_mount_point, self.configuration_file.lstrip('/'))
+
+        plasmalogin_config = configparser.ConfigParser(strict=False)
+        # Make everything case sensitive
+        plasmalogin_config.optionxform = str
+
+        if os.path.isfile(plasmalogin_conf_path):
+            plasmalogin_config.read(plasmalogin_conf_path)
+
+        if 'Autologin' not in plasmalogin_config:
+            plasmalogin_config.add_section('Autologin')
+
+        if do_autologin:
+            plasmalogin_config.set('Autologin', 'User', username)
+        elif plasmalogin_config.has_option('Autologin', 'User'):
+            plasmalogin_config.remove_option('Autologin', 'User')
+
+        if default_desktop_environment is not None:
+            plasmalogin_config.set(
+                'Autologin',
+                'Session',
+                default_desktop_environment.desktop_file
+                )
+
+        with open(plasmalogin_conf_path, 'w') as plasmalogin_config_file:
+            plasmalogin_config.write(plasmalogin_config_file, space_around_delimiters=False)
+
+
+    def basic_setup(self):
+        pass
+
+    def desktop_environment_setup(self, desktop_environment):
+        pass
+
+    def greeter_setup(self):
+        pass
+
 
 class DMsddm(DisplayManager):
     name = "sddm"

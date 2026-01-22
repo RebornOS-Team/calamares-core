@@ -59,7 +59,7 @@
     <message>
       <location filename="../src/modules/partition/gui/BootInfoWidget.cpp" line="82"/>
       <source>This system was started with a &lt;strong&gt;BIOS&lt;/strong&gt; boot environment.&lt;br&gt;&lt;br&gt;To configure startup from a BIOS environment, this installer must install a boot loader, like &lt;strong&gt;GRUB&lt;/strong&gt;, either at the beginning of a partition or on the &lt;strong&gt;Master Boot Record&lt;/strong&gt; near the beginning of the partition table (preferred). This is automatic, unless you choose manual partitioning, in which case you must set it up on your own.</source>
-      <translation>Dieses System wurde mit einer  &lt;strong&gt;BIOS&lt;/strong&gt; Boot-Umgebung gestartet.&lt;br&gt;&lt;br&gt;Um den Systemstart von einer BIOS-Umgebung einzurichten, muss das Installationsprogramm einen Bootloader  wie &lt;strong&gt;GRUB&lt;/strong&gt;installieren, entweder am Anfang einer Partition oder im &lt;strong&gt;Master Boot Record&lt;/strong&gt; nahe des Anfangs der Partitionstabelle (bevorzugt). Dies passiert automatisch, außer Sie wählen die manuelle Partitionierung. In diesem Fall müssen Sie ihn selbst einrichten.</translation>
+      <translation>Dieses System wurde mit einer  &lt;strong&gt;BIOS&lt;/strong&gt; Boot-Umgebung gestartet.&lt;br&gt;&lt;br&gt;Um den Systemstart von einer BIOS-Umgebung einzurichten, muss der Installer einen Bootloader  wie &lt;strong&gt;GRUB&lt;/strong&gt;installieren, entweder am Anfang einer Partition oder im &lt;strong&gt;Master Boot Record&lt;/strong&gt; nahe dem Anfang der Partitionstabelle (bevorzugt). Dies passiert automatisch, außer Sie wählen die manuelle Partitionierung. In diesem Fall müssen Sie ihn selbst einrichten.</translation>
     </message>
   </context>
   <context>
@@ -380,7 +380,7 @@
       <comment>@status</comment>
       <translation>
         <numerusform>Warte auf %n Module...</numerusform>
-        <numerusform>Warte auf %n Module</numerusform>
+        <numerusform>Warte auf %n Module...</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1696,7 +1696,7 @@ Dies wird das Installationsprogramm beenden und alle Änderungen gehen verloren.
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="48"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation>Das %1 Tool ist nicht auf dem System installiert.</translation>
+      <translation>Das &lt;i&gt;%1&lt;/i&gt; Tool ist nicht auf dem System installiert.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="55"/>
@@ -1707,12 +1707,12 @@ Dies wird das Installationsprogramm beenden und alle Änderungen gehen verloren.
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="56"/>
       <source>The source archive &lt;i&gt;%1&lt;/i&gt; does not exist.</source>
-      <translation>Quellarchiv %1 existiert nicht.</translation>
+      <translation>Quellarchiv &lt;i&gt;%1&lt;/i&gt; existiert nicht.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/FSArchiverRunner.cpp" line="70"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation>Für %1 konnte kein Ziel gefunden werden.</translation>
+      <translation>Für &lt;i&gt;%1&lt;/i&gt; konnte kein Ziel gefunden werden.</translation>
     </message>
   </context>
   <context>
@@ -4268,7 +4268,7 @@ Ausgabe:
     <message>
       <location filename="../src/modules/unpackfsc/TarballRunner.cpp" line="84"/>
       <source>Tarball extract file %1</source>
-      <translation>Tarball entpacke Datei %1</translation>
+      <translation>Tarball entpackt Datei %1</translation>
     </message>
   </context>
   <context>
@@ -4450,12 +4450,12 @@ Ausgabe:
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="37"/>
       <source>The &lt;i&gt;%1&lt;/i&gt; tool is not installed on the system.</source>
-      <translation>Das %1 Tool ist nicht auf dem System installiert.</translation>
+      <translation>Das &lt;i&gt;%1&lt;/i&gt; Tool ist nicht installiert auf diesem System.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="46"/>
       <source>No destination could be found for &lt;i&gt;%1&lt;/i&gt;.</source>
-      <translation>Für %1 konnte kein Ziel gefunden werden.</translation>
+      <translation>Für &lt;i&gt;%1&lt;/i&gt; konnte kein Ziel gefunden werden.</translation>
     </message>
     <message>
       <location filename="../src/modules/unpackfsc/UnsquashRunner.cpp" line="98"/>
@@ -4914,7 +4914,7 @@ Ausgabe:
                                 The system locale setting affects the numbers and dates format. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
       <comment>@info</comment>
       <translation>&lt;h3&gt;Regionalschemata&lt;/h3&gt; &lt;/br&gt;
-                    Die Regionalschemata betreffen das Format der Zahlen und Daten. Derzeit eingestellt ist &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+                    Die Regionalschemata betreffen das Format von Zahlen und Datum. Derzeit eingestellt ist &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
   </context>
   <context>
@@ -4940,7 +4940,7 @@ Ausgabe:
                                 The system locale setting affects the numbers and dates format. The current setting is &lt;strong&gt;%1&lt;/strong&gt;.</source>
       <comment>@info</comment>
       <translation>&lt;h3&gt;Regionalschemata&lt;/h3&gt; &lt;/br&gt;
-                    Die Regionalschemata betreffen das Format der Zahlen und Daten. Derzeit eingestellt ist &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+                    Die Regionalschemata betreffen das Format von Zahlen und Datum. Derzeit eingestellt ist &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
   </context>
   <context>
